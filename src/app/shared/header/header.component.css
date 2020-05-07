@@ -1,0 +1,18 @@
+.main-container{
+    margin-top: 5px;
+    padding: 50px;
+}
+
+.q_logo a {
+    display: block;
+    visibility: hidden;
+}
+
+img {
+    display:block;
+    margin:auto;
+    max-width: 0%;
+    height: auto;
+    image-rendering: optimizeQuality;
+}
+

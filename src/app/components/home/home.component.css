@@ -1,0 +1,7 @@
+.o-order__search {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 40px 19px;
+    margin-bottom: 68px;
+    width: 100%;
+}
