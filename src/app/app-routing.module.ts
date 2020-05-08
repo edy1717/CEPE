@@ -4,17 +4,17 @@ import { LoginComponent } from './components/user/login/login.component';
 import { ProfileComponent } from './components/user/profile/profile.component';
 import { HomeComponent } from './components/home/home.component';
 import { ListProductsComponent } from './components/list-products/list-products.component';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { ListProfilesComponent } from './components/user/list-profiles/list-profiles.component';
 
 
 const routes: Routes = [
-  { path : 'dashboard', component : DashboardComponent , pathMatch: 'full'},
-  { path : 'home', component : HomeComponent },
+  { path : 'home', component : HomeComponent , pathMatch: 'full'},
   { path : 'user/login' , component : LoginComponent },
   { path : 'user/profile' ,  component : ProfileComponent },
   { path : 'admin/list-products', component : ListProductsComponent },
-  { path: '',   redirectTo: '/dashboard', pathMatch: 'full' },  
-  { path : '***', component : DashboardComponent }
+  { path : 'admin/list-profiles', component :ListProfilesComponent },
+  { path: '',   redirectTo: '/home', pathMatch: 'full' },  
+  { path : '***',  component : HomeComponent }
 
 ];
 

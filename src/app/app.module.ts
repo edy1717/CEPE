@@ -20,8 +20,8 @@ import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { ListProductsComponent } from './components/list-products/list-products.component';
 import { ModalComponent } from './components/modal/modal.component';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { FilterPipe } from './pipes/filter.pipe'
+import { FilterPipe } from './shared/pipes/filter.pipe';
+import { ListProfilesComponent } from './components/user/list-profiles/list-profiles.component'
 
 
 
@@ -38,8 +38,8 @@ import { FilterPipe } from './pipes/filter.pipe'
     HeaderComponent,
     ListProductsComponent,
     ModalComponent,
-    DashboardComponent,
-    FilterPipe
+    FilterPipe,
+    ListProfilesComponent
   ],
   imports: [
     BrowserModule,

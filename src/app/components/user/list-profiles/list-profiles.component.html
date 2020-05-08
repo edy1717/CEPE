@@ -1,0 +1,51 @@
+
+<div class="main-container">
+    <section class="main-container">
+        <div class="table-responsive">
+            <h2>Perfiles</h2>
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-group">
+                            <input type="text" class=" float-left mb-6" name="filterPost" placeholder="Buscar">
+                            <button class="btn btn-primary float-right mb-3" data-toggle="modal" data-target="#"> Agregar Producto </button>
+                    </div>
+                </div>
+            </div>
+            <table class="table ">
+                <thead>
+                    <tr>
+                        <th scope="col"> #</th>
+                        <th scope="col"> Nombre </th>
+                        <th scope="col"> Correo </th>
+                        <th scope="col"> Telefono </th>
+                        <th scope="col"> &nbsp; </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">  </th>
+                        <td> Edwin </td>
+                        <td> ing.ed.mtz.leon@gmail.com </td>
+                        <td> 1234567890</td>
+                        <td>
+                            <button class="btn" 
+                                    data-toggle="modal" data-target="#modalProducts" placeholder="update">
+                                <i class="fas fa-sync"></i></button>
+                            <!-- BOTON DE ELIMINAR -->
+                            <button class="btn " placeholder="delete">
+                                <i class="fas fa-trash-alt"></i></button> 
+                            <!-- BOTON DE DETALLE -->
+                            <button class="btn" placeholder="masDetalle">
+                                <i class="fas fa-user-edit"></i></button> 
+                                <!-- BOTON DE LISTAS -->
+                                <button class="btn" placeholder="list-product">
+                                <i class="fas fa-list-ul"></i></button> 
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+ </div>  
+
+<app-modal></app-modal>
