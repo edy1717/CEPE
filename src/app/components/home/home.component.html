@@ -1,38 +1,42 @@
 <div class="container">
-  <div class="row">
-      <div class="col-12">
-          <div class="form-group">
-              <input type="text" class=" float-right mb-3" name="filterPost" placeholder="Buscar" [(ngModel)]="filterPost">
-          </div>
-      </div>
-  </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <input type="text" class=" float-right mb-3" name="filterPost" placeholder="Buscar" [(ngModel)]="filterPost">
+            </div>
+        </div>
+    </div>
 </div>
 
 <section id="product" class="mt-3">
-  <div class="container">
-      <div class="row">
-          <div class="col-xs-12 col-sm-6 col-md-4" *ngFor="let product of products |  filter:filterPost ">
-              <div class="card_book">
-                  <div class="card">
-                      <div class="card-body text-center">
-                          <h3>Ana</h3>
-                          <p>
-                              <img class="img-fluid" src="{{product.portada}}" alt="{{product.nombre}}">
-                          </p>
-                          <h4 routerLink="/product/{{product.id}}" class="card-title">{{product.nombre}}</h4>
-                          <p class="card-text">
-                              {{product.descripcion }}
-                          </p>
-                          <div class="container-precio-idioma">
-                              <p class="badge badge-info">
-                                  {{product.cantidad}} pzas disponibles
-                              </p>
-                          </div>
-                          <button class="btn btn-block btn-primary" (click)="alertProduct()">Me interesa</button>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-4" *ngFor="let product of products |  filter:filterPost ">
+                <div class="card_book">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <p>
+                                <img class="img-fluid" src="{{product.portada}}" alt="{{product.nombre}}">
+                            </p>
+                            <h4 routerLink="/product/{{product.id}}" class="card-title">{{product.nombre}}</h4>
+                            <p class="card-text">
+                                {{product.descripcion }}
+                            </p>
+                        </div>
+                        <div class="alineados">
+                            <div class="container-precio-idioma">
+                                <p class="badge badge-info">
+                                    {{product.cantidad}} pzas disponibles
+                                </p>
+                            </div>
+                            <div class="centra">
+                                <p> Por: Ana Pérez</p>
+                            </div>
+                            <button class="btn btn-block" (click)="alertProduct()">Me interesa</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>

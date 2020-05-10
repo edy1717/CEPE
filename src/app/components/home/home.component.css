@@ -1,7 +1,45 @@
-.o-order__search {
-    display: grid;
-    grid-template-columns: 60% 40%;
-    grid-template-rows: 40px 19px;
-    margin-bottom: 68px;
-    width: 100%;
-}
+            .o-order__search {
+                display: grid;
+                grid-template-columns: 60% 40%;
+                grid-template-rows: 40px 19px;
+                margin-bottom: 68px;
+                width: 100%;
+            }
+            
+            .card-book,
+            .card {
+                margin-bottom: 10px;
+                height: 550px;
+                width: auto;
+                background-color: rgba(0, 0, 0, 0.3);
+            }
+            
+            .card-body img {
+                width: auto;
+                height: 165px;
+            }
+            
+            .card-body p,
+            h4 {
+                color: white;
+            }
+            
+            .container-precio-idioma p {
+                margin-left: 32%;
+                background: #743B8F;
+                color: white;
+            }
+            
+            .centra {
+                background: #82E89B;
+                margin-left: 35%;
+                text-align: center;
+                color: black;
+                font-size: 12px;
+                width: 35%;
+            }
+            
+            .alineados button {
+                background: #418215;
+                color: white;
+            }

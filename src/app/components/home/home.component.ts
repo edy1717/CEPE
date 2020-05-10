@@ -26,8 +26,12 @@ export class HomeComponent implements OnInit {
 
   alertProduct(){
     Swal.fire({
-      title: '¿Te interesa?',
-      text: `Para ello descarga la APP`,
+      title: '<strong>Te interesa?</strong>',
+      icon: 'info',
+      html:'Para contactar <b> descarga la aplicación </b>, '+'<br>'+
+      '<a href="https://play.google.com/store/apps?hl=es_MX" ><img src="https://i.pinimg.com/236x/37/18/ff/3718ffe54260f2cb2af297a08b41cc1d.jpg" width="26px" height="26px"></a>'+
+      '<a href="https://www.apple.com/la/ios/app-store/" style="margin-left:12px;"><img src="https://pickaso.com/wp-content/uploads/2016/10/apple-app-store.png" width="26px" height="26px"></a>',
+
 
     });
 
