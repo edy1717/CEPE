@@ -1,8 +1,31 @@
-.color{
+.navbar {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar-nav a {
+    background-color: #418215;
+    color: white;
+}
+
+.navbar-nav a:hover {
+    color: #fcc424;
+}
+
+.iconstore {
+    min-width: 30px;
+    text-align: center;
+    height: 24px;
+    color: #418215
+}
+
+
+/*********/
+
+.color {
     color: #82E89B;
 }
 
-.main-container{
+.main-container {
     margin-top: 5px;
     margin-top: 5px;
     padding: 30px;
@@ -11,19 +34,22 @@
 .main-section {
     border: 1px solid #007bff;
     background: #fff;
-  }
-  .profile-header {
+}
+
+.profile-header {
     background: #007bff;
     height: 150px;
-  }
-  .user-detail {
+}
+
+.user-detail {
     margin: -50px 0 30px 0;
-  }
-  
-  img {
+}
+
+img {
     height: 30px;
     width: 30px;
-  }
-  .user-details h5 {
+}
+
+.user-details h5 {
     margin: 15px 0 5px 0;
-  }
+}

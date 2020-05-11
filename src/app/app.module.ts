@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
-import { HeaderComponent }  from './shared/header/header.component'
+import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { LoginComponent } from './components/user/login/login.component';
 import { ProfileComponent } from './components/user/profile/profile.component';
@@ -32,7 +32,7 @@ import { ListProfilesComponent } from './components/user/list-profiles/list-prof
     HomeComponent,
     NavbarComponent,
     LoginComponent,
-    ProfileComponent, 
+    ProfileComponent,
     NavbarComponent,
     FooterComponent,
     HeaderComponent,
@@ -47,7 +47,7 @@ import { ListProfilesComponent } from './components/user/list-profiles/list-prof
     FormsModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebaseconfig) ,
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
   ],
   providers: [
     AngularFireAuth,

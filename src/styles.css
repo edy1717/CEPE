@@ -1,11 +1,9 @@
-
 .top_header {
     box-shadow: 0 0 5px #d4d4d4;
 }
 
-.wrapper{
-    background: url('https://mobimg.b-cdn.net/pic/v2/gallery/preview/fon-listya-rasteniya-28545.jpg');
+.wrapper {
+    background: url('https://image.freepik.com/foto-gratis/borde-verde-deja-amarillo-copyspace_24972-499.jpg');
     background-attachment: fixed !important;
     background-size: cover;
 }
-
