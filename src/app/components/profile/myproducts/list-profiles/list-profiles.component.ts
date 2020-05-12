@@ -14,27 +14,21 @@ export class ListProfilesComponent implements OnInit {
   dataProfiles;
   dataProducts;
   filterPost = '';
-  
+
   ngOnInit(): void {
     this.getListProfile();
     this.getListProduct();
   }
 
   getListProfile(){
-    
+
     this.dataProfiles = this.dummyService.consultaProfile();
     console.log('us', this.dataProfiles);
   }
 
   getListProduct(){
-    this.dataProducts = this.dummyService.consultaProducts();
-    console.log('producto',this.dataProducts);
-    
+    this.dataProducts = this.dummyService.consultaProducto();
+    console.log('producto', this.dataProducts)
   }
 
-  guardar(){
-
-    
-  }
-  
 }
