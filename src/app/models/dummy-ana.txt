@@ -1,0 +1,418 @@
+{
+      id: 1456,
+      nombre: " Aguacate Criollo",
+      descripcion: "Variedad que crece naturalmente en las zonas altas de México. Se caracteriza por una piel
+                    comestible muy fina y oscura cuando está maduro.",
+      portada: "https://revolucion.news/cienciario.mx/wp-content/uploads/2017/09/AGUACATE-CRIOLLO-FIGURA-1-min.png",
+      cantidad: "20",
+      medida:"Kg"
+    },
+    {
+      id: 4885,
+      nombre: "Tomate de Cascara ",
+      descripcion: "Es una especie fanerógama de la familia Solanaceae. La palabra miltomate procede del náhuatl
+                    milli, milpa, sembrado, y tomatl, tomate.",
+      portada: "https://s3-us-west-1.amazonaws.com/smattcom.com/productos-agricolas/tomatillo/header-tomatillo.png",
+      cantidad: "5",
+      medida:"Kg"
+    },
+    {
+      id: 5566,
+      nombre: " Papaya",
+      descripcion: "Carica papaya es una especie de planta arbustiva del género Carica en la familia Caricaceae.",
+      portada: "https://exoticfruitbox.com/wp-content/uploads/2015/10/papaya-3-Exotic.jpg",
+      cantidad: "3",
+      medida:"Kg"
+    },
+    {
+      id: 0256,
+      nombre: " Chayote",
+      descripcion: "El chayote, es decir el fruto de la Sechium edule, es similar a una pera grande. La tonalidad
+                    de su piel puede variar entre el verde oscuro y el amarillo pálido. ... La pulpa del fruto se
+                    presenta en una coloración blanquecina y en el centro posee una única semilla de forma plana y
+                     lisa, rodeada de una formación fibrosa.",
+      portada: "https://terrafreshfoods.com/blog/es/wp-content/uploads/2015/09/Chayote1-1024x1024.jpg",
+      cantidad: "2",
+      medida:"Kg"
+    },
+    {
+      id: 5887,
+      nombre: " Jicama",
+      descripcion: "La jícama es tubérculo que en México se come generalmente como fruta. Por fuera se parece un poco
+                    en su forma al nabo y está cubierta de una delgada cáscara de color café grisáceo. Por dentro es
+                    blanca y tiene la textura crujiente de una papa cruda o de una pera.",
+      portada: "https://www.aboutespanol.com/thmb/Y77UFlg8A23VTe0Qo6LKu_dRq64=/1885x1414/smart/filters:no_upscale()/jicama-5af32e818e1b6e0036007fcd.jpg",
+      cantidad: "4",
+      medida:"Kg"
+    },
+    {
+      id: 3555,
+      nombre: " Chile Habanero",
+      descripcion: "Es el único chile perteneciente a la variedad Capsicum chinense que se utiliza en México. Tiene
+                    textura suave y forma globosa. Mide 4 cm de largo y tres de ancho, y se considera el chile más
+                    picoso utilizado en México.",
+      portada: "https://hablemosdealimentos.com/wp-content/uploads/2018/09/Chile-Habanero-2.jpg",
+      cantidad: "8",
+      medida:"Kg"
+    },
+    {
+      id: 5684,
+      nombre: " Calabaza",
+      descripcion: "Se denomina calabaza a la calabacera (una planta que pertenece a la familia de las cucurbitáceas)
+                    y a su fruto (que es comestible y puede tener diferentes dimensiones, formas y colores).",
+      portada: "https://4.bp.blogspot.com/-ZkBiFouZYtI/WLAbmcL0OzI/AAAAAAAAMkc/FsGshqpP3LUTe3xzzuyq091whI6t94SuACLcB/s1600/CALABAZA.jpg",
+      cantidad: "15",
+      medida:"Kg"
+    },
+    {
+      id: 6228,
+      nombre: " Maíz",
+      descripcion: "El maíz es uno de los cereales más abundantes y populares en el mundo, y asimismo de los más
+                    consumidos.El maíz o Zea mays de acuerdo a su nombre científico es una planta gramínea, lo cual
+                    significa que tiene un tallo cilíndrico y hojas largas y gruesas, su altura oscila entre el
+                    metro y los tres de alto.",
+      portada: "https://www.caracteristicas.co/wp-content/uploads/2018/10/maiz-2-1-e1581908276964.jpg",
+      cantidad: "20",
+      medida:"Kg"
+    },
+    {
+      id: 8995,
+      nombre: " Nopal",
+      descripcion: "El nopal es una planta suculenta que mide de media entre 1,5 y 3 metros de altura.
+                    Los tallos (cladodios o “palas”) son aplanados y de color verde grisáceo.",
+      portada: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSDUI76xpzb6IE4aGQhn3P2WL4WTzyqBZqi7X8Dx9s6csbElVSX&usqp=CAUg",
+      cantidad: "3",
+      medida:"Kg"
+    },
+    {
+      id: 8546,
+      nombre: " Espinaca",
+      descripcion: "La espinaca pertenece a la familia Chenopodiaceae y la especie Spinacea oleracea.
+                    Esta planta, en una primera fase forma una roseta de hojas de la que posteriormente emite
+                    el tallo.",
+      portada: "https://lh3.googleusercontent.com/proxy/V1tjw1eVDm16--sK6BqpQTz6sJjvnv9511RQOxE88QHnQNyY0BsKoiYuQqJUIPDFHARTAbGDIryxzkcZ4jNqjpYj6f4Qbx0Y3gZB6tYbBh3wsBXkXHI3",
+      cantidad: "8",
+      medida:"Kg"
+    },
+    {
+      id: 6897,
+      nombre: " Setas Comestibles",
+      descripcion: "Las setas u hongos comestibles incluyen muchos tipos de hongos o setas que son recolectados,
+                    cultivados y otros que no son cultivados fácilmente, y que son muy apreciados en la gastronomía.",
+      portada: "https://t2.uc.ltmcdn.com/images/8/2/0/img_cuales_son_las_setas_comestibles_mas_comunes_en_espana_20028_600_square.jpg",
+      cantidad: "7",
+      medida:"Kg"
+    },
+    {
+      id: 7458,
+      nombre: " Chicharo",
+      descripcion: "El chícharo, guisante, arveja o arbeyu, entre otros nombres, es como se conoce a las semillas de la
+                    planta Pisum sativum, denominada generalmente con los mismos nombres coloquiales. Los chícharos son
+                    alimentos muy populares y apreciados por su valor nutricional.",
+      portada: "https://elpoderdelconsumidor.org/wp-content/uploads/2016/10/chicharos.jpg",
+      cantidad: "10",
+      medida:"Kg"
+    },
+    {
+      id: 5423,
+      nombre: " Durazno",
+      descripcion: "Su fruto, el melocotón o durazno, contiene una única semilla encerrada en una cáscara dura, el «hueso». Esta fruta, normalmente de
+                    piel aterciopelada, posee una carne amarilla o blanquecina de sabor dulce y aroma delicado.",
+      portada: "https://www.bioenciclopedia.com/wp-content/uploads/2016/06/duraznos_caracteristicas.jpg",
+      cantidad: "5",
+      medida:"Kg"
+    },
+    {
+      id: 4956,
+      nombre: " Granada",
+      descripcion: "El granado o granada (Punica granatum) es un arbusto frutal caducifolio que puede alcanzar de
+                    5 a 8 m de altura y cuyo fruto es la granada.",
+      portada: "https://i.pinimg.com/originals/9c/b2/87/9cb2878dc907fe48853557208505669e.jpg",
+      cantidad: "5",
+      medida:"Kg"
+    },
+    {
+      id: 7469,
+      nombre: " Guayaba ",
+      descripcion: "El guayabo, y su fruto, la guayaba (palabra de origen arahuaca, siendo su nombre científico Psidium guajava), es una especie de pequeño árbol perteneciente a la familia de las mirtáceas. Es un arbusto o
+                    árbol pequeño natural de América tropical que se ha asilvestrado en otras zonas tropicales del
+                    planeta.",
+      portada: "https://www.ecured.cu/images/6/6a/Guayaba_psidiun.jpeg",
+      cantidad: "12",
+      medida:"Kg"
+    },
+    {
+      id: 1579,
+      nombre: " Higo",
+      descripcion: "El higo, es por tanto, una fruta blanda y de piel fina cuyo color varía de verde a morado mientras
+                    que la pulpa puede ser encarnada o blanca.",
+      portada: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQy6Cml_qiCc7YCRYwsxRvvV6oG5ELWMql1KogRNxf56tY-DCHA&usqp=CAU",
+      cantidad: "12",
+      medida:"Kg"
+    },
+    {
+      id: 1476,
+      nombre: " Limón Persa  ",
+      descripcion: "El limón persa se considera como un híbrido desarrollado entre Citrus
+                    aurantifolia y algún otro Citrus sp. Se desarrolla en áreas tropicales
+                    y subtropicales.",
+      portada: "https://www.justtrademex.com/wp-content/uploads/2015/07/LIMON-PERSA.jpg",
+      cantidad: "7",
+      medida:"Kg"
+    },
+    {
+      id: 2785,
+      nombre: " Mango ",
+      descripcion: El mango de la especie Mangifera indica es una fruta jugosa (más especificamente una drupa) y tiene
+                    numerosas variedades con formas, colores, texturas y sabores muy variables. Es redondo a oblongo y
+                    puede tener pesos de menos de 50 g a más de 2 kg. Consta de una cáscara, una pulpa comestible
+                    (el mesocarpio) y un endocarpio duro que contiene una semilla.",
+      portada: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Mango_and_cross_section_edit.jpg/1024px-Mango_and_cross_section_edit.jpg",
+      cantidad: "12",
+      medida:"Kg"
+    },
+    {
+      id: 1439,
+      nombre: " Naranja ",
+      descripcion: "La naranja es la fruta cítrica del naranjo (Citrus aurantium), con dos subespecies principales:
+                    el naranjo dulce (subespecie Sinensis) y agrio (subespecie Amara). Se la denomina cítrica por su
+                    contenido en ácido cítrico, que le confiere el sabor amargo.",
+      portada: "https://ae01.alicdn.com/kf/HTB1qN3FgxSYBuNjSspjq6x73VXaS/1-pieza-decoraci-n-artificial-fruta-naranja-frutas-falso-ayuda-cognitiva-ense-anza-fruta-EVA-pl.jpg_960x960.jpg",
+      cantidad: "20",
+      medida:"Kg"
+    },
+    {
+      id: 0897,
+      nombre: " Piña ",
+      descripcion: "La piña tropical o piña americana (Ananas comosus) es la fruta obtenida de la planta que recibe
+                    el mismo nombre. Su forma es ovalada y gruesa, con aproximadamente 30 cm de largo y 15 cm de
+                    diámetro. ",
+      portada: "https://www.bioenciclopedia.com/wp-content/uploads/2016/07/pinas.jpg",
+      cantidad: "7",
+      medida:"Kg"
+    },
+
+{
+      id: 7735,
+      nombre: " Platano ",
+      descripcion: "El plátano o banano es una fruta amarilla, de forma alargada, que encontramos en el mercado en
+                    grupos de tres a veinte, de forma similar a un pepino triangular, oblongo y normalmente de color
+                    amarillo.El plátano es rico en fibra, potasio y algunas vitaminas beneficiosas para la salud.",
+      portada: "https://www.definicionabc.com/wp-content/uploads/2013/12/Pl%C3%A1tano-450x299.jpg",
+      cantidad: "7",
+      medida:"Kg"
+    },
+
+{
+      id: 1849,
+      nombre: " Sandía ",
+      descripcion: "La sandía es un fruto grande y de forma más o menos esférica que suele consumirse cruda como postre.
+                    Su pulpa es de color rojizo o amarillento y de sabor dulce. Resulta un alimento muy refrescante
+                    que aporta muy pocas calorías al organismo, también aporta algunas vitaminas y minerales.",
+      portada: "https://www.bioenciclopedia.com/wp-content/uploads/2016/07/sandia_rebanada.jpg",
+      cantidad: "10",
+      medida:"Kg"
+    },
+
+{
+      id: 0745,
+      nombre: " Cebolla Morada ",
+      descripcion: "La variedad morada es un tipo de cebolla con la piel roja púrpura y la carne blanca con matices rojizos.
+                    Tiende a ser de tamaño medio con sabor dulce y suave y se consume cruda, asada o levemente cocinada.",
+      portada: "https://www.jericoo.com/2772-large_default/cebolla-morada-100gr.jpg",
+      cantidad: "7",
+      medida:"Kg"
+    },
+
+{
+      id: 5219,
+      nombre: " Fresa ",
+      descripcion: "Una fresa o frutilla es una planta perenne de la familia de las Rosáceas, cuyo fruto es comestible.
+                    La planta presenta tallos rastreros, con estolones, hojas vellosas y flores blancas o amarillentas.",
+      portada: "https://definicion.de/wp-content/uploads/2009/06/fresa.jpg",
+      cantidad: "7",
+      medida:"Kg"
+    },
+
+{
+      id: 0873,
+      nombre: " Melón ",
+      descripcion: "El melón es una fruta globosa, redonda o alargada, de 20 a 30cm de largo y hasta 2kg de peso. La corteza surcada o
+                    reticulada puede ser de color amarillo claro, verde o combinaciones de ambos según la variedad,
+                    la pulpa es aromática, jugosa y dulce, puede ser blanca o blanca verdosa, amarilla y anaranjada.",
+      portada: "https://www.flores.ninja/wp-content/uploads/2017/01/El-mel%C3%B3n.jpg",
+      cantidad: "18",
+      medida:"Kg"
+    },
+
+    {
+      id: 9531,
+      nombre: " Mandarina ",
+      descripcion: "La mandarina es el fruto de un árbol, el mandarino, de la familia de las rutáceas (género Citrus), algo más pequeño que el naranjo. Los frutos (hespérides), de tamaño menor que la naranja,
+                    están distribuidos en gajos y tienen una pulpa formada por vesículas llenas de jugo muy aromático.",
+      portada: "https://www.ecured.cu/images/thumb/f/f2/Mandara.jpg/260px-Mandara.jpg",
+      cantidad: "4",
+      medida:"Kg"
+    },
+    {
+      id: 0586,
+      nombre: " Tejocote ",
+      descripcion: "Tejocote (Crataegus pubescens)
+                    La pulpa es carnosa, dura, color anaranjado amarillento y de sabor un poco ácido. Se cultiva desde
+                    San Luis Potosí hasta Jalisco y desde Veracruz hasta Chiapas, por lo regular en huertos familiares o a las orillas de los terrenos de cultivo.",
+      portada: "https://laroussecocina.mx/wp-content/uploads/2018/01/Tejocote.jpg",
+      cantidad: "11",
+      medida:"Kg"
+    },
+    {
+      id: 9638,
+      nombre: " Tamarindo ",
+      descripcion: "Tamarindus indica (tamarindo) es un árbol tropical y la única especie del género Tamarindus, perteneciente a las Fabaceae
+                   (Leguminosae), subfamilia Caesalpinioideae, de frutos comestibles muy apreciados en diversos países.",
+      portada: "https://kanankab.files.wordpress.com/2016/10/tamarindo-diabetes.jpg",
+      cantidad: "6",
+      medida:"Kg"
+    },
+    {
+      id: 7068,
+      nombre: " Lima ",
+      descripcion: "La lima es una fruta exótica y fuertemente aromática perteneciente a la familia de los cítricos.
+                    Es el fruto del limero (Citrus aurantifolia). Existen muchas variedades de lima pero
+                    generalmente son de pequeño tamaño, color verde o amarillo. Su sabor es entre
+                    ácido y dulce, según la variedad, a veces es amargo.",
+      portada: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Lime_Blossom.jpg/220px-Lime_Blossom.jpg",
+      cantidad: "12",
+      medida:"Kg"
+    },
+    {
+      id: 1763,
+      nombre: " Mamey ",
+      descripcion: "El mamey es una fruta nativa del continente americano y específicamente de las Antillas. Científicamente se le conoce como: “Mammea
+                    americana L” y pertenece al grupo de las Clusiaceae, conocidas por ser
+                    arbustos que da frutos de forma alargada.",
+      portada: "https://www.monografias.com/trabajos89/ficha-tecnica-del-mamey/image001.jpg",
+      cantidad: "2",
+      medida:"Kg"
+    },
+    {
+      id: 3750,
+      nombre: " Toronja ",
+      descripcion: "La toronja pertenece a la familia de los cítricos. Híbrido entre la naranja dulce y el pomelo, ahora es una planta autónoma desde siglos. La toronja está cubierta
+                    por una cáscara lisa que puede ser amarilla o rosada y de la pulpa interna se extrae
+                    un jugo ligeramente acidulado.",
+      portada: "https://www.justtrademex.com/wp-content/uploads/2015/07/TORONJA-ROJA.jpg",
+      cantidad: "4",
+      medida:"Kg"
+    },
+    {
+      id: 5091,
+      nombre: " Ciruela ",
+      descripcion: "La ciruela es la fruta del ciruelo, nombre común de varias especies arbóreas pertenecientes al subgénero Prunus.
+                    La ciruela es una drupa, es decir, un fruto carnoso con una única semilla rodeada de un endocarpo leñoso.",
+      portada: "https://http2.mlstatic.com/frutal-ciruela-cereza-enano-importante-ver-descripcion-D_NQ_NP_737707-MLM31229314672_062019-F.jpg",
+      cantidad: "5",
+      medida:"Kg"
+    },
+    {
+      id: 2509,
+      nombre: " Chabacano ",
+      descripcion: "El chabacano es una fruta de un árbol generalmente pequeño llamado albaricoquero y se consume bajo
+                    de diversas formas, fresco, seco, en compota, en mermelada, en tartas, en jarabe pero también en
+                    acompañamiento de platos salados, como el lomo de conejo a los albaricoques secos.",
+      portada: "https://http2.mlstatic.com/arbol-de-chabacano-frutal-enano-para-maceta-ver-descripcion-D_NQ_NP_756656-MLM31368412723_072019-F.jpg",
+      cantidad: "5",
+      medida:"Kg"
+    },/////
+    {
+      id: 7469,
+      nombre: " Guayaba ",
+      descripcion: "El guayabo, y su fruto, la guayaba (palabra de origen arahuaca, siendo su nombre científico Psidium guajava), es una especie de pequeño árbol perteneciente a la familia de las mirtáceas. Es un arbusto o
+                    árbol pequeño natural de América tropical que se ha asilvestrado en otras zonas tropicales del
+                    planeta.",
+      portada: "https://www.ecured.cu/images/6/6a/Guayaba_psidiun.jpeg",
+      cantidad: "12",
+      medida:"Kg"
+    },
+    {
+      id: 7469,
+      nombre: " Guayaba ",
+      descripcion: "El guayabo, y su fruto, la guayaba (palabra de origen arahuaca, siendo su nombre científico Psidium guajava), es una especie de pequeño árbol perteneciente a la familia de las mirtáceas. Es un arbusto o
+                    árbol pequeño natural de América tropical que se ha asilvestrado en otras zonas tropicales del
+                    planeta.",
+      portada: "https://www.ecured.cu/images/6/6a/Guayaba_psidiun.jpeg",
+      cantidad: "12",
+      medida:"Kg"
+    },
+    {
+      id: 7469,
+      nombre: " Guayaba ",
+      descripcion: "El guayabo, y su fruto, la guayaba (palabra de origen arahuaca, siendo su nombre científico Psidium guajava), es una especie de pequeño árbol perteneciente a la familia de las mirtáceas. Es un arbusto o
+                    árbol pequeño natural de América tropical que se ha asilvestrado en otras zonas tropicales del
+                    planeta.",
+      portada: "https://www.ecured.cu/images/6/6a/Guayaba_psidiun.jpeg",
+      cantidad: "12",
+      medida:"Kg"
+    },
+    {
+      id: 7469,
+      nombre: " Guayaba ",
+      descripcion: "El guayabo, y su fruto, la guayaba (palabra de origen arahuaca, siendo su nombre científico Psidium guajava), es una especie de pequeño árbol perteneciente a la familia de las mirtáceas. Es un arbusto o
+                    árbol pequeño natural de América tropical que se ha asilvestrado en otras zonas tropicales del
+                    planeta.",
+      portada: "https://www.ecured.cu/images/6/6a/Guayaba_psidiun.jpeg",
+      cantidad: "12",
+      medida:"Kg"
+    },
+    {
+      id: 7469,
+      nombre: " Guayaba ",
+      descripcion: "El guayabo, y su fruto, la guayaba (palabra de origen arahuaca, siendo su nombre científico Psidium guajava), es una especie de pequeño árbol perteneciente a la familia de las mirtáceas. Es un arbusto o
+                    árbol pequeño natural de América tropical que se ha asilvestrado en otras zonas tropicales del
+                    planeta.",
+      portada: "https://www.ecured.cu/images/6/6a/Guayaba_psidiun.jpeg",
+      cantidad: "12",
+      medida:"Kg"
+    },
+    {
+      id: 7469,
+      nombre: " Guayaba ",
+      descripcion: "El guayabo, y su fruto, la guayaba (palabra de origen arahuaca, siendo su nombre científico Psidium guajava), es una especie de pequeño árbol perteneciente a la familia de las mirtáceas. Es un arbusto o
+                    árbol pequeño natural de América tropical que se ha asilvestrado en otras zonas tropicales del
+                    planeta.",
+      portada: "https://www.ecured.cu/images/6/6a/Guayaba_psidiun.jpeg",
+      cantidad: "12",
+      medida:"Kg"
+    },
+    {
+      id: 7469,
+      nombre: " Guayaba ",
+      descripcion: "El guayabo, y su fruto, la guayaba (palabra de origen arahuaca, siendo su nombre científico Psidium guajava), es una especie de pequeño árbol perteneciente a la familia de las mirtáceas. Es un arbusto o
+                    árbol pequeño natural de América tropical que se ha asilvestrado en otras zonas tropicales del
+                    planeta.",
+      portada: "https://www.ecured.cu/images/6/6a/Guayaba_psidiun.jpeg",
+      cantidad: "12",
+      medida:"Kg"
+    },
+    {
+      id: 7469,
+      nombre: " Guayaba ",
+      descripcion: "El guayabo, y su fruto, la guayaba (palabra de origen arahuaca, siendo su nombre científico Psidium guajava), es una especie de pequeño árbol perteneciente a la familia de las mirtáceas. Es un arbusto o
+                    árbol pequeño natural de América tropical que se ha asilvestrado en otras zonas tropicales del
+                    planeta.",
+      portada: "https://www.ecured.cu/images/6/6a/Guayaba_psidiun.jpeg",
+      cantidad: "12",
+      medida:"Kg"
+    },
+    {
+      id: 7469,
+      nombre: " Guayaba ",
+      descripcion: "El guayabo, y su fruto, la guayaba (palabra de origen arahuaca, siendo su nombre científico Psidium guajava), es una especie de pequeño árbol perteneciente a la familia de las mirtáceas. Es un arbusto o
+                    árbol pequeño natural de América tropical que se ha asilvestrado en otras zonas tropicales del
+                    planeta.",
+      portada: "https://www.ecured.cu/images/6/6a/Guayaba_psidiun.jpeg",
+      cantidad: "12",
+      medida:"Kg"
+    },
+
+
+
