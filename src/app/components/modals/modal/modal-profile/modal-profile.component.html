@@ -1,0 +1,49 @@
+<div class="modal fade" id="modalProfile" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">
+            {{   'Actualizar Cliente'  }}
+          </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form name="formProduct" #formProduct="ngForm">
+            <input type="hidden" name="id">
+            <div class="form-group">
+              <label for="nombre" class="col-form-label">Nombre:</label>
+              <input type="text" class="form-control" name="nombre">
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="correo">Correo</label>
+                <input type="text" name="correo" class="form-control" placeholder="correo">
+              </div>
+              <div class="form-group col-md-6" >
+                <label for="phone">Telefono</label>
+                <input type="text" name="phone" class="form-control" placeholder="Telefono" >
+              </div> 
+            </div>
+            <!-- <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="link">Link</label>
+                <input type="text" name="link" class="form-control" placeholder="Link" [(ngModel)]="this.dataApi.selectedProduct.link" >
+              </div>
+            </div> -->
+            <div class="form-group">
+              <label for="direccion" class="col-form-label">Dirección:</label>
+              <textarea class="form-control" name="direccion"></textarea>
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" #btnClose data-dismiss="modal">Cerrar</button>
+              <button type="submit" class="btn btn-primary">Guardar cambios</button>
+            </div>
+          </form>
+        </div>
+ 
+      </div>
+    </div>
+  </div>
