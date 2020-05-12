@@ -1,5 +1,5 @@
 export interface Profiles {
-    id: number,
+    idProfile: number,
     nombre: string,
     email: string,
     phone: string,

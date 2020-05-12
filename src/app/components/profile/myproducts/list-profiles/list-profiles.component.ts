@@ -12,15 +12,22 @@ export class ListProfilesComponent implements OnInit {
   constructor( private dummyService:DummyService) { }
 
   dataProfiles;
+  dataProducts;
   filterPost = '';
   
   ngOnInit(): void {
     this.getListProfile();
+    this.getListProduct();
   }
 
   getListProfile(){
     this.dataProfiles = this.dummyService.consultaProfile();
       console.log('us', this.dataProfiles);
+  }
+
+  getListProduct(){
+    this.dataProducts = this.dummyService.consultaProducto();
+    console.log('producto', this.dataProducts)
   }
 
 }
