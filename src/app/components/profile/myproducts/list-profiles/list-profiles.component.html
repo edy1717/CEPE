@@ -7,7 +7,7 @@
                 <div class="col-12">
                     <div class="form-group">
                         <div class="search-box float-right mb-3 ">
-                                <input type="text" class="search-text" name="filterPost" placeholder="Buscar">
+                            <input type="text" class="search-text" name="filterPost" placeholder="Buscar" [(ngModel)]="filterPost">
                                 <a  class="search-btn">
                                     <i class="fas fa-search"></i>
                                 </a>
@@ -18,22 +18,25 @@
             <table class="table ">
                 <thead>
                     <tr>
-                        <th scope="col"> #</th>
+                        <th scope="col"> Id</th>
                         <th scope="col"> Nombre </th>
                         <th scope="col"> Correo </th>
+                        <th scope="col"> Direccion </th>
                         <th scope="col"> Telefono </th>
                         <th scope="col"> &nbsp; </th>
+
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row">  </th>
-                        <td> Edwin </td>
-                        <td> ing.ed.mtz.leon@gmail.com </td>
-                        <td> 1234567890</td>
+                    <tr *ngFor="let profil of dataProfiles | filterProfile:filterPost">
+                        <th scope="row"> {{profil.id}} </th>
+                        <td> {{profil.nombre}} </td>
+                        <td> {{profil.email}} </td>
+                        <td> {{profil.direccion}} </td>
+                        <td> {{profil.phone}} </td>
                         <td>
                             <button class="btn" 
-                                    data-toggle="modal" data-target="#modalProducts" placeholder="update">
+                                    data-toggle="modal" data-target="#modalProfile" placeholder="update">
                                 <i class="fas fa-sync"></i></button>
                             <!-- BOTON DE ELIMINAR -->
                             <button class="btn " placeholder="delete">
@@ -52,4 +55,4 @@
     </section>
  </div>  
 
-<app-modal></app-modal>
+<app-modal-profile></app-modal-profile>

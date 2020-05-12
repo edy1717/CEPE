@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './components/user/login/login.component';
-import { ProfileComponent } from './components/user/profile/profile.component';
+import { ProfileComponent } from './components/profile/myproducts/profile/profile.component';
 import { HomeComponent } from './components/home/home.component';
 import { ListProductsComponent } from './components/list-products/list-products.component';
-import { ListProfilesComponent } from './components/user/list-profiles/list-profiles.component';
+import { ListProfilesComponent } from './components/profile/myproducts/list-profiles/list-profiles.component';
 import { AuthGuard } from './guards/auth.guard';
 
 

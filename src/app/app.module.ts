@@ -7,7 +7,7 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { LoginComponent } from './components/user/login/login.component';
-import { ProfileComponent } from './components/user/profile/profile.component';
+import { ProfileComponent } from './components/profile/myproducts/profile/profile.component';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
@@ -19,9 +19,12 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { ListProductsComponent } from './components/list-products/list-products.component';
-import { ModalComponent } from './components/modal/modal.component';
 import { FilterPipe } from './shared/pipes/filter.pipe';
-import { ListProfilesComponent } from './components/user/list-profiles/list-profiles.component'
+import { ListProfilesComponent } from './components/profile/myproducts/list-profiles/list-profiles.component';
+import { FilterProfilePipe } from './shared/pipes/filter-profile.pipe';
+import { MyproductsComponent } from './components/profile/myproducts/myproducts.component';
+import { ModalProfileComponent } from './components/modals/modal/modal-profile/modal-profile.component'
+import { ModalComponent } from './components/modals/modal/modal.component';
 
 
 
@@ -39,7 +42,10 @@ import { ListProfilesComponent } from './components/user/list-profiles/list-prof
     ListProductsComponent,
     ModalComponent,
     FilterPipe,
-    ListProfilesComponent
+    ListProfilesComponent,
+    FilterProfilePipe,
+    MyproductsComponent,
+    ModalProfileComponent
   ],
   imports: [
     BrowserModule,
