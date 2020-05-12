@@ -29,7 +29,7 @@ export class DataApiService {
     .pipe (map ( changes => {
       return changes.map( action => {
         const data = action.payload.doc.data() as ProductInterface;
-        data.id = action.payload.doc.id;
+        data.id= action.payload.doc.id;
         return data;
       })
     }))

@@ -4,4 +4,6 @@ export interface ProductInterface {
     descripcion?: string;
     portada?: string;
     cantidad?: string;
+    medida?:string;
+
 }
