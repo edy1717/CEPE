@@ -30,7 +30,6 @@ export class HomeComponent implements OnInit {
 
   getListProduct(){
     this.dataProducts = this.dummyService.consultaProducto();
-    console.log('producto', this.dataProducts)
   }
 
   alertProduct(){

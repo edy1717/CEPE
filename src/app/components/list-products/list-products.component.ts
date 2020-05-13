@@ -49,7 +49,6 @@ export class ListProductsComponent implements OnInit {
   }
 
   onPreUpdateProduct(product: ProductInterface) {
-    console.log('Productos', product);
     this.dataApi.selectedProduct = Object.assign({}, product);
   }
 
