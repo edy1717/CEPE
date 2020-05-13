@@ -41,10 +41,10 @@ export class ListProductsComponent implements OnInit {
       this.dataApi.deleteProduct(idProduct);
     }
   }
-  onDeleteProducts(indice : string):void{
+  onDeleteProducts(i : string):void{
     const confirmacion = confirm('Estas seguro de eliminar el producto');
     if(confirmacion){
-    this.dataProducts.splice(indice, 1)
+    this.dataProducts.splice(i, 1)
     }
   }
 
