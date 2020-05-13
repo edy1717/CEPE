@@ -3,6 +3,7 @@ import { DataApiService } from '../../services/data-api.service';
 import Swal from 'sweetalert2';
 import { Button } from 'protractor';
 import { reduce } from 'rxjs/operators';
+import { DummyService } from '../../services/dummy.service';
 
 @Component({
   selector: 'app-home',
@@ -11,18 +12,24 @@ import { reduce } from 'rxjs/operators';
 })
 export class HomeComponent implements OnInit {
 
-  constructor( private dataApi: DataApiService ) { }
+  constructor( private dataApi: DataApiService, private dummyService: DummyService ) { }
 
   filterPost = '';
   public products = [];
   public product = '';
+  dataProducts;
 
   ngOnInit(): void {
     this.dataApi.getAllProducts().subscribe(products => {
       console.log('Producto', products);
       this.products = products;
     });
+    this.getListProduct();
 
+  }
+
+  getListProduct(){
+    this.dataProducts = this.dummyService.consultaProducto();
   }
 
   alertProduct(){

@@ -35,6 +35,9 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" class="nav-link" routerLink="/admin/list-products">Mis productos</a>
                         <a class="dropdown-item" href="#" class="nav-link" (click)="onLogout()">Cerrar sesión</a>
+                        <li class="nav-item" *ngIf="isLogged">
+                            <a class="nav-link" routerLink="/user/profile">Mi Perfil</a>
+                        </li>                    
                     </div>
                 </li>
             </ul>
