@@ -6,6 +6,7 @@ import { HomeComponent } from './components/home/home.component';
 import { ListProductsComponent } from './components/list-products/list-products.component';
 import { ListProfilesComponent } from './components/profile/myproducts/list-profiles/list-profiles.component';
 import { AuthGuard } from './guards/auth.guard';
+import { MyproductsComponent } from './components/profile/myproducts/myproducts.component';
 
 
 const routes: Routes = [
@@ -13,7 +14,8 @@ const routes: Routes = [
   { path : 'user/login' , component : LoginComponent },
   { path : 'user/profile' ,  component : ProfileComponent },
   { path : 'admin/list-products', component : ListProductsComponent },
-  { path : 'admin/list-profiles', component :ListProfilesComponent },
+  { path : 'admin/list-profiles', component : ListProfilesComponent },
+  { path : 'admin/user-products', component : MyproductsComponent },
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
   { path : '***',  component : HomeComponent }
 
