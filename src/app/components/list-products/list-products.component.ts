@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DataApiService } from '../../services/data-api.service';
 import { ProductInterface } from '../../models/products';
 import { NgForm } from '@angular/forms';
+import { DummyService } from '../../services/dummy.service';
 
 @Component({
   selector: 'app-list-products',
@@ -10,27 +11,40 @@ import { NgForm } from '@angular/forms';
 })
 export class ListProductsComponent implements OnInit {
 
-  constructor( private dataApi: DataApiService ) { }
+  constructor( private dataApi: DataApiService, private dummyService : DummyService ) { }
 
   filterPost = '';
+  dataProducts;
 
   public products : ProductInterface[];
 
   ngOnInit(): void {
-    this.getListProducts();
+    // this.getListProducts();
+    this.getListProduct();
   }
 
-  getListProducts(){
-    this.dataApi.getAllProducts()
-    .subscribe(products => {
-      this.products = products;
-    });
+  getListProduct(){
+    this.dataProducts = this.dummyService.consultaProducto();
+    console.log('producto', this.dataProducts)
   }
+
+  // getListProducts(){
+  //   this.dataApi.getAllProducts()
+  //   .subscribe(products => {
+  //     this.products = products;
+  //   });
+  // }
 
   onDeleteProduct(idProduct: string):void{
     const confirmacion = confirm('Estas seguro de eliminar el producto');
     if(confirmacion){
       this.dataApi.deleteProduct(idProduct);
+    }
+  }
+  onDeleteProducts(indice : string):void{
+    const confirmacion = confirm('Estas seguro de eliminar el producto');
+    if(confirmacion){
+    this.dataProducts.splice(indice, 1)
     }
   }
 

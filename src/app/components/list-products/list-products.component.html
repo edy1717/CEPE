@@ -24,23 +24,25 @@
                         <th scope="col"> Descripción </th>
                         <th scope="col"> Portada </th>
                         <th scope="col"> Cantidad </th>
+                        <th scope="col"> Medida </th>
                         <th scope="col"> &nbsp; </th>
                         <th scope="col"> &nbsp; </th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor=" let product of products  | filter:filterPost  ; index as i">
+                    <tr *ngFor=" let product of dataProducts  | filter:filterPost  ; index as i">
                         <th scope="row"> {{i+1}} </th>
                         <td> {{product.nombre}} </td>
                         <td> {{product.descripcion}} </td>
                         <td> IMAGEN</td>
                         <td> {{product.cantidad}} </td>
+                        <td> {{product.medida}} </td>
                         <td>
                             <button class="btn btn-primary" data-toggle="modal" data-target="#modalProducts"
                                     (click)="onPreUpdateProduct(product)"  >Actualizar</button>
                         </td>
                         <td>
-                            <button class="btn btn-danger" (click)="onDeleteProduct(product.id)" >Eliminar</button> 
+                            <button class="btn btn-danger" (click)="onDeleteProducts(indice)" >Eliminar</button> 
                         </td>
                     </tr>
                 </tbody>
