@@ -1,1 +1,55 @@
-<p>myproducts works!</p>
+<div class="main-container">
+    <section class="main-container">
+        <div class="table-responsive">
+            <div *ngFor=" let myproduct of dataMyProducts">
+                <h2>Por: {{myproduct.profil.idProfile}}, nombre, correo de usuario</h2>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-group">
+                        <div class="search-box float-left mb-6">
+                            <input type="text" class="search-text" name="filterPost" placeholder="Buscar">
+                            <a class="search-btn">
+                                <i class="fas fa-search"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <br>
+            <table class="table ">
+                <thead>
+                    <tr>
+                        <th scope="col"> #</th>
+                        <th scope="col"> Nombre </th>
+                        <th scope="col"> Descripcion </th>
+                        <th scope="col"> Portada </th>
+                        <th scope="col"> Cantidad </th>
+                        <th scope="col"> Medida </th>
+                        <th scope="col"> &nbsp; </th>
+                        <th scope="col"> &nbsp; </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor=" let myproduct of dataMyProducts | filter:filterPost  ; index as i">
+                        <th scope="row "> {{i+1}} </th>
+                        <td>{{myproduct.nombre}} </td>
+                        <td>{{myproduct.descripcion}} </td>
+                        <td></td>
+                        <td>{{myproduct.cantidad}} </td>
+                        <td>{{myproduct.medida}}</td>
+
+                        <td>
+                            <button class="btn btn-primary " data-toggle="modal " data-target="#modalProducts ">Actualizar</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-danger ">Eliminar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</div>
+<app-modal></app-modal>
