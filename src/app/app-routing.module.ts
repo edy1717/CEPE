@@ -5,7 +5,6 @@ import { ProfileComponent } from './components/profile/myproducts/profile/profil
 import { HomeComponent } from './components/home/home.component';
 import { ListProductsComponent } from './components/list-products/list-products.component';
 import { ListProfilesComponent } from './components/profile/myproducts/list-profiles/list-profiles.component';
-import { MyproductsComponent } from './components/profile/myproducts/myproducts.component';
 import { AuthGuard } from './guards/auth.guard';
 import { MyproductsComponent } from './components/profile/myproducts/myproducts.component';
 
@@ -16,7 +15,7 @@ const routes: Routes = [
   { path : 'user/profile' ,  component : ProfileComponent , canActivate: [AuthGuard] },
   { path : 'admin/list-products', component : ListProductsComponent,  canActivate: [AuthGuard]  },
   { path : 'admin/list-profiles', component :ListProfilesComponent,  canActivate: [AuthGuard]  },
-  { path : 'admin/user-products', component : MyproductsComponent, canActivate: [AuthGuard] },
+  { path : 'admin/user-products/:idProfile', component : MyproductsComponent, canActivate: [AuthGuard] },
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
   { path : '***',  component : HomeComponent }
 
