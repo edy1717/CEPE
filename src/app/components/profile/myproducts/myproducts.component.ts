@@ -8,10 +8,14 @@ import { DummyService } from '../../../services/dummy.service';
 })
 export class MyproductsComponent implements OnInit {
 
-  constructor(private dummyService: DummyService ) { }
+  constructor(private dummyService: DummyService ) {
+
+  }
   filterPost = '';
   dataMyProducts;
   public myproducts: ProductProfileInterface [];
+
+
   ngOnInit(): void {
     this.getListProduct();
 
