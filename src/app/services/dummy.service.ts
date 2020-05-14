@@ -3101,12 +3101,9 @@ export class DummyService {
 
   }
 
-  consultaProducts(){
-    return this.products;
-  }
-
   consultaProducto(){
     return this.products;
   }
+
 
 }

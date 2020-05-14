@@ -1,7 +1,9 @@
 <div class="main-container">
     <section class="main-container">
         <div class="table-responsive">
-            <h2>Mis productos</h2>
+            <div *ngFor=" let myproduct of dataMyProducts">
+                <h2>Por: {{myproduct.profil.idProfile}}, nombre, correo de usuario</h2>
+            </div>
             <div class="row">
                 <div class="col-12">
                     <div class="form-group">
@@ -30,13 +32,13 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row "> </th>
-                        <td> </td>
-                        <td> </td>
+                    <tr *ngFor=" let myproduct of dataMyProducts | filter:filterPost  ; index as i">
+                        <th scope="row "> {{i+1}} </th>
+                        <td>{{myproduct.nombre}} </td>
+                        <td>{{myproduct.descripcion}} </td>
                         <td></td>
-                        <td> </td>
-                        <td></td>
+                        <td>{{myproduct.cantidad}} </td>
+                        <td>{{myproduct.medida}}</td>
 
                         <td>
                             <button class="btn btn-primary " data-toggle="modal " data-target="#modalProducts ">Actualizar</button>
