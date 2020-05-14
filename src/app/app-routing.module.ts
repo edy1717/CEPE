@@ -12,16 +12,10 @@ import { MyproductsComponent } from './components/profile/myproducts/myproducts.
 const routes: Routes = [
   { path : 'home', component : HomeComponent , pathMatch: 'full'},
   { path : 'user/login' , component : LoginComponent },
-<<<<<<< HEAD
   { path : 'user/profile' ,  component : ProfileComponent },
   { path : 'admin/list-products', component : ListProductsComponent },
   { path : 'admin/list-profiles', component : ListProfilesComponent },
   { path : 'admin/user-products', component : MyproductsComponent },
-=======
-  { path : 'user/profile' ,  component : ProfileComponent , canActivate: [AuthGuard] },
-  { path : 'admin/list-products', component : ListProductsComponent,  canActivate: [AuthGuard]  },
-  { path : 'admin/list-profiles', component :ListProfilesComponent,  canActivate: [AuthGuard]  },
->>>>>>> master
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
   { path : '***',  component : HomeComponent }
 
