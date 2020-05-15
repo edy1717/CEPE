@@ -7,6 +7,7 @@ import { ListProductsComponent } from './components/list-products/list-products.
 import { ListProfilesComponent } from './components/profile/myproducts/list-profiles/list-profiles.component';
 import { AuthGuard } from './guards/auth.guard';
 import { OffersComponent } from './components/offers/offers.component';
+import { MyproductsComponent } from './component/profile/myproducts/myproducts.component';
 
 
 const routes: Routes = [

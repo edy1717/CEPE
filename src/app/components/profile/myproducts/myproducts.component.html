@@ -32,14 +32,14 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <<<<<<< HEAD <tr *ngFor="let a of misproductos">
+                    <tr *ngFor="let a of myProducts">
                         <th scope="row "></th>
                         <td>{{a.nombre}}</td>
                         <td>{{a.descripcion}} </td>
                         <td>{{a.portada}}</td>
                         <td> {{a.cantidad}}</td>
                         <td>{{a.medida}}</td>
-                        =======
+
                         <tr *ngFor="let myproduct of myProducts | filter:filterPost  ; index as i">
                             <th scope="row "> {{i+1}} </th>
                             <td>{{myproduct.nombre}} </td>
@@ -47,8 +47,6 @@
                             <td></td>
                             <td>{{myproduct.cantidad}} </td>
                             <td>{{myproduct.medida}}</td>
-                            >>>>>>> master
-
                             <td>
                                 <button class="btn btn-primary " data-toggle="modal " data-target="#modalProducts ">Actualizar</button>
                             </td>
