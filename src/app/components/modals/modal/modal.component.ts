@@ -20,7 +20,7 @@ export class ModalComponent implements OnInit {
 
   ngOnInit(): void {
     this.dataApi.getAllProducts().subscribe(products => {
-      console.log('Producto', products);
+     /*  console.log('Producto', products); */
       this.products = products;
     })
   }

@@ -24,7 +24,7 @@ export class ListProfilesComponent implements OnInit {
   getListProfile(){
 
     this.dataProfiles = this.dummyService.consultaProfile();
-    console.log('us', this.dataProfiles);
+
   }
 
   getListProduct(){

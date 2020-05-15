@@ -176,11 +176,11 @@ export class DummyService {
       id: 4885,
       nombre: "Tomate de Cascara ",
       profil : {
-        idProfile : 1,
-        nombre: "Edwin Martinez",
-        email: "edy_ies@systems.com",
-        phone: "00000000",
-        direccion: "San Pedro Xalpa, Col. Azcapotzalco",
+        idProfile : 2,
+      nombre: "Ana María",
+      email: "ana@systems.com",
+      phone: "00000001",
+      direccion: "San Pedro , Col. Barrientos",
       },
       descripcion: "Es una especie fanerógama de la familia Solanaceae. La palabra miltomate procede del náhuat milli, milpa, sembrado, y tomatl, tomate.",
       portada: "https://s3-us-west-1.amazonaws.com/smattcom.com/productos-agricolas/tomatillo/header-tomatillo.png",
@@ -206,11 +206,11 @@ export class DummyService {
      id: 2256,
      nombre: " Chayote",
      profil : {
-      idProfile : 1,
-      nombre: "Edwin Martinez",
-      email: "edy_ies@systems.com",
-      phone: "00000000",
-      direccion: "San Pedro Xalpa, Col. Azcapotzalco",
+      idProfile : 2,
+      nombre: "Ana María",
+      email: "ana@systems.com",
+      phone: "00000001",
+      direccion: "San Pedro , Col. Barrientos",
     },
      descripcion: "El chayote, es decir el fruto de la Sechium edule, es similar a una pera grande. La tonalidad de su piel puede variar entre el verde oscuro y el amarillo pálido. ... La pulpa del fruto sepresenta en una coloración blanquecina y en el centro posee una única semilla de forma plana y lisa, rodeada de una formación fibrosa.",
      portada: "https://terrafreshfoods.com/blog/es/wp-content/uploads/2015/09/Chayote1-1024x1024.jpg",
@@ -3105,5 +3105,14 @@ export class DummyService {
     return this.products;
   }
 
+ productosProfiles( id){
+    let prod = this.products.filter(data=>
+       data.profil.idProfile.toString()===id.toString()
+     );
+    return prod;
 
+   }
 }
+
+
+
