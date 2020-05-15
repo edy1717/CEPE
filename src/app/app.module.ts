@@ -23,9 +23,11 @@ import { FilterPipe } from './shared/pipes/filter.pipe';
 import { ListProfilesComponent } from './components/profile/myproducts/list-profiles/list-profiles.component';
 import { FilterProfilePipe } from './shared/pipes/filter-profile.pipe';
 import { MyproductsComponent } from './components/profile/myproducts/myproducts.component';
-import { ModalProfileComponent } from './components/modals/modal/modal-profile/modal-profile.component'
+import { ModalProfileComponent } from './components/modals/modal-profile/modal-profile.component'
 import { ModalComponent } from './components/modals/modal/modal.component';
 import { OffersComponent } from './components/offers/offers.component';
+import { ModalMyProductsComponent } from './components/modals/modal-my-products/modal-my-products.component';
+import { ModalOffersComponent } from './components/modals/modal-offers/modal-offers.component';
 
 
 
@@ -47,7 +49,9 @@ import { OffersComponent } from './components/offers/offers.component';
     FilterProfilePipe,
     MyproductsComponent,
     ModalProfileComponent,
-    OffersComponent
+    OffersComponent,
+    ModalMyProductsComponent,
+    ModalOffersComponent
   ],
   imports: [
     BrowserModule,
