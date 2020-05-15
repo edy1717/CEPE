@@ -301,7 +301,7 @@ export class DummyService {
         direccion: "San Pedro Xalpa, Col. Azcapotzalco",
       },
     descripcion: "La espinaca pertenece a la familia Chenopodiaceae y la especie Spinacea oleracea.Esta planta, en una primera fase forma una roseta de hojas de la que posteriormente emiteel tallo.",
-    portada: "https://lh3.googleusercontent.com/proxy/V1tjw1eVDm16--sK6BqpQTz6sJjvnv9511RQOxE88QHnQNyY0BsKoiYuQqJUIPDFHARTAbGDIryxzkcZ4jNqjpYj6f4Qbx0Y3gZB6tYbBh3wsBXkXHI3",
+    portada: "https://estaticos.miarevista.es/media/cache/760x570_thumb/uploads/images/gallery/5a4e35b65cafe839a23c9869/ppal-espinacas.jpg",
     cantidad: "8",
     medida:"Kg"
   },
@@ -817,7 +817,7 @@ export class DummyService {
       		direccion: "San  Xalpa, Col. Mejico",
       },
      descripcion: "Fruto verde con lenticelas blancas, características de la variedad, con la pulpa blanca con textura consistente, firme y crujiente. De sabor altamente acidularo es redonda ligeramente alargada y simétrica, con pedúnculo corto.",
-     portada: "https://www.comenaranjas.com/images/stories/virtuemart/product/manzana-granny-smith.jpg",
+     portada: "https://as.com/deporteyvida/imagenes/2017/06/13/portada/1497350755_046425_1497350931_noticia_normal.jpg",
      cantidad: "7",
      medida:"Kg"
    },
@@ -1408,7 +1408,7 @@ export class DummyService {
   },
   {
     id: 9926,
-    nombre: " Cebolla Chalota ",
+    nombre: " Cebolla Chalote ",
     profil : {
       		idProfile: 9,
       		nombre: "Thania Sotelo",
@@ -1417,7 +1417,7 @@ export class DummyService {
       		direccion: "Cto. Circunvalción, Col Satelite",
      },
     descripcion: "Son unos bulbos pequeños y hay distintas variedades siendo la más común la alargada y rosácea en su interior.",
-    portada: "https://www.tuberculos.org/wp-content/uploads/2018/10/chalotas-1200x900.jpg",
+    portada: "https://3inz7fo7irtr3thr14bu4z11y3-wpengine.netdna-ssl.com/wp-content/uploads/Chalotes.-Por-Decoaci%C3%B3n-y-jardines.jpg",
     cantidad: "8",
     medida:"Kg"
   },
@@ -1644,7 +1644,7 @@ export class DummyService {
       		direccion: "Cto. Circunvalción, Col Satelite",
      },
     descripcion: "El arándano es un fruto que crece silvestre en zonas frescas del hemisferio norte. Es una baya globosa de color negro azulado que mide unos 6mm de diámetro. Se consume sobre todo en mermeladas, tartas o como acompañamiento de diversos platos. Es un alimento rico en vitaminas que además aporta pocas calorías al organismo",
-    portada: " https://es.wikipedia.org/wiki/Ar%C3%A1ndano_rojo#/media/Archivo:Cranberries20101210.jpg ",
+    portada: "https://eltorito.net/wp-content/uploads/2019/02/arandano.jpg",
     cantidad: "20",
     medida: "Kilos"
     },
@@ -1659,7 +1659,7 @@ export class DummyService {
       		direccion: "Cto. Circunvalción, Col Satelite",
      },
     descripcion: "La frambuesa es el fruto del frambueso o sangüeso. Esta planta crece silvestre en diversas regiones de Europa, aunque también se cultiva, siendo su cultivo bastante importante. Es una fruta pequeña, cónica o redondeada con una piel aterciopelada de color rojo o amarillento. La pulpa es muy aromática y su sabor es agridulce. Se puede consumir cruda o emplearse para elaborar mermeladas, jaleas y bebidas. También se puede encontrar congelada",
-    portada:" https://st-listas.20minutos.es/images/2014-07/384094/4479374_640px.jpg?1518780769  ",
+    portada:"https://static.diariofemenino.com/media/8083/sonarframbuesas.jpg",
     cantidad: "10",
     medida: "kg"
     },
@@ -1674,7 +1674,7 @@ export class DummyService {
       		direccion: "Cto. Mejiquense, Col Potrero",
      },
     descripcion:" La grosella espinosa o también denominada agrazón o uva espina es una baya que según la especie puede ser blanca, amarilla, roja o verde, con una piel espinosa, vellosa o suave. Las diferentes variedades se diferencian entre sí por la época de maduración, sabor, color, tamaño, forma del fruto y modo de consumo. Predomina el fruto amarillento con piel vellosa, aunque existen también variedades de piel rojiza, verde oscura y verde pálida blancuzca",
-    portada: " https://www.ecured.cu/Grosella_espinosa_india#/media/File:16849194-grosella-espinosa-india-con-vitamina-c.jpg ",
+    portada: "https://hablemosdealimentos.com/wp-content/uploads/2018/07/image_2_large.jpg",
     cantidad: "12",
     medida: "kg"
     },
@@ -1704,7 +1704,7 @@ export class DummyService {
       		direccion: "Cto. Mejiquense, Col Potrero",
      },
     descripcion:" Las grosellas rojas son unas pequeñas frutas redondas de color rojo. Aunque se pueden consumir crudas, su sabor agridulce las hace indicadas para la elaboración de mermeladas, batidos, helados, etc. Son ricas en vitaminas y minerales",
-    portada:" https://www.ecured.cu/Grosella_roja#/media/File:Grosellas_roja.jpg ",
+    portada:"https://www.frutas-hortalizas.com/img/fruites_verdures/presentacio/71.jpg",
     cantidad: "90",
     medida: "kg"
     },
@@ -1719,7 +1719,7 @@ export class DummyService {
       		direccion: "Cto. Mejiquense, Col Potrero",
      },
     descripcion:" La zarzamora es una planta generalmente silvestre de la que se aprovechan sus frutos, unas bayas pequeñas de color negro muy aromáticas y algo ácidas. Se consumen crudas, aunque también se emplean en la elaboración de compotas, macedonias, tartas, etc. Son ricas en vitaminas y minerales. Además, aportan fibra y contienen pocas calorías.",
-    portada:" https://st-listas.20minutos.es/images/2014-07/384094/4479372_640px.jpg?1518780769 ",
+    portada:"https://st-listas.20minutos.es/images/2014-07/384094/4479372_640px.jpg?1518780769",
     cantidad: "7000",
     medida: "kg"
     },
@@ -1734,7 +1734,7 @@ export class DummyService {
       		direccion: "Cto. Mejiquense, Col Potrero",
      },
     descripcion:" El pomelo es una fruta cítrica que pertenece a la familia de las rutáceas y que procede del árbol Citrus paradisi. De unos 15 centímetros de tamaño, está recubierta con una cáscara gruesa y carnosa, amarilla o rosácea. No se conoce su procedencia, pero como en el resto de cítricos, se cree que puede venir de Asia.",
-    portada:" http://www.saludalavista.com/wp-content/woo_custom/1199-pomelo.jpg ",
+    portada:"http://www.saludalavista.com/wp-content/woo_custom/1199-pomelo.jpg",
     cantidad: "70",
     medida: "kg"
     },
@@ -1764,7 +1764,7 @@ export class DummyService {
       		direccion: "Cto. Mejiquense, Col Potrero",
      },
     descripcion:" La chirimoya es una fruta tropical de pulpa refrescante y muy aromática, con sabor dulce ligeramente ácido que recuerda a una mezcla de piña y plátano, o al sabor de la pera. Es muy fácil de comer, se parte en dos mitades y se toma la pulpa con una cuchara, evitando las semillas. Procede de un árbol que le da nombre, el chirimoyo.",
-    portada:" https://consejonutricion.files.wordpress.com/2012/10/placer-blanco-chirimoya-fortalece-corazon_1_638200.jpg ",
+    portada:"https://consejonutricion.files.wordpress.com/2012/10/placer-blanco-chirimoya-fortalece-corazon_1_638200.jpg",
     cantidad: "1190",
     medida: "kg"
 
@@ -1780,7 +1780,7 @@ export class DummyService {
       		direccion: "Cto. Mejiquense, Col Potrero",
      },
     descripcion:" El coco es un fruto redondo y alargado de carne blanca, fibrosa y aceitosa cubierta por una cáscara dura, de color marrón y peluda. El coco tiene una envuelta fibrosa, una carne blanca dentro que recibe el nombre de copra y, cuando el fruto está aún tierno, un líquido lechoso que se suele usar como alimento básico de algunas zonas.",
-    portada:" https://st-listas.20minutos.es/images/2014-07/384094/4479392_640px.jpg?1518780769 ",
+    portada:"https://st-listas.20minutos.es/images/2014-07/384094/4479392_640px.jpg?1518780769",
     cantidad: "9000",
     medida: "kg"
     },
@@ -1795,7 +1795,7 @@ export class DummyService {
       		direccion: "Cto. Mejiquense, Col Potrero",
      },
     descripcion:" El dátil es una fruta desecada natural, no se somete a un proceso de desecación, sino que se seca al sol en el mismo árbol y después se recolecta, escribe Maribel Arias García, dietista-nutricionista del equipo Alimmenta en la web del colectivo.",
-    portada:" https://upload.wikimedia.org/wikipedia/commons/1/1d/Mata_de_Datil.JPG ",
+    portada:"https://upload.wikimedia.org/wikipedia/commons/1/1d/Mata_de_Datil.JPG",
     cantidad: "10000",
     medida: "kg"
     },
@@ -1810,7 +1810,7 @@ export class DummyService {
       		direccion: "Cto. Mejiquense, Col Potrero",
      },
     descripcion:" El kiwi es un fruto de forma ovoide, de tamaño variable y recubierto de una piel fina de color marrón, ligeramente vellosa. Puede tener de 4 a 7,5cm de longitud por 3,5 a 5cm de anchura y el peso varía de 30-150g en función de la variedad, las condiciones climáticas y del sistema de cultivo. La pulpa puede ser de color verde de distinta tonalidad según la variedad, tierna, jugosa y de sabor agridulce. Presenta numerosas y pequeñas semillas negras comestibles. El color de la pulpa y el sabor delicado de la misma que recuerda en parte a la uva, a la fresa y a la piña, lo hacen muy agradable.",
-    portada:" https://st-listas.20minutos.es/images/2014-07/384094/4479412_640px.jpg?1518780769 ",
+    portada:"https://st-listas.20minutos.es/images/2014-07/384094/4479412_640px.jpg?1518780769",
     cantidad: "11000",
     medida: "kg"
     },
@@ -1825,7 +1825,7 @@ export class DummyService {
       		direccion: "Av. Cuaderno, Col. Xiomi",
      },
     descripcion:" El litchi es un fruto oriental redondeado, de unos 2,5-4cm de diámetro. Es de color rojo con la piel rugosa. La pulpa es blanca, dulce y jugosa. Se suele consumir crudo, aunque en China se combina con la carne y el pescado. También se usa en helados o batidos. Es un alimento que aporta vitaminas y minerales al organismo.",
-    portada:" https://st-listas.20minutos.es/images/2014-07/384094/4479381_640px.jpg?1518780769 ",
+    portada:"https://st-listas.20minutos.es/images/2014-07/384094/4479381_640px.jpg?1518780769",
     cantidad: "22000",
     medida: "kg"
     },
@@ -1840,7 +1840,7 @@ export class DummyService {
       		direccion: "Av. Cuaderno, Col. Xiomi",
      },
     descripcion:" El albaricoque es un fruto similar al melocotón pero mucho más pequeño, de color amarillo pálido o anaranjado con alguna sombra roja. La pulpa no es muy jugosa, tiene cierta textura fibrosa y consistencia harinosa cuando el albaricoque está maduro. Se consume principalmente como fruta fresca, aunque también se utiliza para fabricar algunos derivados como compotas, mermeladas, zumos y los famosos ‘orejones’ que no son más que albaricoques secos. ",
-    portada:" https://st-listas.20minutos.es/images/2014-07/384094/4479361_640px.jpg?1518780769 ",
+    portada:"https://st-listas.20minutos.es/images/2014-07/384094/4479361_640px.jpg?1518780769",
     cantidad: "33000",
     medida: "kg"
     },
@@ -1855,7 +1855,7 @@ export class DummyService {
       		direccion: "Av. Cuaderno, Col. Xiomi",
      },
     descripcion:" La cereza es un fruto que puede consumirse fresco o utilizarse en la elaboración de tartas, mousses, mermeladas y compotas. Generalmente las cerezas de mayor tamaño son las que tienen mejor textura y sabor. ",
-    portada:" https://st-listas.20minutos.es/images/2014-07/384094/4479375_640px.jpg?1518780769 ",
+    portada:"https://st-listas.20minutos.es/images/2014-07/384094/4479375_640px.jpg?1518780769",
     cantidad: "44000",
     medida: "kg"
     },
@@ -1870,7 +1870,7 @@ export class DummyService {
       		direccion: "Av. Cuaderno, Col. Xiomi",
      },
     descripcion:" El higo se considera un falso fruto, es un receptáculo que contiene cientos de pequeños frutos que vulgarmente llamamos pepitas. Se utiliza como fruta para consumo en fresco, desecado, como puré para confiterías, en conserva o confitado.",
-    portada:" https://st-listas.20minutos.es/images/2014-07/384094/4480075_640px.jpg?1518780769 ",
+    portada:"https://st-listas.20minutos.es/images/2014-07/384094/4480075_640px.jpg?1518780769",
     cantidad: "66000",
     medida: "kg"
     },
@@ -1885,7 +1885,7 @@ export class DummyService {
       		direccion: "Av. Cuaderno, Col. Xiomi",
      },
     descripcion:" El kaki es una fruta tropical de color más o menos anaranjado, con la piel lisa y un sabor muy dulce. Se consume como fruta fresca, aunque se puede emplear en pasteles o mermeladas. Es una fuente importante de vitaminas A y C.",
-    portada:" https://es.wikipedia.org/wiki/Caqui#/media/Archivo:Persimmon_0375.jpg.",
+    portada:"https://mx.hola.com/imagenes/cocina/recetas/20191018152010/recetas-sorprendentes-con-caqui/0-735-117/portada-kaki-m.jpg",
     cantidad: "77000",
     medida: "kg"
     },
@@ -1900,7 +1900,7 @@ export class DummyService {
       		direccion: "Av. Cuaderno, Col. Xiomi",
      },
     descripcion:" El melocotón es un fruto redondo, coloreado, jugoso y típicamente veraniego. Su producción se extiende a lo largo de los países por lo que podemos disponer de este fruto a lo largo de todo el año.",
-    portada:"https://es.wikipedia.org/wiki/Prunus_persica#/media/Archivo:Illustration_Prunus_persica0.jpg ",
+    portada:"https://estaticos.miarevista.es/media/cache/1140x_thumb/uploads/images/gallery/596741315cafe81c37bec0e9/melocotones-int.jpg",
     cantidad: "88000",
     medida: "kg"
     },
@@ -1915,7 +1915,7 @@ export class DummyService {
       		direccion: "Av. Cuaderno, Col. Xiomi",
      },
     descripcion:" La nectarina es un fruto redondo, con carne jugosa, con hueso, parecido al melocotón. Su piel no es vellosa sino lisa como la de la ciruela y se puede consumir sin pelar o pelado. La época de recolección de la nectarina es durante el mes de mayo en el hemisferio norte, aunque se puede encontrar en los mercados durante todo al año ya que se cultiva en muchos países del mundo.",
-    portada:" https://st-listas.20minutos.es/images/2014-07/384094/4479363_640px.jpg?1518780769 ",
+    portada:"https://st-listas.20minutos.es/images/2014-07/384094/4479363_640px.jpg?1518780769",
     cantidad: "99000",
     medida: "kg"
     },
@@ -1930,7 +1930,7 @@ export class DummyService {
       		direccion: "Av. Cuaderno, Col. Xiomi",
      },
     descripcion:" El níspero es un fruto redondeado de color anaranjado que es apreciado por su carne aromática, dulce y algo ácida. Se suele consumir en crudo, aunque se elaboran diversos preparados como mermeladas, pasteles o zumos. Apenas aporta nutrientes al organismo, aunque contiene potasio en cantidades apreciables y algunas vitaminas.",
-    portada: "https://es.wikipedia.org/wiki/Eriobotrya_japonica#/media/Archivo:Eriobotrya_japonica_SZ97.png ",
+    portada: "https://img.europapress.es/fotoweb/fotonoticia_20170327081841_1024.jpg",
     cantidad: "1100",
     medida: "kg"
     },
@@ -1945,7 +1945,7 @@ export class DummyService {
       		direccion: "Av. Cuaderno, Col. Xiomi",
      },
     descripcion:" La almendra es la semilla comestible del fruto del almendro dulce, de color blanco brillante envuelta con una cubierta marrón rojizo. Se consume como fruto seco, frito y/o salado y también se elaboran productos tan conocidos como el turrón y el mazapán.",
-    portada:" https://es.wikipedia.org/wiki/Almendra#/media/Archivo:Mandel_Gr_99.jpg ",
+    portada:"https://as.com/deporteyvida/imagenes/2018/09/17/portada/1537176857_550034_1537176981_noticia_normal.jpg",
     cantidad:" 2200",
     medida: "kg"
     },
@@ -1960,7 +1960,7 @@ export class DummyService {
       		direccion: "Av. Cuaderno, Col. Xiomi",
      },
     descripcion:" Es una planta anual que crece de forma vertical, con el tallo principal liso y erecto que mide de 40 a 180 centímetros de largo. Tiene tallos lisos con panículas de espiguillas en verano y hojas verdes y planas. Dichas panículas de ramitas caídas son inflorescencias de espiguillas colgantes y separadas unas de otras con 2-3 flósculos (flores pequeñas).  Las semillas son color oro pálido.",
-    portada:" https://es.wikipedia.org/wiki/Avena#/media/Archivo:Avena-sativa.jpg ",
+    portada:"https://as.com/deporteyvida/imagenes/2018/09/17/portada/1537176857_550034_1537176981_noticia_normal.jpg",
     cantidad: "3300",
     medida: "kg"
     },
@@ -1975,7 +1975,7 @@ export class DummyService {
       		direccion: "Cto. Batiseñal, Col. Panteon",
      },
     descripcion:" El cacahuete o maní es un fruto seco muy apreciado y popular. Los venden con cáscara o pelados, salados o no y muchas veces tostados Es ingrediente de algunos productos de bollería y con él se elabora la manteca de cacahuete. El cacahuete se conoce familiarmente por otros nombres como el de maní, cachué, alfóncigo de tierra y cacao de tierra. Es un fruto seco muy apreciado y popular.",
-    portada:"https://es.wikipedia.org/wiki/Arachis_hypogaea#/media/Archivo:Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg",
+    portada:"https://dam.cocinafacil.com.mx/wp-content/uploads/2018/04/beneficios-del-cacahuate.jpg",
     cantidad: "4400",
     medida: "kg"
     },
@@ -1990,7 +1990,7 @@ export class DummyService {
       		direccion: "Cto. Batiseñal, Col. Panteon",
      },
     descripcion:" La castaña es el fruto del castaño, de forma redondeada y plana, por un lado, normalmente de color marrón brillante por fuera y la pulpa blanco-amarillenta y de sabor dulce. Suelen comerse asadas, aunque hay muchos más usos y formas de presentación en el mercado.",
-    portada:"https://es.wikipedia.org/wiki/Casta%C3%B1a#/media/Archivo:Illustration_Castanea_sativa0.jpg ",
+    portada:"https://www.hogarmania.com/archivos/201710/castana-otono-1280x720x80xX.jpg",
     cantidad:" 5500",
     medida: "kg"
     },
@@ -2005,7 +2005,7 @@ export class DummyService {
       		direccion: "Cto. Batiseñal, Col. Panteon",
      },
     descripcion:" La nuez es el fruto del nogal, de forma redondeada u ovoide, con una cáscara dura y rugosa de color pardo rojiza. La parte comestible de su interior tiene un sabor dulce particular. En el mercado hay nueces descascarilladas, troceadas o molidas y productos elaborados con ellas.",
-    portada:"https://es.wikipedia.org/wiki/Anexo:Nueces_con_valor_culinario#/media/Archivo:Bellota_Encina_Carrasca.jpg ",
+    portada:"https://animalgourmet.com/wp-content/uploads/2017/08/nueces.jpg",
     cantidad: "6600",
     medida: "kg"
     },
@@ -2020,7 +2020,7 @@ export class DummyService {
       		direccion: "Cto. Batiseñal, Col. Panteon",
      },
     descripcion:" Es un fruto seco muy similar a la nuez por lo que se conoce como ‘nuez americana’ o ‘Nuez Pecan’. Se consume al natural y se utiliza para elaborar muchos postres.Es una fuente importante de proteínas.",
-    portada:"https://es.wikipedia.org/wiki/Carya_illinoinensis#/media/Archivo:Carya_illinoinensis.jpg",
+    portada:"https://cdn.pixabay.com/photo/2015/12/12/22/40/pecan-1090266_960_720.jpg",
     cantidad:" 7700",
     medida: "kg"
     },
@@ -2035,7 +2035,7 @@ export class DummyService {
       		direccion: "Cto. Batiseñal, Col. Panteon",
      },
     descripcion:" El pistacho es un fruto seco de pequeño tamaño, alargado con una cáscara dura, delgada y de color marrón claro. La parte comestible es verde-amarillenta y tierna. Se usan en productos comestibles y hasta en cosméticos, por lo que hay mucha demanda. El pistacho es un fruto de gran categoría y es muy apreciado tanto para su consumo en fresco como para la industria.",
-    portada:"https://es.wikipedia.org/wiki/Pistacia_vera#/media/Archivo:Pistachio_vera.jpg",
+    portada:"https://s1.eestatic.com/2015/07/31/cocinillas/Cocinillas_52754725_116201422_1706x960.jpg",
     cantidad:" 8800",
     medida: "kg"
     },
@@ -2050,7 +2050,7 @@ export class DummyService {
       		direccion: "Cto. Batiseñal, Col. Panteon",
      },
     descripcion:" El physalis o alquejenje (también se la conoce por el nombre de tomatillo o farolillo chino) es una fruta exótica de color naranja con forma de cereza y envuelta en sus propias hojas. Originaria de zonas cálidas de clima tropical de Sudamérica, el alquejenje ya se cultiva en las zonas cálidas de España, porque cada vez son más preciadas sus propiedades nutritivas y antioxidantes, por lo que la OMS recomienda su consumo.",
-    portada:"https://es.wikipedia.org/wiki/Physalis_alkekengi#/media/Archivo:PhysalisAlkekengi-balloon.jpg",
+    portada:"https://www.paraque-sirve.com/wp-content/uploads/2019/09/Para-Que-Sirve-el-Physalis-Peruviana-1280x720.jpg",
     cantidad: "9900",
     medida: "kg"
     },
@@ -2065,7 +2065,7 @@ export class DummyService {
       		direccion: "Cto. Batiseñal, Col. Panteon",
      },
     descripcion:" La chirimoya es un fruto de origen tropical de forma más o menos redondeada y de piel verde reticulada, que se consume por su pulpa blanca, dulce y muy aromática. Se toma principalmente cruda, aunque también se emplea en mermeladas, batidos o helados. Es un alimento rico en vitaminas y minerales.",
-    portada:"https://es.wikipedia.org/wiki/Annona_cherimola#/media/Archivo:Cherimoya_tree_hg.jpg",
+    portada:"https://www.concienciaeco.com/wp-content/uploads/2018/10/chirimoya.jpg",
     cantidad: "110",
     medida: "kg"
     },
@@ -2095,7 +2095,7 @@ export class DummyService {
       		direccion: "Cto. Batiseñal, Col. Panteon",
      },
     descripcion:" Se trata de una fruta con corteza dura y de forma esférica, que adquiere un color entre rojo y púrpura cuando está en su punto óptimo de maduración, volviéndose blanda y fácil de abril. Este fruto tiene un gusto agridulce, parecido a un cítrico.",
-    portada:"https://es.wikipedia.org/wiki/Garcinia_mangostana#/media/Archivo:Mangosteen_scale_v2.jpg",
+    portada:"https://smoda.elpais.com/wp-content/uploads/images/201519/magostino__4445.jpg",
     cantidad: "330",
     medida: "kg"
     },
@@ -2125,7 +2125,7 @@ export class DummyService {
       		direccion: "Av. Cuaderno, Col. Xiomi",
      },
     descripcion:" La fruta del dragón se divide en dos especies principales: la H. triangularis o pitahaya amarilla y la H. ocamposis o pitahaya roja. Cada ejemplar presenta sus propias ventajas e inconvenientes, aunque ambas disfrutan de una gran acogida en lo que a consumo se refiere. La pitahaya roja es mucho más atractiva a la vista gracias a una piel de color rosa intenso, sin embargo, es más frágil y delicada, sobre todo a la hora de transportarla y manejarla durante el mercadeo. En cambio, la pitahaya amarilla ofrece mejores posibilidades comerciales por su resistencia e increíble sabor, pero también es menos perecedera.",
-    portada:"https://es.wikipedia.org/wiki/Pitahaya#/media/Archivo:Yellow_pitaya.jpg",
+    portada:"https://gourmetdemexico.com.mx/wp-content/uploads/2019/06/fruta-del-dragon-pitahaya-1.jpg",
     cantidad: "550",
     medida: "Gramos"
     },
@@ -2140,7 +2140,7 @@ export class DummyService {
       		direccion: "Av. Cuaderno, Col. Xiomi",
      },
     descripcion:" Es pequeño, de forma ovalada y muy dulce, con cierto parecido a la pulpa de la uva. Tiene un sabor fresco, jugoso y un poco ácido. Su aspecto exterior está formado por una delgada capa alrededor de la pulpa, rodeada de espinas o pelos inofensivos al tacto. Su color es rojo por fuera, blanco en el interior y contiene dentro de la pulpa una semilla venenosa.",
-    portada:"https://es.wikipedia.org/wiki/Nephelium_lappaceum#/media/Archivo:Rambutan.jpg",
+    portada:"https://storage.googleapis.com/portalfruticola/2016/10/Rambutan-shutterstock-1024x683.jpg",
     cantidad: "660",
     medida: "kg"
     },
@@ -2155,13 +2155,13 @@ export class DummyService {
       		direccion: "Av. Cuaderno, Col. Xiomi",
      },
     descripcion: "También conocido con el nombre de tomate de árbol, el tamarillo es muy similar al tomate pero de forma más ovalada. Se cultiva en zonas tropicales como Colombia y Brasil, pertenece a la familia de las Solanáceas y es muy rico en calcio, magnesio, fósforo, hierro, y vitaminas A y C.",
-    portada:"https://es.wikipedia.org/wiki/Solanum_betaceum#/media/Archivo:Tamarillos.jpg",
+    portada:"https://plantasyflores.pro/wp-content/uploads/2019/09/tamarillo_opt.jpg",
     cantidad: "770",
     medida: "kg"
     },
     {
     id:3332,
-    nombre:" Dátil",
+    nombre:"Dátil",
     profil : {
       		idProfile: 14,
       		nombre: "Nemo",
@@ -2170,7 +2170,7 @@ export class DummyService {
       		direccion: "Av. Cuaderno, Col. Xiomi",
      },
     descripcion:" El dátil es le fruto de la palmera datilera. Es una baya de color amarillo dorado o rojo parduzco en la madurez. Su carne es blanda, aromática y de sabor dulce. En su interior posee un hueso alargado con un surco longitudinal.Los dátiles pueden consumirse frescos o secos y constituyen un alimento básico para los habitantes del norte de África y el Cercano Oriente, quienes son los principales productores.",
-    portada:" https://es.wikipedia.org/wiki/D%C3%A1til#/media/Archivo:Owoce_Daktyl.jpg",
+    portada:"https://upload.wikimedia.org/wikipedia/commons/1/1d/Mata_de_Datil.JPG",
     cantidad: "880",
     medida: "kg"
     },
@@ -2200,7 +2200,7 @@ export class DummyService {
       		direccion: "Av. Cuaderno, Col. Xiomi",
      },
     descripcion: "Los orejones de albaricoque y de melocotón son una buena fuente de betacaroteno precursor de la vitamina A de gran efecto antioxidante, ayudándonos a prevenir las enfermedades degenerativas, las cardiovasculares y el cáncer.",
-    portada:"https://es.wikipedia.org/wiki/Orej%C3%B3n_(alimento)#/media/Archivo:Orejones.jpg",
+    portada:"https://espanafascinante.com/wp-content/uploads/imagen_alimentos_orejonesalbaricoque.jpg",
     cantidad: "10100",
     medida: "kg"
     },
@@ -2215,7 +2215,7 @@ export class DummyService {
       		direccion: "Av. Cuaderno, Col. Xiomi",
      },
     descripcion:" En el caso de los orejones de melocotón, son una muy buena fuente de potasio, de calcio, de hierro, de provitamina A (que se convierte en vitamina A en el organismo) y vitamina B3 (o niacina)",
-    portada:"https://es.wikipedia.org/wiki/Fruta_seca#/media/Archivo:Dry_fruit.jpg",
+    portada:"https://estaticos.miarevista.es/media/cache/1140x_thumb/uploads/images/gallery/596741315cafe81c37bec0e9/melocotones-int.jpg",
     cantidad: "11110",
     medida: "kg"
     },
@@ -2230,7 +2230,7 @@ export class DummyService {
       		direccion: "Av. Cuaderno, Col. Xiomi",
      },
     descripcion: "Las uvas pasas, como su nombre indica, son uvas pasadas, secas, deshidratadas, ya que simplemente se dejan a secar hasta que se queda un fruto dulce y de color oscuro.",
-    portada:"https://es.wikipedia.org/wiki/Pasa#/media/Archivo:Sunmaid-Raisin-Pile.jpg",
+    portada:"https://static3.abc.es/media/familia/2018/11/21/uvas-pasas-klnB--620x349@abc.jpg",
     cantidad: "12120",
     medida: "kg"
     },
@@ -2245,7 +2245,7 @@ export class DummyService {
       		direccion: "Av. Cuaderno, Col. Xiomi",
      },
     descripcion:" El pepino es una hortaliza de verano, de forma alargada y de unos 15cm de largo. Su piel es de color verde que se aclara hasta volverse amarilla en la madurez. Actualmente puede encontrarse en los mercados europeos a lo largo de todo el año. Pueden adquirirse pepinos frescos o encurtidos en vinagreta.",
-    portada:"https://es.wikipedia.org/wiki/Cucumis_sativus#/media/Archivo:Illustration_Cucumis_sativus0.jpg",
+    portada:"https://muyenforma.com/wp-content/uploads/2015/12/pepino-fruta-o-verdura.jpg",
     cantidad: "13130",
     medida: "kg"
     },
@@ -2260,7 +2260,7 @@ export class DummyService {
       		direccion: "Av. Cuaderno, Col. Xiomi",
      },
     descripcion:" El cilantro pertenece al grupo familiar de las umbelíferas o apiáceas. Su tallo puede medir hasta ochenta centímetros de altura, presentando hojas filiformes en su parte superior y dentadas en su parte inferior. ... Cuando está fresco, el cilantro no se cocina ya que el calor modifica su sabor y su fragancia.",
-    portada:"https://es.wikipedia.org/wiki/Coriandrum_sativum#/media/Archivo:Coriandrum_sativum_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-193.jpg",
+    portada:"https://static2.diariovasco.com/www/multimedia/201907/24/media/cortadas/cilantro-kfjE-Rho1c2l9GCF2kie9dzjFNLP-1248x770@Diario%20Vasco.jpg",
     cantidad: "14140",
     medida: "kg"
     },
@@ -2275,7 +2275,7 @@ export class DummyService {
       		direccion: "Cto. Trueno, Col. Galaxya",
      },
     descripcion: "El Ají o también llamado chile en México y otros países, es el fruto de diversas especies del género Capsicum. Este se caracteriza por ser altamente oxidante, de bajo aporte calórico y muy variable en cuanto a su pungencia (picor).",
-    portada:"https://es.wikipedia.org/wiki/Capsicum#/media/Archivo:Illustration_Capsicum_annuum0.jpg",
+    portada:"https://cdn.colombia.com/sdi/2013/03/01/ebf726124760445ab36f0ba2b9fa6832.jpg",
     cantidad: "15150",
     medida: "kg"
     },
@@ -2290,7 +2290,7 @@ export class DummyService {
       		direccion: "Cto. Trueno, Col. Galaxya",
      },
     descripcion:" El moral o morera es un árbol del cual se obtienen frutos conocidos como moras. Estas moras, además de ser sabrosas y nutritivas, poseen propiedades terapéuticas que permiten ser aprovechadas para diferentes usos medicinales.Las moras también conocidas con el nombre científico Morus nigra, son frutas originarias de Europa y Asia.Estas además de tener características organolépticas especiales, contienen propiedades terapéuticas que les permiten ser utilizadas con diferentes usos medicinales.",
-    portada:"https://es.wikipedia.org/wiki/Mora_(fruta)#/media/Archivo:Black_Butte_blackberry.jpg",
+    portada:"https://estaticos.miarevista.es/media/cache/1140x_thumb/uploads/images/gallery/59c0e0dd5bafe8af7b9440ca/beneficiosmoras-int.jpg",
     cantidad: "1616",
     medida: "kg"
     },
@@ -2305,7 +2305,7 @@ export class DummyService {
       		direccion: "Cto. Trueno, Col. Galaxya",
      },
     descripcion:" El cafeto es un arbusto o árbol pequeño, perennifolio, de fuste recto que puede alcanzar los 10 metros en estado silvestre; en los cultivos se los mantiene normalmente en tamaño más reducido, alrededor de 3 metros. Las hojas son elípticas, oscuras y coriáceas.",
-    portada:"https://es.wikipedia.org/wiki/Coffea#/media/Archivo:Diagram_of_Coffea_arabica.jpg",
+    portada:"https://notishop.net/wp-content/uploads/2018/10/Notishop-deshoping-gadget-nueva-especie-de-cafe-Colombia-1.jpg",
     cantidad:" 1818",
     medida: "kg"
     },
@@ -2320,7 +2320,7 @@ export class DummyService {
       		direccion: "Cto. Trueno, Col. Galaxya",
      },
     descripcion:" Es una angiosperma, planta dicotiledónea, que pertenece a la familia de las Malvaceae. Es nativo de Asia y África. Exactamente como ocurre con los tomates, pimientos y otras plantas, el algodón es nativamente una planta perenne, pero hoy en día se cultiva anual.",
-    portada:"https://es.wikipedia.org/wiki/Algod%C3%B3n#/media/Archivo:CottonPlant.JPG",
+    portada:"https://revistaq.mx/wp-content/uploads/2018/08/C%C3%A1psula-de-algod%C3%B3n-en-el-campo-Narrabri-NSW-Australia.jpg",
     cantidad: "2020",
     medida: "kg"
     },
@@ -2335,7 +2335,7 @@ export class DummyService {
       		direccion: "Cto. Trueno, Col. Galaxya",
      },
     descripcion:" Glycine max, llamada popularmente soja, es una especie de la familia Fabaceae, o familia de las leguminosas. Se cultiva por sus semillas, de medio contenido en aceite (véase planta oleaginosa) y alto de proteína.",
-    portada:"https://es.wikipedia.org/wiki/Glycine_max#/media/Archivo:Soybean.USDA.jpg",
+    portada:"https://i.blogs.es/aee921/soja/450_1000.jpg",
     cantidad: "2121",
     medida:" kg"
     },
@@ -2350,7 +2350,7 @@ export class DummyService {
       		direccion: "Cto. Trueno, Col. Galaxya",
      },
     descripcion:" La adelfa, conocida científicamente como Nerium oleander, es un arbusto que puede llegar a alcanzar los 6 metros de altura. Se trata de una especie perennifolia que se caracteriza por contar con un follaje siempre verde durante todo el año. Se trata de un árbol de crecimiento rápido y densa ramificación.",
-    portada:"https://es.wikipedia.org/wiki/Nerium_oleander#/media/Archivo:Nerium_oleander_flowers_leaves.jpg",
+    portada:"https://www.dogalize.com/wp-content/uploads/2017/11/oleander-2648971_640.jpg",
     cantidad: "2222",
     medida: "kg"
     },
@@ -2365,7 +2365,7 @@ export class DummyService {
       		direccion: "Cto. Trueno, Col. Galaxya",
      },
     descripcion:" Es un helecho muy popular debido a su pequeño tamaño y a la frescura que aportan sus hojas. El culantrillo también es conocido por el nombre de hierba de las fuentes y la razón de este nombre residen en que de forma natural suele crecer junto a las fuentes. ",
-    portada: "https://es.wikipedia.org/wiki/Adiantum_capillus-veneris#/media/Archivo:Adiantum_capillus-veneris_(USDA).jpg",
+    portada: "https://jardineriaplantasyflores.com/wp-content/uploads/2017/10/Adiantum-capillus-veneris-Culantrillo.jpg",
     cantidad:" 2525",
     medida: "kg"
     },
@@ -2380,7 +2380,7 @@ export class DummyService {
       		direccion: "Cto. Trueno, Col. Galaxya",
      },
     descripcion: "La cúrcuma (Cúrcuma longa L.) es una planta de la Familia Zingiberaceae originaria del sudeste asiático. Es conocida mundialmente como especia aromática, utilizada en la gastronomía asiática para dar un toque de color y sabor picante a los platos.",
-    portada:"https://es.wikipedia.org/wiki/Curcuma_longa#/media/Archivo:Curcuma_longa_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-199.jpg",
+    portada:"https://mk0laprensalatice12d.kinstacdn.com/wp-content/uploads/2019/07/angela_1413939056-780x470.jpg",
     cantidad: "2626",
     medida: "kg"
     },
@@ -2395,7 +2395,7 @@ export class DummyService {
       		direccion: "Cto. Trueno, Col. Galaxya",
      },
     descripcion:" Feijoa sellowiana), también denominado guayabo, feijoa, guayaba o guayabo del Brasil, es una especie botánica arbustiva, ramificada, que alcanza 4 m de altura. Es originario de las tierras altas del sur de Brasil, Argentina y Uruguay. Resiste el frío, aunque no por debajo de los -12 °C.",
-    portada:"https://es.wikipedia.org/wiki/Acca_sellowiana#/media/Archivo:Acca_sellowiana_Fruit_MHNT_Fronton.jpg",
+    portada:"https://i.ytimg.com/vi/tafOJhpYEmg/maxresdefault.jpg",
     cantidad: "2727",
     medida: "kg"
     },
@@ -2410,7 +2410,7 @@ export class DummyService {
       		direccion: "Cto. Trueno, Col. Galaxya",
      },
     descripcion:" La fruta más apestosa del mundo se llama durián. Tiene un gusto afrutado, una textura con cierta cremosidad y un final entre amargo y fermentado. Está cubierto de espinas y porta un tamaño similar al de una sandía. ... El Durio Ziberthinus es una fruta exótica originaria de Asia.",
-    portada:"https://es.wikipedia.org/wiki/Durio_zibethinus#/media/Archivo:Durio_Zibethinus_Van_Nooten.jpg",
+    portada:"https://imagenes.20minutos.es/files/image_656_370/uploads/imagenes/2019/05/13/950067.jpg",
     cantidad: "2828",
     medida: "kg"
     },
@@ -2425,7 +2425,7 @@ export class DummyService {
       		direccion: "Av. Telaraña, Col. Telaraña",
      },
     descripcion: "El pomelo es un fruto en forma de globo ligeramente achatado, de corteza lisa o rugosa, de color amarillo pálido o rojizo. Se consume principalmente como fruta fresca, y posee numerosas cualidades digestivas, estomacales y antisépticas.",
-    portada:"https://es.wikipedia.org/wiki/Citrus_%C3%97_paradisi#/media/Archivo:Pummelo_or_Pamplemousse_(Citrus_maxima_(Burm.)_Merr.);_flowe_Wellcome_V0042686.jpg",
+    portada:"http://www.saludalavista.com/wp-content/woo_custom/1199-pomelo.jpg",
     cantidad: "2929",
     medida: "kg"
     },
@@ -2440,7 +2440,7 @@ export class DummyService {
       		direccion: "Av. Telaraña, Col. Telaraña",
      },
     descripcion:" El chile poblano (fresco) o chile ancho (seco) es una variedad del chile Capsicum annuum. Es muy apreciado en la gastronomía mexicana, donde se usa en todo tipo de recetas, como en los populares chiles rellenos.",
-    portada:"https://es.wikipedia.org/wiki/Chile_poblano#/media/Archivo:Poblano_Pepper.jpg",
+    portada:"https://www.cocinavital.mx/wp-content/uploads/2019/07/beneficios-chile-poblano-salud.jpg",
     cantidad:" 3030",
     medida: "kg"
     },
@@ -2455,7 +2455,7 @@ export class DummyService {
       		direccion: "Av. Telaraña, Col. Telaraña",
      },
     descripcion:"  La nectarina es un fruto redondo, con carne jugosa, con hueso, parecido al melocotón. ... La nectarina es un fruto redondo, con carne jugosa, con hueso, parecido al melocotón. Su piel no es vellosa sino lisa como la de la ciruela y se puede consumir sin pelar o pelado.",
-    portada: "https://es.wiktionary.org/wiki/nectarina#/media/Archivo:Nectarine_CDC.jpg",
+    portada: "https://www.ecestaticos.com/image/clipping/5e103b225347eeacdde82061adf9b992/nectarina-una-fruta-de-origen-incierto-con-gran-poder-antioxidante.jpg",
     cantidad: "3131",
     medida: "kg"
     },
@@ -2470,7 +2470,7 @@ export class DummyService {
       		direccion: "Av. Telaraña, Col. Telaraña",
      },
     descripcion:" El zapote es una fruta tropical consumida en México y América Central, según la variedad su pulpa puede ser amarilla, blanca, negra o rojiza, el fruto puede ser redondo, ovoide o elíptico, a menudo termina en punta en el ápice.",
-    portada:"https://es.wikipedia.org/wiki/Zapote_(fruta)#/media/Archivo:Zapote_y_pl%C3%A1tano_en_Iquitos.jpg",
+    portada:"https://www.gob.mx/cms/uploads/article/main_image/43307/zapote-negro.jpg",
     cantidad: "3232",
     medida: "kg"
     },
@@ -2485,7 +2485,7 @@ export class DummyService {
       		direccion: "Av. Telaraña, Col. Telaraña",
      },
     descripcion:" El caqui es una fruta originaria de China que tiene una piel fina y lisa de color naranja brillante, con pulpa de color naranja. Su corona es verde y medio deshidratada y ocasionalmente produce 2-8 semillas no comestibles. ... Caquis Hachiya, que solo se comen maduros y el.",
-    portada: "https://es.wikipedia.org/wiki/Caqui#/media/Archivo:Persimmon_0375.jpg",
+    portada: "https://www.jardineriaon.com/wp-content/uploads/2014/02/Persimmon.jpg",
     cantidad: "3333",
     medida: "kg"
     },
@@ -2545,7 +2545,7 @@ export class DummyService {
       		direccion: "Av. Telaraña, Col. Telaraña",
      },
     descripcion:" La uchuva es una fruta semiácida, redonda, amarilla, dulce y pequeña (mide entre 1,25 y 2 cm de diámetro), y viene envuelta en una cáscara protectora. A la uchuva se le considera una fruta exótica, se utiliza para preparar helados, yogurt, glaseados y chutneys.",
-    portada:" https://st-listas.20minutos.es/images/2014-07/384094/4480123_640px.jpg?1518780769",
+    portada:"https://st-listas.20minutos.es/images/2014-07/384094/4480123_640px.jpg?1518780769",
     cantidad: "20",
     medida: "kg"
     },
@@ -2590,7 +2590,7 @@ export class DummyService {
       		direccion: "Cto. Criptonita, Col. No tiene",
      },
     descripcion:" El caimito (Chrysophyllum cainito) es un árbol tropical de la familia Sapotaceae, originario de las áreas de baja elevación de América Central y del Caribe. Crece rápidamente y puede llegar a una altura de veinte metros. ... También se le conoce por el nombre de achras caimito.",
-    portada:" https://st-listas.20minutos.es/images/2014-07/384094/4480126_640px.jpg?1518780769",
+    portada:"https://st-listas.20minutos.es/images/2014-07/384094/4480126_640px.jpg?1518780769",
     cantidad: "50",
     medida: "kg"
     },
@@ -2625,21 +2625,6 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:1108,
-    nombre: "Darian",
-    profil : {
-      		idProfile: 17,
-      		nombre: "Capiran america",
-      		email: "capi@systems.com",
-      		phone: "00000017",
-      		direccion: "Cto. Criptonita, Col. No tiene",
-     },
-    descripcion:" El durián crece en los árboles conocidos como durio y se encuentra presente en todo el sudeste asiático, aunque es una fruta nativa de Indonesia, Malasia y Brunei. Es una fruta fácil de reconocer, no sólo por su intenso olor, sino por su aspecto.",
-    portada:" https://st-listas.20minutos.es/images/2014-07/384094/4480120_640px.jpg?1518780769",
-    cantidad: "80",
-    medida: "kg"
-    },
-    {
     id:5109,
     nombre: "Naranjilla",
     profil : {
@@ -2665,7 +2650,7 @@ export class DummyService {
       		direccion: "Cto. Criptonita, Col. No tiene",
      },
     descripcion:" Tabasco: son de tamaño mediano y de sabor muy dulce. Es rico en fósforo, zinc y calcio. Es el más conocido entre la variedad de los plátanos y se pueden disfrutar con crema, mermelada, en postres y malteadas.",
-    portada:" https://st-listas.20minutos.es/images/2014-07/384094/4479366_640px.jpg?1518780769",
+    portada:"https://st-listas.20minutos.es/images/2014-07/384094/4479366_640px.jpg?1518780769",
     cantidad: "100",
     medida: "kg"
     },
@@ -2680,7 +2665,7 @@ export class DummyService {
       		direccion: "Cto. Criptonita, Col. No tiene",
      },
     descripcion:" La uva es una fruta que crece en racimos apretados. Su pulpa es blanca o púrpura y de sabor dulce. Se consume como fruta fresca o zumo, aunque su utilidad principal es la obtención de vinos. ... La piel puede ser verdosa, amarillenta o purpúrea, y la pulpa es jugosa y dulce, conteniendo varias semillas o pepitas.",
-    portada:" https://st-listas.20minutos.es/images/2014-07/384094/4479388_640px.jpg?1518780769 ",
+    portada:"https://st-listas.20minutos.es/images/2014-07/384094/4479388_640px.jpg?1518780769",
     cantidad: "110",
     medida: "kg"
     },
@@ -2740,7 +2725,7 @@ export class DummyService {
       		direccion: "Av. Corazon, Col. Roto",
      },
     descripcion: "Fruto verde con lenticelas blancas, características de la variedad, con la pulpa blanca con textura consistente, firme y crujiente. De sabor altamente acidular, es redonda ligeramente alargada y simétrica, con pedúnculo corto. De calibre medio-alto.",
-    portada:" https://st-listas.20minutos.es/images/2014-07/384094/4478852_640px.jpg?1518780769",
+    portada:"https://st-listas.20minutos.es/images/2014-07/384094/4478852_640px.jpg?1518780769",
     cantidad: "150",
     medida: "kg",
     },
@@ -2770,7 +2755,7 @@ export class DummyService {
       		direccion: "Av. Corazon, Col. Roto",
      },
     descripcion: "La Royal Gala es una manzana de tamaño pequeño a medio con un sabor dulce, ideal para tartas, salsas y ensaladas. También muy rica como merienda o tentempié. Se caracteriza por un tono rojo intenso de piel, el color varía de amarillo a casi naranja con rayas de color naranja intenso sobre un fondo amarillo verdoso.",
-    portada:" https://st-listas.20minutos.es/images/2014-07/384094/4478853_640px.jpg?1518780769",
+    portada:"https://st-listas.20minutos.es/images/2014-07/384094/4478853_640px.jpg?1518780769",
     cantidad: "190",
     medida: "kg"
     },
@@ -2785,7 +2770,7 @@ export class DummyService {
       		direccion: "Av. Corazon, Col. Roto",
      },
     descripcion: "La ciruela es una fruta de hueso, redonda o alargada que puede ser de color amarillo, verde, rojo o lila. En general es muy nutritiva y rica en vitaminas, destacando la vitamina C. Según su contenido en agua es más o menos jugosa. Las ciruelas pasas o deshidratadas se conservan más tiempo y son muy dulces.",
-    portada:" https://st-listas.20minutos.es/images/2014-07/384094/4479365_640px.jpg?1518780769 ",
+    portada:"https://st-listas.20minutos.es/images/2014-07/384094/4479365_640px.jpg?1518780769",
     cantidad: "200",
     medida: "kg"
     },
@@ -2815,7 +2800,7 @@ export class DummyService {
       		direccion: "Av. Corazon, Col. Roto",
      },
     descripcion: "El d'Anjou se considera una pera mediana a grande, típicamente alrededor de 270–285 gramos, 85 mm de altura y 80 mm de diámetro. Tiene una base ancha, globular, tallo corto y piel delgada con muchas lenticelas notables.",
-    portada:" https://st-listas.20minutos.es/images/2014-07/384094/4478855_640px.jpg?1518780769",
+    portada:"https://st-listas.20minutos.es/images/2014-07/384094/4478855_640px.jpg?1518780769",
     cantidad:" 400",
     medida: "kg"
     },
@@ -2830,7 +2815,7 @@ export class DummyService {
       		direccion: "Av. Corazon, Col. Roto",
      },
     descripcion: "La caña de azúcar es una planta herbácea perenne que forma parte de la familia de las gramíneas; por lo tanto, está emparentada con el arroz, el maíz, el sorgo, la avena y el bambú.",
-    portada:" https://st-listas.20minutos.es/images/2014-07/384094/4479408_640px.jpg?1518780769",
+    portada:"https://st-listas.20minutos.es/images/2014-07/384094/4479408_640px.jpg?1518780769",
     cantidad: "500",
     medida: "kg"
     },
@@ -2875,7 +2860,7 @@ export class DummyService {
       		direccion: "Cto. Corazon, Col. Panteon",
      },
     descripcion: "Ciruela negra. Prunus domestica, el ciruelo europeo y sus múltiples variedades/cultivares, es una especie de pequeño árbol perteneciente a la familia de las rosáceas. ... Árbol de hasta 7(10) m, caducifolio e inerme con ramillas glabrescentes, en general rojizas y brillantes.",
-    portada:" https://st-listas.20minutos.es/images/2014-07/384094/4479364_640px.jpg?1518780769",
+    portada:"https://www.dhresource.com/0x0/f2/albu/g8/M01/ED/B5/rBVaVF1AG6WAMOfNAAMb38T1i_Y827.jpg",
     cantidad: "800",
     medida: "kg"
     },
@@ -2896,7 +2881,7 @@ export class DummyService {
     },
     {
     id:1221,
-    nombre: "Mara cuya Amarillo",
+    nombre: "Maracuya Amarillo",
     profil : {
       		idProfile: 19,
       		nombre: "Ivonne",
@@ -2905,7 +2890,7 @@ export class DummyService {
       		direccion: "Cto. Corazon, Col. Panteon",
      },
     descripcion: "Maracuyá amarillo (Passiflora edulis f. flavicarpa). Es una planta trepadora de la familia de las Passifloráceas, originaria en su forma morada de Brasil, la forma amarilla derivó de la morada en Australia de donde volvió a América.",
-    portada:" https://st-listas.20minutos.es/images/2014-07/384094/4479395_640px.jpg?1518780769",
+    portada:"https://st-listas.20minutos.es/images/2014-07/384094/4479395_640px.jpg?1518780769",
     cantidad: "1000",
     medida: "kg"
     },
@@ -2920,7 +2905,7 @@ export class DummyService {
       		direccion: "Cto. Corazon, Col. Panteon",
      },
     descripcion: "El melón chino es una fruta globosa, redonda o alargada, de 20 a 30cm de largo y hasta 2kg de peso. La corteza surcada o reticulada puede ser de color amarillo claro, verde o combinaciones de ambos según la variedad, la pulpa es aromática, jugosa y dulce, puede ser blanca o blanca verdosa, amarilla y anaranjada.",
-    portada:" https://st-listas.20minutos.es/images/2014-07/384094/4479360_640px.jpg?1518780769",
+    portada:"https://www.lacomer.com.mx/superc/img_art/1205_3.jpg",
     cantidad: "1100",
     medida: "kg"
     },
@@ -2965,7 +2950,7 @@ export class DummyService {
       		direccion: "Cto. Corazon, Col. Panteon",
      },
     descripcion: "La uva es una fruta obtenida de la vid. Las uvas vienen en racimos, son pequeñas y dulces. Se comen frescas y se utilizan para producir agraz, mosto, vino, brandy, vinagre y pisco. Crecen agrupadas en racimos de entre 6 y 300 uvas. Pueden ser negras, moradas, amarillas, doradas, púrpura, rosadas.",
-    portada:" https://st-listas.20minutos.es/images/2014-07/384094/4479389_640px.jpg?1518780769 ",
+    portada:"https://st-listas.20minutos.es/images/2014-07/384094/4479389_640px.jpg?1518780769",
     cantidad: "1400",
     medida: "kg"
     },
@@ -2980,7 +2965,7 @@ export class DummyService {
       		direccion: "Cto. Corazon, Col. Panteon",
      },
     descripcion: "Melón verde. El melón verde, casaba, melón rocío de miel o melón tuna (conocido en inglés como honeydew) es un fruto de la familia de melones que se cultiva para el consumo gastronómico. La fruta es similar al melón anaranjado, pero tiene un sabor más dulce, contiene más agua y posee un color verde pálido o claro.",
-    portada:" https://st-listas.20minutos.es/images/2014-07/384094/4480115_640px.jpg?1518780769",
+    portada:"https://st-listas.20minutos.es/images/2014-07/384094/4480115_640px.jpg?1518780769",
     cantidad: "1500",
     medida: "kg"
     },
@@ -2995,7 +2980,7 @@ export class DummyService {
       		direccion: "Cto. Corazon, Col. Panteon",
      },
     descripcion: "Rico en vitamina C y mangnesio el plátano rojo es un buen antioxidante que ayuda a estimular el sistema inmunológico para prevenir resfriados o gripe. Bueno para la digestión. Es rico en potasio y tiene la capacidad de aliviar problemas gastrointestinales.",
-    portada:"https://es.wikipedia.org/wiki/Musa_acuminata#/media/Archivo:Musa_acuminata1.jpg",
+    portada:"https://mejorconsalud.com/wp-content/uploads/2018/04/racimo-platanos-rojos.jpg",
     cantidad: "1600",
     medida: "kg"
     },
@@ -3010,7 +2995,7 @@ export class DummyService {
       		direccion: "Cto. Corazon, Col. Panteon",
      },
     descripcion: "Las peras bosc suelen ser de tamaño medio y tienen forma de botella, además de la piel dorada y marrón. Asimismo, la pulpa es jugosa y un poco ácida. Pera bosc, cruda y sin procesar; la bosc es una variedad antigua de pera. Pyrus communis.",
-    portada:" https://st-listas.20minutos.es/images/2014-07/384094/4478859_640px.jpg?1518780769",
+    portada:"https://st-listas.20minutos.es/images/2014-07/384094/4478859_640px.jpg?1518780769",
     cantidad: "1700",
     medida: "kg"
     },
@@ -3025,7 +3010,7 @@ export class DummyService {
       		direccion: "Av. Cuaderno, Col. Xiomi",
      },
     descripcion: "El tomate es el fruto de la planta conocida como tomatera, una especie herbácea que pertenece a la familia de las solanáceas y es nativa del continente americano. Los tomates son bayas de color rojizo que se caracterizan por su pulpa con múltiples semillas y por su jugo.",
-    portada:" https://st-listas.20minutos.es/images/2014-07/384094/4480116_640px.jpg?1518780769",
+    portada:"https://st-listas.20minutos.es/images/2014-07/384094/4480116_640px.jpg?1518780769",
     cantidad: "1800",
     medida: "kg"
     },
@@ -3040,7 +3025,7 @@ export class DummyService {
       		direccion: "Av. Cuaderno, Col. Xiomi",
      },
     descripcion:" La guanábana es una deliciosa fruta originaria de Perú, es el fruto de un árbol de la familia Annonaceae, genero Annona, y es conocida en algunas regiones de Suramérica como graviola. Este fruto se caracteriza por una corteza verde rugosa espinosa y una pulpa blanquecina muy blanda con grandes semillas de color negro.",
-    portada:" https://st-listas.20minutos.es/images/2014-07/384094/4479382_640px.jpg?1518780769",
+    portada:"https://st-listas.20minutos.es/images/2014-07/384094/4479382_640px.jpg?1518780769",
     cantidad: "1900",
     medida: "kg"
     },
@@ -3055,7 +3040,7 @@ export class DummyService {
       		direccion: "Av. Cuaderno, Col. Xiomi",
      },
     descripcion:" El fruto del jalapeño es carnoso y alargado, alcanzando los 7 cm de largo y alrededor de 3 de ancho en la base. Se emplea tanto antes como después de la maduración; una parte importante de la producción total se destina al secado, proceso tras el cual se lo conoce como chile chipotle (del náhuatl chilpoctli, que significa chile ahumado). Es una variedad de fruta medianamente picante, entre 2500 y 8000 puntos en la escala Scoville, aunque la intensidad del sabor depende en gran medida de las características del terreno y de la variedad de semilla; las más habituales son conocidas como típico, meco y morita. Buena parte de la capsaicina, el alcaloide que provoca la picazón, se concentra en las venas y semillas en el interior del fruto; retirarlas antes de su empleo proporciona un sabor más delicado.",
-    portada:"https://es.wikipedia.org/wiki/Chile_jalape%C3%B1o#/media/Archivo:Immature_jalapeno_capsicum_annuum_var_annuum.jpeg",
+    portada:"https://www.eluniversal.com.mx/sites/default/files/styles/f01-1023x630/public/2018/01/19/chile.jpg?itok=pa2jyDnu",
     cantidad:"1994",
     medida: "kg"
     },
@@ -3070,7 +3055,7 @@ export class DummyService {
       		direccion: "Av. Cuaderno, Col. Xiomi",
      },
     descripcion:" El chile serrano (Capsicum annuum cv. ‘Serrano Sinahusia’) también conocido como chile verde es una variedad de chile de origen y consumo en México, caracterizado por ser pequeño, de forma cilíndrica y a veces terminado en punta. Se considera picante y generalmente se acompaña con sus semillas y venas, también muy picantes. La mayor parte de las veces se consume fresco, es decir inmaduro, aunque también puede consumirse en su estado maduro cuando presenta un color rojo. Menos común es el chile serrano seco, que se puede utilizar completo o molido. ",
-    portada:"https://es.wikipedia.org/wiki/Chile_serrano#/media/Archivo:Chiles_serranos.jpg",
+    portada:"https://www.mexicodesconocido.com.mx/wp-content/uploads/2018/02/chile-serrano.jpg",
     cantidad: "1995",
     medida: "kg"
     },
@@ -3101,8 +3086,10 @@ export class DummyService {
   consultaProducto(){
      return this.products;
    }
-  productoUsuario(idProfile:number){
-    return this.products[idProfile];
+  productoProfiles(id){
+  let product = this.products.filter(data => 
+    data.profil.idProfile.toString()===id.toString());
+    return product;
   }
 
 }

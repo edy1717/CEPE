@@ -1,14 +1,14 @@
 <div class="main-container">
     <section class="main-container">
         <div class="table-responsive">
-            <div *ngFor=" let myprofile of dataMyProducts; index as i">
-                <h2>Por:  nombre, correo de usuario</h2>
+            <div>
+                <h2>Por:  {{myProducts[0].profil.idProfile }} <b>{{myProducts[0].profil.nombre}} {{myProducts[0].profil.email}}</b></h2>
             </div>
             <div class="row">
                 <div class="col-12">
                     <div class="form-group">
                         <div class="search-box float-left mb-6">
-                            <input type="text" class="search-text" name="filterPost" placeholder="Buscar">
+                            <input type="text" class="search-text" name="filterPost" placeholder="Buscar" [(ngModel)]="filterPost">
                             <a class="search-btn">
                                 <i class="fas fa-search"></i>
                             </a>
@@ -32,7 +32,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor=" let myproduct of dataMyProducts | filter:filterPost  ; index as i">
+                    <tr *ngFor="let myproduct of myProducts | filter:filterPost  ; index as i">
                         <th scope="row "> {{i+1}} </th>
                         <td>{{myproduct.nombre}} </td>
                         <td>{{myproduct.descripcion}} </td>

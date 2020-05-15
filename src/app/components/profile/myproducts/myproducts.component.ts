@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductProfileInterface } from 'src/app/interfaces/products-profile';
 import { DummyService } from '../../../services/dummy.service';
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-myproducts',
   templateUrl: './myproducts.component.html',
@@ -8,16 +9,20 @@ import { DummyService } from '../../../services/dummy.service';
 })
 export class MyproductsComponent implements OnInit {
 
-  constructor(private dummyService: DummyService ) { }
+  myProducts : any =  [];
   filterPost = '';
-  dataMyProducts;
-  public myproducts: ProductProfileInterface [];
+
+  constructor(private activatedRoute: ActivatedRoute, private dummyService: DummyService ) {
+    this.activatedRoute.params.subscribe (params => {
+      if(params.idProfile != null){
+        this.myProducts = this.dummyService.productoProfiles(params['idProfile']);
+      }
+    });
+   }
+
   ngOnInit(): void {
-    this.getListProduct();
 
   }
-  getListProduct(){
-    this.dataMyProducts = this.dummyService.consultaProducto();
-  }
+
 
 }
