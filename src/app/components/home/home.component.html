@@ -4,8 +4,7 @@
             <div class="form-group">
                 <span class="fas fa-store iconstore"></span><b style="font-size: 30px;">Tienda</b>
                 <div class="search-box float-right mb-3 ">
-                    <input type="text" class="search-text" name="filterPost" placeholder="Buscar"
-                        [(ngModel)]="filterPost">
+                    <input type="text" class="search-text" name="filterPost" placeholder="Buscar" [(ngModel)]="filterPost">
                     <a class="search-btn">
                         <i class="fas fa-search"></i>
                     </a>
@@ -49,17 +48,17 @@
     <div class="main-container">
         <div class="card-columns">
             <div *ngFor="let product of dataProducts | filter:filterPost">
-                <div class="card">
+                <div class="card ">
                     <img src="{{product.portada}} " class="card-img-top" alt="{{product.nombre}}">
                     <div class="card-body">
-                        <h4 routerLink="/product/{{product.id}} " class="card-title ">{{product.nombre}}</h4>
-                        <p class="card-text ">
+                        <h4 routerLink="/product/{{product.id}} " class="card-title "><b>{{product.nombre}}</b></h4>
+                        <p class="card-text text-justify">
                             {{product.descripcion }}
                         </p>
                     </div>
                     <div class="lower ">
                         <div class="container-precio-idioma ">
-                            <p class="badge badge-info ">
+                            <p class="badge badge-info text-justify ">
                                 {{product.cantidad}} pzas disponibles
                             </p>
                         </div>
