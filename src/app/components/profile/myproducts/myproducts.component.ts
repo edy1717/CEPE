@@ -11,7 +11,7 @@ export class MyproductsComponent implements OnInit {
 
   misproductos:any=[];
 
-  constructor(private activatedRoute:ActivatedRoute,  private dummyService: DummyService ) {
+  constructor(private activatedRoute: ActivatedRoute,  private dummyService: DummyService ) {
 
     this.activatedRoute.params.subscribe( params => {
        if (params.idProfile != null){
