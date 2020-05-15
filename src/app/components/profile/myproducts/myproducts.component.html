@@ -1,8 +1,8 @@
 <div class="main-container">
     <section class="main-container">
         <div class="table-responsive">
-            <div *ngFor=" let myproduct of dataMyProducts">
-                <h2>Por: {{myproduct.profil.idProfile}}, nombre, correo de usuario</h2>
+            <div *ngFor=" let myprofile of dataMyProducts; index as i">
+                <h2>Por:  nombre, correo de usuario</h2>
             </div>
             <div class="row">
                 <div class="col-12">

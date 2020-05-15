@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Profiles } from '../models/profiles';
+import { Profiles } from '../interfaces/profiles';
 import { Observable } from 'rxjs/internal/Observable';
-import { ProductProfileInterface } from '../models/products-profile';
+import { ProductProfileInterface } from '../interfaces/products-profile';
 
 
 @Injectable({
@@ -10,8 +10,6 @@ import { ProductProfileInterface } from '../models/products-profile';
 export class DummyService {
 
 
-  guardarCliente : Profiles [] = [];
-  respuestaAlta =[];
   profiles : Profiles [] = [
     {
       idProfile : 1,
@@ -3101,7 +3099,10 @@ export class DummyService {
   }
 
   consultaProducto(){
-    return this.products;
+     return this.products;
+   }
+  productoUsuario(idProfile:number){
+    return this.products[idProfile];
   }
 
 }

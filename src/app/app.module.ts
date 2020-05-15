@@ -25,6 +25,7 @@ import { FilterProfilePipe } from './shared/pipes/filter-profile.pipe';
 import { MyproductsComponent } from './components/profile/myproducts/myproducts.component';
 import { ModalProfileComponent } from './components/modals/modal/modal-profile/modal-profile.component'
 import { ModalComponent } from './components/modals/modal/modal.component';
+import { OffersComponent } from './components/offers/offers.component';
 
 
 
@@ -45,7 +46,8 @@ import { ModalComponent } from './components/modals/modal/modal.component';
     ListProfilesComponent,
     FilterProfilePipe,
     MyproductsComponent,
-    ModalProfileComponent
+    ModalProfileComponent,
+    OffersComponent
   ],
   imports: [
     BrowserModule,

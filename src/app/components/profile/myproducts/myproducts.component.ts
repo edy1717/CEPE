@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductProfileInterface } from 'src/app/models/products-profile';
+import { ProductProfileInterface } from 'src/app/interfaces/products-profile';
 import { DummyService } from '../../../services/dummy.service';
 @Component({
   selector: 'app-myproducts',
@@ -18,8 +18,6 @@ export class MyproductsComponent implements OnInit {
   }
   getListProduct(){
     this.dataMyProducts = this.dummyService.consultaProducto();
-    console.log('myproducto', this.dataMyProducts);
-
   }
 
 }

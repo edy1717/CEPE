@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataApiService } from '../../services/data-api.service';
-import { ProductInterface } from '../../models/products';
+import { ProductInterface } from '../../interfaces/products';
 import { NgForm } from '@angular/forms';
 import { DummyService } from '../../services/dummy.service';
 

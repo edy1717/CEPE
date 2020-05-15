@@ -29,7 +29,7 @@
                 </thead>
                 <tbody>
                     <tr *ngFor="let profil of dataProfiles | filterProfile:filterPost">
-                        <th scope="row"> {{profil.id}} </th>
+                        <th scope="row"> {{profil.idProfile}} </th>
                         <td> {{profil.nombre}} </td>
                         <td> {{profil.email}} </td>
                         <td> {{profil.direccion}} </td>
@@ -45,7 +45,7 @@
                             <button class="btn" placeholder="masDetalle">
                                 <i class="fas fa-user-edit"></i></button> 
                                 <!-- BOTON DE LISTAS -->
-                                <button class="btn" placeholder="list-product" routerLink="/admin/user-products">
+                                <button class="btn" placeholder="list-product" (click)="Misproductos(profil.idProfile)">
                                 <i class="fas fa-list-ul"></i></button> 
                         </td>
                     </tr>

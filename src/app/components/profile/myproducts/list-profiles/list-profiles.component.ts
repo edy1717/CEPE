@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DummyService } from '../../../../services/dummy.service';
-import { Profiles } from '../../../../models/profiles';
+import { Profiles } from '../../../../interfaces/profiles';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-list-profiles',
@@ -9,7 +10,7 @@ import { Profiles } from '../../../../models/profiles';
 })
 export class ListProfilesComponent implements OnInit {
 
-  constructor( private dummyService:DummyService) { }
+  constructor( private dummyService:DummyService,  private router:Router) { }
 
   dataProfiles;
   dataProducts;
@@ -22,11 +23,13 @@ export class ListProfilesComponent implements OnInit {
 
   getListProfile(){
     this.dataProfiles = this.dummyService.consultaProfile();
-      console.log('us', this.dataProfiles);
   }
 
   getListProduct(){
     this.dataProducts = this.dummyService.consultaProducto();
   }
 
+  Misproductos($a){
+    this.router.navigate(['/admin/user-products', $a]);
+  }
 }
