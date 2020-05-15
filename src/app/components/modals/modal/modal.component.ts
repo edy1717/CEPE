@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { DataApiService } from '../../../services/data-api.service';
 import { NgForm } from '@angular/forms'
-import { ProductInterface } from '../../../models/products';
+import { ProductInterface } from '../../../interfaces/products';
 
 @Component({
   selector: 'app-modal',

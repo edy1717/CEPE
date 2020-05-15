@@ -1,3 +1,8 @@
+.main-container{
+    margin-top: 1px;
+    margin-top: 2px;
+    padding: 20px;
+}
 
             .input-field {
                 width: 100%;
@@ -9,7 +14,7 @@
                 border: 2px solid dodgerblue;
             }
 
-            .card-book,
+            /* .card-book,
             .card {
                 margin-bottom: 10px;
                 height: 550px;
@@ -32,6 +37,8 @@
                 background: #743B8F;
                 color: white;
             }
+ */
+            
 
             .for {
                 background: #82E89B;

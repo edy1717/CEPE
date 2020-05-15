@@ -2,13 +2,13 @@
     <section class="main-container">
         <div class="table-responsive">
             <div>
-                <h2>Por: {{misproductos[0].profil.idProfile }} <b>{{misproductos[0].profil.nombre}} {{misproductos[0].profil.email}}</b></h2>
+                <h2>Por: {{myProducts[0].profil.idProfile }} <b>{{myProducts[0].profil.nombre}} {{myProducts[0].profil.email}}</b></h2>
             </div>
             <div class="row">
                 <div class="col-12">
                     <div class="form-group">
                         <div class="search-box float-left mb-6">
-                            <input type="text" class="search-text" name="filterPost" placeholder="Buscar">
+                            <input type="text" class="search-text" name="filterPost" placeholder="Buscar" [(ngModel)]="filterPost">
                             <a class="search-btn">
                                 <i class="fas fa-search"></i>
                             </a>
@@ -32,21 +32,30 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let a of misproductos">
+                    <<<<<<< HEAD <tr *ngFor="let a of misproductos">
                         <th scope="row "></th>
                         <td>{{a.nombre}}</td>
                         <td>{{a.descripcion}} </td>
                         <td>{{a.portada}}</td>
                         <td> {{a.cantidad}}</td>
                         <td>{{a.medida}}</td>
+                        =======
+                        <tr *ngFor="let myproduct of myProducts | filter:filterPost  ; index as i">
+                            <th scope="row "> {{i+1}} </th>
+                            <td>{{myproduct.nombre}} </td>
+                            <td>{{myproduct.descripcion}} </td>
+                            <td></td>
+                            <td>{{myproduct.cantidad}} </td>
+                            <td>{{myproduct.medida}}</td>
+                            >>>>>>> master
 
-                        <td>
-                            <button class="btn btn-primary " data-toggle="modal " data-target="#modalProducts ">Actualizar</button>
-                        </td>
-                        <td>
-                            <button class="btn btn-danger ">Eliminar</button>
-                        </td>
-                    </tr>
+                            <td>
+                                <button class="btn btn-primary " data-toggle="modal " data-target="#modalProducts ">Actualizar</button>
+                            </td>
+                            <td>
+                                <button class="btn btn-danger ">Eliminar</button>
+                            </td>
+                        </tr>
                 </tbody>
             </table>
         </div>

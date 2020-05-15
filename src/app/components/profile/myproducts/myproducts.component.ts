@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductProfileInterface } from 'src/app/models/products-profile';
+import { ProductProfileInterface } from 'src/app/interfaces/products-profile';
 import { DummyService } from '../../../services/dummy.service';
 import { ActivatedRoute } from '@angular/router';
 @Component({
@@ -9,23 +9,21 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class MyproductsComponent implements OnInit {
 
-  misproductos:any=[];
+  myProducts : any =  [];
+  filterPost = '';
 
-  constructor(private activatedRoute: ActivatedRoute,  private dummyService: DummyService ) {
-
-    this.activatedRoute.params.subscribe( params => {
-       if (params.idProfile != null){
-           this.misproductos =   this.dummyService.productosProfiles(params['idProfile']);
-          console.log(this.misproductos);
-       }
+  constructor(private activatedRoute: ActivatedRoute, private dummyService: DummyService ) {
+    this.activatedRoute.params.subscribe (params => {
+      if(params.idProfile != null){
+        this.myProducts = this.dummyService.productoProfiles(params['idProfile']);
+      }
     });
-
-  }
-
+   }
 
   ngOnInit(): void {
 
   }
+
 
 
 }

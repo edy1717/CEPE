@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DummyService } from '../../../../services/dummy.service';
-import { ProductProfileInterface } from '../../../../models/products-profile';
+import { Profiles } from '../../../../interfaces/profiles';
 import { Router } from '@angular/router';
 
 @Component({
@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class ListProfilesComponent implements OnInit {
 
-  constructor( private dummyService: DummyService, private router:Router) { }
+  constructor( private dummyService:DummyService,  private router:Router) { }
 
   dataProfiles;
   dataProducts;
@@ -24,7 +24,6 @@ export class ListProfilesComponent implements OnInit {
   getListProfile(){
 
     this.dataProfiles = this.dummyService.consultaProfile();
-
   }
 
   getListProduct(){
