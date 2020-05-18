@@ -1,7 +1,7 @@
 .main-container {
-    margin-top: 1px;
-    margin-top: 2px;
-    padding: 20px;
+    margin-top: 5px;
+    margin-top: 5px;
+    padding: 30px;
 }
 
 .input-field {
@@ -87,5 +87,5 @@ h4 {
     min-width: 10px;
     text-align: center;
     height: 44px;
-    color: #418215
+    color: #418215 <<<<<<< HEAD
 }
