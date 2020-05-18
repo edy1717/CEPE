@@ -9,7 +9,6 @@ import { ProductProfileInterface } from '../interfaces/products-profile';
 })
 export class DummyService {
 
-
   profiles : Profiles [] = [
     {
       idProfile : 1,
@@ -156,7 +155,7 @@ export class DummyService {
   products : ProductProfileInterface [] = [
 
     {
-      id: 1456,
+      id: "1456",
       nombre: " Aguacate Criollo",
       profil : {
         idProfile : 1,
@@ -171,7 +170,7 @@ export class DummyService {
       medida:"Kg"
     },
     {
-      id: 4885,
+      id: "4885",
       nombre: "Tomate de Cascara ",
       profil : {
         idProfile : 2,
@@ -186,7 +185,7 @@ export class DummyService {
       medida:"Kg"
      },
     {
-    id: 5566,
+    id: "5566",
     nombre: " Papaya",
     profil : {
       idProfile : 1,
@@ -201,7 +200,7 @@ export class DummyService {
      medida:"Kg"
    },
    {
-     id: 2256,
+     id: "2256",
      nombre: " Chayote",
      profil : {
       idProfile : 2,
@@ -216,7 +215,7 @@ export class DummyService {
      medida:"Kg"
    },
     {
-      id: 5887,
+      id: "5887",
       nombre: " Jicama",
       profil : {
         idProfile : 1,
@@ -231,7 +230,7 @@ export class DummyService {
       medida:"Kg"
     },
     {
-      id: 3555,
+      id: "3555",
       nombre: " Chile Habanero",
       profil : {
         idProfile : 1,
@@ -246,7 +245,7 @@ export class DummyService {
       medida:"Kg"
     },
     {
-      id: 5684,
+      id: "5684",
       nombre: " Calabaza",
       profil : {
         idProfile : 1,
@@ -261,7 +260,7 @@ export class DummyService {
       medida:"Kg"
     },
   {
-    id: 6228,
+    id: "6228",
     nombre: " Maíz",
     profil : {
         idProfile : 1,
@@ -276,7 +275,7 @@ export class DummyService {
     medida:"Kg"
   },
   {
-    id: 8995,
+    id: "8995",
     nombre: " Nopal",
     profil : {
         idProfile : 1,
@@ -291,7 +290,7 @@ export class DummyService {
     medida:"Kg"
   },
   {
-    id: 8546,
+    id: "8546",
     nombre: " Espinaca",
     profil : {
         idProfile : 1,
@@ -306,7 +305,7 @@ export class DummyService {
     medida:"Kg"
   },
   {
-     id: 6897,
+     id: "6897",
      nombre: " Setas Comestibles",
      profil : {
         idProfile : 2,
@@ -321,7 +320,7 @@ export class DummyService {
      medida:"Kg"
    },
    {
-     id: 7458,
+     id: "7458",
      nombre: " Chicharo",
      profil : {
         idProfile : 2,
@@ -336,7 +335,7 @@ export class DummyService {
      medida:"Kg"
    },
    {
-     id: 5423,
+     id: "5423",
      nombre: " Durazno",
      profil : {
         idProfile : 2,
@@ -351,7 +350,7 @@ export class DummyService {
      medida:"Kg"
    },
    {
-     id: 4956,
+     id: "4956",
      nombre: " Granada",
      profil : {
         idProfile : 2,
@@ -366,7 +365,7 @@ export class DummyService {
      medida:"Kg"
    },
    {
-     id: 7469,
+     id: "7469",
      nombre: " Guayaba ",
      profil : {
         idProfile : 2,
@@ -381,7 +380,7 @@ export class DummyService {
      medida:"Kg"
    },
    {
-     id: 1476,
+     id: "1476",
      nombre: " Limón Persa  ",
      profil : {
         idProfile : 2,
@@ -396,7 +395,7 @@ export class DummyService {
      medida:"Kg"
    },
    {
-     id: 2785,
+     id: "2785",
      nombre: " Mango ",
      profil : {
         idProfile : 2,
@@ -411,7 +410,7 @@ export class DummyService {
      medida:"Kg"
    },
    {
-     id: 1439,
+     id: "1439",
      nombre: " Naranja ",
      profil : {
         idProfile : 2,
@@ -426,7 +425,7 @@ export class DummyService {
      medida:"Kg"
    },
     {
-      id: 8897,
+      id: "8897",
       nombre: " Piña ",
       profil : {
         idProfile : 2,
@@ -442,7 +441,7 @@ export class DummyService {
     },
 
 {
-      id: 7735,
+      id: "7735",
       nombre: " Platano ",
       profil : {
         idProfile : 2,
@@ -458,7 +457,7 @@ export class DummyService {
     },
 
 {
-      id: 1849,
+      id: "1849",
       nombre: " Sandía ",
       profil : {
         idProfile : 3,
@@ -474,7 +473,7 @@ export class DummyService {
     },
 
 {
-      id: 9745,
+      id: "9745",
       nombre: " Cebolla Morada ",
       profil : {
         idProfile : 3,
@@ -490,7 +489,7 @@ export class DummyService {
     },
 
 {
-      id: 5219,
+      id: "5219",
       nombre: " Fresa ",
       profil : {
         idProfile : 3,
@@ -506,7 +505,7 @@ export class DummyService {
     },
 
 {
-      id: 7873,
+      id: "7873",
       nombre: " Melón ",
       profil : {
         idProfile : 3,
@@ -522,7 +521,7 @@ export class DummyService {
     },
 
     {
-      id: 9531,
+      id: "9531",
       nombre: " Mandarina ",
       profil : {
         idProfile : 3,
@@ -537,7 +536,7 @@ export class DummyService {
       medida:"Kg"
     },
     {
-      id: 3330,
+      id: "3330",
       nombre: " Tejocote ",
       profil : {
         idProfile : 3,
@@ -552,7 +551,7 @@ export class DummyService {
       medida:"Kg"
     },
     {
-      id: 9638,
+      id: "9638",
       nombre: " Tamarindo ",
         profil : {
         idProfile : 3,
@@ -567,7 +566,7 @@ export class DummyService {
       medida:"Kg"
     },
     {
-      id: 7068,
+      id: "7068",
       nombre: " Lima ",
       profil : {
         idProfile : 3,
@@ -582,7 +581,7 @@ export class DummyService {
       medida:"Kg"
     },
     {
-      id: 1763,
+      id: "1763",
       nombre: " Mamey ",
       profil : {
         idProfile : 3,
@@ -597,7 +596,7 @@ export class DummyService {
       medida:"Kg"
     },
     {
-      id: 3750,
+      id: "3750",
       nombre: " Toronja ",
       profil : {
         idProfile : 3,
@@ -612,7 +611,7 @@ export class DummyService {
       medida:"Kg"
     },
   {
-      id: 5091,
+      id: "5091",
       nombre: " Ciruela ",
       profil : {
               idProfile : 4,
@@ -627,7 +626,7 @@ export class DummyService {
       medida:"Kg"
     },
     {
-      id: 2509,
+      id: "2509",
       nombre: " Chabacano ",
       profil : {
               idProfile : 4,
@@ -642,7 +641,7 @@ export class DummyService {
       medida:"Kg"
     },
     {
-      id: 6826,
+      id: "6826",
       nombre: " Uva ",
       profil : {
               idProfile : 4,
@@ -657,7 +656,7 @@ export class DummyService {
       medida:"Kg"
     },
     {
-      id: 3071,
+      id: "3071",
       nombre: " Membrillo ",
       profil : {
               idProfile : 4,
@@ -672,7 +671,7 @@ export class DummyService {
       medida:"Kg"
     },
     {
-      id: 7300,
+      id: "7300",
       nombre: " Tuna ",
       profil : {
               idProfile : 4,
@@ -687,7 +686,7 @@ export class DummyService {
       medida:"Kg"
     },
     {
-      id: 1001,
+      id: "1001",
       nombre: " Capulin ",
       profil : {
               idProfile : 4,
@@ -702,7 +701,7 @@ export class DummyService {
       medida:"Kg"
     },
     {
-      id: 5626,
+      id: "5626",
       nombre: " Pera ",
       profil : {
               idProfile : 4,
@@ -717,7 +716,7 @@ export class DummyService {
       medida:"Kg"
     },
     {
-      id: 1133,
+      id: "1133",
       nombre: " Perón ",
       profil : {
               idProfile : 4,
@@ -732,7 +731,7 @@ export class DummyService {
       medida:"Kg"
     },
     {
-      id: 2287,
+      id: "2287",
       nombre: " Chicozapote ",
       profil : {
               idProfile : 4,
@@ -747,7 +746,7 @@ export class DummyService {
       medida:"Kg"
     },
     {
-      id: 3377,
+      id: "3377",
       nombre: " Caña ",
       profil : {
               idProfile : 4,
@@ -762,7 +761,7 @@ export class DummyService {
       medida:"Kg"
     },
     {
-      id: 4460,
+      id: "4460",
       nombre: " Tejocote ",
       profil : {
           idProfile: 5,
@@ -777,7 +776,7 @@ export class DummyService {
       medida:"Kg"
     },
     {
-     id: 8880,
+     id: "8880",
      nombre: " Manzana Fuji ",
      profil : {
           idProfile: 5,
@@ -792,7 +791,7 @@ export class DummyService {
      medida:"Kg"
    },
     {
-     id: 9990,
+     id: "9990",
      nombre: " Manzana Golden ",
      profil : {
           idProfile: 5,
@@ -807,7 +806,7 @@ export class DummyService {
      medida:"Kg"
    },
     {
-     id: 1000,
+     id: "1000",
      nombre: " Manzana Granny Smith ",
      profil : {
           idProfile: 5,
@@ -822,7 +821,7 @@ export class DummyService {
      medida:"Kg"
    },
     {
-     id: 5554,
+     id: "5554",
      nombre: " Manzana Reineta ",
      profil : {
           idProfile: 5,
@@ -837,7 +836,7 @@ export class DummyService {
      medida:"Kg"
    },
     {
-     id: 8863,
+     id: "8863",
      nombre: " Manzana Red Delicious ",
      profil : {
           idProfile: 5,
@@ -852,7 +851,7 @@ export class DummyService {
      medida:"Kg"
    },
     {
-     id: 5005,
+     id: "5005",
      nombre: " Manzana Startinkg ",
      profil : {
           idProfile: 5,
@@ -867,7 +866,7 @@ export class DummyService {
      medida:"Kg"
    },
     {
-     id: 7774,
+     id: "7774",
      nombre: " Manzana Royal Gala ",
      profil : {
           idProfile: 5,
@@ -882,7 +881,7 @@ export class DummyService {
      medida:"Kg"
    },
     {
-     id: 8003,
+     id: "8003",
      nombre: " Ajo ",
      profil : {
           idProfile: 5,
@@ -897,7 +896,7 @@ export class DummyService {
      medida:"Kg"
    },
     {
-     id: 4407,
+     id: "4407",
      nombre: " Ruda ",
      profil : {
           idProfile: 5,
@@ -912,7 +911,7 @@ export class DummyService {
      medida:"Kg"
    },
    {
-     id: 7022,
+     id: "7022",
      nombre: " Aguacate Hass ",
      profil : {
       		idProfile: 6,
@@ -927,7 +926,7 @@ export class DummyService {
      medida:"Kg"
    },
    {
-    id: 1199,
+    id: "1199",
     nombre: " Aguacate Bacón ",
     profil : {
       		idProfile: 6,
@@ -942,7 +941,7 @@ export class DummyService {
     medida:"Kg"
   },
    {
-    id: 5904,
+    id: "5904",
     nombre: " Aguacate Pinkerton ",
     profil : {
       		idProfile: 6,
@@ -957,7 +956,7 @@ export class DummyService {
     medida:"Kg"
   },
    {
-    id: 6010,
+    id: "6010",
     nombre: " Hierba Menta ",
     profil : {
       		idProfile: 6,
@@ -972,7 +971,7 @@ export class DummyService {
     medida:"g"
   },
    {
-    id: 2208,
+    id: "2208",
     nombre: " Aguacate Reed ",
     profil : {
       		idProfile: 6,
@@ -987,7 +986,7 @@ export class DummyService {
     medida:"Kg"
   },
    {
-    id: 4631,
+    id: "4631",
     nombre: " Epazote ",
     profil : {
       		idProfile: 6,
@@ -1002,7 +1001,7 @@ export class DummyService {
     medida:"g"
   },
    {
-    id: 9990,
+    id: "9990",
     nombre: " Hierbabuena ",
     profil : {
       		idProfile: 6,
@@ -1017,7 +1016,7 @@ export class DummyService {
     medida:"g"
   },
    {
-    id: 7751,
+    id: "7751",
     nombre: " Arnica ",
     profil : {
       		idProfile: 6,
@@ -1032,7 +1031,7 @@ export class DummyService {
     medida:"g"
   },
    {
-    id: 8700,
+    id: "8700",
     nombre: " Romero ",
     profil : {
       		idProfile: 6,
@@ -1047,7 +1046,7 @@ export class DummyService {
     medida:"g"
   },
    {
-    id: 3309,
+    id: "3309",
     profil : {
       		idProfile: 6,
       		nombre: "Daniela",
@@ -1062,7 +1061,7 @@ export class DummyService {
     medida:"g"
   },
    {
-    id: 3031,
+    id: "3031",
     nombre: " Sábila Mexicana  ",
     profil : {
       		idProfile: 7,
@@ -1077,7 +1076,7 @@ export class DummyService {
     medida:"Kg"
   },
    {
-    id: 9077,
+    id: "9077",
     nombre: " Achiote ",
     profil : {
       		idProfile: 7,
@@ -1092,7 +1091,7 @@ export class DummyService {
     medida:"Kg"
   },
    {
-    id: 7726,
+    id: "7726",
     nombre: " Nopal ",
     profil : {
       		idProfile: 7,
@@ -1107,7 +1106,7 @@ export class DummyService {
     medida:"Kg"
   },
    {
-    id: 3302,
+    id: "3302",
     nombre: " Cacao ",
     profil : {
       		idProfile: 7,
@@ -1122,7 +1121,7 @@ export class DummyService {
     medida:"Kg"
   },
    {
-    id: 7770,
+    id: "7770",
     nombre: " Jengibre ",
     profil : {
       		idProfile: 7,
@@ -1137,7 +1136,7 @@ export class DummyService {
     medida:"g"
   },
    {
-    id: 6993,
+    id: "6993",
     nombre: " Nuez Moscada  ",
     profil : {
       		idProfile: 7,
@@ -1152,7 +1151,7 @@ export class DummyService {
     medida:"Kg"
   },
    {
-    id: 9663,
+    id: "9663",
     nombre: " Manzanilla ",
     profil : {
       		idProfile: 7,
@@ -1167,7 +1166,7 @@ export class DummyService {
     medida:"g"
   },
    {
-    id: 7889,
+    id: "7889",
     nombre: " Plátano Dominico  ",
     profil : {
       		idProfile: 7,
@@ -1182,7 +1181,7 @@ export class DummyService {
     medida:"Kg"
   },
    {
-    id: 2068,
+    id: "2068",
     nombre: " Berenjena ",
     profil : {
       		idProfile: 7,
@@ -1197,7 +1196,7 @@ export class DummyService {
     medida:"Kg"
   },
   {
-    id: 3337,
+    id: "3337",
     nombre: " Chile Manzano ",
     profil : {
       		idProfile: 7,
@@ -1212,7 +1211,7 @@ export class DummyService {
     medida:"Kg"
   },
   {
-    id: 7008,
+    id: "7008",
     nombre: " Chile Morrón ",
     profil : {
       		idProfile: 8,
@@ -1227,7 +1226,7 @@ export class DummyService {
     medida:"Kg"
   },
   {
-    id: 9400,
+    id: "9400",
     nombre: " Tomate saladette ",
     profil : {
       		idProfile: 8,
@@ -1242,7 +1241,7 @@ export class DummyService {
     medida:"Kg"
   },
   {
-    id: 4445,
+    id: "4445",
     nombre: " Tomate uva ",
     profil : {
       		idProfile: 8,
@@ -1257,7 +1256,7 @@ export class DummyService {
     medida:"Kg"
   },
   {
-    id: 7390,
+    id: "7390",
     nombre: " Pepino ",
     profil : {
       		idProfile: 8,
@@ -1272,7 +1271,7 @@ export class DummyService {
     medida:"Kg"
   },
   {
-    id: 6002,
+    id: "6002",
     nombre: "Brócoli",
     profil : {
       		idProfile: 8,
@@ -1287,7 +1286,7 @@ export class DummyService {
     medida:"Kg"
   },
   {
-    id: 3928,
+    id: "3928",
     nombre: " Lechuga Romana ",
     profil : {
       		idProfile: 8,
@@ -1302,7 +1301,7 @@ export class DummyService {
     medida:"Kg"
   },
   {
-    id: 8612,
+    id: "8612",
     nombre: "  Lechuga iceberg ",
     profil : {
       		idProfile: 8,
@@ -1317,7 +1316,7 @@ export class DummyService {
     medida:"Kg"
   },
   {
-    id: 6613,
+    id: "6613",
     nombre: " Papa blanca  ",
     profil : {
       		idProfile: 8,
@@ -1332,7 +1331,7 @@ export class DummyService {
     medida:"Kg"
   },
   {
-    id: 9614,
+    id: "9614",
     nombre: " Papa Cambray ",
     profil : {
       		idProfile: 8,
@@ -1347,7 +1346,7 @@ export class DummyService {
     medida:"Kg"
   },
   {
-    id: 5052,
+    id: "5052",
     nombre: " Papa Russet Burbank ",
     profil : {
       		idProfile: 8,
@@ -1362,7 +1361,7 @@ export class DummyService {
     medida:"Kg"
   },
   {
-    id: 6053,
+    id: "6053",
     nombre: " Papa galeana ",
     profil : {
       		idProfile: 9,
@@ -1377,7 +1376,7 @@ export class DummyService {
     medida:"Kg"
   },
   {
-    id: 8026,
+    id: "8026",
     nombre: " Papa roja o colorada ",
     profil : {
       		idProfile: 9,
@@ -1392,7 +1391,7 @@ export class DummyService {
     medida:"Kg"
   },
   {
-    id: 5027,
+    id: "5027",
     nombre: " Garbanzo ",
     profil : {
       		idProfile: 9,
@@ -1407,7 +1406,7 @@ export class DummyService {
     medida:"Kg"
   },
   {
-    id: 9926,
+    id: "9926",
     nombre: " Cebolla Chalote ",
     profil : {
       		idProfile: 9,
@@ -1422,7 +1421,7 @@ export class DummyService {
     medida:"Kg"
   },
   {
-    id: 1927,
+    id: "1927",
     nombre: " Cebolla blanca ",
     profil : {
       		idProfile: 9,
@@ -1437,7 +1436,7 @@ export class DummyService {
     medida:"Kg"
   },
   {
-    id: 4406,
+    id: "4406",
     nombre: " Cebollin ",
     profil : {
       		idProfile: 9,
@@ -1452,7 +1451,7 @@ export class DummyService {
     medida:"Kg"
   },
   {
-    id: 6407,
+    id: "6407",
     nombre: " Cebolla Dorada ",
     profil : {
       		idProfile: 9,
@@ -1467,7 +1466,7 @@ export class DummyService {
     medida:"Kg"
   },
   {
-    id: 1413,
+    id: "1413",
     nombre: " Haba ",
     profil : {
       		idProfile: 9,
@@ -1482,7 +1481,7 @@ export class DummyService {
     medida:"Kg"
   },
   {
-    id: 1416,
+    id: "1416",
     nombre: " Frijol Ayocote Morado ",
     profil : {
       		idProfile: 9,
@@ -1497,7 +1496,7 @@ export class DummyService {
     medida:"Kg"
   },
   {
-    id: 6046,
+    id: "6046",
     nombre: " Frijol rosa crema ",
     profil : {
       		idProfile: 9,
@@ -1512,7 +1511,7 @@ export class DummyService {
     medida:"Kg"
   },
   {
-    id: 2064,
+    id: "2064",
     nombre: " Frijol Sangre de toro ",
     profil : {
       		idProfile: 10,
@@ -1527,7 +1526,7 @@ export class DummyService {
     medida:"g"
   },
   {
-    id: 1226,
+    id: "1226",
     nombre: " Frijol San Francisco ",
     profil : {
       		idProfile: 10,
@@ -1542,7 +1541,7 @@ export class DummyService {
     medida:"g"
   },
   {
-    id: 7726,
+    id: "7726",
     nombre: " Frijol Vaquita ",
     profil : {
       		idProfile: 10,
@@ -1557,7 +1556,7 @@ export class DummyService {
     medida:"g"
   },
   {
-    id: 6610,
+    id: "6610",
     nombre: " Frijol negro ",
     profil : {
       		idProfile: 10,
@@ -1572,7 +1571,7 @@ export class DummyService {
     medida:"Kg"
   },
   {
-    id: 9611,
+    id: "9611",
     nombre: " Frijol  Bayo  ",
     profil : {
       		idProfile: 10,
@@ -1587,7 +1586,7 @@ export class DummyService {
     medida:"Kg"
   },
   {
-    id: 5520,
+    id: "5520",
     nombre: " Limón verde o amargo  ",
     profil : {
       		idProfile: 10,
@@ -1602,7 +1601,7 @@ export class DummyService {
     medida:"Kg"
   },
   {
-    id: 2012,
+    id: "2012",
     nombre: " Limón Amarillo ",
     profil : {
       		idProfile: 10,
@@ -1617,7 +1616,7 @@ export class DummyService {
     medida:"Kg"
   },
   {
-    id: 2026,
+    id: "2026",
     nombre: " Tomate Cherry ",
     profil : {
       		idProfile: 10,
@@ -1634,7 +1633,7 @@ export class DummyService {
 
 
    {
-    id: 1234,
+    id: "1234",
     nombre: "Arándano",
     profil : {
       		idProfile: 10,
@@ -1649,7 +1648,7 @@ export class DummyService {
     medida: "Kilos"
     },
     {
-    id: 4321,
+    id: "4321",
     nombre: "Frambuesa",
     profil : {
       		idProfile: 10,
@@ -1664,7 +1663,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id: 1122,
+    id: "1122",
     nombre: "Grosella Espinosa",
     profil : {
       		idProfile: 11,
@@ -1679,7 +1678,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id: 2233,
+    id: "2233",
     nombre: "Grosella Negra",
     profil : {
       		idProfile: 11,
@@ -1694,7 +1693,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id: 3344,
+    id: "3344",
     nombre: "Grosella Roja",
     profil : {
       		idProfile: 11,
@@ -1709,7 +1708,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id: 4455,
+    id: "4455",
     nombre: "Zarzamora",
     profil : {
       		idProfile: 11,
@@ -1724,7 +1723,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id: 5566,
+    id: "5566",
     nombre: "Pomelo",
     profil : {
       		idProfile: 11,
@@ -1739,7 +1738,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id: 6677,
+    id: "6677",
     nombre: "Carambola",
     profil : {
       		idProfile: 11,
@@ -1754,7 +1753,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id: 7788,
+    id: "7788",
     nombre: "Chirimoya",
     profil : {
       		idProfile: 11,
@@ -1770,7 +1769,7 @@ export class DummyService {
 
     },
     {
-    id: 8899,
+    id: "8899",
     nombre: "Coco",
     profil : {
       		idProfile: 11,
@@ -1785,7 +1784,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id: 9900,
+    id: "9900",
     nombre: "Dátil",
     profil : {
       		idProfile: 11,
@@ -1800,7 +1799,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id: 9099,
+    id: "9099",
     nombre: "Kiwi",
     profil : {
       		idProfile: 11,
@@ -1815,7 +1814,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id: 9988,
+    id: "9988",
     nombre: "Litchi",
     profil : {
       		idProfile: 12,
@@ -1830,7 +1829,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id: 8877,
+    id: "8877",
     nombre: "Albaricoque",
     profil : {
       		idProfile: 12,
@@ -1845,7 +1844,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:7766,
+    id:"7766",
     nombre:" Cereza",
     profil : {
       		idProfile: 12,
@@ -1860,7 +1859,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id: 5544,
+    id: "5544",
     nombre: "Higo",
     profil : {
       		idProfile: 12,
@@ -1875,7 +1874,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id: 4433,
+    id: "4433",
     nombre: "Kaki",
     profil : {
       		idProfile: 12,
@@ -1890,7 +1889,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id: 3322,
+    id: "3322",
     nombre: "Melocotón",
     profil : {
       		idProfile: 12,
@@ -1905,7 +1904,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:2211,
+    id:"2211",
     nombre:" Nectarina",
     profil : {
       		idProfile: 12,
@@ -1920,7 +1919,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:1112,
+    id:"1112",
     nombre: "Níspero",
     profil : {
       		idProfile: 12,
@@ -1935,7 +1934,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:2223,
+    id:"2223",
     nombre: "Almendra",
     profil : {
       		idProfile: 12,
@@ -1950,7 +1949,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:3334,
+    id:"3334",
     nombre:" Avena",
     profil : {
       		idProfile: 12,
@@ -1965,7 +1964,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:4445,
+    id:"4445",
     nombre:" Cacahuate",
     profil : {
       		idProfile: 13,
@@ -1980,7 +1979,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:5556,
+    id:"5556",
     nombre:" Castaña",
     profil : {
       		idProfile: 13,
@@ -1995,7 +1994,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:6667,
+    id:"6667",
     nombre:" Nuez",
     profil : {
       		idProfile: 13,
@@ -2010,7 +2009,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:7778,
+    id:"7778",
     nombre:" Pacana",
     profil : {
       		idProfile: 13,
@@ -2025,7 +2024,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:8889,
+    id:"8889",
     nombre: "Pistacho",
     profil : {
       		idProfile: 13,
@@ -2040,7 +2039,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:9990,
+    id:"9990",
     nombre:" Alquejenje",
     profil : {
       		idProfile: 13,
@@ -2055,7 +2054,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:6009,
+    id:"6009",
     nombre:" Chirimoya",
     profil : {
       		idProfile: 13,
@@ -2070,7 +2069,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:9998,
+    id:"9998",
     nombre:" Kumquat",
     profil : {
       		idProfile: 13,
@@ -2085,7 +2084,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:8887,
+    id:"8887",
     nombre:" Mangostino",
     profil : {
       		idProfile: 13,
@@ -2100,7 +2099,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:7776,
+    id:"7776",
     nombre: "Maracuya",
     profil : {
       		idProfile: 13,
@@ -2115,7 +2114,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:6665,
+    id:"6665",
     nombre: "Pitahaya",
     profil : {
       		idProfile: 14,
@@ -2130,7 +2129,7 @@ export class DummyService {
     medida: "Gramos"
     },
     {
-    id:5554,
+    id:"5554",
     nombre: "Rambután",
     profil : {
       		idProfile: 14,
@@ -2145,7 +2144,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:4443,
+    id:"4443",
     nombre: "Tamarillo",
     profil : {
       		idProfile: 14,
@@ -2160,7 +2159,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:3332,
+    id:"3332",
     nombre:"Dátil",
     profil : {
       		idProfile: 14,
@@ -2175,7 +2174,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:2221,
+    id:"2221",
     nombre:" Higo seco",
     profil : {
       		idProfile: 14,
@@ -2190,7 +2189,7 @@ export class DummyService {
     medida: "Gramos"
     },
     {
-    id:1110,
+    id:"1110",
     nombre: "Orejones de albaricoque",
     profil : {
       		idProfile: 14,
@@ -2205,7 +2204,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:1029,
+    id:"1029",
     nombre:" Orejones de melocotón",
     profil : {
       		idProfile: 14,
@@ -2220,7 +2219,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:3847,
+    id:"3847",
     nombre:" Uva pasa",
     profil : {
       		idProfile: 14,
@@ -2235,7 +2234,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:5665,
+    id:"5665",
     nombre: "Pepino cohombro",
     profil : {
       		idProfile: 14,
@@ -2250,7 +2249,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:1111,
+    id:"1111",
     nombre: "Cilantro",
     profil : {
       		idProfile: 14,
@@ -2265,7 +2264,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:2222,
+    id:"2222",
     nombre: "Ají",
     profil : {
       		idProfile: 15,
@@ -2280,7 +2279,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:3333,
+    id:"3333",
     nombre:" Moras",
     profil : {
       		idProfile: 15,
@@ -2295,7 +2294,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:5555,
+    id:"5555",
     nombre: "Cafeto",
     profil : {
       		idProfile: 15,
@@ -2310,7 +2309,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:7777,
+    id:"7777",
     nombre: "Algodón",
     profil : {
       		idProfile: 15,
@@ -2325,7 +2324,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:8888,
+    id:"8888",
     nombre: "Soja",
     profil : {
       		idProfile: 15,
@@ -2340,7 +2339,7 @@ export class DummyService {
     medida:" kg"
     },
     {
-    id:9999,
+    id:"9999",
     nombre: "Adelfa",
     profil : {
       		idProfile: 15,
@@ -2355,7 +2354,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:7531,
+    id:"7531",
     nombre:" Culantrillo",
     profil : {
       		idProfile: 15,
@@ -2370,7 +2369,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:6600,
+    id:"6600",
     nombre: "Cúrcuma",
     profil : {
       		idProfile: 15,
@@ -2385,7 +2384,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:9989,
+    id:"9989",
     nombre:" Feijoa",
     profil : {
       		idProfile: 15,
@@ -2400,7 +2399,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id: 1005,
+    id: "1005",
     nombre: "Durián",
     profil : {
       		idProfile: 15,
@@ -2415,7 +2414,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:2005,
+    id:"2005",
     nombre: "Pomelo",
     profil : {
       		idProfile: 16,
@@ -2430,7 +2429,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:3005,
+    id:"3005",
     nombre:" Chile Poblano",
     profil : {
       		idProfile: 16,
@@ -2445,7 +2444,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:4005,
+    id:"4005",
     nombre: "Nectarinas",
     profil : {
       		idProfile: 16,
@@ -2460,7 +2459,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:5005,
+    id:"5005",
     nombre:" Zapote",
     profil : {
       		idProfile: 16,
@@ -2475,7 +2474,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:6005,
+    id:"6005",
     nombre: "Fruta Sharon",
     profil : {
       		idProfile: 16,
@@ -2490,7 +2489,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id: 5005,
+    id: "5005",
     nombre:" Kiwi amarillo",
     profil : {
       		idProfile: 16,
@@ -2505,7 +2504,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:8005,
+    id:"8005",
     nombre:" Albaricoque",
     profil : {
       		idProfile: 16,
@@ -2520,7 +2519,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:9005,
+    id:"9005",
     nombre:" Rambutan",
     profil : {
       		idProfile: 16,
@@ -2535,7 +2534,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:1102,
+    id:"1102",
     nombre: "Uchuva",
     profil : {
       		idProfile: 16,
@@ -2550,7 +2549,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:6103,
+    id:"6103",
     nombre: "Pera Red Bartlett",
     profil : {
       		idProfile: 16,
@@ -2565,7 +2564,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:5104,
+    id:"5104",
     nombre:" Pasas",
     profil : {
       		idProfile: 17,
@@ -2580,7 +2579,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:2105,
+    id:"2105",
     nombre: "Caimito",
     profil : {
       		idProfile: 17,
@@ -2595,7 +2594,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:2106,
+    id:"2106",
     nombre:" Kiwano",
     profil : {
       		idProfile: 17,
@@ -2610,7 +2609,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:7107,
+    id:"7107",
     nombre:" Noni",
     profil : {
       		idProfile: 17,
@@ -2625,7 +2624,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:5109,
+    id:"5109",
     nombre: "Naranjilla",
     profil : {
       		idProfile: 17,
@@ -2640,7 +2639,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:2200,
+    id:"2200",
     nombre: "Plátano Tabasco",
     profil : {
       		idProfile: 17,
@@ -2655,7 +2654,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:9100,
+    id:"9100",
     nombre: "Uva Blanca",
     profil : {
       		idProfile: 17,
@@ -2670,7 +2669,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:3300,
+    id:"3300",
     nombre: "Mango Paraíso",
     profil : {
       		idProfile: 17,
@@ -2685,7 +2684,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:4400,
+    id:"4400",
     nombre: "Uva Roja",
     profil : {
       		idProfile: 17,
@@ -2700,7 +2699,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:5000,
+    id:"5000",
     nombre: "Limón",
     profil : {
       		idProfile: 18,
@@ -2715,7 +2714,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:6600,
+    id:"6600",
     nombre:" Manzana Gray Smith",
     profil : {
       		idProfile: 18,
@@ -2730,7 +2729,7 @@ export class DummyService {
     medida: "kg",
     },
     {
-    id: 7780,
+    id: "7780",
     nombre: "Aguacate",
     profil : {
       		idProfile: 18,
@@ -2745,7 +2744,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:7900,
+    id:"7900",
     nombre:" Manzana Royal Gala",
     profil : {
       		idProfile: 18,
@@ -2760,7 +2759,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:1213,
+    id:"1213",
     nombre: "Ciruela Roja",
     profil : {
       		idProfile: 18,
@@ -2775,7 +2774,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:1214,
+    id:"1214",
     nombre: "Uva Azul",
     profil : {
       		idProfile: 18,
@@ -2790,7 +2789,7 @@ export class DummyService {
     medida:" Gramos"
     },
     {
-    id:1215,
+    id:"1215",
     nombre: "Pera Anjou",
     profil : {
       		idProfile: 18,
@@ -2805,7 +2804,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:1216,
+    id:"1216",
     nombre: "Caña de 	Azúcar",
     profil : {
       		idProfile: 18,
@@ -2820,7 +2819,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:1217,
+    id:"1217",
     nombre: "Guaya",
     profil : {
       		idProfile: 18,
@@ -2835,7 +2834,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:1218,
+    id:"1218",
     nombre: "Plátano Macho",
     profil : {
       		idProfile: 18,
@@ -2850,7 +2849,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:1219,
+    id:"1219",
     nombre: "Ciruela Negra",
     profil : {
       		idProfile: 19,
@@ -2865,7 +2864,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:1220,
+    id:"1220",
     nombre: "Toronja o Pomelo",
     profil : {
       		idProfile: 19,
@@ -2880,7 +2879,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:1221,
+    id:"1221",
     nombre: "Maracuya Amarillo",
     profil : {
       		idProfile: 19,
@@ -2895,7 +2894,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:1222,
+    id:"1222",
     nombre:" Melón chino",
     profil : {
       		idProfile: 19,
@@ -2910,7 +2909,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:1223,
+    id:"1223",
     nombre: "Guayabas Silvestres",
     profil : {
       		idProfile: 19,
@@ -2925,7 +2924,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:1224,
+    id:"1224",
     nombre: "Fruta estrella o carambola",
     profil : {
       		idProfile: 19,
@@ -2940,7 +2939,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:1225,
+    id:"1225",
     nombre:" Uva Rosada",
     profil : {
       		idProfile: 19,
@@ -2955,7 +2954,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:1226,
+    id:"1226",
     nombre: "Melón verde",
     profil : {
       		idProfile: 19,
@@ -2970,7 +2969,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:1227,
+    id:"1227",
     nombre: "Plátano rojo",
     profil : {
       		idProfile: 19,
@@ -2985,7 +2984,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:1228,
+    id:"1228",
     nombre: "Pera Bosc",
     profil : {
       		idProfile: 19,
@@ -3000,7 +2999,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:1229,
+    id:"1229",
     nombre: "Jitomate",
     profil : {
       		idProfile: 20,
@@ -3015,7 +3014,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:1230,
+    id:"1230",
     nombre: "Guanábana",
     profil : {
       		idProfile: 20,
@@ -3030,7 +3029,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:1240,
+    id:"1240",
     nombre: "Chile jalapeño",
     profil : {
       		idProfile: 20,
@@ -3045,7 +3044,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:1250,
+    id:"1250",
     nombre: "Chile serrano",
     profil : {
       		idProfile: 20,
@@ -3060,7 +3059,7 @@ export class DummyService {
     medida: "kg"
     },
     {
-    id:1280,
+    id:"1280",
     nombre: "Chile güero",
     profil : {
       		idProfile: 20,
@@ -3079,6 +3078,7 @@ export class DummyService {
 
   constructor() { }
 
+
   consultaProfile(){
     return this.profiles;
 
@@ -3087,19 +3087,17 @@ export class DummyService {
   consultaProducto(){
      return this.products;
    }
+
   productoProfiles(id){
-  let product = this.products.filter(data => 
+  let product = this.products.filter(data =>
     data.profil.idProfile.toString()===id.toString());
     return product;
   }
 
- productosProfiles( id){
-    let prod = this.products.filter(data=>
-       data.profil.idProfile.toString()===id.toString()
-     );
-    return prod;
+  public selectedProducts : ProductProfileInterface = {
+    id:null
+  }
 
-   }
 }
 
 

@@ -3,7 +3,7 @@ import { AngularFireAuth } from '@angular/fire/auth';
 import { AuthService } from '../../services/auth.service';
 import { UserInterface } from '../../interfaces/user';
 
-
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-navbar',
@@ -11,6 +11,9 @@ import { UserInterface } from '../../interfaces/user';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+
+  active = 1;
+  
 
   constructor( private authService : AuthService,
                 private afsAuth : AngularFireAuth ) { }
@@ -52,5 +55,6 @@ export class NavbarComponent implements OnInit {
     this.afsAuth.signOut();
   }
 
-  
+
+
 }

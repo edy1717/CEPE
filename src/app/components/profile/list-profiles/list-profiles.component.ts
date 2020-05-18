@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { DummyService } from '../../../../services/dummy.service';
-import { Profiles } from '../../../../interfaces/profiles';
 import { Router } from '@angular/router';
+import { DummyService } from '../../../services/dummy.service';
 
 @Component({
   selector: 'app-list-profiles',
