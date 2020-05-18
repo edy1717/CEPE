@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { DataApiService } from '../../services/data-api.service';
 import { ProductInterface } from '../../interfaces/products';
-import { NgForm } from '@angular/forms';
 import { DummyService } from '../../services/dummy.service';
+import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ModalComponent } from '../modals/modal/modal.component';
+
 
 @Component({
   selector: 'app-list-products',
@@ -11,7 +13,10 @@ import { DummyService } from '../../services/dummy.service';
 })
 export class ListProductsComponent implements OnInit {
 
-  constructor( private dataApi: DataApiService, private dummyService : DummyService ) { }
+  constructor( public dataApi: DataApiService, 
+                public dummyService : DummyService, 
+                private modalService: NgbModal,
+                public activeModal: NgbActiveModal) { }
 
   filterPost = '';
   dataProducts;
@@ -19,8 +24,8 @@ export class ListProductsComponent implements OnInit {
   public products : ProductInterface[];
 
   ngOnInit(): void {
-    // this.getListProducts();
     this.getListProduct();
+    
   }
 
   getListProduct(){
@@ -28,19 +33,6 @@ export class ListProductsComponent implements OnInit {
     console.log('producto', this.dataProducts)
   }
 
-  // getListProducts(){
-  //   this.dataApi.getAllProducts()
-  //   .subscribe(products => {
-  //     this.products = products;
-  //   });
-  // }
-
-  onDeleteProduct(idProduct: string):void{
-    const confirmacion = confirm('Estas seguro de eliminar el producto');
-    if(confirmacion){
-      this.dataApi.deleteProduct(idProduct);
-    }
-  }
   onDeleteProducts(i : string):void{
     const confirmacion = confirm('Estas seguro de eliminar el producto');
     if(confirmacion){
@@ -51,5 +43,11 @@ export class ListProductsComponent implements OnInit {
   onPreUpdateProduct(product: ProductInterface) {
     this.dataApi.selectedProduct = Object.assign({}, product);
   }
+
+  opens(content) {
+    this.modalService.open(content, { windowClass: 'dark-modal' });
+  }
+
+  
 
 }

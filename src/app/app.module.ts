@@ -7,7 +7,7 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { LoginComponent } from './components/user/login/login.component';
-import { ProfileComponent } from './components/profile/myproducts/profile/profile.component';
+import { ProfileComponent } from './components/profile/profile/profile.component';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
@@ -20,7 +20,7 @@ import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { ListProductsComponent } from './components/list-products/list-products.component';
 import { FilterPipe } from './shared/pipes/filter.pipe';
-import { ListProfilesComponent } from './components/profile/myproducts/list-profiles/list-profiles.component';
+import { ListProfilesComponent } from './components/profile/list-profiles/list-profiles.component';
 import { FilterProfilePipe } from './shared/pipes/filter-profile.pipe';
 import { MyproductsComponent } from './components/profile/myproducts/myproducts.component';
 import { ModalProfileComponent } from './components/modals/modal-profile/modal-profile.component'
@@ -28,7 +28,7 @@ import { ModalComponent } from './components/modals/modal/modal.component';
 import { OffersComponent } from './components/offers/offers.component';
 import { ModalMyProductsComponent } from './components/modals/modal-my-products/modal-my-products.component';
 import { ModalOffersComponent } from './components/modals/modal-offers/modal-offers.component';
-
+import { NgbModule, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -51,7 +51,7 @@ import { ModalOffersComponent } from './components/modals/modal-offers/modal-off
     ModalProfileComponent,
     OffersComponent,
     ModalMyProductsComponent,
-    ModalOffersComponent
+    ModalOffersComponent,
   ],
   imports: [
     BrowserModule,
@@ -60,10 +60,12 @@ import { ModalOffersComponent } from './components/modals/modal-offers/modal-off
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebaseconfig) ,
     AngularFireDatabaseModule,
+    NgbModule.forRoot(),
   ],
   providers: [
     AngularFireAuth,
-    AngularFirestore
+    AngularFirestore,
+    NgbActiveModal,
   ],
   bootstrap: [AppComponent,
       ]

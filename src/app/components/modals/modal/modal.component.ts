@@ -1,16 +1,32 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, ViewEncapsulation } from '@angular/core';
 import { DataApiService } from '../../../services/data-api.service';
 import { NgForm } from '@angular/forms'
-import { ProductInterface } from '../../../interfaces/products';
+import { NgbModal, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
+import { DummyService } from 'src/app/services/dummy.service';
 
 @Component({
   selector: 'app-modal',
   templateUrl: './modal.component.html',
-  styleUrls: ['./modal.component.css']
+  encapsulation: ViewEncapsulation.None,
+  styles: [`
+    .dark-modal .modal-content {
+      background-color: #292b2c;
+      color: white;
+    }
+    .dark-modal .close {
+      color: white;
+    }
+  `]
 })
+
 export class ModalComponent implements OnInit {
 
-  constructor( public dataApi : DataApiService ) { }
+
+
+
+  constructor( public dataApi : DataApiService,
+    public activeModal: NgbActiveModal, public dummyService : DummyService,
+    private modalService: NgbModal   ) { }
 
   @ViewChild('btnClose') btnClose : ElementRef;
 
@@ -37,4 +53,7 @@ export class ModalComponent implements OnInit {
   this.btnClose.nativeElement.click();
   }
 
+  opens(content) {
+    this.modalService.open(content, { windowClass: 'dark-modal' });
+  }
 }
