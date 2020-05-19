@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AuthService } from '../../services/auth.service';
 import { UserInterface } from '../../interfaces/user';
+import { Router } from '@angular/router';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -13,10 +14,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 export class NavbarComponent implements OnInit {
 
   active = 1;
-  
+
 
   constructor( private authService : AuthService,
-                private afsAuth : AngularFireAuth ) { }
+                private afsAuth : AngularFireAuth, private router:Router ) { }
 
   public app_name: string = 'Sembrando Conciencia';
 
@@ -52,7 +53,8 @@ export class NavbarComponent implements OnInit {
   }
 
   onLogout() {
-    this.afsAuth.signOut();
+    localStorage.removeItem('SCtoken');
+    this.router.navigateByUrl('/home');
   }
 
 

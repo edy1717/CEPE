@@ -14,15 +14,15 @@
             </a>
                 </li>
 
-                <li class="nav-item dropdown" *ngIf="isLogged">
+                <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               {{user.name}}
               <img src="{{user.photoURL}}" class="rounded-circle img-thumbnail" alt="profile">
             </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li class="nav-item" *ngIf="isLogged">
+                        <li class="nav-item">
                             <a class="nav-link" routerLink="/user/profile">Mi Perfil</a>
-                        </li>                    
+                        </li>
                         <a class="dropdown-item" class="nav-link" routerLink="/admin/list-products">Productos</a>
                         <a class="dropdown-item" class="nav-link" routerLink="/admin/list-profiles">Perfiles</a>
                         <a class="dropdown-item" href="#" class="nav-link" (click)="onLogout()">Cerrar sesión</a>
@@ -32,5 +32,3 @@
         </div>
     </nav>
 </div>
-
-
