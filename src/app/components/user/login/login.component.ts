@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
+import { UsuarioService } from '../../../services/usuario.service';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +13,8 @@ export class LoginComponent implements OnInit {
 
   constructor( public afAuth : AngularFireAuth, 
                 private router : Router,
-                private authService : AuthService ) { }
+                private authService : AuthService,
+                private usService : UsuarioService ) { }
 
     public email: string = '';
     public password: string = '';
@@ -43,6 +45,12 @@ export class LoginComponent implements OnInit {
 
   onLogout():void{
     this.authService.logoutUser();
+  }
+
+  onLoginCorreo(){
+    this.usService.onlogin(this.usService).subscribe ( resp => {
+      console.log(this.usService) 
+    })
   }
 
 }
