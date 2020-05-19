@@ -2,10 +2,10 @@
     background-color: rgba(255, 255, 255, 0.5);
 }
 
-.navbar-nav a {
+/* .navbar-nav a {
     background-color: #418215;
     color: white;
-}
+} */
 
 .navbar-nav a:hover {
     color: #fcc424;
