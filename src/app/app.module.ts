@@ -29,6 +29,7 @@ import { OffersComponent } from './components/offers/offers.component';
 import { ModalMyProductsComponent } from './components/modals/modal-my-products/modal-my-products.component';
 import { ModalOffersComponent } from './components/modals/modal-offers/modal-offers.component';
 import { NgbModule, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -57,10 +58,12 @@ import { NgbModule, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebaseconfig) ,
     AngularFireDatabaseModule,
     NgbModule.forRoot(),
+    
   ],
   providers: [
     AngularFireAuth,
