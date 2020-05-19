@@ -18,7 +18,7 @@
             <!-- <div class="input-group">-->
             <div class="nav-item dropdown">
                 <button class="btn btn-outline-success dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class ="fa fa-user"></i> Mi Perfil</button>
+                        <i class ="far fa-user "></i> Mi Perfil</button>
                 <div class="dropdown-menu">
                     <a class="dropdown-item" class="nav-link" routerLink="/admin/list-products">Productos</a>
                     <a class="dropdown-item" class="nav-link" routerLink="/admin/list-profiles">Perfiles</a>
@@ -27,21 +27,6 @@
             </div>
             <!--</div> -->
 
-
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="far fa-user"></i> {{user.name}}
-                    <img src="{{user.photoURL}}" class="rounded-circle img-thumbnail" alt="profile">
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <li class="nav-item">
-                        <a class="nav-link" routerLink="/user/profile">Mi Perfil</a>
-                    </li>
-                    <a class="dropdown-item" routerLink="/admin/list-products">Productos</a>
-                    <a class="dropdown-item" routerLink="/admin/list-profiles">Perfiles</a>
-                    <a class="dropdown-item" href="#" (click)="onLogout()">Cerrar sesión</a>
-                </div>
-            </li>
         </ul>
     </div>
 </nav>
