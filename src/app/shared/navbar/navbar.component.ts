@@ -18,8 +18,7 @@ export class NavbarComponent implements OnInit {
 
 
   constructor( private authService : AuthService,
-                private afsAuth : AngularFireAuth,
-                private router : Router ) { }
+                private afsAuth : AngularFireAuth, private router:Router ) { }
 
   public app_name: string = 'Sembrando Conciencia';
 

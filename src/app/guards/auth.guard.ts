@@ -9,14 +9,10 @@ export class AuthGuard implements CanActivate {
 
   canActivate(){
     if (localStorage.getItem('SCtoken')){
-      console.log('Entró al if');
       return true;
     }
     else{
-      console.log('Entró al else');
       return false;
-
-
     }
   }
 }
