@@ -173,11 +173,11 @@ export class DummyService {
       id: "4885",
       nombre: "Tomate de Cascara ",
       profil : {
-        idProfile : 1,
-        nombre: "Edwin Martinez",
-        email: "edy_ies@systems.com",
-        phone: "00000000",
-        direccion: "San Pedro Xalpa, Col. Azcapotzalco",
+        idProfile : 2,
+      nombre: "Ana María",
+      email: "ana@systems.com",
+      phone: "00000001",
+      direccion: "San Pedro , Col. Barrientos",
       },
       descripcion: "Es una especie fanerógama de la familia Solanaceae. La palabra miltomate procede del náhuat milli, milpa, sembrado, y tomatl, tomate.",
       portada: "https://s3-us-west-1.amazonaws.com/smattcom.com/productos-agricolas/tomatillo/header-tomatillo.png",
@@ -3083,16 +3083,15 @@ export class DummyService {
 
   consultaProfile(){
     return this.profiles;
+
   }
 
   consultaProducto(){
      return this.products;
    }
 
-
-
   productoProfiles(id){
-  let product = this.products.filter(data => 
+  let product = this.products.filter(data =>
     data.profil.idProfile.toString()===id.toString());
     return product;
   }
@@ -3102,3 +3101,6 @@ export class DummyService {
   }
 
 }
+
+
+

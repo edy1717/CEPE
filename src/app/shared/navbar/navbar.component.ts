@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AuthService } from '../../services/auth.service';
 import { UserInterface } from '../../interfaces/user';
+import { Router } from '@angular/router';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { Router } from '@angular/router';
@@ -14,11 +15,10 @@ import { Router } from '@angular/router';
 export class NavbarComponent implements OnInit {
 
   active = 1;
-  
+
 
   constructor( private authService : AuthService,
-                private afsAuth : AngularFireAuth,
-                private router : Router ) { }
+                private afsAuth : AngularFireAuth, private router:Router ) { }
 
   public app_name: string = 'Sembrando Conciencia';
 

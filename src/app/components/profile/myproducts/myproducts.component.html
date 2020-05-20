@@ -6,7 +6,7 @@
     <section class="main-container">
         <div class="table-responsive">
             <div>
-                <h2>Por:  {{myProducts[0].profil.idProfile }} <b>{{myProducts[0].profil.nombre}} {{myProducts[0].profil.email}}</b></h2>
+                <h2>Por: {{myProducts[0].profil.idProfile }} <b>{{myProducts[0].profil.nombre}} {{myProducts[0].profil.email}}</b></h2>
             </div>
             <div class="row">
                 <div class="col-12">
@@ -28,7 +28,7 @@
                         <th scope="col"> #2</th>
                         <th scope="col"> Nombre </th>
                         <th scope="col"> Descripcion </th>
-                        <th scope="col"> Portada </th>
+                        <th scope="col"> Imagen </th>
                         <th scope="col"> Cantidad </th>
                         <th scope="col"> Medida </th>
                         <th scope="col"> &nbsp; </th>
@@ -36,13 +36,13 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let myproduct of myProducts | filter:filterPost  ; index as i">
-                        <th scope="row "> {{i+1}} </th>
-                        <td>{{myproduct.nombre}} </td>
-                        <td>{{myproduct.descripcion}} </td>
-                        <td></td>
-                        <td>{{myproduct.cantidad}} </td>
-                        <td>{{myproduct.medida}}</td>
+                    <tr *ngFor="let a of myProducts">
+                        <th scope="row "></th>
+                        <td>{{a.nombre}}</td>
+                        <td>{{a.descripcion}} </td>
+                        <td>{{a.portada}}</td>
+                        <td> {{a.cantidad}}</td>
+                        <td>{{a.medida}}</td>
 
                         <td>
                             <button class="btn btn-primary " data-toggle="modal" data-target="#modalMyProducts">Actualizar</button>

@@ -11,7 +11,7 @@
                     <div class="form-group">
                         <div class="search-box float-left mb-6">
                             <input type="text" class="search-text" name="filterPost" placeholder="Buscar" [(ngModel)]="filterPost">
-                            <a  class="search-btn">
+                            <a class="search-btn">
                                 <i class="fas fa-search"></i>
                             </a>
                     </div> 
@@ -45,14 +45,14 @@
                                     (click)="onPreUpdateProduct(product)"  >Actualizarpapu</button>
                         </td>
                         <td>
-                            <button class="btn btn-danger" (click)="onDeleteProducts(i)" >Eliminar</button> 
+                            <button class="btn btn-danger" (click)="onDeleteProducts(i)">Eliminar</button>
                         </td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </section>
- </div>  
+</div>
 
 <app-modal></app-modal>
 
@@ -69,7 +69,7 @@
       </button>
     </div>
     <div class="modal-body">
-      <form name="formProduct" #formProduct="ngForm" (ngSubmit)="onSaveProduct(formProduct)" >          
+      <form name="formProduct" #formProduct="ngForm" (ngSubmit)="onSaveProduct(formProduct)" >
         <input type="hidden" name="id" [(ngModel)]= "this.dummyService.selectedProducts.id" >
         <div class="form-group">
           <label for="nombre" class="col-form-label">Nombre:</label>
@@ -83,7 +83,7 @@
           <div class="form-group col-md-6" >
             <label for="portada">Portada</label>
             <input type="text" name="portada" class="form-control" placeholder="Imagen" [(ngModel)]="this.dummyService.selectedProducts.portada">
-          </div> 
+          </div>
         </div>
         <div class="form-group">
           <label for="descripcion" class="col-form-label">Descripcion:</label>
