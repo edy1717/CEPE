@@ -8,18 +8,18 @@ import { take, map, tap } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class AuthGuard implements CanActivate {
-  constructor(private afsAuth: AngularFireAuth, private router: Router) { }
-  canActivate(
-    next: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
+  constructor(private router: Router) { }
 
-    return this.afsAuth.authState
-      .pipe(take(1))
-      .pipe(map(authState => !!authState))
-      .pipe(tap(auth => {
-        if (!auth) {
-          this.router.navigate(['/user/login']);
-        }
-      }));
+  canActivate(){
+    if (localStorage.getItem('SCtoken')){
+      console.log('Entró al if');
+      return true;
+    }
+    else{
+      console.log('Entró al else');
+      return false;
+
+
+    }
   }
 }

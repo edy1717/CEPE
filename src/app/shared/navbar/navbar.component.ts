@@ -4,6 +4,7 @@ import { AuthService } from '../../services/auth.service';
 import { UserInterface } from '../../interfaces/user';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -16,7 +17,8 @@ export class NavbarComponent implements OnInit {
   
 
   constructor( private authService : AuthService,
-                private afsAuth : AngularFireAuth ) { }
+                private afsAuth : AngularFireAuth,
+                private router : Router ) { }
 
   public app_name: string = 'Sembrando Conciencia';
 
@@ -34,7 +36,6 @@ export class NavbarComponent implements OnInit {
       if(user){
         this.user.name = user.displayName;
         this.user.email = user.email
-        this.user.photoURL = user.photoURL
       }
     })
   }
@@ -52,7 +53,8 @@ export class NavbarComponent implements OnInit {
   }
 
   onLogout() {
-    this.afsAuth.signOut();
+    localStorage.removeItem('SCtoken');
+    this.router.navigateByUrl('/home');
   }
 
 

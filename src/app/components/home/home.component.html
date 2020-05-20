@@ -1,3 +1,8 @@
+<div class="contenedor">
+    <img src="../../../assets/img/banner_tienda.jpg" class="d-block w-100" alt="Responsive image">
+  <div class="centrado">TIENDA</div>
+</div>
+
 <div class="container">
     <div class="row">
         <div class="col-12">
@@ -18,22 +23,16 @@
     <div class="main-container">
         <div class="card-columns">
             <div *ngFor="let product of dataProducts | filter:filterPost">
-                <div class="card ">
-                    <img src="{{product.portada}} " class="card-img-top" alt="{{product.nombre}}">
+                <div class="card bg-transparent ">
+                    <img src="{{product.portada}} " class="img-thumbnail rounded mx-auto d-block" alt="{{product.nombre}}">
                     <div class="card-body">
                         <h4 routerLink="/product/{{product.id}} " class="card-title "><b>{{product.nombre}}</b></h4>
-                        <p class="card-text text-justify">
-                            {{product.descripcion }}
-                        </p>
                     </div>
                     <div class="lower ">
                         <div class="container-precio-idioma ">
                             <p class="badge badge-info text-justify ">
-                                {{product.cantidad}} pzas disponibles
+                               Cantidad disponible : {{product.cantidad}} 
                             </p>
-                        </div>
-                        <div class="for ">
-                            <p> Por: {{product.profil.nombre}}</p>
                         </div>
                         <button class="btn btn-block " (click)="alertProduct() ">Me interesa</button>
                     </div>

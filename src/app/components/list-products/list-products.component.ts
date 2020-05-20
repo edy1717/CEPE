@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { DataApiService } from '../../services/data-api.service';
 import { ProductInterface } from '../../interfaces/products';
 import { DummyService } from '../../services/dummy.service';
-import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { ModalComponent } from '../modals/modal/modal.component';
 
 
 @Component({
@@ -15,8 +13,7 @@ export class ListProductsComponent implements OnInit {
 
   constructor( public dataApi: DataApiService, 
                 public dummyService : DummyService, 
-                private modalService: NgbModal,
-                public activeModal: NgbActiveModal) { }
+                ) { }
 
   filterPost = '';
   dataProducts;
@@ -41,11 +38,9 @@ export class ListProductsComponent implements OnInit {
   }
 
   onPreUpdateProduct(product: ProductInterface) {
-    this.dataApi.selectedProduct = Object.assign({}, product);
-  }
-
-  opens(content) {
-    this.modalService.open(content, { windowClass: 'dark-modal' });
+    //this.dataApi.selectedProduct = Object.assign({}, product);
+    this.dummyService.selectedProducts = Object.assign({}, product)
+    console.log('que pedo',product)
   }
 
   
