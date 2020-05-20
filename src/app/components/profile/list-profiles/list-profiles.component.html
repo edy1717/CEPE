@@ -1,7 +1,10 @@
+<div class="contenedor">
+    <img src="../../../assets/img/Banner_secundario.jpg" class="d-block w-100" alt="Responsive image">
+    <div class="centrado" alt="Responsive image">Lista de Clientes</div>
+</div>
 <div class="main-container">
     <section class="main-container">
         <div class="table-responsive">
-            <h2>Perfiles</h2>
             <div class="row">
                 <div class="col-12">
                     <div class="form-group">
@@ -34,17 +37,17 @@
                         <td> {{profil.direccion}} </td>
                         <td> {{profil.phone}} </td>
                         <td>
-                            <button class="btn" data-toggle="modal" data-target="#modalProfile" placeholder="update">
-                                <i class="fas fa-sync"></i></button>
+                            <button class="btn" data-toggle="modal" data-target="#modalProfile" placeholder="update" data-placement="top" title="Actualizar Cliente">
+                                <i class="fas fa-sync colorActulizar "></i></button>
                             <!-- BOTON DE ELIMINAR -->
-                            <button class="btn " placeholder="delete">
-                                <i class="fas fa-trash-alt"></i></button>
+                            <button class="btn" placeholder="delete" data-placement="top" title="Eliminar Cliente">
+                                <i class="fas fa-trash-alt colorDelete"></i></button>
                             <!-- BOTON DE DETALLE -->
-                            <button class="btn" placeholder="masDetalle">
-                                <i class="fas fa-user-edit"></i></button>
+                            <button class="btn" placeholder="masDetalle" data-placement="top" title="Reportar Cliente">
+                                <i class="fas fa-user-edit colorReportar "></i></button>
                             <!-- BOTON DE LISTAS -->
-                            <button class="btn" placeholder="list-product" (click)="Misproductos(profil.idProfile)">
-                                <i class="fas fa-list-ul"></i></button>
+                            <button class="btn" placeholder="list-product" data-placement="top" title="Ver Productos del Cliente" (click)="Misproductos(profil.idProfile)">
+                                <i class="fas fa-list-ul colorDetalle"></i></button>
                         </td>
                     </tr>
                 </tbody>
@@ -54,5 +57,3 @@
 </div>
 
 <app-modal-profile></app-modal-profile>
-
-

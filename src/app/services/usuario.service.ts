@@ -14,9 +14,7 @@ export class UsuarioService {
   constructor( private http: HttpClient ) { }
 
   onlogin(data){
-
     return this.http.post(this.url + '/login', data);
-
   }
 
   setToken(token): void

@@ -7,20 +7,19 @@ import { ListProfilesComponent } from './components/profile/list-profiles/list-p
 import { AuthGuard } from './guards/auth.guard';
 import { OffersComponent } from './components/offers/offers.component';
 import { ProfileComponent } from './components/profile/profile/profile.component';
-import { ModalComponent } from './components/modals/modal/modal.component';
 import { MyproductsComponent } from './components/profile/myproducts/myproducts.component';
+import { ModalHomeComponent } from './components/modals/modal-home/modal-home.component';
 
 
 const routes: Routes = [
   { path : 'home', component : HomeComponent , pathMatch: 'full'},
   { path : 'user/login' , component : LoginComponent },
-  { path : 'user/profile' ,  component : ProfileComponent , canActivate: [AuthGuard] },
-  { path : 'admin/list-products', component : ListProductsComponent,  canActivate: [AuthGuard]  },
-  { path : 'admin/list-profiles', component :ListProfilesComponent,  canActivate: [AuthGuard]  },
-  { path : 'admin/offers', component : OffersComponent, canActivate: [AuthGuard]},
-  { path : 'admin/user-products/:idProfile', component : MyproductsComponent, canActivate: [AuthGuard] },
-  { path : 'admin/modal', component : ModalComponent, canActivate: [AuthGuard] },
-
+  { path : 'user/profile' ,  component : ProfileComponent ,  },
+  { path : 'admin/list-products', component : ListProductsComponent,    },
+  { path : 'admin/list-profiles', component :ListProfilesComponent,    },
+  { path : 'admin/offers', component : OffersComponent,  },
+  { path : 'admin/user-products/:idProfile', component : MyproductsComponent,  },
+  { path : 'admin/modal', component : ModalHomeComponent,  },
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
   { path : '***',  component : HomeComponent }
 

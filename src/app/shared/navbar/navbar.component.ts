@@ -5,6 +5,7 @@ import { UserInterface } from '../../interfaces/user';
 import { Router } from '@angular/router';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -17,7 +18,8 @@ export class NavbarComponent implements OnInit {
 
 
   constructor( private authService : AuthService,
-                private afsAuth : AngularFireAuth, private router:Router ) { }
+                private afsAuth : AngularFireAuth,
+                private router : Router ) { }
 
   public app_name: string = 'Sembrando Conciencia';
 
@@ -34,7 +36,7 @@ export class NavbarComponent implements OnInit {
     this.authService.isAuth().subscribe(user =>  {
       if(user){
         this.user.name = user.displayName;
-        this.user.email = user.email;
+        this.user.email = user.email
       }
     })
   }

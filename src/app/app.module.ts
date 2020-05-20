@@ -30,6 +30,7 @@ import { ModalMyProductsComponent } from './components/modals/modal-my-products/
 import { ModalOffersComponent } from './components/modals/modal-offers/modal-offers.component';
 import { NgbModule, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
+import { ModalHomeComponent } from './components/modals/modal-home/modal-home.component';
 
 
 
@@ -53,6 +54,7 @@ import { HttpClientModule } from '@angular/common/http';
     OffersComponent,
     ModalMyProductsComponent,
     ModalOffersComponent,
+    ModalHomeComponent,
   ],
   imports: [
     BrowserModule,
