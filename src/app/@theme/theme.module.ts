@@ -15,12 +15,12 @@ import { CustomMatPaginatorIntl } from '../shared/pipes/paginator-es';
     ],
     providers: [
         {
-          provide: MatPaginatorIntl, 
+          provide: MatPaginatorIntl,
           useClass: CustomMatPaginatorIntl
         }
       ],
 })
 
 export class ThemeModule{
-    NgModule : ThemeModule;
+    NgModule: ThemeModule;
 }

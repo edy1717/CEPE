@@ -1,4 +1,4 @@
-  <img src="../../../assets/img/Banner_lista_productos.jpg" class="img-fluid" alt="Responsive image">
+<img src="../../../assets/img/Banner_lista_productos.jpg" class="img-fluid" alt="Responsive image">
 <div class="main-container">
     <section class="main-container">
         <div class="table-responsive">
@@ -7,16 +7,14 @@
                     <div class="col-12">
                         <div class="form-group">
                             <div class="search-box float-left mb-3 ">
-                                <input type="text" class="search-text" name="filterPost" placeholder="Buscar"
-                                    [(ngModel)]="filterPost">
+                                <input type="text" class="search-text" name="filterPost" placeholder="Buscar" [(ngModel)]="filterPost">
                                 <a class="search-btn">
                                     <i class="fas fa-search"></i>
                                 </a>
                             </div>
-                            <mat-paginator [length]="dataProducts.length" [pageSize]="page_size" [pageSizeOptions]="pageSizeOptions"
-                                (page)="handlePage($event) ">
+                            <mat-paginator [length]="dataProducts.length" [pageSize]="page_size" [pageSizeOptions]="pageSizeOptions" (page)="handlePage($event) ">
                             </mat-paginator>
-                             <button class="btn btn-lg btn-outline-primary">Agregar producto</button>
+                            <button class="btn btn-lg btn-outline-primary">Agregar producto</button>
                         </div>
                     </div>
                 </div>
@@ -43,8 +41,7 @@
                         <td> {{product.cantidad}} </td>
                         <td> {{product.medida}} </td>
                         <td>
-                            <button class="btn btn-primary" data-toggle="modal" data-target="#modalProducts"
-                                    (click)="onPreUpdateProduct(product)"  >Actualizarpapu</button>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#modalProducts" (click)="onPreUpdateProduct(product)">Actualizarpapu</button>
                         </td>
                         <td>
                             <button class="btn btn-danger" (click)="onDeleteProducts(i)">Eliminar</button>
@@ -57,4 +54,3 @@
 </div>
 
 <app-modal></app-modal>
-

@@ -25,6 +25,7 @@
     "@angular/router": "~9.1.1",
     "@ng-bootstrap/ng-bootstrap": "^4.1.2",
     "@ng-bootstrap/schematics": "^2.0.0-alpha.1",
+    "angular-material": "^1.1.22",
     "bootstrap": "^4.4.1",
     "firebase": "^7.14.2",
     "font-awesome": "^4.7.0",
