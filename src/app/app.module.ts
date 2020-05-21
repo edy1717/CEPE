@@ -31,6 +31,9 @@ import { ModalOffersComponent } from './components/modals/modal-offers/modal-off
 import { NgbModule, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 import { ModalHomeComponent } from './components/modals/modal-home/modal-home.component';
+import { ThemeModule } from './@theme/theme.module';
+
+
 
 
 
@@ -55,6 +58,7 @@ import { ModalHomeComponent } from './components/modals/modal-home/modal-home.co
     ModalMyProductsComponent,
     ModalOffersComponent,
     ModalHomeComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -65,7 +69,7 @@ import { ModalHomeComponent } from './components/modals/modal-home/modal-home.co
     AngularFireModule.initializeApp(environment.firebaseconfig) ,
     AngularFireDatabaseModule,
     NgbModule.forRoot(),
-    
+    ThemeModule,
   ],
   providers: [
     AngularFireAuth,
