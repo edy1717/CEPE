@@ -1,12 +1,20 @@
-<div class="contenedor">
-    <img src="../../../assets/img/Banner_secundario.jpg" class="d-block w-100" alt="Responsive image">
-  <div class="centrado">Ofertas</div>
-  </div>
+<img src="../../../assets/img/Banner_ofertas.jpg" class="img-fluid" alt="Responsive image">
 
 <section id=" product " class="mt-3 ">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group">
+                    <mat-paginator [length]="imagenes.length" [pageSize]="page_size" [pageSizeOptions]="pageSizeOptions"
+                        (page)="handlePage($event) ">
+                    </mat-paginator>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container ">
         <div class="row ">
-            <div class="col-xs-12 col-sm-6 col-md-4 " *ngFor="let product of imagenes ">
+            <div class="col-xs-12 col-sm-6 col-md-4 " *ngFor="let product of imagenes  | paginate:page_size:page_number ">
                 <div class="card_book ">
                     <div class="card ">
                         <div class="card-body text-center ">

@@ -28,12 +28,11 @@ import { ModalComponent } from './components/modals/modal/modal.component';
 import { OffersComponent } from './components/offers/offers.component';
 import { ModalMyProductsComponent } from './components/modals/modal-my-products/modal-my-products.component';
 import { ModalOffersComponent } from './components/modals/modal-offers/modal-offers.component';
-import { NgbModule, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 import { ModalHomeComponent } from './components/modals/modal-home/modal-home.component';
+import { PaginatePipe } from './shared/pipes/paginate.pipe';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ThemeModule } from './@theme/theme.module';
-
-
 
 
 
@@ -58,7 +57,7 @@ import { ThemeModule } from './@theme/theme.module';
     ModalMyProductsComponent,
     ModalOffersComponent,
     ModalHomeComponent,
-
+    PaginatePipe
   ],
   imports: [
     BrowserModule,
@@ -68,13 +67,12 @@ import { ThemeModule } from './@theme/theme.module';
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebaseconfig) ,
     AngularFireDatabaseModule,
-    NgbModule.forRoot(),
-    ThemeModule,
+    BrowserAnimationsModule,
+    ThemeModule
   ],
   providers: [
     AngularFireAuth,
     AngularFirestore,
-    NgbActiveModal,
   ],
   bootstrap: [AppComponent,
       ]

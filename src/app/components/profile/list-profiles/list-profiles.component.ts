@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { DummyService } from '../../../services/dummy.service';
+import { PageEvent } from '@angular/material/paginator';
 
 @Component({
   selector: 'app-list-profiles',
@@ -33,5 +34,14 @@ export class ListProfilesComponent implements OnInit {
 
 
   }
+
+  handlePage(e: PageEvent){
+    this.page_size = e.pageSize
+    this.page_number = e.pageIndex + 1
+  }
+
+  page_size: number = 5;
+  page_number: number = 1;
+  pageSizeOptions  = [5, 10, 15, 20, 25, 30, 40, 80 , 100]
 
 }

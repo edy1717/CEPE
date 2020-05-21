@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProductProfileInterface } from 'src/app/interfaces/products-profile';
 import { DummyService } from '../../../services/dummy.service';
 import { ActivatedRoute } from '@angular/router';
+import { PageEvent } from '@angular/material/paginator';
 @Component({
   selector: 'app-myproducts',
   templateUrl: './myproducts.component.html',
@@ -24,6 +25,14 @@ export class MyproductsComponent implements OnInit {
 
   }
 
+  handlePage(e: PageEvent){
+    this.page_size = e.pageSize
+    this.page_number = e.pageIndex + 1
+  }
+
+  page_size: number = 5;
+  page_number: number = 1;
+  pageSizeOptions  = [5, 10, 15, 20, 25, 30, 40, 80 , 100]
 
 
 }

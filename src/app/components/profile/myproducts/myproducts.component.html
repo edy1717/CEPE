@@ -1,25 +1,28 @@
-<div class="contenedor">
-    <img src="../../../assets/img/Banner_secundario.jpg" class="d-block w-100" alt="Responsive image">
-  <div class="centrado">Lista de productos por cliente</div>
-  </div>
+    <img src="../../../assets/img/Banner_lista_productos_cliente.jpg" class="img-fluid" alt="Responsive image">
+
 <div class="main-container">
     <section class="main-container">
         <div class="table-responsive">
             <div>
                 <h2>Por: {{myProducts[0].profil.idProfile }} <b>{{myProducts[0].profil.nombre}} {{myProducts[0].profil.email}}</b></h2>
             </div>
-            <div class="row">
-                <div class="col-12">
-                    <div class="form-group">
-                        <div class="search-box float-left mb-6">
-                            <input type="text" class="search-text" name="filterPost" placeholder="Buscar" [(ngModel)]="filterPost">
-                            <a class="search-btn">
-                                <i class="fas fa-search"></i>
-                            </a>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-group">
+                            <div class="search-box float-left mb-3 ">
+                                <input type="text" class="search-text" name="filterPost" placeholder="Buscar"
+                                    [(ngModel)]="filterPost">
+                                <a class="search-btn">
+                                    <i class="fas fa-search"></i>
+                                </a>
+                            </div>
+                            <mat-paginator [length]="myProducts.length" [pageSize]="page_size" [pageSizeOptions]="pageSizeOptions"
+                                (page)="handlePage($event) ">
+                            </mat-paginator>
                         </div>
                     </div>
                 </div>
-
             </div>
             <br>
             <table class="table ">
