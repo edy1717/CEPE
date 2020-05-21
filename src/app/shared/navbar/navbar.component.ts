@@ -30,26 +30,26 @@ export class NavbarComponent implements OnInit {
   };
 
   ngOnInit(): void {
-    this.getCurrentUser();
-    this.authService.isAuth().subscribe(user =>  {
-      if(user){
-        this.user.name = user.displayName;
-        this.user.email = user.email
-      }
-    })
+    // this.getCurrentUser();
+    // this.authService.isAuth().subscribe(user =>  {
+    //   if(user){
+    //     this.user.name = user.displayName;
+    //     this.user.email = user.email
+    //   }
+    // })
   }
 
-  getCurrentUser() {
-    this.authService.isAuth().subscribe(auth => {
-      if (auth) {
-        console.log('user logged');
-        this.isLogged = true;
-      } else {
-        console.log('NOT user logged');
-        this.isLogged = false;
-      }
-    });
-  }
+  // getCurrentUser() {
+  //   this.authService.isAuth().subscribe(auth => {
+  //     if (auth) {
+  //       console.log('user logged');
+  //       this.isLogged = true;
+  //     } else {
+  //       console.log('NOT user logged');
+  //       this.isLogged = false;
+  //     }
+  //   });
+  // }
 
   onLogout() {
     localStorage.removeItem('SCtoken');

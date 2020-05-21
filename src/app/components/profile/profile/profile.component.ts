@@ -20,14 +20,14 @@ export class ProfileComponent implements OnInit {
   };
 
   ngOnInit(): void {
-    this.authService.isAuth().subscribe(user =>  {
-      if(user){
-        this.user.name = user.displayName;
-        this.user.email = user.email
-        this.user.photoURL = user.photoURL
-        this.providerId = user.providerData[0].providerId;
-      }
-    })
+    // this.authService.isAuth().subscribe(user =>  {
+    //   if(user){
+    //     this.user.name = user.displayName;
+    //     this.user.email = user.email
+    //     this.user.photoURL = user.photoURL
+    //     this.providerId = user.providerData[0].providerId;
+    //   }
+    // })
   }
 
 }

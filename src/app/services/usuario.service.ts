@@ -13,20 +13,21 @@ export class UsuarioService {
 
   constructor( private http: HttpClient ) { }
 
-  onlogin(data){
-    return this.http.post(this.url + '/login', data);
+  registerUser(data){
+    return this.http.post(this.url+'/registrar', data)
   }
 
-  setToken(token): void
-  {
-    localStorage.setItem('accessToken', token);
-  }
-getToken()
-  {
-    return localStorage.getItem('accessToken');
+  consultUsers(data){
+    return this.http.post(this.url+'/obtener/todos', data)
   }
 
-  
+  editUser(data){
+    return this.http.post(this.url+'/', data)
+  }
+
+  deleteUser(data){
+    return this.http.post(this.url+'/', data)
+  }
 
 
 }

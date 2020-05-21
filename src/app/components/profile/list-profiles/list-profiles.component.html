@@ -44,7 +44,7 @@
                             <button class="btn" placeholder="delete" data-placement="top" title="Eliminar Cliente" (click)="removerDato()">
                                 <i class="fas fa-trash-alt colorDelete"></i></button>
                             <!-- BOTON DE DETALLE -->
-                            <button class="btn" placeholder="masDetalle" data-placement="top" title="Reportar Cliente">
+                            <button class="btn" data-toggle="modal" data-target="#modalReporte" placeholder="masDetalle" data-placement="top" title="Reportar Cliente">
                                 <i class="fas fa-user-edit colorReportar "></i></button>
                             <!-- BOTON DE LISTAS -->
                             <button class="btn" placeholder="list-product" data-placement="top" title="Ver Productos del Cliente" (click)="misProductos(profil.idProfile)">
@@ -58,3 +58,4 @@
 </div>
 
 <app-modal-profile></app-modal-profile>
+<app-modal-reporte></app-modal-reporte>
