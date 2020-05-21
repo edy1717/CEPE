@@ -5,6 +5,8 @@ import { Button } from 'protractor';
 import { reduce } from 'rxjs/operators';
 import { DummyService } from '../../services/dummy.service';
 import {MatPaginatorModule, PageEvent} from '@angular/material/paginator';
+import { MatDialog } from '@angular/material/dialog';
+import { ModalHomeComponent } from '../modals/modal-home/modal-home.component';
 
 
 @Component({
@@ -14,7 +16,9 @@ import {MatPaginatorModule, PageEvent} from '@angular/material/paginator';
 })
 export class HomeComponent implements OnInit {
 
-  constructor( private dataApi: DataApiService, private dummyService: DummyService ) { }
+
+  constructor( private dataApi: DataApiService, private dummyService: DummyService, public dialog: MatDialog ) { }
+nombre : string;
 
   filterPost = '';
   public products = [];
@@ -23,10 +27,10 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.dataApi.getAllProducts().subscribe(products => {
-      console.log('Producto', products);
       this.products = products;
     });
     this.getListProduct();
+    this.openDialog();
 
   }
 
@@ -44,6 +48,21 @@ export class HomeComponent implements OnInit {
 
     });
   }
+
+  openDialog():void{
+    const dialogRef = this.dialog.open(ModalHomeComponent, {
+      width: '450px',
+      data: {  nombre : this.nombre }
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed' , this.nombre);
+      this.nombre = result;
+    });
+
+  }
+
+
+
 
   handlePage(e: PageEvent){
     this.page_size = e.pageSize

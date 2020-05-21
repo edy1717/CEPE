@@ -1,5 +1,5 @@
-<img src="../../../assets/img/banner_tiendas.jpg" class="img-fluid" alt="Responsive image">
-
+    <img src="../../../assets/img/banner_tiendas.jpg" class="img-fluid" alt="Responsive image">
+    
 <div class="main-container">
     <div class="row">
         <div class="col-12">
@@ -22,52 +22,18 @@
             <mat-card class="card">
                 <mat-card-content>
                     <div class="card-body text-center">
-                        <img mat-card-image src="{{product.portada}} ">
+                        <img src="{{product.portada}} " class="img-thumbnail" alt="..."> 
                     </div>
                     <h4 routerLink="/product/{{product.id}} " class="card-title text-center"><b>{{product.nombre}}</b></h4>
                     <p class="text-center">
-                        Cantidad disponible : {{product.cantidad}}
+                        Cantidad disponible : <b class="color">{{product.cantidad}} {{product.medida}} </b> 
                     </p>
                 </mat-card-content>
-
                 <mat-card-actions>
-                    <button mat-button (click)="alertProduct() ">Me interesa</button>
+                    <button mat-button (click)="openDialog() ">DETALLE DEL PRODUCTO</button>
                 </mat-card-actions>
-
-
             </mat-card>
         </div>
     </div>
 </div>
 
-<!-- <section id=" product " class="mt-3 ">
-    <div class="main-container">
-        <div class="card-columns">
-            <div *ngFor="let product of dataProducts | filter:filterPost | paginate:page_size:page_number">
-                <div class="card bg-transparent ">
-                    <img src="{{product.portada}} " class="img-thumbnail rounded mx-auto d-block"
-                        alt="{{product.nombre}}">
-                    <div class="card-body">
-                        <h4 routerLink="/product/{{product.id}} " class="card-title "><b>{{product.nombre}}</b></h4>
-                    </div>
-                    <div class="lower ">
-                        <div class="container-precio-idioma ">
-                            <p class="badge badge-info text-justify ">
-                                Cantidad disponible : {{product.cantidad}}
-                            </p>
-                        </div>
-                        <button class="btn btn-block " (click)="alertProduct() ">Me interesa</button>
-                    </div>
-                    <h4 routerLink="/product/{{product.id}} " class="card-title text-center"><b>{{product.nombre}}</b></h4>
-                    <p class="text-center">
-                        Cantidad disponible : {{product.cantidad}}
-                    </p>
-                </mat-card-content>
-                <mat-card-actions>
-                    <button mat-button (click)="alertProduct() ">Me interesa</button>
-                </mat-card-actions>
-
-            </mat-card>
-        </div>
-    </div>
-</section> -->

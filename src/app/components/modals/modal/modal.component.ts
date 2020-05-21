@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef,  } from '@angular/core';
 import { DataApiService } from '../../../services/data-api.service';
-import { NgForm } from '@angular/forms'
+import { NgForm, FormGroup, FormControl } from '@angular/forms';
 import { DummyService } from 'src/app/services/dummy.service';
 
 @Component({
@@ -9,6 +9,8 @@ import { DummyService } from 'src/app/services/dummy.service';
 })
 
 export class ModalComponent implements OnInit {
+
+  formActualizarProduct : FormGroup;
 
   constructor( public dataApi : DataApiService,
                  public dummyService : DummyService   ) { }
@@ -21,9 +23,24 @@ export class ModalComponent implements OnInit {
 
   ngOnInit(): void {
     this.dataApi.getAllProducts().subscribe(products => {
-     /*  console.log('Producto', products); */
       this.products = products;
     })
+    this.formProduct()
+  }
+
+  formProduct(){
+    this.formActualizarProduct = new FormGroup({
+      id : new FormControl (),
+      nombre : new FormControl (),
+      descripcion : new FormControl (),
+      portada : new FormControl (),
+      cantidad : new FormControl (),
+      medida : new FormControl ()
+    })
+  }
+
+  save(){
+    console.log('holi', this.formProduct)
   }
 
 

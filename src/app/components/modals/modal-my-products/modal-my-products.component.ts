@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-modal-my-products',
@@ -7,9 +8,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModalMyProductsComponent implements OnInit {
 
+  formActualizarProductClient : FormGroup;
+
   constructor() { }
 
   ngOnInit(): void {
+    this.formActProClient()
+  }
+
+  formActProClient(){
+    this.formActualizarProductClient = new FormGroup ({
+      idProCli : new FormControl (),
+      nombre: new FormControl (),
+      descripcion : new FormControl (),
+      imagen :  new FormControl (),
+      cantidad : new FormControl (),
+      medida : new FormControl (), 
+    })
+  }
+ 
+
+
+  save(){
+    console.log(this.formActualizarProductClient)
   }
 
 }

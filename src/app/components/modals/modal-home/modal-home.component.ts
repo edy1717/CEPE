@@ -1,5 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { DummyService } from 'src/app/services/dummy.service';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+
+export interface ProductInterface {
+  id: string;
+  nombre: string;
+  descripcion: string;
+  portada: string;
+  cantidad: string;
+  medida:string;
+
+}
 
 @Component({
   selector: 'app-modal-home',
@@ -7,15 +18,23 @@ import { DummyService } from 'src/app/services/dummy.service';
   styleUrls: ['./modal-home.component.css']
 })
 export class ModalHomeComponent implements OnInit {
+ 
+  dataProducts;
 
-  dataProducts;dfd
+  constructor( public dialogRef: MatDialogRef<ModalHomeComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: ProductInterface, public dummyService : DummyService ) { }
 
-  constructor(  ) { }
+    ngOnInit(): void {
+      this.getListProduct()
+    }
+  
+    getListProduct(){
+      this.dataProducts = this.dummyService.consultaProducto();
+    }
 
-  ngOnInit(): void {
-    
+  onNoClick(): void {
+    this.dialogRef.close();
   }
-
 
 
 }
