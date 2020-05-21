@@ -3,11 +3,12 @@
     padding: 30px;
 }
 
-* Cards */ .card {
+.card {
     margin-top: 20px;
     max-width: 400px;
     background-color: transparent;
     justify-content: center;
+    margin-bottom: 10px;
 }
 
 mat-card-image img {

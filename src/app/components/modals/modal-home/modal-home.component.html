@@ -1,9 +1,9 @@
-<!-- Button trigger modal -->
+<!-- Button trigger modal
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
     Launch demo modal
   </button>
-  
-  <!-- Modal -->
+
+   Modal
   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -37,4 +37,20 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
+
+
+<div *ngFor="let data of data">
+    <h1 mat-dialog-title>Hi {{data.idProfile}}</h1>
+    <div mat-dialog-content>
+        <p>What's your favorite animal?</p>
+        <mat-form-field>
+            <mat-label>Favorite Animal</mat-label>
+            <input matInput [(ngModel)]="data.nombre">
+        </mat-form-field>
+    </div>
+    <div mat-dialog-actions>
+        <button mat-button (click)="onNoClick()">No Thanks</button>
+        <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button>
+    </div>
+</div>

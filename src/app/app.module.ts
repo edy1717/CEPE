@@ -68,7 +68,7 @@ import { ThemeModule } from './@theme/theme.module';
     AngularFireModule.initializeApp(environment.firebaseconfig) ,
     AngularFireDatabaseModule,
     BrowserAnimationsModule,
-    ThemeModule
+    ThemeModule,
   ],
   providers: [
     AngularFireAuth,
