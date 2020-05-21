@@ -21,24 +21,24 @@ export class ListProfilesComponent implements OnInit {
   ngOnInit(): void {
     this.getListProfile();
     this.getListProduct();
-    this.eliminar();
+    //this.eliminar();
   }
 
-  eliminar (){
-    this.formDelete = new FormGroup ({
-      usuario_id : new FormControl (),
-      cliente_id : new FormControl ()
-    })
-  }
+  // eliminar (){
+  //   this.formDelete = new FormGroup ({
+  //     usuario_id : new FormControl (),
+  //     cliente_id : new FormControl ()
+  //   })
+  // }
 
-  removerDato() {
-    if(this.formDelete.valid)  {
-      console.log(this.formDelete.value)
-    }else{
+  // removerDato() {
+  //   if(this.formDelete.valid)  {
+  //     console.log(this.formDelete.value)
+  //   }else{
      
-    }
-    this.formDelete.reset()
-  }
+  //   }
+  //   this.formDelete.reset()
+  // }
 
 
   getListProfile(){

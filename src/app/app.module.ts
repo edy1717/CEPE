@@ -71,6 +71,8 @@ import { ModalReporteComponent } from './components/modals/modal-reporte/modal-r
     AngularFireDatabaseModule,
     BrowserAnimationsModule,
     ThemeModule,
+  
+
   ],
   providers: [
     AngularFireAuth,

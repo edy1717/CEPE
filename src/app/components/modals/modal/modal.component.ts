@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef,  } from '@angular/core';
 import { DataApiService } from '../../../services/data-api.service';
-import { NgForm, FormGroup, FormControl } from '@angular/forms';
+import { NgForm, FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
 import { DummyService } from 'src/app/services/dummy.service';
 
 @Component({

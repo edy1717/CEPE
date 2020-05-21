@@ -1,8 +1,6 @@
-import { DataApiService } from '../../../services/data-api.service';
-import { DummyService } from '../../../services/dummy.service';
-import { FormControl } from '@angular/forms';
-import { FormGroup } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
+import { NgForm , FormControl, FormGroup,  ReactiveFormsModule } from '@angular/forms';
+
 
 @Component({
   selector: 'app-modal-reporte',
@@ -13,8 +11,8 @@ export class ModalReporteComponent implements OnInit {
 
   formReporte : FormGroup;
 
-  constructor(public dataApi: DataApiService,
-              public dummyService: DummyService  ) { }
+  constructor(
+                ) { }
 
   ngOnInit(): void {
     this.formReporteUs();

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm, FormGroup, FormControl } from '@angular/forms';
+import { NgForm , FormControl, FormGroup,  ReactiveFormsModule } from '@angular/forms';
 import { DummyService } from '../../../services/dummy.service';
 
 
@@ -22,7 +22,7 @@ export class ModalProfileComponent implements OnInit {
     this.formActualizarPerfil = new FormGroup ({
       nombre : new FormControl (),
       email : new FormControl (),
-      telefono : new FormControl (),
+      phone : new FormControl (),
       direccion : new FormControl (),
     })
   }
