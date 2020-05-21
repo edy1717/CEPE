@@ -1,71 +1,51 @@
 .main-container {
     margin-top: 5px;
-    margin-top: 5px;
     padding: 30px;
 }
 
-.img-fluid{
-    max-width:100%;
-    height: 100%;
-}
-
-
-.centrado{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    color: #ffffff;
-    transform: translate(-50%, -50%);
-    font-size: 2.5em;
-}
-
-.contenedor{
-    position: relative;
-    text-align: center;
-}
-
-
-.input-field {
-    width: 100%;
-    padding: 10px;
-    outline: none;
-}
-
-.input-field:focus {
-    border: 2px solid dodgerblue;
-}
+*  Cards  */
 
 .card {
-    background-color: rgba(f2, f2, f2, 0.7);
+    margin-top: 20px;
+    max-width: 400px;
+    background-color: transparent;
+    justify-content: center;
 }
 
-/* .card-body p,
-h4 {
-    color: black;
-    font-size: 12px;
-    font-display: auto;
-} */
-
-.container-precio-idioma p {
-    margin-left: 36%;
-    background: #743B8F;
-    color: white;
+mat-card-image img {
+    height: 20px;
 }
 
-.for {
-    background: #82E89B;
-    margin-left: 33%;
-    text-align: center;
-    color: black;
-    font-size: 12px;
-    width: 35%;
+mat-card-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.lower button {
+mat-card-actions button {
     background: #418215;
     color: white;
 }
 
+mat-card-content p {
+    background: #743B8F;
+    color: white;
+    max-width: 100%;
+}
+
+.card-body img {
+    width: auto;
+    height: 165px;
+    color: black;
+}
+
+mat-card-content h4 {
+    color: black;
+}
+
+pagen{
+    padding: 10px;
+}
 
 /* buscador */
 
@@ -75,7 +55,6 @@ h4 {
     left: 80;
     background: rgb(241, 239, 241);
     height: 40px;
-    border-radius: 40px;
     padding: 10px;
 }
 
@@ -84,15 +63,13 @@ h4 {
     float: rigth;
     width: 25px;
     height: 25px;
-    border-radius: 50%;
-    background: #743B8F;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .search-text {
-    border: none;
+    border: black;
     background: none;
     outline: none;
     float: left;
@@ -103,9 +80,7 @@ h4 {
     line-height: 20px;
 }
 
-.iconstore {
-    min-width: 15px;
-    text-align: center;
-    height: 44px;
-    color: #418215 ;
+.mat-paginator{
+    border :none;
+    background: none;
 }

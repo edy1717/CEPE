@@ -4,6 +4,8 @@ import Swal from 'sweetalert2';
 import { Button } from 'protractor';
 import { reduce } from 'rxjs/operators';
 import { DummyService } from '../../services/dummy.service';
+import {MatPaginatorModule, PageEvent} from '@angular/material/paginator';
+
 
 @Component({
   selector: 'app-home',
@@ -41,7 +43,15 @@ export class HomeComponent implements OnInit {
       background: 'rgba(255, 255, 255, 0.7)',
 
     });
-
   }
+
+  handlePage(e: PageEvent){
+    this.page_size = e.pageSize
+    this.page_number = e.pageIndex + 1
+  }
+
+  page_size: number =8;
+  page_number: number = 1;
+  pageSizeOptions  = [4, 8, 16, 24, 32, 40, 48 , 100]
 
 }

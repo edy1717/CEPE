@@ -1,22 +1,24 @@
-<div class="contenedor">
-  <img src="../../../assets/img/Banner_secundario.jpg" class="d-block w-100" alt="Responsive image">
-<div class="centrado">Lista de productos</div>
-</div>
-
+  <img src="../../../assets/img/Banner_lista_productos.jpg" class="img-fluid" alt="Responsive image">
 <div class="main-container">
     <section class="main-container">
         <div class="table-responsive">
-            <div class="row">
-                <div class="col-12">
-                    <div class="form-group">
-                        <div class="search-box float-left mb-6">
-                            <input type="text" class="search-text" name="filterPost" placeholder="Buscar" [(ngModel)]="filterPost">
-                            <a class="search-btn">
-                                <i class="fas fa-search"></i>
-                            </a>
-                    </div> 
-                    <button class="btn btn-lg btn-outline-primary">Agregar producto</button>
-                </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-group">
+                            <div class="search-box float-left mb-3 ">
+                                <input type="text" class="search-text" name="filterPost" placeholder="Buscar"
+                                    [(ngModel)]="filterPost">
+                                <a class="search-btn">
+                                    <i class="fas fa-search"></i>
+                                </a>
+                            </div>
+                            <mat-paginator [length]="dataProducts.length" [pageSize]="page_size" [pageSizeOptions]="pageSizeOptions"
+                                (page)="handlePage($event) ">
+                            </mat-paginator>
+                             <button class="btn btn-lg btn-outline-primary">Agregar producto</button>
+                        </div>
+                    </div>
                 </div>
             </div>
             <table class="table ">
@@ -33,7 +35,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor=" let product of dataProducts  | filter:filterPost  ; index as i">
+                    <tr *ngFor=" let product of dataProducts  | filter:filterPost  | paginate:page_size:page_number ; index as i ">
                         <th scope="row"> {{i+1}} </th>
                         <td> {{product.nombre}} </td>
                         <td> {{product.descripcion}} </td>
@@ -56,43 +58,3 @@
 
 <app-modal></app-modal>
 
-
-<!-- MODAL  -->
-
-<!-- <ng-template #content let-modal id="content">
-    <div class="modal-header">
-      <h4 class="modal-title" id="modal-basic-title">
-        {{ !this.dummyService.selectedProducts.id ? 'Nuevo producto' : 'Actualizar producto' }}
-      </h4>
-      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    <div class="modal-body">
-      <form name="formProduct" #formProduct="ngForm" (ngSubmit)="onSaveProduct(formProduct)" >
-        <input type="hidden" name="id" [(ngModel)]= "this.dummyService.selectedProducts.id" >
-        <div class="form-group">
-          <label for="nombre" class="col-form-label">Nombre:</label>
-          <input type="text" class="form-control" name="nombre" [(ngModel)]="this.dummyService.selectedProducts.nombre" >
-        </div>
-        <div class="form-row">
-          <div class="form-group col-md-6">
-            <label for="cantidad">Cantidad</label>
-            <input type="text" name="cantidad" class="form-control" placeholder="Cantidad" [(ngModel)]="this.dummyService.selectedProducts.cantidad">
-          </div>
-          <div class="form-group col-md-6" >
-            <label for="portada">Portada</label>
-            <input type="text" name="portada" class="form-control" placeholder="Imagen" [(ngModel)]="this.dummyService.selectedProducts.portada">
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="descripcion" class="col-form-label">Descripcion:</label>
-          <textarea class="form-control" name="descripcion" [(ngModel)]=this.dummyService.selectedProducts.descripcion></textarea>
-        </div>
-      </form>
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-secondary" (click)="modal.close('Close click')" data-dismiss="modal">Cerrar</button>
-      <button type="submit" class="btn btn-primary">Guardar producto</button>
-    </div>
-  </ng-template>  -->

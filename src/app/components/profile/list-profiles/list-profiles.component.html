@@ -1,18 +1,22 @@
-<div class="contenedor">
-    <img src="../../../assets/img/Banner_secundario.jpg" class="d-block w-100" alt="Responsive image">
-  <div class="centrado" alt="Responsive image">Lista de Clientes</div>
-  </div>
+    <img src="../../../assets/img/Banner_lista_clientes.jpg" class="img-fluid" alt="Responsive image">
+
 <div class="main-container">
     <section class="main-container">
         <div class="table-responsive">
-            <div class="row">
-                <div class="col-12">
-                    <div class="form-group">
-                        <div class="search-box float-right mb-3 ">
-                            <input type="text" class="search-text" name="filterPost" placeholder="Buscar" [(ngModel)]="filterPost">
-                            <a class="search-btn">
-                                <i class="fas fa-search"></i>
-                            </a>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-group">
+                            <div class="search-box float-left mb-3 ">
+                                <input type="text" class="search-text" name="filterPost" placeholder="Buscar"
+                                    [(ngModel)]="filterPost">
+                                <a class="search-btn">
+                                    <i class="fas fa-search"></i>
+                                </a>
+                            </div>
+                            <mat-paginator [length]="dataProfiles.length" [pageSize]="page_size" [pageSizeOptions]="pageSizeOptions"
+                                (page)="handlePage($event) ">
+                            </mat-paginator>
                         </div>
                     </div>
                 </div>
@@ -26,11 +30,10 @@
                         <th scope="col"> Direccion </th>
                         <th scope="col"> Telefono </th>
                         <th scope="col"> &nbsp; </th>
-
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let profil of dataProfiles | filterProfile:filterPost">
+                    <tr *ngFor="let profil of dataProfiles | filterProfile:filterPost | paginate:page_size:page_number">
                         <th scope="row"> {{profil.idProfile}} </th>
                         <td> {{profil.nombre}} </td>
                         <td> {{profil.email}} </td>

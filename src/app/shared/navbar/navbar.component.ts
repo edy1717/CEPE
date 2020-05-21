@@ -5,7 +5,6 @@ import { UserInterface } from '../../interfaces/user';
 import { Router } from '@angular/router';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',

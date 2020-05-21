@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DataApiService } from '../../services/data-api.service';
 import { ProductInterface } from '../../interfaces/products';
 import { DummyService } from '../../services/dummy.service';
+import { PageEvent } from '@angular/material/paginator';
 
 
 @Component({
@@ -42,6 +43,15 @@ export class ListProductsComponent implements OnInit {
     this.dummyService.selectedProducts = Object.assign({}, product)
     console.log('que pedo',product)
   }
+
+  handlePage(e: PageEvent){
+    this.page_size = e.pageSize
+    this.page_number = e.pageIndex + 1
+  }
+
+  page_size: number = 5;
+  page_number: number = 1;
+  pageSizeOptions  = [5, 10, 15, 20, 25, 30, 40, 80 , 100]
 
   
 
