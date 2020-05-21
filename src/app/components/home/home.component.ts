@@ -52,6 +52,6 @@ export class HomeComponent implements OnInit {
 
   page_size: number =8;
   page_number: number = 1;
-  pageSizeOptions  = [4, 8, 16, 24, 32, 40, 48 , 100]
+  pageSizeOptions  = [4, 8, 16, 24, 32, 40, 48 ,  80 , 100]
 
 }

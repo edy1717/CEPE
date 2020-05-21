@@ -8,17 +8,14 @@ import { DummyService } from 'src/app/services/dummy.service';
 })
 export class ModalHomeComponent implements OnInit {
 
-  dataProducts;
+  dataProducts;dfd
 
-  constructor( public dummyService : DummyService ) { }
+  constructor(  ) { }
 
   ngOnInit(): void {
-    this.getListProduct()
+    
   }
 
-  getListProduct(){
-    this.dataProducts = this.dummyService.consultaProducto();
-    console.log('producto', this.dataProducts)
-  }
+
 
 }
