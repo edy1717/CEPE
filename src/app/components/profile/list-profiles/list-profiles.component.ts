@@ -31,14 +31,14 @@ export class ListProfilesComponent implements OnInit {
   //   })
   // }
 
-  // removerDato() {
-  //   if(this.formDelete.valid)  {
-  //     console.log(this.formDelete.value)
-  //   }else{
-     
-  //   }
-  //   this.formDelete.reset()
-  // }
+  removerDato() {
+    if(this.formDelete.valid)  {
+      console.log(this.formDelete.value)
+    }else{
+
+    }
+    this.formDelete.reset()
+  }
 
 
   getListProfile(){

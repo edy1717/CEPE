@@ -20,6 +20,8 @@ export class HomeComponent implements OnInit {
 
   constructor( private dataApi: DataApiService, private dummyService: DummyService, public dialog: MatDialog ) { }
 
+
+
   filterPost = '';
   public products = [];
   public product = '';
@@ -30,6 +32,8 @@ export class HomeComponent implements OnInit {
       this.products = products;
     });
     this.getListProduct();
+
+
   }
 
   getListProduct(){
@@ -47,17 +51,15 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  // openDialog():void{
-  //   const dialogRef = this.dialog.open(ModalHomeComponent, {
-  //     width: '450px',
-  //     data: {  nombre : this.nombre }
-  //   });
-  //   dialogRef.afterClosed().subscribe(result => {
-  //     console.log('The dialog was closed' , this.nombre);
-  //     this.nombre = result;
-  //   });
+  openDialog(value){
+    const dialogRef = this.dialog.open(ModalHomeComponent, {
+      width: '450px',
+      data: { item : value }
+    });
+    dialogRef.afterClosed().subscribe(result => {
+    });
 
-//  }
+  }
 
 
 

@@ -71,7 +71,6 @@ import { ModalReporteComponent } from './components/modals/modal-reporte/modal-r
     AngularFireDatabaseModule,
     BrowserAnimationsModule,
     ThemeModule,
-  
 
   ],
   providers: [
@@ -79,6 +78,9 @@ import { ModalReporteComponent } from './components/modals/modal-reporte/modal-r
     AngularFirestore,
   ],
   bootstrap: [AppComponent,
+      ],
+      entryComponents:[
+        ModalHomeComponent,
       ]
 })
 export class AppModule { }
