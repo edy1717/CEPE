@@ -7,7 +7,6 @@ import { DummyService } from '../../services/dummy.service';
 import { ModalHomeComponent } from '../modals/modal-home/modal-home.component';
 import {MatPaginatorModule, PageEvent} from '@angular/material/paginator';
 import { MatDialog } from '@angular/material/dialog';
-import { ProductProfileInterface } from 'src/app/interfaces/products-profile';
 
 
 @Component({
@@ -18,7 +17,9 @@ import { ProductProfileInterface } from 'src/app/interfaces/products-profile';
 
 export class HomeComponent implements OnInit {
 
+
   constructor( private dataApi: DataApiService, private dummyService: DummyService, public dialog: MatDialog ) { }
+nombre : string;
 
   filterPost = '';
   public products = [];
@@ -27,10 +28,10 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.dataApi.getAllProducts().subscribe(products => {
-      console.log('Producto', products);
       this.products = products;
     });
     this.getListProduct();
+    this.openDialog();
 
   }
 
@@ -49,17 +50,19 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  openDialog(): void {
+  openDialog():void{
     const dialogRef = this.dialog.open(ModalHomeComponent, {
-      width: '250px',
-
+      width: '450px',
+      data: {  nombre : this.nombre }
     });
-
     dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-
+      console.log('The dialog was closed' , this.nombre);
+      this.nombre = result;
     });
+
   }
+
+
 
 
   handlePage(e: PageEvent){
@@ -69,6 +72,6 @@ export class HomeComponent implements OnInit {
 
   page_size: number =8;
   page_number: number = 1;
-  pageSizeOptions  = [4, 8, 16, 24, 32, 40, 48 , 100]
+  pageSizeOptions  = [4, 8, 16, 24, 32, 40, 48 ,  80 , 100]
 
 }

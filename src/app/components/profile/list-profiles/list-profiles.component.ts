@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { DummyService } from '../../../services/dummy.service';
 import { PageEvent } from '@angular/material/paginator';
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-list-profiles',
@@ -15,11 +16,30 @@ export class ListProfilesComponent implements OnInit {
   dataProfiles;
   dataProducts;
   filterPost = '';
+  formDelete : FormGroup;
 
   ngOnInit(): void {
     this.getListProfile();
     this.getListProduct();
+    this.eliminar();
   }
+
+  eliminar (){
+    this.formDelete = new FormGroup ({
+      usuario_id : new FormControl (),
+      cliente_id : new FormControl ()
+    })
+  }
+
+  removerDato() {
+    if(this.formDelete.valid)  {
+      console.log(this.formDelete.value)
+    }else{
+     
+    }
+    this.formDelete.reset()
+  }
+
 
   getListProfile(){
 
@@ -29,10 +49,8 @@ export class ListProfilesComponent implements OnInit {
   getListProduct(){
     this.dataProducts = this.dummyService.consultaProducto();
   }
-  Misproductos($a){
+  misProductos($a){
     this.router.navigate(['/admin/user-products', $a]);
-
-
   }
 
   handlePage(e: PageEvent){

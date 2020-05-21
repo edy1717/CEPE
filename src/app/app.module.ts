@@ -57,7 +57,7 @@ import { ThemeModule } from './@theme/theme.module';
     ModalMyProductsComponent,
     ModalOffersComponent,
     ModalHomeComponent,
-    PaginatePipe
+    PaginatePipe,
   ],
   imports: [
     BrowserModule,

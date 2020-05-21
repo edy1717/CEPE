@@ -1,10 +1,10 @@
-<!-- Button trigger modal
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+<!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
     Launch demo modal
-  </button>
+  </button> -->
 
-   Modal
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- Modal -->
+<!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -40,17 +40,17 @@
   </div> -->
 
 
-<div *ngFor="let data of data">
-    <h1 mat-dialog-title>Hi {{data.idProfile}}</h1>
-    <div mat-dialog-content>
-        <p>What's your favorite animal?</p>
-        <mat-form-field>
-            <mat-label>Favorite Animal</mat-label>
-            <input matInput [(ngModel)]="data.nombre">
-        </mat-form-field>
-    </div>
-    <div mat-dialog-actions>
-        <button mat-button (click)="onNoClick()">No Thanks</button>
-        <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button>
-    </div>
+
+
+<h1 mat-dialog-title>Nuestros productos</h1>
+<div mat-dialog-content>
+    <img src={ {data.nombre}} class="card-img" alt="...">
+    <p>Aguacate Criollo</p>
+    <p class="card-text"><small class="text-muted">Producto disponible {{data.nombre}} </small></p>
+    <p class="card-text"> product.descripcion </p>
+    <p class="card-text"><small class="text-muted">¿Te interesa?</small> <br>
+        <small class="text-muted1">Descarga nuestra APP</small> <br>
+        <i class="fab fa-android " style="color :#418215;"></i><small class="text-muted">Disponible para Andorid Mobile</small>
+
+    </p>
 </div>

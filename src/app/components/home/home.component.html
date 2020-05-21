@@ -1,6 +1,6 @@
 <img src="../../../assets/img/banner_tiendas.jpg" class="img-fluid" alt="Responsive image">
 
-<div class="container">
+<div class="main-container">
     <div class="row">
         <div class="col-12">
             <div class="form-group">
@@ -22,16 +22,15 @@
             <mat-card class="card">
                 <mat-card-content>
                     <div class="card-body text-center">
-                        <img src="{{product.portada}}" class="img-thumbnail" alt="Responsive image">
+                        <img src="{{product.portada}} " class="img-thumbnail" alt="...">
                     </div>
                     <h4 routerLink="/product/{{product.id}} " class="card-title text-center"><b>{{product.nombre}}</b></h4>
                     <p class="text-center">
-                        Cantidad disponible : {{product.cantidad}}
+                        Cantidad disponible : <b class="color">{{product.cantidad}} {{product.medida}} </b>
                     </p>
                 </mat-card-content>
                 <mat-card-actions>
-                    <button mat-button (click)="alertProduct() ">Me interesa</button>
-                    <button mat-button (click)="openDialog() ">Me interesa</button>
+                    <button mat-button (click)="openDialog() ">DETALLE DEL PRODUCTO</button>
                 </mat-card-actions>
             </mat-card>
         </div>
