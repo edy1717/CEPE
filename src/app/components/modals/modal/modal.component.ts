@@ -1,7 +1,9 @@
 import { Component, OnInit, ViewChild, ElementRef,  } from '@angular/core';
 import { DataApiService } from '../../../services/data-api.service';
-import { NgForm, FormGroup, FormControl } from '@angular/forms';
+import { NgForm, FormGroup, FormControl,ReactiveFormsModule } from '@angular/forms';
 import { DummyService } from 'src/app/services/dummy.service';
+
+
 
 @Component({
   selector: 'app-modal',
@@ -35,7 +37,8 @@ export class ModalComponent implements OnInit {
       descripcion : new FormControl (),
       portada : new FormControl (),
       cantidad : new FormControl (),
-      medida : new FormControl ()
+      medida : new FormControl (),
+      imagen: new FormControl(),
     })
   }
 

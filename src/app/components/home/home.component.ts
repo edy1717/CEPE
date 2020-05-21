@@ -19,7 +19,8 @@ export class HomeComponent implements OnInit {
 
 
   constructor( private dataApi: DataApiService, private dummyService: DummyService, public dialog: MatDialog ) { }
-nombre : string;
+
+  nombre: string;
 
   filterPost = '';
   public products = [];
@@ -31,7 +32,7 @@ nombre : string;
       this.products = products;
     });
     this.getListProduct();
-    this.openDialog();
+
 
   }
 
@@ -50,14 +51,14 @@ nombre : string;
     });
   }
 
-  openDialog():void{
+  openDialog(value){
     const dialogRef = this.dialog.open(ModalHomeComponent, {
       width: '450px',
-      data: {  nombre : this.nombre }
+      data: { item : value }
     });
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed' , this.nombre);
-      this.nombre = result;
+      // this.nombre = result;
     });
 
   }

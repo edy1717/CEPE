@@ -1,7 +1,6 @@
 import { DataApiService } from '../../../services/data-api.service';
 import { DummyService } from '../../../services/dummy.service';
-import { FormControl } from '@angular/forms';
-import { FormGroup } from '@angular/forms';
+import { FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 
 @Component({

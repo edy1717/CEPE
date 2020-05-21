@@ -35,7 +35,7 @@ export class ListProfilesComponent implements OnInit {
     if(this.formDelete.valid)  {
       console.log(this.formDelete.value)
     }else{
-     
+
     }
     this.formDelete.reset()
   }

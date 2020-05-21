@@ -44,10 +44,10 @@
 
 <h1 mat-dialog-title>Nuestros productos</h1>
 <div mat-dialog-content>
-    <img src={ {data.nombre}} class="card-img" alt="...">
-    <p>Aguacate Criollo</p>
-    <p class="card-text"><small class="text-muted">Producto disponible {{data.nombre}} </small></p>
-    <p class="card-text"> product.descripcion </p>
+    <img src={{dataProducts.portada}} class="card-img" alt="...">
+    <p>{{dataProducts.nombre}}</p>
+    <p class="card-text"><small class="text-muted">Producto disponible {{dataProducts.cantidad}}{{dataProducts.medida}} </small></p>
+    <p class="card-text"> {{dataProducts.descripcion}}</p>
     <p class="card-text"><small class="text-muted">¿Te interesa?</small> <br>
         <small class="text-muted1">Descarga nuestra APP</small> <br>
         <i class="fab fa-android " style="color :#418215;"></i><small class="text-muted">Disponible para Andorid Mobile</small>
