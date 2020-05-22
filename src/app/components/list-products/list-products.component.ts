@@ -17,12 +17,12 @@ export class ListProductsComponent implements OnInit {
   formConsulta : FormGroup;
   myProducts : any=[];
   respuesta ;
-  resultados ;
+  resultados;
   filterPost = '';
   dataProducts;
   headElements = ['#','Nombre','Descripción','estatus' ];
 
-  constructor( 
+  constructor(
                 private cultivoServ : CultivoService
                 ) { }
 
@@ -44,11 +44,11 @@ export class ListProductsComponent implements OnInit {
     //this.getListProduct();
     this.crearConsulta();
     this.consultar();
-    
+
   }
 
   consultar(){
-    
+
     this.cultivoServ.consultaCultivo(this.formConsulta.value).subscribe (data => {
       this.respuesta = data ;
       this.resultados = this.respuesta.resultados
@@ -88,6 +88,6 @@ export class ListProductsComponent implements OnInit {
   page_number: number = 1;
   pageSizeOptions  = [5, 10, 15, 20, 25, 30, 40, 80 , 100]
 
-  
+
 
 }

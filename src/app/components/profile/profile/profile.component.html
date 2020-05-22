@@ -1,24 +1,71 @@
-  <img src="../../../assets/img/Banner_mi_perfil.jpg" class="img-fluid" alt="Responsive image">
+<img src="../../../../assets/img/mi_perfil.jpg" class="img-fluid" alt="Responsive image" style="max-width: 100%;">
+<mat-card class="example-card">
+    <mat-card-header>
+    </mat-card-header>
+    <mat-card-content>
+        <form [formGroup]="formMyproduct">
 
 
-<section id="profile" class="container">
-    <div class="row mt-5">
-      <div class="offset-lg-4 col-lg-4 col-sm-6 col-12 main-section text-center card">
-        <div class="row">
-          <div class="col-lg-12 col-sm-12 col-12 profile-header"></div>
-        </div>
-        <div class="row user-details">
-          <div class="col-12">
-            <img src="{{user.photoURL}}" class="rounded-circle img-thumbnail" alt="profile">
-            <h5 *ngIf="providerId != 'password'">{{user.name}}</h5>
-            <p>
-              {{user.email}}
-            </p>
-  
-            <hr>
-            <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores suscipit itaque minima quae.</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+            <div class="row">
+                <div class="col-2">
+
+                    <div mat-card-avatar class="example-header-image"></div>
+                </div>
+                <div class="col-10">
+                    <div class="otro">
+                        <mat-form-field class="mr-5">
+                            <mat-label>Nombre</mat-label>
+                            <input matInput formControlName="nombre">
+                        </mat-form-field>
+
+                        <mat-form-field class="mr-5">
+                            <mat-label>Apellido Paterno </mat-label>
+                            <input matInput formControlName="Apepat">
+                        </mat-form-field>
+
+                        <mat-form-field class="mr-5">
+                            <mat-label>Apellido Materno </mat-label>
+                            <input matInput formControlName="Apemat">
+                        </mat-form-field>
+
+                        <mat-form-field class="mr-5">
+                            <mat-label>correo electronico </mat-label>
+                            <input matInput formControlName="email">
+                        </mat-form-field>
+
+                        <mat-form-field class="mr-5">
+                            <mat-label>Contraseña </mat-label>
+                            <input matInput formControlName="contra">
+                        </mat-form-field>
+                    </div>
+                </div>
+
+            </div>
+
+            <!--
+            <div class="col-4">
+                <mat-form-field class="mr-5">
+                    <mat-label>Apellido Paterno </mat-label>
+                    <input matInput formControlName="Apepat">
+                </mat-form-field>
+            </div>
+            <div class="col-4">
+
+            </div>
+            <div class="col-4">
+
+            </div>
+            <div class="col-4">
+
+            </div>
+            </div> -->
+        </form>
+
+
+
+
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-button (click)="openDialog('1')">Actualizar Perfil</button>
+    </mat-card-actions>
+</mat-card>

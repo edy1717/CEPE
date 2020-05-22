@@ -34,7 +34,7 @@ import { PaginatePipe } from './shared/pipes/paginate.pipe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ThemeModule } from './@theme/theme.module';
 import { ModalReporteComponent } from './components/modals/modal-reporte/modal-reporte.component';
-import { ReportesComponent } from './components/profile/reportes/reportes.component';
+import { ModalUserprofileComponent } from './components/modals/modal-userprofile/modal-userprofile.component';
 
 
 
@@ -61,7 +61,7 @@ import { ReportesComponent } from './components/profile/reportes/reportes.compon
     ModalHomeComponent,
     PaginatePipe,
     ModalReporteComponent,
-    ReportesComponent,
+    ModalUserprofileComponent,
   ],
   imports: [
     BrowserModule,
