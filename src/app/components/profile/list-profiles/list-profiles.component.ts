@@ -16,8 +16,8 @@ export class ListProfilesComponent implements OnInit {
   myProducts : any =  [];
   dataProfiles;
   filterPost = '';
-  respuesta
-  headElements = ['Id', 'Nombre', 'Correo', 'Direccion', 'Telefono']
+  respuesta;
+  headElements = ['Id', 'Nombre', 'Correo', 'Direccion', 'Telefono'];
 
   constructor( private dummyService:DummyService,  private router:Router, private _us: UsuarioService) { }
 
