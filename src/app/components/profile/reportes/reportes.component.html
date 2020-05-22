@@ -1,4 +1,6 @@
 <img src="../../../assets/img/Banner_lista_productos.jpg" class="img-fluid" alt="Responsive image">
+
+
 <div class="main-container">
     <section class="main-container">
         <div class="table-responsive">
@@ -25,13 +27,11 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor=" let product of resultados  | filter:filterPost  | paginate:page_size:page_number ; index as i ">
+                    <tr *ngFor=" let repor of resultados  | filter:filterPost  | paginate:page_size:page_number ; index as i ">
                         <th scope="row"> {{i+1}} </th>
-                        <td> {{product.nombre}} </td>
-                        <td> {{product.descripcion}} </td>
-                        <td> ... </td>
-                        <td> {{product.cantidad}} </td>
-                        <td> {{product.medida}} </td>
+                        <td> {{repor.nombre}} </td>
+                        <td> {{repor.motivo}} </td>
+                        <td> {{repor.resolucon}} </td>
                         <td>
                             <button class="btn btn-primary" data-toggle="modal" data-target="#modalProducts">Actualizar</button>
                         </td>
