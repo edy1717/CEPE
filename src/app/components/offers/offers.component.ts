@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { DummyImagesService } from '../../services/dummy-images.service';
+import { OffersService } from '../../services/offers.service';
+import { FormControl } from '@angular/forms';
+import { FormGroup } from '@angular/forms';
 import { PageEvent } from '@angular/material/paginator';
 
 @Component({
@@ -9,18 +12,38 @@ import { PageEvent } from '@angular/material/paginator';
 })
 export class OffersComponent implements OnInit {
 
+  offers: any[];
+  formMyoffers : FormGroup;
+
 imagenes;
 
-  constructor(private dummyImagen: DummyImagesService) { }
+  constructor( private offerServ: OffersService) { }
 
   ngOnInit(): void {
-    this.verImagen()
+
+
+    this.formMyOffers();
+    this.consultarTodos();
+
   }
 
-  verImagen(){
-    this.imagenes = this.dummyImagen.consultaImagen();
-    console.log('img', this.imagenes)
+  formMyOffers(){
+    this.formMyoffers = new FormGroup ({
+      id : new FormControl (),
+      contenido: new FormControl  ()
+    });
   }
+
+  consultarTodos(){
+    this.offerServ.consultarPosts(this.formMyoffers.value).subscribe((resp:any) => {
+    this.offers = resp.resultados;
+    console.log(this.offers);
+
+    }, err => {
+      console.error(err);
+    });
+  }
+
 
   handlePage(e: PageEvent){
     this.page_size = e.pageSize

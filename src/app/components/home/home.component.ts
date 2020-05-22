@@ -5,6 +5,9 @@ import { Button } from 'protractor';
 import { reduce } from 'rxjs/operators';
 import { DummyService } from '../../services/dummy.service';
 import { ModalHomeComponent } from '../modals/modal-home/modal-home.component';
+import { CultivoService } from '../../services/cultivo.service';
+import { FormControl } from '@angular/forms';
+import { FormGroup } from '@angular/forms';
 import {MatPaginatorModule, PageEvent} from '@angular/material/paginator';
 import { MatDialog } from '@angular/material/dialog';
 
@@ -17,8 +20,12 @@ import { MatDialog } from '@angular/material/dialog';
 
 export class HomeComponent implements OnInit {
 
+ // let html
+ registros: any[];
+ formMyproduct : FormGroup;
 
-  constructor( private dataApi: DataApiService, private dummyService: DummyService, public dialog: MatDialog ) { }
+
+constructor( private dataApi: DataApiService, private dummyService: DummyService, public dialog: MatDialog, private _cs :CultivoService ) { }
 
 
 
@@ -33,22 +40,35 @@ export class HomeComponent implements OnInit {
     });
     this.getListProduct();
 
+    this.formMyProduct();
+    this.consultarTodos();
 
   }
+
+  formMyProduct(){
+    this.formMyproduct = new FormGroup ({
+      id : new FormControl (),
+      nombre : new FormControl(),
+      descripción : new FormControl(),
+      imagen : new FormControl(),
+      cantidad : new FormControl(),
+      medida: new FormControl  ()
+    })
+  }
+
+  consultarTodos(){
+    this._cs.consultaCultivo(this.formMyproduct.value).subscribe((resp:any) => {
+    this.registros = resp.resultados;
+    console.log(this.registros);
+
+    }, err => {
+      console.error(err);
+    });
+  }
+
 
   getListProduct(){
     this.dataProducts = this.dummyService.consultaProducto();
-  }
-
-  alertProduct(){
-    Swal.fire({
-      title: '<strong>Te interesa?</strong>',
-      html: 'Para contactar <b> descarga la aplicación. </b> ' + '<br>' +
-      '<a href="https://play.google.com/store/apps?hl=es_MX" ><img src="https://i.pinimg.com/236x/37/18/ff/3718ffe54260f2cb2af297a08b41cc1d.jpg" width="26px" height="26px"></a>'+
-      '<a href="https://www.apple.com/la/ios/app-store/" style="margin-left:12px;"><img src="https://pickaso.com/wp-content/uploads/2016/10/apple-app-store.png" width="26px" height="26px"></a>',
-      background: 'rgba(255, 255, 255, 0.7)',
-
-    });
   }
 
   openDialog(value){

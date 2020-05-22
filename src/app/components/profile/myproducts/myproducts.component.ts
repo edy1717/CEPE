@@ -19,7 +19,7 @@ export class MyproductsComponent implements OnInit {
   resultados;
 
   filterPost = '';
-  headElements = [ '#', 'Nombre', 'Descripcion', 'Imagen', 'Cantidad', 'Medida'] 
+  headElements = [ '#', 'Nombre', 'Descripcion', 'Imagen', 'Cantidad', 'Medida']
 
   constructor(private activatedRoute: ActivatedRoute, private dummyService: DummyService, private _cs :CultivoService,
    ) {
@@ -46,7 +46,7 @@ export class MyproductsComponent implements OnInit {
     this.consultar();
   }
 
-  consultar(){  
+  consultar(){
     this._cs.consultaCultivo(this.formMyproduct.value).subscribe (data => {
       this.respuesta = data ;
       this.resultados = this.respuesta.resultados

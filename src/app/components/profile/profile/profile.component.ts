@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../../services/auth.service';
 import { UserInterface } from '../../../interfaces/user';
+import {
+    ModalUserprofileComponent
+} from '../../modals/modal-userprofile/modal-userprofile.component';
+import { MatDialog } from '@angular/material/dialog';
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-profile',
@@ -9,9 +14,11 @@ import { UserInterface } from '../../../interfaces/user';
 })
 export class ProfileComponent implements OnInit {
 
-  constructor( private authService : AuthService ) { }
+  constructor( private authService : AuthService , public dialog: MatDialog) { }
 
   public providerId : string = 'null';
+  formMyproduct : FormGroup;
+
 
   user : UserInterface = {
     name : '',
@@ -28,6 +35,27 @@ export class ProfileComponent implements OnInit {
     //     this.providerId = user.providerData[0].providerId;
     //   }
     // })
+    this.formMyProduct();
   }
 
+
+  formMyProduct(){
+    this.formMyproduct = new FormGroup ({
+      nombre : new FormControl (),
+      Apepat : new FormControl(),
+      Apemat : new FormControl(),
+      email : new FormControl(),
+      contra : new FormControl()
+    })
+  }
+
+  openDialog(valor){
+    const dialogRef = this.dialog.open(ModalUserprofileComponent, {
+      width: '450px',
+      data: { item : valor }
+    });
+    dialogRef.afterClosed().subscribe(result => {
+    });
+
+  }
 }
