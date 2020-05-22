@@ -3,3 +3,28 @@
     font-family: "Latin Modern Roman 10";
   font-style: oblique;
 }
+
+.card {
+  margin-top: 20px;
+  max-width: 400px;
+  background-color: none;
+  justify-content: center;
+  border: none;
+  outline: none;
+}
+
+.card-body img {
+  width: auto;
+  height: 165px;
+  color: black;
+}
+
+.card-color{
+  color:#928C8C;
+}
+.card-colo1{
+  color: #A9A6A5; 
+}
+.color {
+  color: #743B8F;
+}

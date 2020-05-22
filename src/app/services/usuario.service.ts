@@ -9,7 +9,7 @@ import { map } from 'rxjs/operators';
 export class UsuarioService {
   resultado;
 
-  url = environment.apiUrl + '/auth';
+  url = environment.apiUrl + '/usuario';
 
   constructor( private http: HttpClient ) { }
 
@@ -19,10 +19,6 @@ export class UsuarioService {
 
   consultUsers(data){
     return this.http.post(this.url+'/obtener/todos', data)
-  }
-
-  editUser(data){
-    return this.http.post(this.url+'/', data)
   }
 
   deleteUser(data){

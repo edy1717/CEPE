@@ -13,8 +13,8 @@
                                     <i class="fas fa-search"></i>
                                 </a>
                             </div>
-                            <mat-paginator [length]="dataProfiles.length" [pageSize]="page_size" [pageSizeOptions]="pageSizeOptions" (page)="handlePage($event) ">
-                            </mat-paginator>
+                            <!-- <mat-paginator [length]="dataProfiles.length" [pageSize]="page_size" [pageSizeOptions]="pageSizeOptions" (page)="handlePage($event) ">
+                            </mat-paginator> -->
                         </div>
                     </div>
                 </div>
@@ -22,11 +22,7 @@
             <table class="table table-hover">
                 <thead>
                     <tr>
-                        <th scope="col"> Id</th>
-                        <th scope="col"> Nombre </th>
-                        <th scope="col"> Correo </th>
-                        <th scope="col"> Direccion </th>
-                        <th scope="col"> Telefono </th>
+                        <th *ngFor="let head of headElements" scope="col">{{head}} </th>
                         <th scope="col"> &nbsp; </th>
                     </tr>
                 </thead>

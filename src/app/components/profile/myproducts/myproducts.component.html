@@ -28,18 +28,13 @@
             <table class="table ">
                 <thead>
                     <tr>
-                        <th scope="col"> #2</th>
-                        <th scope="col"> Nombre </th>
-                        <th scope="col"> Descripcion </th>
-                        <th scope="col"> Imagen </th>
-                        <th scope="col"> Cantidad </th>
-                        <th scope="col"> Medida </th>
+                        <th *ngFor="let head of headElements" scope="col">{{head}} </th>
                         <th scope="col"> &nbsp; </th>
                         <th scope="col"> &nbsp; </th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let a of myProducts">
+                    <tr *ngFor="let a of resultados">
                         <th scope="row "></th>
                         <td>{{a.nombre}}</td>
                         <td>{{a.descripcion}} </td>

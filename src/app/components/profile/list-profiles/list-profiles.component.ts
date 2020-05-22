@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { DummyService } from '../../../services/dummy.service';
 import { PageEvent } from '@angular/material/paginator';
 import { FormGroup, FormControl } from '@angular/forms';
+import { UsuarioService } from '../../../services/usuario.service';
 
 @Component({
   selector: 'app-list-profiles',
@@ -11,44 +12,56 @@ import { FormGroup, FormControl } from '@angular/forms';
 })
 export class ListProfilesComponent implements OnInit {
 
-  constructor( private dummyService:DummyService,  private router:Router) { }
+  formListProfil : FormGroup;
 
   dataProfiles;
-  dataProducts;
   filterPost = '';
-  formDelete : FormGroup;
+  respuesta
+  headElements = ['Id', 'Nombre', 'Correo', 'Direccion', 'Telefono']
+
+  constructor( private dummyService:DummyService,  private router:Router, private _us: UsuarioService) { }
+
+  formListpro(){
+    this.formListProfil = new FormGroup ({
+      nombre : new FormControl (),
+      email : new FormControl (),
+      direccion : new FormControl (),
+      phone : new FormControl (),
+    })
+  }
 
   ngOnInit(): void {
-    this.getListProfile();
-    this.getListProduct();
-    //this.eliminar();
+    // this.getListProfile();
+    // this.getListProduct();
+    this.formListpro();
+    this.consultar();
   }
 
-  // eliminar (){
-  //   this.formDelete = new FormGroup ({
-  //     usuario_id : new FormControl (),
-  //     cliente_id : new FormControl ()
-  //   })
+  consultar(){  
+    this._us.consultUsers(this.formListProfil.value).subscribe (data => {
+      this.respuesta = data ;
+      this.dataProfiles = this.respuesta.dataProfiles
+        console.log(this.dataProfiles)
+    })
+  }
+
+
+  // removerDato() {
+  //   if(this.formDelete.valid)  {
+  //     console.log(this.formDelete.value)
+  //   }else{
+  //   }
+  //   this.formDelete.reset()
   // }
 
-  removerDato() {
-    if(this.formDelete.valid)  {
-      console.log(this.formDelete.value)
-    }else{
 
-    }
-    this.formDelete.reset()
-  }
+  // getListProfile(){
+  //   this.dataProfiles = this.dummyService.consultaProfile();
+  // }
 
-
-  getListProfile(){
-
-    this.dataProfiles = this.dummyService.consultaProfile();
-  }
-
-  getListProduct(){
-    this.dataProducts = this.dummyService.consultaProducto();
-  }
+  // getListProduct(){
+  //   this.dataProducts = this.dummyService.consultaProducto();
+  // }
   misProductos($a){
     this.router.navigate(['/admin/user-products', $a]);
   }

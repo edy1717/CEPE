@@ -12,8 +12,8 @@
                                     <i class="fas fa-search"></i>
                                 </a>
                             </div>
-                            <mat-paginator [length]="dataProducts.length" [pageSize]="page_size" [pageSizeOptions]="pageSizeOptions" (page)="handlePage($event) ">
-                            </mat-paginator>
+                            <!-- <mat-paginator [length]="resultados.length" [pageSize]="page_size" [pageSizeOptions]="pageSizeOptions" (page)="handlePage($event) ">
+                            </mat-paginator> -->
                         </div>
                     </div>
                 </div>
@@ -21,18 +21,11 @@
             <table class="table ">
                 <thead>
                     <tr>
-                        <th scope="col"> #</th>
-                        <th scope="col"> Nombre </th>
-                        <th scope="col"> Descripción </th>
-                        <th scope="col"> Portada </th>
-                        <th scope="col"> Cantidad </th>
-                        <th scope="col"> Medida </th>
-                        <th scope="col"> &nbsp; </th>
-                        <th scope="col"> &nbsp; </th>
+                        <th *ngFor="let head of headElements" scope="col">{{head}} </th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor=" let product of dataProducts  | filter:filterPost  | paginate:page_size:page_number ; index as i ">
+                    <tr *ngFor=" let product of resultados  | filter:filterPost  | paginate:page_size:page_number ; index as i ">
                         <th scope="row"> {{i+1}} </th>
                         <td> {{product.nombre}} </td>
                         <td> {{product.descripcion}} </td>
@@ -40,7 +33,7 @@
                         <td> {{product.cantidad}} </td>
                         <td> {{product.medida}} </td>
                         <td>
-                            <button class="btn btn-primary" data-toggle="modal" data-target="#modalProducts" (click)="onPreUpdateProduct(product)">Actualizarpapu</button>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#modalProducts">Actualizar</button>
                         </td>
                         <td>
                             <button class="btn btn-danger" (click)="onDeleteProducts(i)">Eliminar</button>
@@ -51,5 +44,4 @@
         </div>
     </section>
 </div>
-
 <app-modal></app-modal>
