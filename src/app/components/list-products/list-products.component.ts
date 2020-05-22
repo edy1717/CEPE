@@ -15,6 +15,7 @@ import { FormGroup, Validators, FormControl } from '@angular/forms';
 export class ListProductsComponent implements OnInit {
 
   formConsulta : FormGroup;
+  myProducts : any =  [];
   respuesta ;
   resultados ;
   filterPost = '';

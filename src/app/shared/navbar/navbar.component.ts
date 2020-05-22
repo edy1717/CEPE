@@ -17,7 +17,7 @@ export class NavbarComponent implements OnInit {
 
 
   constructor( private authService : AuthService,
-                private afsAuth : AngularFireAuth, private router:Router ) { }
+                 private router:Router ) { }
 
   public app_name: string = 'Sembrando Conciencia';
 
@@ -30,7 +30,7 @@ export class NavbarComponent implements OnInit {
   };
 
   ngOnInit(): void {
-    // this.getCurrentUser();
+    //this.getCurrentUser();
     // this.authService.isAuth().subscribe(user =>  {
     //   if(user){
     //     this.user.name = user.displayName;
@@ -40,7 +40,7 @@ export class NavbarComponent implements OnInit {
   }
 
   // getCurrentUser() {
-  //   this.authService.isAuth().subscribe(auth => {
+  //   this.authService.onlogin().subscribe(auth => {
   //     if (auth) {
   //       console.log('user logged');
   //       this.isLogged = true;

@@ -13,7 +13,7 @@ import { UsuarioService } from '../../../services/usuario.service';
 export class ListProfilesComponent implements OnInit {
 
   formListProfil : FormGroup;
-
+  myProducts : any =  [];
   dataProfiles;
   filterPost = '';
   respuesta
