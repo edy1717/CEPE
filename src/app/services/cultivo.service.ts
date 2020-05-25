@@ -16,7 +16,7 @@ export class CultivoService {
   }
 
   consultaCultivo(data){
-    return this.http.get(this.url+'/obtener/todos', data)
+    return this.http.post(this.url+'/obtener/todos', data);
   }
 
   editarCultivo(data){

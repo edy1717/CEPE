@@ -24,7 +24,8 @@ export class HomeComponent implements OnInit {
  registros: any[];
  formMyproduct : FormGroup;
 
-  constructor( public dialog: MatDialog ) { }
+
+constructor( public dialog: MatDialog, private _cs :CultivoService ) { }
 
 
 
@@ -38,15 +39,34 @@ export class HomeComponent implements OnInit {
     //   this.products = products;
     // });
     // this.getListProduct();
+    this.formMyProduct();
+    this.consultarTodos();
+  }
 
 
+  formMyProduct(){
+    this.formMyproduct = new FormGroup ({
+      id : new FormControl (),
+      nombre : new FormControl(),
+      descripción : new FormControl(),
+      imagen : new FormControl(),
+      cantidad : new FormControl(),
+      medida: new FormControl  ()
+    })
+  }
+
+  consultarTodos(){
+    this._cs.consultaCultivo(this.formMyproduct.value).subscribe((resp:any) => {
+    this.registros = resp.resultados;
+    console.log(this.registros);
+
+    }, err => {
+      console.error(err);
+    });
   }
 
 
 
-  getListProduct(){
-    this.dataProducts = this.dummyService.consultaProducto();
-  }
 
   openDialog(value){
     const dialogRef = this.dialog.open(ModalHomeComponent, {

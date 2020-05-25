@@ -21,13 +21,13 @@ export class MyproductsComponent implements OnInit {
   filterPost = '';
   headElements = [ '#', 'Nombre', 'Descripcion', 'Imagen', 'Cantidad', 'Medida']
 
-  constructor(private activatedRoute: ActivatedRoute, private dummyService: DummyService, private _cs :CultivoService,
+  constructor(private activatedRoute: ActivatedRoute,  private _cs :CultivoService,
    ) {
-    this.activatedRoute.params.subscribe (params => {
-      if(params.idProfile != null){
-        this.myProducts = this.dummyService.productoProfiles(params['idProfile']);
-      }
-    });
+    // this.activatedRoute.params.subscribe (params => {
+    //   if(params.idProfile != null){
+    //     this.myProducts = this.dummyService.productoProfiles(params['idProfile']);
+    //   }
+    // });
    }
 
    formMyProduct(){
