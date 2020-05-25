@@ -47,11 +47,11 @@ export class MyproductsComponent implements OnInit {
   }
 
   consultar(){
-    this._cs.consultaCultivo(this.formMyproduct.value).subscribe (data => {
-      this.respuesta = data ;
-      this.resultados = this.respuesta.resultados
-        console.log(this.resultados)
-    })
+    // this._cs.consultaCultivo(this.formMyproduct.value).subscribe (data => {
+    //   this.respuesta = data ;
+    //   this.resultados = this.respuesta.resultados
+    //     console.log(this.resultados)
+    // })
   }
 
 

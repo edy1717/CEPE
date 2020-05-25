@@ -8,15 +8,14 @@
                     <div class="col-12">
                         <div class="form-group">
                             <div class="search-box float-left mb-3 ">
-                                <input type="text" class="search-text" name="filterPost" placeholder="Buscar"
-                                    [(ngModel)]="filterPost">
+                                <input type="text" class="search-text" name="filterPost" placeholder="Buscar" [(ngModel)]="filterPost">
                                 <a class="search-btn">
                                     <i class="fas fa-search"></i>
                                 </a>
                             </div>
-                            <mat-paginator [length]="myProducts.length" [pageSize]="page_size" [pageSizeOptions]="pageSizeOptions"
+                            <!-- <mat-paginator [length]="myProducts.length" [pageSize]="page_size" [pageSizeOptions]="pageSizeOptions"
                                 (page)="handlePage($event) ">
-                            </mat-paginator>
+                            </mat-paginator> -->
                         </div>
                     </div>
                 </div>
