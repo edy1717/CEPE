@@ -8,7 +8,7 @@ import { AuthGuard } from './guards/auth.guard';
 import { OffersComponent } from './components/offers/offers.component';
 import { ProfileComponent } from './components/profile/profile/profile.component';
 import { MyproductsComponent } from './components/profile/myproducts/myproducts.component';
-import { ReportesComponent } from './components/profile/reportes/reportes.component';
+import { ReportsComponent } from './components/profile/reports/reports.component';
 
 
 const routes: Routes = [
@@ -18,8 +18,8 @@ const routes: Routes = [
   { path : 'admin/list-products', component : ListProductsComponent,    },
   { path : 'admin/list-profiles', component :ListProfilesComponent,    },
   { path : 'admin/offers', component : OffersComponent,  },
+  { path : 'admin/reports', component : ReportsComponent },
   { path : 'admin/user-products/:idProfile', component : MyproductsComponent,  },
-  { path : 'admin/reporte', component : ReportesComponent,  },
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
   { path : '***',  component : HomeComponent }
 

@@ -1,4 +1,4 @@
-<section id="login" class="mb-5 mt-5">
+<!-- <section id="login" class="mb-5 mt-5">
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-sm-6 col-md-4 mx-auto">
@@ -34,4 +34,26 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
+<div class="signin-content">
+    <mat-card>
+      <mat-card-content>
+        <form [formGroup]="formLogin" (ngSubmit)="crearFormulario()">
+          <p>Iniciar Sesión</p>
+          <mat-form-field class="full-width-input">
+            <input matInput placeholder="Ingresa tu correo electronico" formControlName="email" required>
+            <mat-error>
+              Por favor!!! ingresa tu correo correctamente
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field class="full-width-input">
+            <input matInput type="password" placeholder="Ingresa tu contraseña" formControlName="password" required>
+            <mat-error>
+              Por favor!!! ingresa tu contraseña correctamente
+            </mat-error>
+          </mat-form-field>
+          <button mat-raised-button class="color" type="submit" (click)="onLoginCorreo()">Iniciar</button>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>

@@ -14,15 +14,12 @@ export class LoginComponent implements OnInit {
 
   formLogin: FormGroup;
   resultado;
+  private formSubmitAttempt: boolean;
 
-  constructor( public afAuth : AngularFireAuth,
-                private router : Router,
+  constructor(  private router : Router,
                 private usService : AuthService ) { }
 
 
-
-    public email: string = '';
-    public password: string = '';
 
   ngOnInit() {
     this.crearFormulario();
@@ -31,8 +28,8 @@ export class LoginComponent implements OnInit {
 
   crearFormulario() {
     this.formLogin = new FormGroup({
-      email: new FormControl(null),
-      password: new FormControl(null)
+      email: new FormControl(''),
+      password: new FormControl('')
     });
   }
 
@@ -75,8 +72,10 @@ export class LoginComponent implements OnInit {
 
       console.log(localStorage.getItem('SCtoken'));
       }
-    })
+    }),error => console.log('erros nemo',error)
   }
+
+
 
 }
 
