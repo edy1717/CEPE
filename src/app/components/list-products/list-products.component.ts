@@ -49,14 +49,14 @@ export class ListProductsComponent implements OnInit {
 
   consultar(){
 
-    this.cultivoServ.consultaCultivo(this.formConsulta.value).subscribe (data => {
-      this.respuesta = data ;
-      this.resultados = this.respuesta.resultados
-        console.log('nou', this.resultados.value)
-        console.log('esto es data', data)
+    // this.cultivoServ.consultaCultivo(this.formConsulta.value).subscribe (data => {
+    //   this.respuesta = data ;
+    //   this.resultados = this.respuesta.resultados
+    //     console.log('nou', this.resultados.value)
+    //     console.log('esto es data', data)
 
-    })
-    console.log('esto no es data', this.resultados);
+    // })
+    // console.log('esto no es data', this.resultados);
 
 
   }

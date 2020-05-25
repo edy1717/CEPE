@@ -68,7 +68,7 @@ export class LoginComponent implements OnInit {
     this.resultado = resp;
     if (this.resultado.data.token != ''){
       localStorage.setItem('SCtoken', this.resultado.data.token);
-      this.router.navigateByUrl('/admin/offers');
+      this.router.navigateByUrl('/home');
 
       console.log(localStorage.getItem('SCtoken'));
       }
