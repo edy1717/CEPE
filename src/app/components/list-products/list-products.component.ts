@@ -20,7 +20,7 @@ export class ListProductsComponent implements OnInit {
   resultados;
   filterPost = '';
   dataProducts;
-  headElements = ['#','Nombre','Descripción','Portada','Cantidad','Medida', ' ', ' ' ];
+  headElements = ['#','Nombre','Descripción','estatus' ];
 
   constructor(
                 private cultivoServ : CultivoService
@@ -52,8 +52,13 @@ export class ListProductsComponent implements OnInit {
     this.cultivoServ.consultaCultivo(this.formConsulta.value).subscribe (data => {
       this.respuesta = data ;
       this.resultados = this.respuesta.resultados
-        console.log(this.resultados)
+        console.log('nou', this.resultados.value)
+        console.log('esto es data', data)
+
     })
+    console.log('esto no es data', this.resultados);
+
+
   }
 
   // getListProduct(){

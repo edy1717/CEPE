@@ -7,7 +7,7 @@ export class PaginatePipe implements PipeTransform {
 
   transform( array: any[], page_size: number, page_number: number ): any[] {
 
-    // if(!array.length) return []
+    //if(!array.length) return []
     if(!array) return[]
     page_size = page_size || 5
     page_number = page_number || 1

@@ -11,7 +11,7 @@ export class ReporteService {
 
   constructor(private http: HttpClient) { }
 
-  registerUser(data){
+  reportUser(data){
     return this.http.post(this.url + '/buscar', data);
   }
 }

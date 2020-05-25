@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { DataApiService } from '../../services/data-api.service';
+//import { DataApiService } from '../../services/data-api.service';
 import Swal from 'sweetalert2';
 import { Button } from 'protractor';
 import { reduce } from 'rxjs/operators';
-import { DummyService } from '../../services/dummy.service';
+// import { DummyService } from '../../services/dummy.service';
 import { ModalHomeComponent } from '../modals/modal-home/modal-home.component';
 import { CultivoService } from '../../services/cultivo.service';
 import { FormControl } from '@angular/forms';
@@ -24,8 +24,7 @@ export class HomeComponent implements OnInit {
  registros: any[];
  formMyproduct : FormGroup;
 
-
-constructor( private dataApi: DataApiService, private dummyService: DummyService, public dialog: MatDialog, private _cs :CultivoService ) { }
+  constructor( public dialog: MatDialog ) { }
 
 
 
@@ -35,36 +34,14 @@ constructor( private dataApi: DataApiService, private dummyService: DummyService
   dataProducts;
 
   ngOnInit(): void {
-    this.dataApi.getAllProducts().subscribe(products => {
-      this.products = products;
-    });
-    this.getListProduct();
+    // this.dataApi.getAllProducts().subscribe(products => {
+    //   this.products = products;
+    // });
+    // this.getListProduct();
 
-    this.formMyProduct();
-    this.consultarTodos();
 
   }
 
-  formMyProduct(){
-    this.formMyproduct = new FormGroup ({
-      id : new FormControl (),
-      nombre : new FormControl(),
-      descripción : new FormControl(),
-      imagen : new FormControl(),
-      cantidad : new FormControl(),
-      medida: new FormControl  ()
-    })
-  }
-
-  consultarTodos(){
-    this._cs.consultaCultivo(this.formMyproduct.value).subscribe((resp:any) => {
-    this.registros = resp.resultados;
-    console.log(this.registros);
-
-    }, err => {
-      console.error(err);
-    });
-  }
 
 
   getListProduct(){

@@ -4,16 +4,16 @@
 
 export const environment = {
   production: false,
-  firebaseconfig: {
-    apiKey: "AIzaSyBTNd7sXSdk1D3Xmxni8RTlnntyn1utskQ",
-    authDomain: "cepe-223b8.firebaseapp.com",
-    databaseURL: "https://cepe-223b8.firebaseio.com",
-    projectId: "cepe-223b8",
-    storageBucket: "cepe-223b8.appspot.com",
-    messagingSenderId: "553948672165",
-    appId: "1:553948672165:web:e4b61639e313a8fe175d4c",
-    measurementId: "G-36HWCRZZXJ"
-  },
+  // firebaseconfig: {
+  //   apiKey: "AIzaSyBTNd7sXSdk1D3Xmxni8RTlnntyn1utskQ",
+  //   authDomain: "cepe-223b8.firebaseapp.com",
+  //   databaseURL: "https://cepe-223b8.firebaseio.com",
+  //   projectId: "cepe-223b8",
+  //   storageBucket: "cepe-223b8.appspot.com",
+  //   messagingSenderId: "553948672165",
+  //   appId: "1:553948672165:web:e4b61639e313a8fe175d4c",
+  //   measurementId: "G-36HWCRZZXJ"
+  // },
   apiUrl : 'http://34.94.150.226'
 };
 

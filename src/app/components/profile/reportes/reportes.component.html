@@ -1,0 +1,47 @@
+<img src="../../../assets/img/Banner_lista_productos.jpg" class="img-fluid" alt="Responsive image">
+
+
+<div class="main-container">
+    <section class="main-container">
+        <div class="table-responsive">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-group">
+                            <div class="search-box float-left mb-3 ">
+                                <input type="text" class="search-text" name="filterPost" placeholder="Buscar" [(ngModel)]="filterPost">
+                                <a class="search-btn">
+                                    <i class="fas fa-search"></i>
+                                </a>
+                            </div>
+                            <mat-paginator [length]="myProducts.length" [pageSize]="page_size" [pageSizeOptions]="pageSizeOptions" (page)="handlePage($event) ">
+                            </mat-paginator> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <table class="table ">
+                <thead>
+                    <tr>
+                        <th *ngFor="let head of headElements" scope="col">{{head}} </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor=" let repor of resultados  | filter:filterPost  | paginate:page_size:page_number ; index as i ">
+                        <th scope="row"> {{i+1}} </th>
+                        <td> {{repor.nombre}} </td>
+                        <td> {{repor.motivo}} </td>
+                        <td> {{repor.resolucon}} </td>
+                        <td>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#modalProducts">Actualizar</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-danger" (click)="onDeleteProducts(i)">Eliminar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</div>
+<app-modal></app-modal>

@@ -13,11 +13,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { environment } from '../environments/environment';
 
-import { AngularFireModule } from '@angular/fire';
-import { AngularFireDatabaseModule } from '@angular/fire/database';
+// import { AngularFireModule } from '@angular/fire';
+// import { AngularFireDatabaseModule } from '@angular/fire/database';
 
-import { AngularFireAuth } from '@angular/fire/auth';
-import { AngularFirestore } from '@angular/fire/firestore';
+// import { AngularFireAuth } from '@angular/fire/auth';
+// import { AngularFirestore } from '@angular/fire/firestore';
 import { ListProductsComponent } from './components/list-products/list-products.component';
 import { FilterPipe } from './shared/pipes/filter.pipe';
 import { ListProfilesComponent } from './components/profile/list-profiles/list-profiles.component';
@@ -34,7 +34,7 @@ import { PaginatePipe } from './shared/pipes/paginate.pipe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ThemeModule } from './@theme/theme.module';
 import { ModalReporteComponent } from './components/modals/modal-reporte/modal-reporte.component';
-import { ModalUserprofileComponent } from './components/modals/modal-userprofile/modal-userprofile.component';
+import { ReportesComponent } from './components/profile/reportes/reportes.component';
 
 
 
@@ -61,7 +61,7 @@ import { ModalUserprofileComponent } from './components/modals/modal-userprofile
     ModalHomeComponent,
     PaginatePipe,
     ModalReporteComponent,
-    ModalUserprofileComponent,
+    ReportesComponent,
   ],
   imports: [
     BrowserModule,
@@ -69,15 +69,15 @@ import { ModalUserprofileComponent } from './components/modals/modal-userprofile
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    AngularFireModule.initializeApp(environment.firebaseconfig) ,
-    AngularFireDatabaseModule,
+    // AngularFireModule.initializeApp(environment.firebaseconfig) ,
+    // AngularFireDatabaseModule,
     BrowserAnimationsModule,
     ThemeModule,
 
   ],
   providers: [
-    AngularFireAuth,
-    AngularFirestore,
+    // AngularFireAuth,
+    // AngularFirestore,
   ],
   bootstrap: [AppComponent,
       ],

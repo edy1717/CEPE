@@ -8,7 +8,7 @@ import { AuthGuard } from './guards/auth.guard';
 import { OffersComponent } from './components/offers/offers.component';
 import { ProfileComponent } from './components/profile/profile/profile.component';
 import { MyproductsComponent } from './components/profile/myproducts/myproducts.component';
-import { ModalHomeComponent } from './components/modals/modal-home/modal-home.component';
+import { ReportesComponent } from './components/profile/reportes/reportes.component';
 
 
 const routes: Routes = [
@@ -19,7 +19,7 @@ const routes: Routes = [
   { path : 'admin/list-profiles', component :ListProfilesComponent,    },
   { path : 'admin/offers', component : OffersComponent,  },
   { path : 'admin/user-products/:idProfile', component : MyproductsComponent,  },
-  { path : 'admin/modal', component : ModalHomeComponent,  },
+  { path : 'admin/reporte', component : ReportesComponent,  },
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
   { path : '***',  component : HomeComponent }
 
