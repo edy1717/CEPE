@@ -35,10 +35,9 @@ constructor( public dialog: MatDialog, private _cs :CultivoService ) { }
   ngOnInit(): void {
     this.consultarTodos();
     this.formMyProduct();
-    this.getListBooks()
+    this.consultarId();
 
   }
-
 
   formMyProduct(){
     this.formMyproduct = new FormGroup ({
@@ -51,16 +50,24 @@ constructor( public dialog: MatDialog, private _cs :CultivoService ) { }
     })
   }
 
+  consultarId(){
+    console.log('Hola');
+
+   this._cs.consultaCultivo()
+   .subscribe((productos: any) =>{
+     console.log(productos);
+
+
+    });
+  }
+
   consultarTodos(){
     console.log('Hola');
 
-   this._cs.consultaCultivo().pipe(
-     tap(r => console.log(r)
-     )
-   )
+   this._cs.consultarTodosCultivos()
    .subscribe((productos: any) =>{
-     this.productos = productos
-     console.log('Holiiii',productos);
+     console.log(productos);
+
 
     });
   }
