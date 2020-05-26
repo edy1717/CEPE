@@ -17,8 +17,8 @@ Authorization: 'Bearer ' + localStorage.getItem('SCtoken') }) };
 export class CultivoService {
 
   url = environment.apiUrl + '/cultivo';
-  product:Observable<any>;
-  products:Observable<any>;
+  // product:Observable<any>;
+  // products:Observable<any>;
 
 
 
@@ -33,7 +33,7 @@ export class CultivoService {
 };
 
   constructor( private http: HttpClient, private authService: AuthService ) {
-    console.log('Holi',httpOptions);
+    // console.log('Holi',httpOptions);
 
   }
 

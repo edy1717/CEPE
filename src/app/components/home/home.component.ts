@@ -22,11 +22,11 @@ export class HomeComponent implements OnInit {
 
  // let html
  registros: any[];
- formMyproduct : FormGroup;
- public productos:ProductInterface;
+ formMyproduct: FormGroup;
+ public productos: ProductInterface;
 
 
-constructor( public dialog: MatDialog, private _cs :CultivoService ) { }
+constructor( public dialog: MatDialog, private _cs: CultivoService ) { }
 
   filterPost = '';
   public products = [];
@@ -53,29 +53,20 @@ constructor( public dialog: MatDialog, private _cs :CultivoService ) { }
   }
 
   consultarId(){
-    console.log('Hola');
-
+    // console.log('Hola');
    this._cs.consultaCultivo()
    .subscribe((productos: any) =>{
      console.log(productos);
-
-
     });
   }
 
   consultarTodos(){
-    console.log('Hola');
-
-   this._cs.consultarTodosCultivos()
+    // console.log('Hola');
+    this._cs.consultarTodosCultivos()
    .subscribe((productos: any) =>{
      console.log(productos);
-
-
     });
   }
-
-
-
 
 
   openDialog(value){
@@ -87,9 +78,6 @@ constructor( public dialog: MatDialog, private _cs :CultivoService ) { }
     });
 
   }
-
-
-
 
   handlePage(e: PageEvent){
      this.page_size = e.pageSize
