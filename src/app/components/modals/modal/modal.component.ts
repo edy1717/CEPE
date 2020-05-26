@@ -15,6 +15,7 @@ export class ModalComponent implements OnInit {
   public products =[];
   public product = '';
   respuesta;
+  dataProducts;
 
   constructor( private _sc : CultivoService  ) { }
 
@@ -27,7 +28,9 @@ export class ModalComponent implements OnInit {
     // this.dataApi.getAllProducts().subscribe(products => {
     //   this.products = products;
     // })
+  
     this.formProduct()
+
   }
 
   formProduct(){
@@ -42,6 +45,7 @@ export class ModalComponent implements OnInit {
     })
   }
 
+
   save(){
     console.log('holi', this.formProduct)
   }
@@ -53,6 +57,7 @@ export class ModalComponent implements OnInit {
       console.log('editar1', respEditar)
     })
   }
+
 
 
   // onSaveProduct( productForm: NgForm ):void{
