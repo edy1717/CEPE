@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { OffersService } from '../../services/offers.service';
+import { ModalOffersComponent } from '../modals/modal-offers/modal-offers.component';
 import { FormControl } from '@angular/forms';
 import { FormGroup } from '@angular/forms';
 import { PageEvent } from '@angular/material/paginator';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-offers',
@@ -11,37 +13,55 @@ import { PageEvent } from '@angular/material/paginator';
 })
 export class OffersComponent implements OnInit {
 
-  offers: any[];
-  formMyoffers : FormGroup;
+  registros: any[];
+  formmyPoduct : FormGroup;
+  resultados;
+  respuesta;
 
-imagenes;
-
-  constructor( private offerServ: OffersService) { }
+  constructor( private offerServ: OffersService, public dialog: MatDialog) { }
 
   ngOnInit(): void {
+    this.consultar();
+    this.formMyProduct();
 
 
-    this.formMyOffers();
-    this.consultarTodos();
-
+    // this.consultarId();
   }
 
-  formMyOffers(){
-    this.formMyoffers = new FormGroup ({
-      id : new FormControl (),
-      contenido: new FormControl  ()
+  formMyProduct(){
+    this.formmyPoduct = new FormGroup ({
+      id : new FormControl (''),
+      contenido: new FormControl  ('')
+    })
+  }
+
+  // consultarId(){
+  //  this.offerServ.consultarTodosPost()
+  //  .subscribe((productos: any) =>{
+  //    console.log(productos);
+  //   });
+  // }
+
+  consultar(){
+    this.offerServ.consultarTodosPost().subscribe (data => {
+      this.respuesta = data ;
+      /* this.resultados = this.respuesta.resultados */
+      console.log(this.respuesta.data);
+      /* console.log('resu', this.resultados) */
+  });
+  }
+
+  openDialog(value){
+    const dialogRef = this.dialog.open(ModalOffersComponent, {
+      width: '450px',
+      data: { item : value }
     });
-  }
-
-  consultarTodos(){
-    this.offerServ.consultarPosts(this.formMyoffers.value).subscribe((resp:any) => {
-    this.offers = resp.resultados;
-    console.log(this.offers);
-
-    }, err => {
-      console.error(err);
+    dialogRef.afterClosed().subscribe(result => {
     });
+
   }
+
+
 
 
   // handlePage(e: PageEvent){

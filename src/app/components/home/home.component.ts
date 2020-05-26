@@ -18,11 +18,12 @@ export class HomeComponent implements OnInit {
 
  registros: any[];
  formmyPoduct : FormGroup;
- productos ;
  resultados;
  respuesta;
+
  filterPost = '';
-dataProducts;
+ productos ;
+ dataProducts;
 
 
 constructor( public dialog: MatDialog, private _cs: CultivoService ) { }
@@ -55,13 +56,11 @@ constructor( public dialog: MatDialog, private _cs: CultivoService ) { }
   consultar(){
     this._cs.consultarTodosCultivos().subscribe (data => {
       this.respuesta = data ;
-    this.resultados = this.respuesta.resultados
-      console.log('esto es data', data)
-      console.log('resu', this.resultados)
+      this.resultados = this.respuesta.resultados;
+      console.log('esto es data', data);
+      console.log('resu', this.resultados);
   })
   }
-
-
 
   openDialog(value){
     const dialogRef = this.dialog.open(ModalHomeComponent, {

@@ -42,7 +42,7 @@ export class ListProductsComponent implements OnInit {
   consultar(){
     this._sc.consultarTodosCultivos().subscribe (data => {
       this.respuesta = data ;
-    this.resultados = this.respuesta.resultados
+      this.resultados = this.respuesta.resultados
       console.log('esto es data', data)
       console.log('resu', this.resultados)
   })
