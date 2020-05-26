@@ -27,7 +27,9 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let profil of dataProfiles | filterProfile:filterPost | paginate:page_size:page_number">
+                    <!-- <tr *ngFor="let profil of dataProfiles | filterProfile:filterPost | paginate:page_size:page_number"> -->
+                        <tr *ngFor="let profil of dataProfiles | filterProfile:filterPost ">
+
                         <th scope="row"> {{profil.idProfile}} </th>
                         <td> {{profil.nombre}} </td>
                         <td> {{profil.email}} </td>

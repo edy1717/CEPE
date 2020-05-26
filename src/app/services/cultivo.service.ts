@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment';
 import { ProductInterface } from '../interfaces/products';
-import {Observable} from 'rxjs/internal/observable';
 import {map} from 'rxjs/operators';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 
 
 import { AuthService } from './auth.service';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -25,7 +25,6 @@ export class CultivoService {
     portada: '',
     cantidad: '',
     medida:'',
-
 };
 
   constructor( private http: HttpClient, private authService: AuthService ) { }
@@ -41,9 +40,9 @@ export class CultivoService {
 
   consultaCultivo(){
     const token = this.authService.getToken();
-    const urlProd = `http://34.94.150.226/cultivo/obtener`;
-    return this.http.get(urlProd,{headers: this.headers});
-    //  return this.http.get(this.url+'/obtener/todos');
+    const urlProd = `http://34.94.150.226/cultivo/obtener/todos`;
+    console.log(token)
+     return this.http.post(urlProd , token);
   }
 
   editarCultivo(data){

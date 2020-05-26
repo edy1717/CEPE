@@ -13,11 +13,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { environment } from '../environments/environment';
 
-// import { AngularFireModule } from '@angular/fire';
-// import { AngularFireDatabaseModule } from '@angular/fire/database';
 
-// import { AngularFireAuth } from '@angular/fire/auth';
-// import { AngularFirestore } from '@angular/fire/firestore';
 import { ListProductsComponent } from './components/list-products/list-products.component';
 import { FilterPipe } from './shared/pipes/filter.pipe';
 import { ListProfilesComponent } from './components/profile/list-profiles/list-profiles.component';
@@ -30,7 +26,7 @@ import { ModalMyProductsComponent } from './components/modals/modal-my-products/
 import { ModalOffersComponent } from './components/modals/modal-offers/modal-offers.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ModalHomeComponent } from './components/modals/modal-home/modal-home.component';
-import { PaginatePipe } from './shared/pipes/paginate.pipe';
+//import { PaginatePipe } from './shared/pipes/paginate.pipe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ThemeModule } from './@theme/theme.module';
 import { ModalReporteComponent } from './components/modals/modal-reporte/modal-reporte.component';
@@ -60,7 +56,7 @@ import { ReportsComponent } from './components/profile/reports/reports.component
     ModalMyProductsComponent,
     ModalOffersComponent,
     ModalHomeComponent,
-    PaginatePipe,
+    //PaginatePipe,
     ModalReporteComponent,
     ModalUserprofileComponent,
     ReportsComponent,

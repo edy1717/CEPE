@@ -29,30 +29,27 @@ export class HomeComponent implements OnInit {
 constructor( public dialog: MatDialog, private _cs :CultivoService ) { }
 
   filterPost = '';
-  public products = [];
-  public product = '';
   dataProducts;
 
 
   ngOnInit(): void {
     this.consultarTodos();
     this.formMyProduct();
+    this.getListBooks()
 
   }
 
 
   formMyProduct(){
     this.formMyproduct = new FormGroup ({
-      id : new FormControl (),
-      nombre : new FormControl(),
-      descripción : new FormControl(),
-      imagen : new FormControl(),
-      cantidad : new FormControl(),
-      medida: new FormControl  ()
+      id : new FormControl (''),
+      nombre : new FormControl(''),
+      descripción : new FormControl(''),
+      imagen : new FormControl(''),
+      cantidad : new FormControl(''),
+      medida: new FormControl  ('')
     })
   }
-
-
 
   consultarTodos(){
     console.log('Hola');
@@ -67,6 +64,13 @@ constructor( public dialog: MatDialog, private _cs :CultivoService ) { }
 
     });
   }
+
+  getListBooks(): void {
+    this._cs
+      .consultaCultivo()
+      .subscribe((productos: ProductInterface) => (this.productos = productos));
+  }
+
 
 
 
@@ -85,13 +89,13 @@ constructor( public dialog: MatDialog, private _cs :CultivoService ) { }
 
 
 
-  handlePage(e: PageEvent){
-     this.page_size = e.pageSize
-     this.page_number = e.pageIndex + 1
-   }
+  // handlePage(e: PageEvent){
+  //    this.page_size = e.pageSize
+  //    this.page_number = e.pageIndex + 1
+  //  }
 
-   page_size: number =8;
-   page_number: number = 1;
-   pageSizeOptions  = [4, 8, 16, 24, 32, 40, 48 ,  80 , 100]
+  //  page_size: number =8;
+  //  page_number: number = 1;
+  //  pageSizeOptions  = [4, 8, 16, 24, 32, 40, 48 ,  80 , 100]
 
 }

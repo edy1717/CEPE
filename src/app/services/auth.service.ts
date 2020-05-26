@@ -25,11 +25,11 @@ export class AuthService {
 
     setToken(token): void
     {
-      localStorage.setItem('accessToken', token);
+      localStorage.setItem('SCtoken', token);
     }
   getToken()
     {
-      return localStorage.getItem('accessToken');
+      return localStorage.getItem('SCtoken');
     }
 
     getCurrentUser(){
