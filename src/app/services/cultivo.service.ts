@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment';
 import { ProductInterface } from '../interfaces/products';
-import {Observable} from 'rxjs/internal/observable';
 import {map} from 'rxjs/operators';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { AuthService } from './auth.service';
@@ -17,10 +16,6 @@ Authorization: 'Bearer ' + localStorage.getItem('SCtoken') }) };
 export class CultivoService {
 
   url = environment.apiUrl + '/cultivo';
-  // product:Observable<any>;
-  // products:Observable<any>;
-
-
 
   public selectProduct: ProductInterface = {
     id: null,
@@ -29,11 +24,9 @@ export class CultivoService {
     portada: '',
     cantidad: '',
     medida:'',
-
 };
 
   constructor( private http: HttpClient, private authService: AuthService ) {
-    // console.log('Holi',httpOptions);
 
   }
 

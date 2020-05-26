@@ -27,12 +27,13 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let profil of dataProfiles | filterProfile:filterPost | paginate:page_size:page_number">
-                        <th scope="row"> {{profil.idProfile}} </th>
-                        <td> {{profil.nombre}} </td>
+                    <!-- <tr *ngFor="let profil of dataProfiles | filterProfile:filterPost | paginate:page_size:page_number"> -->
+                        <tr *ngFor="let profil of respuesta.data | filterProfile:filterPost ">
+
+                        <th scope="row"> {{profil.id}} </th>
+                        <td> {{profil.nombre}} {{profil.apellidoPaterno}} </td>
                         <td> {{profil.email}} </td>
-                        <td> ... </td>
-                        <td> {{profil.direccion}} </td>
+                        <td> {{profil.ubicacion}} </td>
                         <td> {{profil.phone}} </td>
                         <td>
                             <button class="btn" data-toggle="modal" data-target="#modalProfile" placeholder="update" data-placement="top" title="Actualizar Cliente">

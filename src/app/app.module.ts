@@ -13,11 +13,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { environment } from '../environments/environment';
 
-// import { AngularFireModule } from '@angular/fire';
-// import { AngularFireDatabaseModule } from '@angular/fire/database';
 
-// import { AngularFireAuth } from '@angular/fire/auth';
-// import { AngularFirestore } from '@angular/fire/firestore';
 import { ListProductsComponent } from './components/list-products/list-products.component';
 import { FilterPipe } from './shared/pipes/filter.pipe';
 import { ListProfilesComponent } from './components/profile/list-profiles/list-profiles.component';
@@ -73,8 +69,6 @@ import { AuthService } from './services/auth.service';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    // AngularFireModule.initializeApp(environment.firebaseconfig) ,
-    // AngularFireDatabaseModule,
     BrowserAnimationsModule,
     ThemeModule,
 
