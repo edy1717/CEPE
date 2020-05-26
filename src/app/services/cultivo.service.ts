@@ -46,14 +46,14 @@ export class CultivoService {
   }
 
   editarCultivo(data){
-   const productId = data.productId;
-   const token = this.authService.getToken();
-   const urlProd = `http://34.94.150.226/cultivo/editar/${productId}/?access_token=${token}`;
-   return this.http
-     .put<ProductInterface>(urlProd,data)
-     .pipe(map(dat => dat ));
+  //  const productId = data.productId;
+  //  const token = this.authService.getToken();
+  //  const urlProd = `http://34.94.150.226/cultivo/editar/${productId}/?access_token=${token}`;
+  //  return this.http
+  //    .put<ProductInterface>(urlProd,data)
+  //    .pipe(map(dat => dat ));
 
-    // return this.http.post(this.url+'/editar', data);
+     return this.http.post(this.url+'/editar', data, httpOptions);
   }
 
   eliminarCultivo(id:String){

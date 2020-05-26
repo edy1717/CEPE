@@ -12,8 +12,8 @@
                                     <i class="fas fa-search"></i>
                                 </a>
                             </div>
-                            <!-- <mat-paginator [length]="myProducts.length" [pageSize]="page_size" [pageSizeOptions]="pageSizeOptions" (page)="handlePage($event) ">
-                            </mat-paginator> -->
+                            <mat-paginator [length]="respuesta.data.length" [pageSize]="page_size" [pageSizeOptions]="pageSizeOptions" (page)="handlePage($event) ">
+                            </mat-paginator> 
                         </div>
                     </div>
                 </div>
@@ -28,7 +28,7 @@
                 </thead>
                 <tbody>
                     <!-- <tr *ngFor=" let product of resultados  | filter:filterPost  | paginate:page_size:page_number ; index as i "> -->
-                    <tr *ngFor="let product of respuesta.data | filter:filterPost ; index as i">
+                    <tr *ngFor="let product of respuesta.data | filter:filterPost | paginate:page_size:page_number ; index as i">
 
                         <th scope="row"> {{product.id}} </th>
                         <td> {{product.titulo}} </td>

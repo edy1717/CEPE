@@ -1,7 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef,  } from '@angular/core';
-//import { DataApiService } from '../../../services/data-api.service';
 import { NgForm, FormGroup, FormControl,ReactiveFormsModule } from '@angular/forms';
-import { DummyService } from 'src/app/services/dummy.service';
+import { CultivoService } from 'src/app/services/cultivo.service';
 
 
 
@@ -13,27 +12,28 @@ import { DummyService } from 'src/app/services/dummy.service';
 export class ModalComponent implements OnInit {
 
   formActualizarProduct : FormGroup;
+  public products =[];
+  public product = '';
+  respuesta;
 
-  // constructor( public dataApi : DataApiService,
-  //                public dummyService : DummyService   ) { }
+  constructor( private _sc : CultivoService  ) { }
 
   @ViewChild('btnClose') btnClose : ElementRef;
 
-  public products =[];
-  public product = '';
+ 
 
 
   ngOnInit(): void {
     // this.dataApi.getAllProducts().subscribe(products => {
     //   this.products = products;
     // })
-    // this.formProduct()
+    this.formProduct()
   }
 
   formProduct(){
     this.formActualizarProduct = new FormGroup({
       id : new FormControl (),
-      nombre : new FormControl (),
+      titulo : new FormControl (),
       descripcion : new FormControl (),
       portada : new FormControl (),
       cantidad : new FormControl (),
@@ -44,6 +44,14 @@ export class ModalComponent implements OnInit {
 
   save(){
     console.log('holi', this.formProduct)
+  }
+
+  actualizarCultivo(){
+    this._sc.editarCultivo(this.formActualizarProduct.value).subscribe ( respEditar => {
+      this.respuesta = respEditar
+      console.log('editar', this.respuesta)
+      console.log('editar1', respEditar)
+    })
   }
 
 
