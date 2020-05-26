@@ -1,49 +1,4 @@
-<!-- <div class="modal fade" id="modalProducts" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">
-            {{ !this.dataApi.selectedProduct.id ? 'Nuevo producto' : 'Actualizar producto' }}
-          </h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <form name="formProduct" #formProduct="ngForm" (ngSubmit)="onSaveProduct(formProduct)" >
-            <input type="hidden" name="id" [(ngModel)]= "this.dataApi.selectedProduct.id" >
-            <div class="form-group">
-              <label for="nombre" class="col-form-label">Nombre:</label>
-              <input type="text" class="form-control" name="nombre" [(ngModel)]="this.dataApi.selectedProduct.nombre" >
-            </div>
-            <div class="form-row">
-              <div class="form-group col-md-6">
-                <label for="cantidad">Cantidad</label>
-                <input type="text" name="cantidad" class="form-control" placeholder="Cantidad" [(ngModel)]="this.dataApi.selectedProduct.cantidad">
-              </div>
-              <div class="form-group col-md-6" >
-                <label for="portada">Portada</label>
-                <input type="text" name="portada" class="form-control" placeholder="Imagen" [(ngModel)]="this.dataApi.selectedProduct.portada">
-              </div> 
-            </div>
-         <div class="form-group">
-              <label for="descripcion" class="col-form-label">Descripcion:</label>
-              <textarea class="form-control" name="descripcion" [(ngModel)]=this.dataApi.selectedProduct.descripcion></textarea>
-            </div>
-
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" #btnClose data-dismiss="modal">Cerrar</button>
-              <button type="submit" class="btn btn-primary">Guardar producto</button>
-            </div>
-          </form>
-        </div>
- 
-      </div>
-    </div>
-  </div> 
- -->
-
- <!-- <ng-container [formGroup]="formActualizarProduct">
+ <ng-container [formGroup]="formActualizarProduct">
   <div class="modal fade" id="modalProducts" tabindex="-1" role="dialog" aria-labelledby="modalProductsLabel"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -57,7 +12,7 @@
         <div class="modal-body">
           <mat-form-field class="mr-5">
             <mat-label>Nombre</mat-label>
-            <input matInput formControlName="nombre">
+            <input matInput formControlName="titulo">
           </mat-form-field>
 
           <mat-form-field class="mr-5">
@@ -75,8 +30,8 @@
             <input matInput formControlName="cantidad">
           </mat-form-field>
 
-          <mat-form-field>
-            <mat-label>Medida</mat-label>
+          <mat-form-field class="mr-5">
+            <mat-label >Medida</mat-label>
             <select matNativeControl required>
               <input matInput formControlName="medida">
               <option value=""></option>
@@ -86,12 +41,17 @@
               <option value="piezas">Piezas</option>
             </select>
           </mat-form-field>
+
+          <mat-form-field class="mr-5">
+            <mat-label>id</mat-label>
+            <input matInput formControlName="id">
+          </mat-form-field>
           
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary" (click)="save()">Guardar</button>
+          <button type="button" class="btn btn-primary" (click)="actualizarCultivo()">Guardar</button>
         </div>
       </div>
     </div>
   </div>
-</ng-container> -->
+</ng-container> 

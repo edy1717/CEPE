@@ -29,7 +29,7 @@ export class ListProductsComponent implements OnInit {
   formMyProduct(){
     this.formmyPoduct = new FormGroup ({
       id : new FormControl (''),
-      nombre : new FormControl(''),
+      titulo : new FormControl(''),
       descripción : new FormControl(''),
       imagen : new FormControl(''),
       cantidad : new FormControl(''),
@@ -54,6 +54,13 @@ export class ListProductsComponent implements OnInit {
   //   if(confirmacion){
   //   this.dataProducts.splice(i, 1)
   //   }
+  // }
+  // actualizarCultivo(){
+  //   this._sc.editarCultivo(this.formmyPoduct.value).subscribe ( respEditar => {
+  //     this.respuesta = respEditar
+  //     console.log('editar', this.respuesta)
+  //     console.log('editar1', respEditar)
+  //   })
   // }
 
 
