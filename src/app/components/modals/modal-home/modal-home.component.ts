@@ -1,5 +1,4 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { DummyService } from 'src/app/services/dummy.service';
 import { CultivoService } from '../../../services/cultivo.service';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
@@ -30,16 +29,15 @@ export class ModalHomeComponent implements OnInit {
     ngOnInit(): void {
        this.getListProduct();
        this.dataProducts = this.data.item;
-       console.log('holi', this.dataProducts);
+      //  console.log('holi', this.dataProducts);
 
     }
     getListProduct(){
       this.dataProducts = this._cs.consultaCultivo(this.dataProducts);
     }
 
-  onNoClick(): void {
-    this.dialogRef.close();
-  }
-
+    onNoClick(): void {
+      this.dialogRef.close();
+    }
 
 }

@@ -33,12 +33,16 @@ export class CultivoService {
   registerCultivo(data){
     return this.http.post(this.url+'/registar', data);
   }
-
   //id
-  consultaCultivo(id){
+  consultaCultivo(data){
   const token = this.authService.getToken();
-/*    let data = {id:5}; */
-    return this.http.post(this.url+'/obtener',id, httpOptions);
+  console.log('como recibe el servicio', data);
+
+ /*  let id = {usuarioCreador:5};
+      console.log(id); */
+
+    return this.http.post(this.url+'/buscar',data,httpOptions);
+
   }
 
   consultarTodosCultivos(){

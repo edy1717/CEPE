@@ -28,7 +28,7 @@
                 </thead>
                 <tbody>
                     <!-- <tr *ngFor="let profil of dataProfiles | filterProfile:filterPost | paginate:page_size:page_number"> -->
-                        <tr *ngFor="let profil of respuesta.data | filterProfile:filterPost ">
+                    <tr *ngFor="let profil of respuesta.data | filterProfile:filterPost ">
 
                         <th scope="row"> {{profil.id}} </th>
                         <td> {{profil.nombre}} {{profil.apellidoPaterno}} </td>
@@ -45,7 +45,7 @@
                             <button class="btn" data-toggle="modal" data-target="#modalReporte" placeholder="masDetalle" data-placement="top" title="Reportar Cliente">
                                 <i class="fas fa-user-edit colorReportar "></i></button>
                             <!-- BOTON DE LISTAS -->
-                            <button class="btn" placeholder="list-product" data-placement="top" title="Ver Productos del Cliente" (click)="misProductos(profil.idProfile)">
+                            <button class="btn" placeholder="list-product" data-placement="top" title="Ver Productos del Cliente" (click)="misProductos(profil.id)">
                                 <i class="fas fa-list-ul colorDetalle"></i></button>
                         </td>
                     </tr>

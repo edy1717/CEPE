@@ -38,7 +38,7 @@ export class ListProfilesComponent implements OnInit {
     this.consultar();
   }
 
-  // consultar(){  
+  // consultar(){
   //   this._us.consultUsers(this.formListProfil.value).subscribe (data => {
   //     this.respuesta = data ;
   //     this.dataProfiles = this.respuesta.dataProfiles
@@ -71,8 +71,8 @@ export class ListProfilesComponent implements OnInit {
   // getListProduct(){
   //   this.dataProducts = this.dummyService.consultaProducto();
   // }
-  misProductos($a){
-    this.router.navigate(['/admin/user-products', $a]);
+  misProductos($usuarioCreador){
+    this.router.navigate(['/admin/user-products',$usuarioCreador]);
   }
 
   handlePage(e: PageEvent){
