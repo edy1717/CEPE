@@ -31,7 +31,7 @@ constructor( public dialog: MatDialog, private _cs: CultivoService ) { }
   ngOnInit(): void {
     this.consultar();
     this.formMyProduct();
-    this.consultarId();
+
 
   }
 
@@ -46,12 +46,11 @@ constructor( public dialog: MatDialog, private _cs: CultivoService ) { }
     })
   }
 
-  consultarId(){
-   this._cs.consultaCultivo()
-   .subscribe((productos: any) =>{
+  /* consultarId(){
+   this._cs.consultaCultivo(id).subscribe((productos: any) =>{
      console.log(productos);
     });
-  }
+  } */
 
   consultar(){
     this._cs.consultarTodosCultivos().subscribe (data => {
