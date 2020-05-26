@@ -17,9 +17,10 @@ export class ListProfilesComponent implements OnInit {
   dataProfiles;
   filterPost = '';
   respuesta;
+  resultados
   headElements = ['Id', 'Nombre', 'Correo', 'Direccion', 'Telefono'];
 
-  constructor( private dummyService:DummyService,  private router:Router, private _us: UsuarioService) { }
+  constructor(  private router:Router, private _us: UsuarioService) { }
 
   formListpro(){
     this.formListProfil = new FormGroup ({
@@ -37,12 +38,20 @@ export class ListProfilesComponent implements OnInit {
     this.consultar();
   }
 
-  consultar(){  
-    this._us.consultUsers(this.formListProfil.value).subscribe (data => {
+  // consultar(){  
+  //   this._us.consultUsers(this.formListProfil.value).subscribe (data => {
+  //     this.respuesta = data ;
+  //     this.dataProfiles = this.respuesta.dataProfiles
+  //       console.log(this.dataProfiles)
+  //   })
+  // }
+  consultar(){
+    this._us.consultUsers().subscribe (data => {
       this.respuesta = data ;
-      this.dataProfiles = this.respuesta.dataProfiles
-        console.log(this.dataProfiles)
-    })
+    this.resultados = this.respuesta.resultados
+      console.log('esto es data de perfil', data)
+      console.log('resu', this.resultados)
+  })
   }
 
 

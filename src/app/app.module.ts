@@ -26,7 +26,7 @@ import { ModalMyProductsComponent } from './components/modals/modal-my-products/
 import { ModalOffersComponent } from './components/modals/modal-offers/modal-offers.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ModalHomeComponent } from './components/modals/modal-home/modal-home.component';
-//import { PaginatePipe } from './shared/pipes/paginate.pipe';
+import { PaginatePipe } from './shared/pipes/paginate.pipe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ThemeModule } from './@theme/theme.module';
 import { ModalReporteComponent } from './components/modals/modal-reporte/modal-reporte.component';
@@ -58,7 +58,7 @@ import { AuthService } from './services/auth.service';
     ModalMyProductsComponent,
     ModalOffersComponent,
     ModalHomeComponent,
-    //PaginatePipe,
+    PaginatePipe,
     ModalReporteComponent,
     ModalUserprofileComponent,
     ReportsComponent,
@@ -69,8 +69,6 @@ import { AuthService } from './services/auth.service';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    // AngularFireModule.initializeApp(environment.firebaseconfig) ,
-    // AngularFireDatabaseModule,
     BrowserAnimationsModule,
     ThemeModule,
 

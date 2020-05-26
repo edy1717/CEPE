@@ -1,9 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-//import { DataApiService } from '../../services/data-api.service';
-import Swal from 'sweetalert2';
-import { Button } from 'protractor';
-import { reduce, tap } from 'rxjs/operators';
-// import { DummyService } from '../../services/dummy.service';
 import { ModalHomeComponent } from '../modals/modal-home/modal-home.component';
 import { CultivoService } from '../../services/cultivo.service';
 import { ProductInterface } from '../../interfaces/products';
@@ -20,27 +15,27 @@ import { MatDialog } from '@angular/material/dialog';
 })
 export class HomeComponent implements OnInit {
 
- // let html
+ 
  registros: any[];
- formMyproduct : FormGroup;
- public productos:ProductInterface;
+ formmyPoduct : FormGroup;
+ productos ;
+ resultados;
+ respuesta;
+ filterPost = '';
+dataProducts;
 
 
 constructor( public dialog: MatDialog, private _cs :CultivoService ) { }
 
-  filterPost = '';
-  dataProducts;
-
-
   ngOnInit(): void {
-    this.consultarTodos();
+    this.consultar();
     this.formMyProduct();
     this.consultarId();
 
   }
 
   formMyProduct(){
-    this.formMyproduct = new FormGroup ({
+    this.formmyPoduct = new FormGroup ({
       id : new FormControl (''),
       nombre : new FormControl(''),
       descripción : new FormControl(''),
@@ -51,36 +46,21 @@ constructor( public dialog: MatDialog, private _cs :CultivoService ) { }
   }
 
   consultarId(){
-    console.log('Hola');
-
    this._cs.consultaCultivo()
    .subscribe((productos: any) =>{
      console.log(productos);
-
-
     });
   }
 
-  consultarTodos(){
-    console.log('Hola');
-
-   this._cs.consultarTodosCultivos()
-   .subscribe((productos: any) =>{
-     console.log(productos);
-
-
-    });
+  consultar(){
+    this._cs.consultarTodosCultivos().subscribe (data => {
+      this.respuesta = data ;
+    this.resultados = this.respuesta.resultados
+      console.log('esto es data', data)
+      console.log('resu', this.resultados)
+  })
   }
-
-  getListBooks(): void {
-    this._cs
-      .consultaCultivo()
-      .subscribe((productos: ProductInterface) => (this.productos = productos));
-  }
-
-
-
-
+  
 
 
   openDialog(value){
@@ -96,13 +76,13 @@ constructor( public dialog: MatDialog, private _cs :CultivoService ) { }
 
 
 
-  // handlePage(e: PageEvent){
-  //    this.page_size = e.pageSize
-  //    this.page_number = e.pageIndex + 1
-  //  }
+  handlePage(e: PageEvent){
+     this.page_size = e.pageSize
+     this.page_number = e.pageIndex + 1
+   }
 
-  //  page_size: number =8;
-  //  page_number: number = 1;
-  //  pageSizeOptions  = [4, 8, 16, 24, 32, 40, 48 ,  80 , 100]
+   page_size: number =4;
+   page_number: number = 1;
+   pageSizeOptions  = [4, 8, 16, 24, 32, 40, 48 ,  80 , 100]
 
 }

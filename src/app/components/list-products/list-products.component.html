@@ -22,14 +22,16 @@
                 <thead>
                     <tr>
                         <th *ngFor="let head of headElements" scope="col">{{head}} </th>
+                        <th scope="col"> &nbsp; </th>
+                        <th scope="col"> &nbsp; </th>
                     </tr>
                 </thead>
                 <tbody>
                     <!-- <tr *ngFor=" let product of resultados  | filter:filterPost  | paginate:page_size:page_number ; index as i "> -->
-                    <tr *ngFor=" let product of resultados  | filter:filterPost ; index as i ">
+                    <tr *ngFor="let product of respuesta.data | filter:filterPost ; index as i">
 
-                        <th scope="row"> {{i+1}} </th>
-                        <td> {{product.nombre}} </td>
+                        <th scope="row"> {{product.id}} </th>
+                        <td> {{product.titulo}} </td>
                         <td> {{product.descripcion}} </td>
                         <td> ... </td>
                         <td> {{product.cantidad}} </td>
@@ -38,7 +40,8 @@
                             <button class="btn btn-primary" data-toggle="modal" data-target="#modalProducts">Actualizar</button>
                         </td>
                         <td>
-                            <button class="btn btn-danger" (click)="onDeleteProducts(i)">Eliminar</button>
+                            <button class="btn btn-danger" >Eliminar</button>
+                            <!-- (click)="onDeleteProducts(i)" -->
                         </td>
                     </tr>
                 </tbody>

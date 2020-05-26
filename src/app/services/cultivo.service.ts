@@ -17,9 +17,6 @@ export class CultivoService {
 
   url = environment.apiUrl + '/cultivo';
 
-
-
-
   public selectProduct: ProductInterface = {
     id: null,
     nombre: '',
@@ -30,7 +27,6 @@ export class CultivoService {
 };
 
   constructor( private http: HttpClient, private authService: AuthService ) {
-    console.log('Holi',httpOptions);
 
   }
 
