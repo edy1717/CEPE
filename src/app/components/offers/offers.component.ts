@@ -45,7 +45,7 @@ export class OffersComponent implements OnInit {
   consultar(){
     this.offerServ.consultarTodosPost().subscribe (data => {
       this.respuesta = data ;
-      /* this.resultados = this.respuesta.resultados */
+      this.resultados = this.respuesta.resultados
       console.log(this.respuesta.data);
       /* console.log('resu', this.resultados) */
   });
@@ -64,12 +64,12 @@ export class OffersComponent implements OnInit {
 
 
 
-  // handlePage(e: PageEvent){
-  //   this.page_size = e.pageSize
-  //   this.page_number = e.pageIndex + 1
-  // }
+  handlePage(e: PageEvent){
+    this.page_size = e.pageSize
+    this.page_number = e.pageIndex + 1
+  }
 
-  // page_size: number = 5;
-  // page_number: number = 1;
-  // pageSizeOptions  = [5, 10, 15, 20, 25, 30, 40, 80 , 100]
+  page_size: number = 5;
+  page_number: number = 1;
+  pageSizeOptions  = [5, 10, 15, 20, 25, 30, 40, 80 , 100]
 }
