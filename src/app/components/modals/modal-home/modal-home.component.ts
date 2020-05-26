@@ -34,7 +34,7 @@ export class ModalHomeComponent implements OnInit {
 
     }
     getListProduct(){
-      this.dataProducts = this._cs.consultaCultivo();
+      this.dataProducts = this._cs.consultaCultivo(this.dataProducts);
     }
 
   onNoClick(): void {

@@ -35,10 +35,10 @@ export class CultivoService {
   }
 
   //id
-  consultaCultivo(){
+  consultaCultivo(id){
   const token = this.authService.getToken();
-   let data = {id:5};
-    return this.http.post(this.url+'/obtener',data, httpOptions);
+/*    let data = {id:5}; */
+    return this.http.post(this.url+'/obtener',id, httpOptions);
   }
 
   consultarTodosCultivos(){
