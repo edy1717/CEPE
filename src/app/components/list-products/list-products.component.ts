@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductInterface } from '../../interfaces/products';
 import { PageEvent } from '@angular/material/paginator';
 import { CultivoService } from '../../services/cultivo.service';
 import { FormGroup, Validators, FormControl } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
+import { ModalComponent } from '../modals/modal/modal.component';
 
 
 @Component({
@@ -18,7 +19,7 @@ export class ListProductsComponent implements OnInit {
   resultados;
   filterPost = '';
 
-  constructor( private _sc : CultivoService) { }
+  constructor( public dialog: MatDialog, private _sc : CultivoService) { }
 
   ngOnInit(): void {
     this.formMyProduct();
@@ -62,6 +63,16 @@ export class ListProductsComponent implements OnInit {
   //     console.log('editar1', respEditar)
   //   })
   // }
+
+  openModActu(value){
+    const dialogRef = this.dialog.open(ModalComponent, {
+      width: '450px',
+      data: { item : value }
+    });
+    dialogRef.afterClosed().subscribe(result => {
+    });
+
+  }
 
 
 

@@ -14,8 +14,10 @@ export class ModalMyProductsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.formActProClient()
+    this.formActProClient();
+
   }
+
 
   formActProClient(){
     this.formActualizarProductClient = new FormGroup ({
@@ -27,7 +29,6 @@ export class ModalMyProductsComponent implements OnInit {
       imagen:new FormControl(),
     })
   }
-
 
 
   save(){

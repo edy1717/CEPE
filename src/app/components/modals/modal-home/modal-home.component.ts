@@ -5,16 +5,6 @@ import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog
 import { FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
 
 
-// export interface ProductInterface {
-//   // id: string;
-//   // nombre: string;
-//   // descripcion: string;
-//   // portada: string;
-//   // cantidad: string;
-//   // medida:string;
-
-// }
-
 @Component({
   selector: 'app-modal-home',
   templateUrl: './modal-home.component.html',

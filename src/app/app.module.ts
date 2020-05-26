@@ -19,21 +19,23 @@ import { FilterPipe } from './shared/pipes/filter.pipe';
 import { ListProfilesComponent } from './components/profile/list-profiles/list-profiles.component';
 import { FilterProfilePipe } from './shared/pipes/filter-profile.pipe';
 import { MyproductsComponent } from './components/profile/myproducts/myproducts.component';
-import { ModalProfileComponent } from './components/modals/modal-profile/modal-profile.component'
-import { ModalComponent } from './components/modals/modal/modal.component';
+// import { ModalComponent } from './components/modals/modal/modal.component';
 import { OffersComponent } from './components/offers/offers.component';
 import { ModalMyProductsComponent } from './components/modals/modal-my-products/modal-my-products.component';
-import { ModalOffersComponent } from './components/modals/modal-offers/modal-offers.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { ModalHomeComponent } from './components/modals/modal-home/modal-home.component';
 import { PaginatePipe } from './shared/pipes/paginate.pipe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ThemeModule } from './@theme/theme.module';
 import { ModalReporteComponent } from './components/modals/modal-reporte/modal-reporte.component';
-import { ModalUserprofileComponent } from './components/modals/modal-userprofile/modal-userprofile.component';
 import { ReportsComponent } from './components/profile/reports/reports.component';
 // import { AuthInterceptorService } from  './services/auth-interceptor.service';
 import { AuthService } from './services/auth.service';
+
+import { ModalUserprofileComponent } from './components/modals/modal-userprofile/modal-userprofile.component';
+import { ModalOffersComponent } from './components/modals/modal-offers/modal-offers.component';
+import { ModalComponent } from './components/modals/modal/modal.component';
+import { ModalProfileComponent } from './components/modals/modal-profile/modal-profile.component'
+import { ModalHomeComponent } from './components/modals/modal-home/modal-home.component';
 
 
 
@@ -71,8 +73,6 @@ import { AuthService } from './services/auth.service';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     ThemeModule,
-
-
   ],
   providers: [
     // AngularFireAuth,
