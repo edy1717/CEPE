@@ -1,6 +1,8 @@
+import { ReporteService } from '../../../services/reporte.service';
 // import { DataApiService } from '../../../services/data-api.service';
 // import { DummyService } from '../../../services/dummy.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Inject } from '@angular/core';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { NgForm , FormControl, FormGroup,  ReactiveFormsModule } from '@angular/forms';
 
 
@@ -13,7 +15,8 @@ export class ModalReporteComponent implements OnInit {
 
   formReporte : FormGroup;
 
-  constructor(
+  constructor(public dialogRef: MatDialogRef<ModalReporteComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: any, private _reports: ReporteService
                 ) { }
 
   ngOnInit(): void {

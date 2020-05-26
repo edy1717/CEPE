@@ -43,11 +43,15 @@ import {MatIconModule} from '@angular/material/icon';
           provide: MatPaginatorIntl,
           useClass: CustomMatPaginatorIntl
         },
-        { provide: MatDialogRef, useValue: {} },
-	    { provide: MAT_DIALOG_DATA, useValue: [] },
-      ]
-
-      
+        {
+          provide: MatDialogRef,
+          useValue: {},
+        },
+        {
+          provide: MAT_DIALOG_DATA,
+          useValue: {},
+        }
+      ],
 })
 
 export class ThemeModule{

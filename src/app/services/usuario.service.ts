@@ -25,6 +25,12 @@ export class UsuarioService {
     return this.http.get(this.url + '/obtener/todos', httpOptions);
     }
 
+  consultUserId(data){
+
+   let id = {id:data};
+      console.log(id);
+    return this.http.post(this.url + '/obtener',id, httpOptions);
+  }
   deleteUser(data){
     return this.http.post(this.url+'/', data)
   }

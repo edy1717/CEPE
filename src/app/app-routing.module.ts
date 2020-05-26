@@ -19,7 +19,7 @@ const routes: Routes = [
   { path : 'admin/list-profiles', component :ListProfilesComponent,    },
   { path : 'admin/offers', component : OffersComponent,  },
   { path : 'admin/reports', component : ReportsComponent },
-  { path : 'admin/user-products/:idProfile', component : MyproductsComponent,  },
+  { path : 'admin/user-products/:usuarioCreador', component : MyproductsComponent,  },
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
   { path : '***',  component : HomeComponent }
 

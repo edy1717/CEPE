@@ -68,7 +68,6 @@ constructor( public dialog: MatDialog, private _cs: CultivoService ) { }
     });
     dialogRef.afterClosed().subscribe(result => {
     });
-
   }
 
   handlePage(e: PageEvent){
