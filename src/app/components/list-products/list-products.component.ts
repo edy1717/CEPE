@@ -35,7 +35,7 @@ export class ListProductsComponent implements OnInit {
       imagen : new FormControl(''),
       cantidad : new FormControl(''),
       medida: new FormControl  ('')
-    })
+    });
   }
 
 
