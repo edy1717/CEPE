@@ -20,9 +20,9 @@ export class ListProductsComponent implements OnInit {
   data:any;
   filterPost = '';
 
-  constructor( public dialog: MatDialog, private _sc : CultivoService) { }
+  constructor( private _sc: CultivoService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.formMyProduct();
     this.consultar();
   }
@@ -50,7 +50,14 @@ export class ListProductsComponent implements OnInit {
   })
   }
 
+  elimina(id){
 
+     this._sc.eliminarCultivo(id).subscribe(data => {
+       console.log('Eliminado');
+       this.consultar();
+
+  });
+  }
   // onDeleteProducts(i : string):void{
   //   const confirmacion = confirm('Estas seguro de eliminar el producto');
   //   if(confirmacion){
@@ -65,15 +72,7 @@ export class ListProductsComponent implements OnInit {
     })
   }
 
-  openDialog(value){
-    const dialogRef = this.dialog.open(ModalComponent, {
-      width: '450px',
-      data: { item : value }
-    });
-    dialogRef.afterClosed().subscribe(result => {
-    });
-
-  }
+ 
 
 
 

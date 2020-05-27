@@ -66,7 +66,14 @@ export class MyproductsComponent implements OnInit {
       }
     });
 }
+elimina(id){
 
+  this._cs.eliminarCultivo(id).subscribe(data => {
+    console.log('Eliminado');
+    this.consultar();
+
+});
+}
        /*
        }
 */
