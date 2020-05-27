@@ -21,7 +21,9 @@ import {MatIconModule} from '@angular/material/icon';
         MatSelectModule,
         MatToolbarModule,
         MatMenuModule,
-        MatIconModule
+        MatIconModule,
+
+        
     ],
     exports:[
         MatCardModule,
@@ -32,7 +34,9 @@ import {MatIconModule} from '@angular/material/icon';
         MatSelectModule,
         MatToolbarModule,
         MatMenuModule,
-        MatIconModule
+        MatIconModule,
+        
+        
     ],
     providers: [
         {

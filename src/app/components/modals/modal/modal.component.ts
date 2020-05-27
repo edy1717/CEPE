@@ -1,68 +1,69 @@
-import { Component, OnInit, ViewChild, ElementRef,  } from '@angular/core';
-import { NgForm, FormGroup, FormControl,ReactiveFormsModule } from '@angular/forms';
-import { CultivoService } from 'src/app/services/cultivo.service';
-
+import { Component, OnInit, Inject } from '@angular/core';
+import { DummyService } from 'src/app/services/dummy.service';
+import { CultivoService } from '../../../services/cultivo.service';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
 
 
 @Component({
   selector: 'app-modal',
   templateUrl: './modal.component.html',
+  styleUrls: ['./modal.component.css']
 })
 
 export class ModalComponent implements OnInit {
 
   formActualizarProduct : FormGroup;
-  public products =[];
-  public product = '';
   respuesta;
+  dataProducts;
+  
 
-  constructor( private _sc : CultivoService  ) { }
-
-  @ViewChild('btnClose') btnClose : ElementRef;
-
+ constructor(  private _cs: CultivoService  ) { }
  
 
 
-  ngOnInit(): void {
-    // this.dataApi.getAllProducts().subscribe(products => {
-    //   this.products = products;
-    // })
-    this.formProduct()
-  }
+ ngOnInit(): void {
+   this.formProduct()
 
-  formProduct(){
-    this.formActualizarProduct = new FormGroup({
-      id : new FormControl (),
-      titulo : new FormControl (),
-      descripcion : new FormControl (),
-      portada : new FormControl (),
-      cantidad : new FormControl (),
-      medida : new FormControl (),
-      imagen: new FormControl(),
-    })
-  }
+ }
 
-  save(){
-    console.log('holi', this.formProduct)
-  }
-
-  actualizarCultivo(){
-    this._sc.editarCultivo(this.formActualizarProduct.value).subscribe ( respEditar => {
-      this.respuesta = respEditar
-      console.log('editar', this.respuesta)
-      console.log('editar1', respEditar)
-    })
-  }
+ formProduct(){
+   this.formActualizarProduct = new FormGroup({
+     id : new FormControl (),
+     titulo : new FormControl (),
+     descripcion : new FormControl (),
+     portada : new FormControl (),
+     cantidad : new FormControl (),
+     medida : new FormControl (),
+     imagen: new FormControl(),
+   })
+ }
 
 
-  // onSaveProduct( productForm: NgForm ):void{
-  //   if(productForm.value.id == null) {
-  //     //nuevo
-  //     this.dataApi.addProduct(productForm.value);
-  //   }else {
-  //     this.dataApi.updateProduct(productForm.value);
-  //   }
-  // productForm.resetForm();
-  // this.btnClose.nativeElement.click();
+ save(){
+   console.log('holi', this.formProduct)
+ }
+
+ actualizarCultivo(){
+   this._cs.editarCultivo(this.formActualizarProduct.value).subscribe ( respEditar => {
+     this.respuesta = respEditar
+     console.log('editar', this.respuesta)
+     console.log('editar1', respEditar)
+   })
+ }
+
+
+
+
+ // onSaveProduct( productForm: NgForm ):void{
+  //if(productForm.value.id == null) {
+    //nuevo
+  //   this.dataApi.addProduct(productForm.value);
+  // }else {
+  //   this.dataApi.updateProduct(productForm.value);
   // }
+ // productForm.resetForm();
+ // this.btnClose.nativeElement.click();
+ // }
+
 }

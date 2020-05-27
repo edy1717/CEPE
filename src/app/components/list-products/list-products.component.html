@@ -27,9 +27,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- <tr *ngFor=" let product of resultados  | filter:filterPost  | paginate:page_size:page_number ; index as i "> -->
                     <tr *ngFor="let product of respuesta.data | filter:filterPost | paginate:page_size:page_number ; index as i">
-
                         <th scope="row"> {{product.id}} </th>
                         <td> {{product.titulo}} </td>
                         <td> {{product.descripcion}} </td>
@@ -37,7 +35,10 @@
                         <td> {{product.cantidad}} </td>
                         <td> {{product.medida}} </td>
                         <td>
-                            <button class="btn btn-primary" data-toggle="modal" data-target="#modalProducts">Actualizar</button>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#modalProducts"
+                             >Actualizar</button>
+                            <!-- <button class="btn btn-primary" (click)="openDialog(respuesta.data)" >Actualizar con modal</button> -->
+
                         </td>
                         <td>
                             <button class="btn btn-danger" (click)="elimina(product)">Eliminar</button>
@@ -50,3 +51,4 @@
     </section>
 </div>
 <app-modal></app-modal>
+

@@ -28,11 +28,7 @@ export class MyproductsComponent implements OnInit {
   constructor(private activatedRoute: ActivatedRoute,
               private _cs: CultivoService,
               private _us: UsuarioService ) {
-    // this.activatedRoute.params.subscribe (params => {
-    //   if(params.idProfile != null){
-    //     this.myProducts = this.dummyService.productoProfiles(params['idProfile']);
-    //   }
-    // });
+
    }
 
    formMyProduct(){
