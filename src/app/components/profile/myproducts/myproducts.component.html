@@ -16,7 +16,7 @@
                                     <i class="fas fa-search"></i>
                                 </a>
                             </div>
-                            <mat-paginator [length]="myProducts.data.length" [pageSize]="page_size" [pageSizeOptions]="pageSizeOptions"
+                            <mat-paginator [length]="myProducts.length" [pageSize]="page_size" [pageSizeOptions]="pageSizeOptions"
                                 (page)="handlePage($event) ">
                             </mat-paginator> 
                         </div>
@@ -33,7 +33,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let a of myProducts.data | filter:filterPost | paginate:page_size:page_number">
+                    <tr *ngFor="let a of myProducts | filter:filterPost | paginate:page_size:page_number">
                         <th scope="row "></th>
                         <td>{{a.titulo}}</td>
                         <td>{{a.descripcion}} </td>

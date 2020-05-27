@@ -17,8 +17,9 @@ export class ListProductsComponent implements OnInit {
   headElements = ['#','Nombre','Descripción','Imagen', 'Cantidad','Medida' ];
   respuesta;
   resultados;
-  data:any;
+  resul;
   filterPost = '';
+  cultivo;
 
   constructor( private _sc: CultivoService) { }
 
@@ -43,11 +44,15 @@ export class ListProductsComponent implements OnInit {
 
   consultar(){
     this._sc.consultarTodosCultivos().subscribe (data => {
-      this.respuesta = data ;
-      this.resultados = this.respuesta.resultados
-      console.log('esto es data', data)
-      console.log('resu', this.resultados)
+      this.respuesta = data;
+      this.resultados = this.respuesta.data
+      console.log('pp', this.resultados)
   })
+  }
+
+  obtenerCultivoId(data){
+    this.cultivo = data
+    console.log(this.cultivo)
   }
 
   elimina(id){
@@ -58,23 +63,7 @@ export class ListProductsComponent implements OnInit {
 
   });
   }
-  // onDeleteProducts(i : string):void{
-  //   const confirmacion = confirm('Estas seguro de eliminar el producto');
-  //   if(confirmacion){
-  //   this.dataProducts.splice(i, 1)
-  //   }
-  // }
-  actualizarCultivo(){
-    this._sc.editarCultivo(this.formmyPoduct.value).subscribe ( respEditar => {
-      this.respuesta = respEditar
-      console.log('editar', this.respuesta)
-      console.log('editar1', respEditar)
-    })
-  }
-
  
-
-
 
   handlePage(e: PageEvent){
     this.page_size = e.pageSize

@@ -3,6 +3,7 @@ import { environment } from '../../environments/environment';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { map, tap } from 'rxjs/operators';
 import { isNullOrUndefined } from 'util';
+import { UserInterface } from '../interfaces/user';
 
 @Injectable({
   providedIn: 'root'
@@ -61,7 +62,7 @@ export class AuthService {
       return localStorage.getItem('SCtoken');
     }
 
-    getCurrentUser(){
+    getCurrentUser(): UserInterface{
       let user_string = localStorage.getItem('currentUser');
       if(!isNullOrUndefined(user_string)){
         let user = JSON.parse(user_string)

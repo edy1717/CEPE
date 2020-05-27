@@ -37,12 +37,7 @@ export class CultivoService {
   consultaCultivo(data){
   const token = this.authService.getToken();
   console.log('como recibe el servicio', data);
-
- /*  let id = {usuarioCreador:5};
-      console.log(id); */
-
     return this.http.post(this.url+'/buscar',data,httpOptions);
-
   }
 
   consultarTodosCultivos(){
@@ -50,33 +45,11 @@ export class CultivoService {
   }
 
   editarCultivo(data){
-  //  const productId = data.productId;
-  //  const token = this.authService.getToken();
-  //  const urlProd = `http://34.94.150.226/cultivo/editar/${productId}/?access_token=${token}`;
-  //  return this.http
-  //    .put<ProductInterface>(urlProd,data)
-  //    .pipe(map(dat => dat ));
-
      return this.http.post(this.url+'/editar', data, httpOptions);
   }
 
   eliminarCultivo(id){
-
-
-console.log(id);
-
+  console.log(id);
      return this.http.post(this.url+'/eliminar',id, httpOptions);
-
-
-  //   const token = this.authService.getToken();
-  //   console.log(token);
-  //   const urlProd = `http://34.94.150.226/cultivo/eliminar/${id}/?access_toke=${token}`;
-  //  return this.http
-  //    .delete<ProductInterface>(urlProd)
-  //    .pipe(map(dat => dat ));
-
-  //   // return this.http.delete(this.url+'/eliminar');
-  // }
-
 }
 }

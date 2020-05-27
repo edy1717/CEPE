@@ -14,8 +14,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 export class NavbarComponent implements OnInit {
 
   active = 1;
-  public isLogged : Boolean = false;
-
+  public isLogged = true;
 
   constructor( private authService : AuthService,
                  private router:Router ) { }
@@ -23,11 +22,6 @@ export class NavbarComponent implements OnInit {
   public app_name: string = 'Sembrando Conciencia';
 
 
-  user : UserInterface = {
-    name : '',
-    email : '',
-    photoURL : ''
-  };
 
   ngOnInit(): void {
     this.onCheckUser();
@@ -39,7 +33,7 @@ export class NavbarComponent implements OnInit {
     // })
   }
 
-  // getCurrentUser() {
+  //getCurrentUser() {
   //   this.authService.onlogin().subscribe(auth => {
   //     if (auth) {
   //       console.log('user logged');
@@ -63,6 +57,5 @@ export class NavbarComponent implements OnInit {
       this.isLogged = true;
     }
   }
-
 
 }

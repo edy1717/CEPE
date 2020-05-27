@@ -44,10 +44,9 @@ export class OffersComponent implements OnInit {
 
   consultar(){
     this.offerServ.consultarTodosPost().subscribe (data => {
-      this.respuesta = data ;
-      this.resultados = this.respuesta.resultados
-      console.log(this.respuesta.data);
-      /* console.log('resu', this.resultados) */
+      this.respuesta = data;
+      this.resultados = this.respuesta.data
+      console.log('pp', this.resultados)
   });
   }
 

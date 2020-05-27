@@ -12,8 +12,8 @@
                                     <i class="fas fa-search"></i>
                                 </a>
                             </div>
-                            <mat-paginator [length]="respuesta.data.length" [pageSize]="page_size" [pageSizeOptions]="pageSizeOptions" (page)="handlePage($event) ">
-                            </mat-paginator>
+                            <mat-paginator [length]="resultados.length" [pageSize]="page_size" [pageSizeOptions]="pageSizeOptions" (page)="handlePage($event) ">
+                            </mat-paginator> 
                         </div>
                     </div>
                 </div>
@@ -27,7 +27,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let product of respuesta.data | filter:filterPost | paginate:page_size:page_number ; index as i">
+                    <tr *ngFor="let product of resultados | paginate:page_size:page_number | filter:filterPost">
                         <th scope="row"> {{product.id}} </th>
                         <td> {{product.titulo}} </td>
                         <td> {{product.descripcion}} </td>
@@ -35,10 +35,8 @@
                         <td> {{product.cantidad}} </td>
                         <td> {{product.medida}} </td>
                         <td>
-                            <button class="btn btn-primary" data-toggle="modal" data-target="#modalProducts"
-                             >Actualizar</button>
-                            <!-- <button class="btn btn-primary" (click)="openDialog(respuesta.data)" >Actualizar con modal</button> -->
-
+                            <button class="btn btn-primary" 
+                            (click)="obtenerCultivoId(product.id)" data-toggle="modal" data-target="#modalProducts">Actualizar</button>
                         </td>
                         <td>
                             <button class="btn btn-danger" (click)="elimina(product)">Eliminar</button>
@@ -50,5 +48,5 @@
         </div>
     </section>
 </div>
-<app-modal></app-modal>
+<app-modal [cultivoId]="cultivo" ></app-modal>
 

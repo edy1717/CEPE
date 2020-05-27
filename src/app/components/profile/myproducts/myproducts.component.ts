@@ -43,11 +43,8 @@ export class MyproductsComponent implements OnInit {
    }
 
   ngOnInit(): void {
-
     this.consultar();
     this.formMyProduct();
-
-
   }
 
   consultar(){
@@ -66,6 +63,8 @@ export class MyproductsComponent implements OnInit {
       }
     });
 }
+
+
 elimina(id){
 
   this._cs.eliminarCultivo(id).subscribe(data => {
@@ -74,17 +73,6 @@ elimina(id){
 
 });
 }
-       /*
-       }
-*/
-
-
-   /*   this._cs.consultaCultivo(idProfile).subscribe (data => {
-       this.respuesta = data ;
-       this.resultados = this.respuesta.resultados
-       console.log(this.resultados)
-     }); */
-
 
 
 
