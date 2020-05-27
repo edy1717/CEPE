@@ -61,10 +61,15 @@ export class MyproductsComponent implements OnInit {
      this.activatedRoute.params.subscribe (params => {
 
       if(params.usuarioCreador != null){
-        this._cs.consultaCultivo(params).subscribe (datacult => {
+        this._cs.consultaCultivo(params).subscribe(datacult => {
         this.myProducts = datacult;
+        this.respuesta = this.myProducts.datacult;
+        console.log(this.respuesta);
+
          /*   console.log('params en my products como se recive',params);
         console.log('respuesta del servicio',this.myProducts); */
+        console.log(datacult);
+
         });
          this._us.consultUserId(params.usuarioCreador).subscribe(dataus=>{
           this.usua  = dataus;

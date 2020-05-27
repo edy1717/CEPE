@@ -16,9 +16,8 @@
                                     <i class="fas fa-search"></i>
                                 </a>
                             </div>
-                            <mat-paginator  [pageSize]="page_size" [pageSizeOptions]="pageSizeOptions"
-                                (page)="handlePage($event) ">
-                            </mat-paginator> 
+                            <mat-paginator [pageSize]="page_size" [pageSizeOptions]="pageSizeOptions" (page)="handlePage($event) ">
+                            </mat-paginator>
                         </div>
                     </div>
                 </div>
@@ -42,7 +41,7 @@
                         <td>{{a.medida}}</td>
 
                         <td>
-                            <button class="btn btn-primary " data-toggle="modal" data-target="#modalMyProducts">Actualizar</button>
+                            <button class="btn actualizar" data-toggle="modal" data-target="#modalMyProducts">Actualizar</button>
                         </td>
                         <td>
                             <button class="btn btn-danger  " (click)="elimina(a)">Eliminar</button>

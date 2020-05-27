@@ -1,24 +1,27 @@
-.main-container{
+.main-container {
     margin-top: 1px;
     margin-top: 2px;
     padding: 20px;
 }
 
-.colorReportar{
-    color: #743B8F ;
-}
-.colorActulizar{
-    color: #418215;
-}
-.colorDelete{
- color: red;
-}
-.colorDetalle{
-    color:#82E89B
+.colorReportar {
+    color: #743B8F;
 }
 
-.mat-paginator{
-    border :none;
+.colorActulizar {
+    color: #418215;
+}
+
+.colorDelete {
+    color: red;
+}
+
+.colorDetalle {
+    color: #82E89B
+}
+
+.mat-paginator {
+    border: none;
     background: none;
 }
 

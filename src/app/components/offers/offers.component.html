@@ -49,16 +49,14 @@
             <!-- <div class="col-lg-3 col-md-4 col-sm-12" *ngFor="let product of respuesta.data | filter:filterPost| paginate:page_size:page_number">  -->
             <mat-card class="card">
                 <mat-card-content>
-                    <h4 routerLink="/product/{{product.id}} " class="card-title text-center"><b>Nuestro {{product.id}}</b></h4>
+                    <!-- <h4 routerLink="/product/{{product.id}} " class="card-title text-center"><b>Nuestro {{product.id}}</b></h4> -->
                     <p class="text-center">
                         Contenido <b class="color">{{product.contenido}}  </b>
                     </p>
                 </mat-card-content>
-                <mat-card-actions>
-                    <button class="btn btn-primary">Actualizar</button>
-                </mat-card-actions>
-                <mat-card-actions>
-                    <button class="btn btn-danger" (click)="eliminarPost(product)">Eliminar</button>
+                <mat-card-actions class="col-12">
+                    <button class="btn actualizar">Actualizar</button>
+                    <button class="btn eliminar" (click)="eliminarPost(product)">Eliminar</button>
                 </mat-card-actions>
             </mat-card>
         </div>

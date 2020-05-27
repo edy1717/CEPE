@@ -4,6 +4,8 @@ import { DummyService } from '../../../services/dummy.service';
 import { PageEvent } from '@angular/material/paginator';
 import { FormGroup, FormControl } from '@angular/forms';
 import { UsuarioService } from '../../../services/usuario.service';
+import { ModalProfileComponent } from '../../modals/modal-profile/modal-profile.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-list-profiles',
@@ -17,10 +19,12 @@ export class ListProfilesComponent implements OnInit {
   dataProfiles;
   filterPost = '';
   respuesta;
-  resultados
+  resultados;
+
+  cultivo;
   headElements = ['Id', 'Nombre', 'Correo', 'Direccion', 'Telefono'];
 
-  constructor(  private router:Router, private _us: UsuarioService) { }
+  constructor(  private router:Router, private _us: UsuarioService,  public dialog:MatDialog) { }
 
   formListpro(){
     this.formListProfil = new FormGroup ({
@@ -46,6 +50,16 @@ export class ListProfilesComponent implements OnInit {
   })
   }
 
+openDialog(value){
+  const dialogRef = this.dialog.open(ModalProfileComponent, {
+    width: '450px',
+    data: { id: value}
+  });
+  dialogRef.afterClosed().subscribe(resul =>{
+
+  });
+}
+
   eliminarProfile(id){
     this._us.eliminarPerfil(id).subscribe(data => {
     console.log('Eliminado');
@@ -53,6 +67,7 @@ export class ListProfilesComponent implements OnInit {
 
  });
  }
+
 
   // removerDato() {
   //   if(this.formDelete.valid)  {

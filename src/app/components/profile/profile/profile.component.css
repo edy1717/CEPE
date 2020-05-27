@@ -19,3 +19,9 @@
 .otro {
     transform: translateY(0px);
 }
+
+.actualizar {
+    background: #418215;
+    color: white;
+    margin-right: 5px;
+}

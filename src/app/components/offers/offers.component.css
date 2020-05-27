@@ -4,7 +4,7 @@
 }
 
 .color {
-    color: #743B8F;
+    color: black;
 }
 
 .card {
@@ -25,13 +25,20 @@ mat-card-actions {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 20px;
 }
 
-
-/* mat-card-actions button {
+.actualizar {
     background: #418215;
     color: white;
-} */
+    margin-right: 5px;
+}
+
+.eliminar {
+    background-color: red;
+    color: white;
+    margin-left: 10px;
+}
 
 mat-card-content p {
     color: black;

@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { NgForm , FormControl, FormGroup,  ReactiveFormsModule } from '@angular/forms';
 import { DummyService } from '../../../services/dummy.service';
 import { CultivoService } from '../../../services/cultivo.service';
+import { UsuarioService } from '../../../services/usuario.service';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 
 @Component({
@@ -11,13 +13,16 @@ import { CultivoService } from '../../../services/cultivo.service';
 })
 export class ModalProfileComponent implements OnInit {
 
-  formActualizarPerfil : FormGroup;
-  respuesta
+  formActualizarPerfil: FormGroup;
+  respuesta;
 
-  constructor( private _sc : CultivoService) { }
+  constructor( private _use:UsuarioService, public dialogRef:MatDialogRef<ModalProfileComponent>,
+               @Inject(MAT_DIALOG_DATA) public data:any) { }
+
 
   ngOnInit(): void {
     this.actualizarPerfil();
+    this.formActualizarPerfil.get('id').patchValue(this.data.id);
   }
 
   actualizarPerfil(){
@@ -29,14 +34,17 @@ export class ModalProfileComponent implements OnInit {
     })
   }
 
-save(){
-  this._sc.consultaCultivo(this.formActualizarPerfil.value).subscribe(res=>{
-    this.respuesta = res;
-    console.log('actualizado', res)
-  })
-  console.log('form',this.formActualizarPerfil.value)
-  console.log('actualizado', this.respuesta)
+  actualizarCliente(){
+    console.log('Usuario', this.formActualizarPerfil.get('id').value);
+  }
+// save(){
+//   this._use.consultaCultivo(this.formActualizarPerfil.value).subscribe(res=>{
+//     this.respuesta = res;
+//     console.log('actualizado', res)
+//   })
+//   console.log('form',this.formActualizarPerfil.value)
+//   console.log('actualizado', this.respuesta)
 
-}
+// }
 
 }
