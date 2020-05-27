@@ -17,6 +17,7 @@ export class ListProductsComponent implements OnInit {
   headElements = ['#','Nombre','Descripción','Imagen', 'Cantidad','Medida' ];
   respuesta;
   resultados;
+  data:any;
   filterPost = '';
 
   constructor( public dialog: MatDialog, private _sc : CultivoService) { }
@@ -56,15 +57,15 @@ export class ListProductsComponent implements OnInit {
   //   this.dataProducts.splice(i, 1)
   //   }
   // }
-  // actualizarCultivo(){
-  //   this._sc.editarCultivo(this.formmyPoduct.value).subscribe ( respEditar => {
-  //     this.respuesta = respEditar
-  //     console.log('editar', this.respuesta)
-  //     console.log('editar1', respEditar)
-  //   })
-  // }
+  actualizarCultivo(){
+    this._sc.editarCultivo(this.formmyPoduct.value).subscribe ( respEditar => {
+      this.respuesta = respEditar
+      console.log('editar', this.respuesta)
+      console.log('editar1', respEditar)
+    })
+  }
 
-  openModActu(value){
+  openDialog(value){
     const dialogRef = this.dialog.open(ModalComponent, {
       width: '450px',
       data: { item : value }
@@ -84,7 +85,5 @@ export class ListProductsComponent implements OnInit {
   page_size: number = 5;
   page_number: number = 1;
   pageSizeOptions  = [5, 10, 15, 20, 25, 30, 40, 80 , 100]
-
-
 
 }

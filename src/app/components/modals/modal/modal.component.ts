@@ -18,19 +18,12 @@ export class ModalComponent implements OnInit {
   dataProducts;
   
 
- constructor(  public dialogRef :MatDialogRef<ModalComponent>,
-   @Inject(MAT_DIALOG_DATA) public data: any, private _cs: CultivoService  ) { }
+ constructor(  private _cs: CultivoService  ) { }
  
 
 
  ngOnInit(): void {
-   // this.dataApi.getAllProducts().subscribe(products => {
-    //this.products = products;
-   // })
-   this.getListProduct();
-   this.dataProducts = this.data.item;
-   // console.log('holi', this.dataProducts);
-   //this.formProduct()
+   this.formProduct()
 
  }
 
@@ -59,13 +52,6 @@ export class ModalComponent implements OnInit {
    })
  }
 
- getListProduct(){
-   this.dataProducts = this._cs.consultaCultivo(this.dataProducts);
- }
-
-onNoClick(): void {
- this.dialogRef.close();
-}
 
 
 

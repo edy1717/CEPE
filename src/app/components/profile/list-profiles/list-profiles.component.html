@@ -13,8 +13,8 @@
                                     <i class="fas fa-search"></i>
                                 </a>
                             </div>
-                            <!-- <mat-paginator [length]="myProducts.length" [pageSize]="page_size" [pageSizeOptions]="pageSizeOptions" (page)="handlePage($event) ">
-                            </mat-paginator>  -->
+                             <mat-paginator [length]="respuesta.data.length"  [pageSizeOptions]="pageSizeOptions" (page)="handlePage($event) ">
+                            </mat-paginator> 
                         </div>
                     </div>
                 </div>
@@ -27,9 +27,8 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- <tr *ngFor="let profil of dataProfiles | filterProfile:filterPost | paginate:page_size:page_number"> -->
-                    <tr *ngFor="let profil of respuesta.data | filterProfile:filterPost ">
-
+                    <tr *ngFor="let profil of respuesta.data | filterProfile:filterPost | paginate:page_size:page_number"> 
+                    <!-- <tr *ngFor="let profil of respuesta.data | filterProfile:filterPost "> -->
                         <th scope="row"> {{profil.id}} </th>
                         <td> {{profil.nombre}} {{profil.apellidoPaterno}} </td>
                         <td> {{profil.email}} </td>
@@ -55,5 +54,5 @@
     </section>
 </div>
 
-<app-modal-profile></app-modal-profile>
-<app-modal-reporte></app-modal-reporte>
+<!-- <app-modal-profile></app-modal-profile>
+<app-modal-reporte></app-modal-reporte> -->

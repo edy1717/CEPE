@@ -38,13 +38,6 @@ export class ListProfilesComponent implements OnInit {
     this.consultar();
   }
 
-  // consultar(){
-  //   this._us.consultUsers(this.formListProfil.value).subscribe (data => {
-  //     this.respuesta = data ;
-  //     this.dataProfiles = this.respuesta.dataProfiles
-  //       console.log(this.dataProfiles)
-  //   })
-  // }
   consultar(){
     this._us.consultUsers().subscribe (data => {
       this.respuesta = data ;
@@ -63,14 +56,6 @@ export class ListProfilesComponent implements OnInit {
   //   this.formDelete.reset()
   // }
 
-
-  // getListProfile(){
-  //   this.dataProfiles = this.dummyService.consultaProfile();
-  // }
-
-  // getListProduct(){
-  //   this.dataProducts = this.dummyService.consultaProducto();
-  // }
   misProductos($usuarioCreador){
     this.router.navigate(['/admin/user-products',$usuarioCreador]);
   }

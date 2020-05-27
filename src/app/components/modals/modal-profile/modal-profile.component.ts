@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm , FormControl, FormGroup,  ReactiveFormsModule } from '@angular/forms';
 import { DummyService } from '../../../services/dummy.service';
+import { CultivoService } from '../../../services/cultivo.service';
 
 
 @Component({
@@ -11,8 +12,9 @@ import { DummyService } from '../../../services/dummy.service';
 export class ModalProfileComponent implements OnInit {
 
   formActualizarPerfil : FormGroup;
+  respuesta
 
-  constructor( private dummyService: DummyService) { }
+  constructor( private _sc : CultivoService) { }
 
   ngOnInit(): void {
     this.actualizarPerfil();
@@ -28,7 +30,13 @@ export class ModalProfileComponent implements OnInit {
   }
 
 save(){
-  console.log(this.formActualizarPerfil)
+  this._sc.consultaCultivo(this.formActualizarPerfil.value).subscribe(res=>{
+    this.respuesta = res;
+    console.log('actualizado', res)
+  })
+  console.log('form',this.formActualizarPerfil.value)
+  console.log('actualizado', this.respuesta)
+
 }
 
 }
