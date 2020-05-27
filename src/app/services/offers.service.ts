@@ -21,9 +21,12 @@ export class OffersService {
     return this.http.post(this.url + '/editar', data);
   }
 
-  eliminarPost(){
-    return this.http.delete(this.url + '/eliminar');
+  eliminarPost(id){
+    console.log(id);
+    return this.http.post(this.url+'/eliminar',id, httpOptions);
+
   }
+
 
 
   consultarTodosPost(){

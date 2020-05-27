@@ -31,9 +31,10 @@ export class UsuarioService {
       console.log(id);
     return this.http.post(this.url + '/obtener',id, httpOptions);
   }
-  deleteUser(data){
-    return this.http.post(this.url+'/', data)
-  }
 
+  eliminarPerfil(id){
+    console.log(id);
+       return this.http.post(this.url+'/eliminar',id, httpOptions);
+  }
 
 }

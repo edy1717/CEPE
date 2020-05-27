@@ -41,11 +41,18 @@ export class ListProfilesComponent implements OnInit {
   consultar(){
     this._us.consultUsers().subscribe (data => {
       this.respuesta = data;
-      this.resultados = this.respuesta.data
-      console.log('pp', this.resultados)
+      this.resultados = this.respuesta.data;
+      console.log('pp', this.resultados);
   })
   }
 
+  eliminarProfile(id){
+    this._us.eliminarPerfil(id).subscribe(data => {
+    console.log('Eliminado');
+    this.consultar();
+
+ });
+ }
 
   // removerDato() {
   //   if(this.formDelete.valid)  {

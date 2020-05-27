@@ -53,7 +53,7 @@ export class ListProductsComponent implements OnInit {
 
   obtenerCultivoId(data){
     this.cultivo = data
-    console.log(this.cultivo)
+    console.log(this.cultivo);
   }
 
   elimina(id){

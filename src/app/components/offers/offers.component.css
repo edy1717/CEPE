@@ -1,54 +1,93 @@
-.main-container{
-    margin-top: 1px;
-    margin-top: 2px;
-    padding: 20px;
+.main-container {
+    margin-top: 5px;
+    padding: 15px;
 }
 
-.card-book,
+.color {
+    color: #743B8F;
+}
+
 .card {
+    margin-top: 20px;
+    max-width: 400px;
+    background-color: transparent;
+    justify-content: center;
     margin-bottom: 10px;
-    height: auto;
-    width: auto;
-    background-color: rgba(0, 0, 0, 0.3);
+    border: none;
+    outline: none;
+}
+
+mat-card-image img {
+    height: 20px;
+}
+
+mat-card-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* mat-card-actions button {
+    background: #418215;
+    color: white;
+} */
+
+mat-card-content p {
+    color: black;
+    max-width: 100%;
 }
 
 .card-body img {
     width: auto;
     height: 165px;
-}
-
-.card-body p,
-h4 {
-    color: white;
-}
-
-.container-precio-idioma p {
-    margin-left: 36%;
-    background: #743B8F;
-    color: white;
-}
-
-.for {
-    background: #82E89B;
-    margin-left: 35%;
-    text-align: center;
     color: black;
-    font-size: 12px;
-    width: 35%;
 }
 
-.lower button {
-    background: #418215;
-    color: white;
-}
-.lower1 button {
-    background: red;
-    color: white;
+mat-card-content h4 {
+    color: black;
 }
 
-.mat-paginator{
-    border :none;
+mat-button {
+    border-radius: 10px;
+    color: red;
+}
+
+
+/* buscador */
+
+.search-box {
+    position: relative;
+    top: 80%;
+    left: 80;
+    background: rgb(241, 239, 241);
+    height: 40px;
+    padding: 10px;
+}
+
+.search-btn {
+    color: whithe;
+    float: rigth;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-text {
+    border: black;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: gray;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 20px;
+}
+
+.mat-paginator {
+    border: none;
     background: none;
 }
-
-

@@ -50,6 +50,14 @@ export class OffersComponent implements OnInit {
   });
   }
 
+  eliminarPost(id){
+
+    this.offerServ.eliminarPost(id).subscribe(data => {
+      console.log('Eliminado');
+      this.consultar();
+
+ });
+ }
   openDialog(value){
     const dialogRef = this.dialog.open(ModalOffersComponent, {
       width: '450px',
