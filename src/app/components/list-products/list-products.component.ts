@@ -17,14 +17,16 @@ export class ListProductsComponent implements OnInit {
   headElements = ['#','Nombre','Descripción','Imagen', 'Cantidad','Medida' ];
   respuesta;
   resultados;
-  data:any;
+  resul;
   filterPost = '';
+  cultivo;
 
-  constructor( public dialog: MatDialog, private _sc : CultivoService) { }
+  constructor( private _sc: CultivoService) { }
 
   ngOnInit() {
     this.formMyProduct();
     this.consultar();
+
   }
 
 
@@ -43,11 +45,15 @@ export class ListProductsComponent implements OnInit {
 
   consultar(){
     this._sc.consultarTodosCultivos().subscribe (data => {
-      this.respuesta = data ;
-      this.resultados = this.respuesta.resultados
-      console.log('esto es data', data)
-      console.log('resu', this.resultados)
+      this.respuesta = data;
+      this.resultados = this.respuesta.data
+      console.log('pp', this.resultados)
   })
+  }
+
+  obtenerCultivoId(data){
+    this.cultivo = data
+    console.log(this.cultivo)
   }
 
   elimina(id){
@@ -58,30 +64,6 @@ export class ListProductsComponent implements OnInit {
 
   });
   }
-  // onDeleteProducts(i : string):void{
-  //   const confirmacion = confirm('Estas seguro de eliminar el producto');
-  //   if(confirmacion){
-  //   this.dataProducts.splice(i, 1)
-  //   }
-  // }
-  actualizarCultivo(){
-    this._sc.editarCultivo(this.formmyPoduct.value).subscribe ( respEditar => {
-      this.respuesta = respEditar
-      console.log('editar', this.respuesta)
-      console.log('editar1', respEditar)
-    })
-  }
-
-  openDialog(value){
-    const dialogRef = this.dialog.open(ModalComponent, {
-      width: '450px',
-      data: { item : value }
-    });
-    dialogRef.afterClosed().subscribe(result => {
-    });
-
-  }
-
 
 
   handlePage(e: PageEvent){

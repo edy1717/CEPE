@@ -1,4 +1,4 @@
- <!-- <ng-container [formGroup]="formActualizarProduct">
+<ng-container [formGroup]="formActualizarProduct">
   <div class="modal fade" id="modalProducts" tabindex="-1" role="dialog" aria-labelledby="modalProductsLabel"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -11,7 +11,7 @@
         </div>
         <div class="modal-body">
           <mat-form-field class="mr-5">
-            <mat-label>Nombre</mat-label>
+            <mat-label>Nombre  </mat-label>
             <input matInput formControlName="titulo">
           </mat-form-field>
 
@@ -43,20 +43,25 @@
           </mat-form-field>
 
           <mat-form-field class="mr-5">
-            <mat-label>id</mat-label>
+            <mat-label>id </mat-label>
             <input matInput formControlName="id">
+          </mat-form-field>
+
+          <mat-form-field class="mr-5">
+            <mat-label>tipo </mat-label>
+            <input matInput formControlName="tipo">
           </mat-form-field>
           
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary" >Guardar</button>
+          <button type="button" class="btn btn-primary" (click)="actualizarCultivo()">Guardar</button>
         </div>
       </div>
     </div>
   </div>
-</ng-container>  -->
+</ng-container>  
 
-<ng-container [formGroup]="formActualizarProduct">
+<!-- <ng-container [formGroup]="formActualizarProduct">
   <div class="modal fade" id="modalProducts" tabindex="-1" role="dialog" aria-labelledby="modalProductsLabel"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -107,9 +112,10 @@
           
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary" (click)="save()">Guardar</button>
+          <button type="button" class="btn btn-primary" (click)="actualizarCultivo(dataProducts)">Guardar</button>
         </div>
       </div>
     </div>
   </div>
 </ng-container> 
+-->

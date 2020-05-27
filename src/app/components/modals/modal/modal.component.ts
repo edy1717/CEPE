@@ -1,8 +1,8 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit, Inject, Input } from '@angular/core';
 import { DummyService } from 'src/app/services/dummy.service';
 import { CultivoService } from '../../../services/cultivo.service';
-import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
+import Swal from 'sweetalert2';
 
 
 @Component({
@@ -14,8 +14,9 @@ import { FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
 export class ModalComponent implements OnInit {
 
   formActualizarProduct : FormGroup;
-  respuesta;
-  dataProducts;
+  respuesta
+  respBack
+  @Input() cultivoId;
   
 
  constructor(  private _cs: CultivoService  ) { }
@@ -23,47 +24,33 @@ export class ModalComponent implements OnInit {
 
 
  ngOnInit(): void {
-   this.formProduct()
+   this.formProduct();
+  console.log(this.cultivoId)
 
  }
 
  formProduct(){
    this.formActualizarProduct = new FormGroup({
-     id : new FormControl (),
+     id : new FormControl (this.cultivoId),
      titulo : new FormControl (),
      descripcion : new FormControl (),
      portada : new FormControl (),
      cantidad : new FormControl (),
      medida : new FormControl (),
      imagen: new FormControl(),
+     tipo : new FormControl ()
    })
  }
 
-
- save(){
-   console.log('holi', this.formProduct)
- }
 
  actualizarCultivo(){
-   this._cs.editarCultivo(this.formActualizarProduct.value).subscribe ( respEditar => {
-     this.respuesta = respEditar
-     console.log('editar', this.respuesta)
-     console.log('editar1', respEditar)
-   })
+  this._cs.editarCultivo(this.formActualizarProduct.value)
+  .subscribe (respBack => {
+    this.respuesta = respBack
+    this.respBack = this.respuesta.codigoOperacionBackend
+  });
  }
 
 
-
-
- // onSaveProduct( productForm: NgForm ):void{
-  //if(productForm.value.id == null) {
-    //nuevo
-  //   this.dataApi.addProduct(productForm.value);
-  // }else {
-  //   this.dataApi.updateProduct(productForm.value);
-  // }
- // productForm.resetForm();
- // this.btnClose.nativeElement.click();
- // }
 
 }

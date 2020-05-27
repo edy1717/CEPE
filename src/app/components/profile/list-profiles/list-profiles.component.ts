@@ -40,10 +40,9 @@ export class ListProfilesComponent implements OnInit {
 
   consultar(){
     this._us.consultUsers().subscribe (data => {
-      this.respuesta = data ;
-    this.resultados = this.respuesta.resultados
-      console.log('esto es data de perfil', data)
-      console.log('resu', this.resultados)
+      this.respuesta = data;
+      this.resultados = this.respuesta.data
+      console.log('pp', this.resultados)
   })
   }
 

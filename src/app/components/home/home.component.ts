@@ -54,10 +54,9 @@ constructor( public dialog: MatDialog, private _cs: CultivoService ) { }
 
   consultar(){
     this._cs.consultarTodosCultivos().subscribe (data => {
-      this.respuesta = data ;
-      this.resultados = this.respuesta.resultados;
-      console.log('esto es data', data);
-      console.log('resu', this.resultados);
+      this.respuesta = data;
+      this.resultados = this.respuesta.data
+      console.log('pp', this.resultados)
   })
   }
 
