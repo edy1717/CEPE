@@ -60,15 +60,23 @@ export class CultivoService {
      return this.http.post(this.url+'/editar', data, httpOptions);
   }
 
-  eliminarCultivo(id:String){
-    const token = this.authService.getToken();
-    console.log(token);
-    const urlProd = `http://34.94.150.226/cultivo/eliminar/${id}/?access_toke=${token}`;
-   return this.http
-     .delete<ProductInterface>(urlProd)
-     .pipe(map(dat => dat ));
+  eliminarCultivo(id){
 
-    // return this.http.delete(this.url+'/eliminar');
-  }
 
+console.log(id);
+
+     return this.http.post(this.url+'/eliminar',id, httpOptions);
+
+
+  //   const token = this.authService.getToken();
+  //   console.log(token);
+  //   const urlProd = `http://34.94.150.226/cultivo/eliminar/${id}/?access_toke=${token}`;
+  //  return this.http
+  //    .delete<ProductInterface>(urlProd)
+  //    .pipe(map(dat => dat ));
+
+  //   // return this.http.delete(this.url+'/eliminar');
+  // }
+
+}
 }

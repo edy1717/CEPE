@@ -18,9 +18,9 @@ export class ListProductsComponent implements OnInit {
   resultados;
   filterPost = '';
 
-  constructor( private _sc : CultivoService) { }
+  constructor( private _sc: CultivoService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.formMyProduct();
     this.consultar();
   }
@@ -48,7 +48,14 @@ export class ListProductsComponent implements OnInit {
   })
   }
 
+  elimina(id){
 
+     this._sc.eliminarCultivo(id).subscribe(data => {
+       console.log('Eliminado');
+       this.consultar();
+
+  });
+  }
   // onDeleteProducts(i : string):void{
   //   const confirmacion = confirm('Estas seguro de eliminar el producto');
   //   if(confirmacion){
