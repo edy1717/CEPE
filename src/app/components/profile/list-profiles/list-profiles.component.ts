@@ -13,7 +13,6 @@ import { UsuarioService } from '../../../services/usuario.service';
 export class ListProfilesComponent implements OnInit {
 
   formListProfil : FormGroup;
-  myProducts : any =  [];
   dataProfiles;
   filterPost = '';
   respuesta;
@@ -42,7 +41,6 @@ export class ListProfilesComponent implements OnInit {
     this._us.consultUsers().subscribe (data => {
       this.respuesta = data;
       this.resultados = this.respuesta.data
-      console.log('pp', this.resultados)
   })
   }
 

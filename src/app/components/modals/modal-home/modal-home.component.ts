@@ -19,7 +19,6 @@ export class ModalHomeComponent implements OnInit {
     ngOnInit(): void {
        this.getListProduct();
        this.dataProducts = this.data.item;
-      //  console.log('holi', this.dataProducts);
 
     }
     getListProduct(){

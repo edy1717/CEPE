@@ -88,6 +88,8 @@ import { ModalHomeComponent } from './components/modals/modal-home/modal-home.co
       ],
       entryComponents:[
         ModalHomeComponent,
+        ModalComponent,
       ]
+
 })
 export class AppModule { }
