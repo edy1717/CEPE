@@ -26,6 +26,7 @@ export class ListProductsComponent implements OnInit {
   ngOnInit() {
     this.formMyProduct();
     this.consultar();
+
   }
 
 

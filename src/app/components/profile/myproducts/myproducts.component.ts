@@ -45,6 +45,16 @@ export class MyproductsComponent implements OnInit {
   ngOnInit(): void {
     this.consultar();
     this.formMyProduct();
+
+  }
+
+
+  consulta(data){
+    this._us.consultUserId(data).subscribe (data => {
+      this.respuesta = data;
+      this.resultados = this.respuesta.data
+      console.log('pp', this.resultados)
+  })
   }
 
   consultar(){
