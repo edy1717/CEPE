@@ -15,7 +15,6 @@ import { MatDialog } from '@angular/material/dialog';
 export class ListProfilesComponent implements OnInit {
 
   formListProfil : FormGroup;
-  myProducts : any =  [];
   dataProfiles;
   filterPost = '';
   respuesta;
@@ -45,8 +44,7 @@ export class ListProfilesComponent implements OnInit {
   consultar(){
     this._us.consultUsers().subscribe (data => {
       this.respuesta = data;
-      this.resultados = this.respuesta.data;
-      console.log('pp', this.resultados);
+      this.resultados = this.respuesta.data
   })
   }
 

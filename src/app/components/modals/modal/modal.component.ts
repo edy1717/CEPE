@@ -4,6 +4,7 @@ import { CultivoService } from '../../../services/cultivo.service';
 import { FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
 import Swal from 'sweetalert2';
 import { Subject } from 'rxjs/internal/Subject';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 
 @Component({
@@ -12,49 +13,54 @@ import { Subject } from 'rxjs/internal/Subject';
   styleUrls: ['./modal.component.css']
 })
 
-export class ModalComponent implements OnChanges,OnInit {
+export class ModalComponent implements OnInit {
 
   formActualizarProduct : FormGroup;
   respuesta
-  respBack
-  @Input() cultivoId;
-
-
- constructor(  private _cs: CultivoService  ) { 
+  respBack;
+  dataProducts;
+  
+ constructor( public dialogRef: MatDialogRef<ModalComponent>,
+  @Inject(MAT_DIALOG_DATA) public data: any, private _cs: CultivoService  ) { 
   this.formProduct();
  }
  
  ngOnInit(): void {
-  
-}
-
-ngOnChanges(changes: SimpleChanges): void {
-  this.formActualizarProduct.get('id').setValue(this.cultivoId);  
-  console.log(this.cultivoId)
+   this.getListProduct()
+   this.dataProducts = this.data.item;
+  this.formActualizarProduct.get('id').patchValue(this.data.id); 
+  console.log('on', this.formActualizarProduct.value)
+  console.log('data', this.data)
 }
 
 
  formProduct(){
    this.formActualizarProduct = new FormGroup({
-     id : new FormControl (this.cultivoId),
-     titulo : new FormControl (),
-     descripcion : new FormControl (),
-     portada : new FormControl (),
-     cantidad : new FormControl (),
-     medida : new FormControl (),
-     imagen: new FormControl(),
-     tipo : new FormControl ()
+     id : new FormControl (null),
+     titulo : new FormControl (null),
+     descripcion : new FormControl (null),
+     portada : new FormControl (null),
+     cantidad : new FormControl (null),
+     medida : new FormControl (null),
+     imagen: new FormControl(null),
+     tipo : new FormControl (null)
    })
  }
 
 
+getListProduct(){
+  this.dataProducts = this._cs.consultaCultivo(this.dataProducts);
+}
+
+
  actualizarCultivo(){
-  // this._cs.editarCultivo(this.formActualizarProduct.value)
-  // .subscribe (respBack => {
-  //   this.respuesta = respBack
-  //   this.respBack = this.respuesta.codigoOperacionBackend
-  // });
-  console.log(this.formActualizarProduct.value)
+  this._cs.editarCultivo(this.formActualizarProduct.value)
+  .subscribe (respBack => {
+    this.respuesta = respBack
+    this.respBack = this.respuesta.codigoOperacionBackend
+  });
+  console.log('form',this.formActualizarProduct.value)
+  console.log('cultivo', this.formActualizarProduct.get('id').value)
  }
 
 

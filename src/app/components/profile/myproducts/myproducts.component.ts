@@ -49,13 +49,13 @@ export class MyproductsComponent implements OnInit {
   }
 
 
-  consulta(data){
-    this._us.consultUserId(data).subscribe (data => {
-      this.respuesta = data;
-      this.resultados = this.respuesta.data
-      console.log('pp', this.resultados)
-  })
-  }
+  // consulta(data){
+  //   this._us.consultUserId(data).subscribe (data => {
+  //     this.respuesta = data;
+  //     this.resultados = this.respuesta.data
+  //     console.log('pp', this.resultados)
+  // })
+  // }
 
   consultar(){
      this.activatedRoute.params.subscribe (params => {
@@ -64,7 +64,7 @@ export class MyproductsComponent implements OnInit {
         this._cs.consultaCultivo(params).subscribe(datacult => {
         this.myProducts = datacult;
         this.respuesta = this.myProducts.datacult;
-        console.log(this.respuesta);
+        console.log('2e', this.respuesta)
 
          /*   console.log('params en my products como se recive',params);
         console.log('respuesta del servicio',this.myProducts); */

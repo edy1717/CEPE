@@ -21,7 +21,7 @@ export class ListProductsComponent implements OnInit {
   filterPost = '';
   cultivo;
 
-  constructor( private _sc: CultivoService) { }
+  constructor( private _sc: CultivoService,  public dialog: MatDialog) { }
 
   ngOnInit() {
     this.formMyProduct();
@@ -38,6 +38,15 @@ export class ListProductsComponent implements OnInit {
       imagen : new FormControl(''),
       cantidad : new FormControl(''),
       medida: new FormControl  ('')
+    });
+  }
+
+  openDialog(value){
+    const dialogRef = this.dialog.open(ModalComponent, {
+      width: '450px',
+      data: { id : value }
+    });
+    dialogRef.afterClosed().subscribe(result => {
     });
   }
 

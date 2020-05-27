@@ -13,8 +13,8 @@
                                     <i class="fas fa-search"></i>
                                 </a>
                             </div>
-                            <!-- <mat-paginator [length]="resultados.length" [pageSizeOptions]="pageSizeOptions" (page)="handlePage($event) ">
-                            </mat-paginator> -->
+                            <!-- <mat-paginator   [pageSizeOptions]="pageSizeOptions" (page)="handlePage($event) ">
+                            </mat-paginator>  -->
                         </div>
                     </div>
                 </div>
@@ -27,7 +27,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let profil of resultados | filterProfile:filterPost" (click)="cultivo=profil.id">
+                    <tr *ngFor="let profil of resultados | filterProfile:filterPost">
                         <!-- <tr *ngFor="let profil of respuesta.data | filterProfile:filterPost "> -->
                         <th scope="row"> {{profil.id}} </th>
                         <td> {{profil.nombre}} {{profil.apellidoPaterno}} </td>
