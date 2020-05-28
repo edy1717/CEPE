@@ -13,11 +13,11 @@ import { UsuarioService } from '../../../services/usuario.service';
 })
 export class MyproductsComponent implements OnInit {
 
-  myProducts:any;
   formMyproduct : FormGroup;
   respuesta;
   resultados;
-  usua:any;
+  usua;
+  dat
 
   filterPost = '';
   headElements = [ '#', 'Nombre', 'Descripcion', 'Imagen', 'Cantidad', 'Medida']
@@ -61,8 +61,8 @@ export class MyproductsComponent implements OnInit {
 
       if(params.usuarioCreador != null){
         this._cs.consultaCultivo(params).subscribe(datacult => {
-        this.myProducts = datacult;
-        this.respuesta = this.myProducts.datacult;
+        this.resultados = datacult;
+        this.respuesta = this.resultados.datacult;
         console.log('2e', this.respuesta)
 
          /*   console.log('params en my products como se recive',params);
@@ -72,7 +72,8 @@ export class MyproductsComponent implements OnInit {
         });
          this._us.consultUserId(params.usuarioCreador).subscribe(dataus=>{
           this.usua  = dataus;
-          /* console.log('respuesta usuario',this.usua); */
+          this.dat = this.usua.dataus;
+          console.log('respuesta usuario',this.usua); 
         });
       }
     });

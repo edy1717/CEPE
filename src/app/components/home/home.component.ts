@@ -23,6 +23,7 @@ export class HomeComponent implements OnInit {
  filterPost = '';
  productos ;
  dataProducts;
+ 
 
 
 constructor( public dialog: MatDialog, private _cs: CultivoService ) { }
@@ -66,6 +67,5 @@ constructor( public dialog: MatDialog, private _cs: CultivoService ) { }
     dialogRef.afterClosed().subscribe(result => {
     });
   }
-
 
 }
