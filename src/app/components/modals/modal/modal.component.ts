@@ -1,5 +1,4 @@
 import { Component, OnInit, Inject, Input, SimpleChanges, OnDestroy, OnChanges } from '@angular/core';
-
 import { CultivoService } from '../../../services/cultivo.service';
 import { FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
 import Swal from 'sweetalert2';
@@ -19,16 +18,16 @@ export class ModalComponent implements OnInit {
   respuesta
   respBack;
   dataProducts;
-  
+
  constructor( public dialogRef: MatDialogRef<ModalComponent>,
-  @Inject(MAT_DIALOG_DATA) public data: any, private _cs: CultivoService  ) { 
+  @Inject(MAT_DIALOG_DATA) public data: any, private _cs: CultivoService  ) {
   this.formProduct();
  }
- 
+
  ngOnInit(): void {
    this.getListProduct()
    this.dataProducts = this.data.item;
-  this.formActualizarProduct.get('id').patchValue(this.data.id); 
+  this.formActualizarProduct.get('id').patchValue(this.data.id);
   console.log('on', this.formActualizarProduct.value)
   console.log('data', this.data)
 }
