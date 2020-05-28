@@ -41,7 +41,7 @@
                             <button class="btn" (click)="eliminarProfile(profil)">
                                 <i class="fas fa-trash-alt colorDelete"></i></button>
                             <!-- BOTON DE DETALLE -->
-                            <button class="btn" data-toggle="modal" data-target="#modalReporte" placeholder="masDetalle" data-placement="top" title="Reportar Cliente">
+                            <button class="btn" (click)="openDialogRep(profil.id)" data-placement="top" title="Reportar Cliente">
                                 <i class="fas fa-user-edit colorReportar "></i></button>
                             <!-- BOTON DE LISTAS -->
                             <button class="btn" placeholder="list-product" data-placement="top" title="Ver Productos del Cliente" (click)="misProductos(profil.id)">

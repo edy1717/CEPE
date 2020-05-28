@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { PageEvent } from '@angular/material/paginator';
 import { FormGroup, FormControl } from '@angular/forms';
 import { ReporteService } from '../../../services/reporte.service';
+import { ModalReporteComponent } from '../../modals/modal-reporte/modal-reporte.component';
+import { MatDialog } from '@angular/material/dialog';
 
 
 @Component({
@@ -13,34 +15,46 @@ export class ReportsComponent implements OnInit {
 
   filterPost;
   myProducts:any=[];
-  headElements=['#', 'Nombre del cliente','Descripcion', 'Tipo de reporte', 'Estatus de reporte', 'Resolución'];
+  headElements=['Id de reporte', 'Razón','Descripcion', 'Id de Usuario Reportado', 'Id de Usuario Creador', 'Fecha de Reporte'];
   formReport : FormGroup;
   resultados;
   respuesta;
 
-  constructor( private _rp : ReporteService) { }
+  constructor( private _rp : ReporteService, public dialog: MatDialog) { }
 
   ngOnInit(): void {
+    this.formReporte();
+    this.consulta();
   }
 
   formReporte(){
     this.formReport = new FormGroup ({
-      nombre: new FormControl (),
-      descripcion: new FormControl(),
-      tiporepo: new FormControl(),
-      estatusrepo: new FormControl(),
-      resolucion: new FormControl()
+      razon: new FormControl (null),
+      descripcion: new FormControl(null),
+      usuarioReportado: new FormControl(null),
+      usuarioCreador: new FormControl(null),
+      fecha: new FormControl(null)
     })
   }
 
   consulta(){
-    this._rp.reportUser(this.formReport.value).subscribe( data =>{
+    this._rp.consultarReport().subscribe( data =>{
       this.respuesta = data
-      this.resultados = this.respuesta.resultados
+      this.resultados = this.respuesta.data
       console.log(this.respuesta)
 
     })
   }
+
+  openDialog(value){
+    const dialogRef = this.dialog.open(ModalReporteComponent, {
+      width: '450px',
+      data: { id : value }
+    });
+    dialogRef.afterClosed().subscribe(result => {
+    });
+  }
+
 
 
 

@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { DummyService } from '../../../services/dummy.service';
 import { PageEvent } from '@angular/material/paginator';
 import { FormGroup, FormControl } from '@angular/forms';
 import { UsuarioService } from '../../../services/usuario.service';
-import { ModalProfileComponent } from '../../modals/modal-profile/modal-profile.component';
 import { MatDialog } from '@angular/material/dialog';
+
+// IMPORTACION DE MODALES
+import { ModalReporteComponent } from '../../modals/modal-reporte/modal-reporte.component';
+import { ModalProfileComponent } from '../../modals/modal-profile/modal-profile.component';
 
 @Component({
   selector: 'app-list-profiles',
@@ -54,7 +56,14 @@ openDialog(value){
     data: { id: value}
   });
   dialogRef.afterClosed().subscribe(resul =>{
+  });
+}
 
+openDialogRep(value){
+  const dialogRef = this.dialog.open(ModalReporteComponent, {
+    data: {id : value}
+  });
+  dialogRef.afterClosed().subscribe(resul =>{
   });
 }
 
