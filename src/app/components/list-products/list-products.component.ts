@@ -50,12 +50,14 @@ export class ListProductsComponent implements OnInit {
     });
   }
 
+
+
   consultar(){
     this._sc.consultarTodosCultivos().subscribe (data => {
       this.respuesta = data;
-      this.resultados = this.respuesta.data;
-      // console.log('pp', this.resultados)
-    });
+      this.resultados = this.respuesta.data
+      console.log('pp', this.resultados)
+  })
   }
 
   obtenerCultivoId(data){

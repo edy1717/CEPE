@@ -4,7 +4,6 @@ import { UserInterface } from '../../../interfaces/user';
 import {
     ModalUserprofileComponent
 } from '../../modals/modal-userprofile/modal-userprofile.component';
-import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
 import { FormGroup, FormControl } from '@angular/forms';
 
@@ -15,7 +14,7 @@ import { FormGroup, FormControl } from '@angular/forms';
 })
 export class ProfileComponent implements OnInit {
 
-  constructor( private authService : AuthService , public dialog: MatDialog, private router:Router) { }
+  constructor( private authService : AuthService , public dialog: MatDialog) { }
 
   public providerId : string = 'null';
   formMyproduct : FormGroup;
@@ -58,19 +57,5 @@ export class ProfileComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
     });
 
-  }
-
-  // Rutas
-  rutProd(){
-    this.router.navigate(['admin/list-products']);
-  }
-  rutPerfiles(){
-    this.router.navigate(['admin/list-profiles']);
-  }
-  rutPost(){
-    this.router.navigate(['admin/offers']);
-  }
-  rutReport(){
-    this.router.navigate(['admin/reports']);
   }
 }

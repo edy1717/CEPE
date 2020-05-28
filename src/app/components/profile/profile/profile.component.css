@@ -1,13 +1,12 @@
 .example-card {
-    max-width: 58%;
+    max-width: 98%;
     align-content: center;
-    margin: 7%;
-    margin-left: 22%;
+    margin: 2%;
     background: white;
 }
 
 .example-header-image {
-    margin: 40%;
+    margin: 25%;
     background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
     background-size: cover;
 }
@@ -24,14 +23,5 @@
 .actualizar {
     background: #418215;
     color: white;
-    margin-left: 10%;
-}
-
-mat-button-toggle-group {
-    margin-left: 12%;
-}
-
-mat-button-toggle {
-    background: #743B8F;
-    color: white;
+    margin-right: 5px;
 }

@@ -4,11 +4,14 @@
     </mat-card-header>
     <mat-card-content>
         <form [formGroup]="formMyproduct">
+
+
             <div class="row">
-                <div class="col-4">
+                <div class="col-2">
+
                     <div mat-card-avatar class="example-header-image"></div>
                 </div>
-                <div class="col-8">
+                <div class="col-10">
                     <div class="otro">
                         <mat-form-field class="mr-5">
                             <mat-label>Nombre</mat-label>
@@ -36,10 +39,19 @@
                         </mat-form-field>
                     </div>
                 </div>
+
             </div>
+
+
+
         </form>
+
+
+
+
     </mat-card-content>
     <mat-card-actions>
+<<<<<<< HEAD
 
         <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
             <mat-button-toggle routerLink="/admin/list-products">Mis Productos</mat-button-toggle>
@@ -47,6 +59,8 @@
             <mat-button-toggle routerLink="/admin/offers">Mis Post</mat-button-toggle>
             <mat-button-toggle routerLink="/admin/reports">Mis Reportes</mat-button-toggle>
         </mat-button-toggle-group>
+=======
+>>>>>>> parent of 14a407e... Buenos
         <button class="btn actualizar" (click)="openDialog('1')">Actualizar Perfil</button>
     </mat-card-actions>
 </mat-card>
