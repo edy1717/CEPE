@@ -1,5 +1,5 @@
 import { Component, OnInit, Inject, Input, SimpleChanges, OnDestroy, OnChanges } from '@angular/core';
-import { DummyService } from 'src/app/services/dummy.service';
+
 import { CultivoService } from '../../../services/cultivo.service';
 import { FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
 import Swal from 'sweetalert2';
