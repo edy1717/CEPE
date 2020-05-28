@@ -51,6 +51,13 @@
 
     </mat-card-content>
     <mat-card-actions>
+
+        <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+            <mat-button-toggle value="" (click)="rutProd()">Mis Productos</mat-button-toggle>
+            <mat-button-toggle value="" (click)="rutPerfiles()">Mis Perfiles</mat-button-toggle>
+            <mat-button-toggle value="" (click)="rutPost()">Mis Post</mat-button-toggle>
+            <mat-button-toggle value="" (click)="rutReport()">Mis Reportes</mat-button-toggle>
+        </mat-button-toggle-group>
         <button class="btn actualizar" (click)="openDialog('1')">Actualizar Perfil</button>
     </mat-card-actions>
 </mat-card>

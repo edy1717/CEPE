@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductProfileInterface } from 'src/app/interfaces/products-profile';
+import { DummyService } from '../../../services/dummy.service';
 import { ActivatedRoute } from '@angular/router';
 import { PageEvent } from '@angular/material/paginator';
 import { FormGroup, FormControl } from '@angular/forms';

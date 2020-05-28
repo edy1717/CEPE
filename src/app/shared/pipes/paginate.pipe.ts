@@ -8,7 +8,7 @@
    transform( array: any[], page_size: number , page_number: number ): any[] {
 
       //if(!array.length) return []
-      if(!array.length <! 0) return[]
+      if(!array) return[]
      page_size = page_size || 3
      page_number = page_number || 1
      --page_number

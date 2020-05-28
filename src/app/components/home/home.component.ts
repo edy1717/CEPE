@@ -1,9 +1,10 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ModalHomeComponent } from '../modals/modal-home/modal-home.component';
 import { CultivoService } from '../../services/cultivo.service';
 import { ProductInterface } from '../../interfaces/products';
 import { FormControl } from '@angular/forms';
 import { FormGroup } from '@angular/forms';
+import {MatPaginatorModule, PageEvent} from '@angular/material/paginator';
 import { MatDialog } from '@angular/material/dialog';
 
 
@@ -30,6 +31,7 @@ constructor( public dialog: MatDialog, private _cs: CultivoService ) { }
   ngOnInit(): void {
     this.consultar();
     this.formMyProduct();
+
 
   }
 
@@ -67,5 +69,13 @@ constructor( public dialog: MatDialog, private _cs: CultivoService ) { }
     });
   }
 
+  handlePage(e: PageEvent){
+     this.page_size = e.pageSize
+     this.page_number = e.pageIndex + 1
+   }
+
+   page_size: number =4;
+   page_number: number = 1;
+   pageSizeOptions  = [4, 8, 16, 24, 32, 40, 48 ,  80 , 100]
 
 }
