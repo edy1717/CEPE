@@ -9,6 +9,7 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatIconModule} from '@angular/material/icon';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
 
 
 @NgModule({
@@ -22,10 +23,9 @@ import {MatIconModule} from '@angular/material/icon';
         MatToolbarModule,
         MatMenuModule,
         MatIconModule,
-
-        
+        MatButtonToggleModule,
     ],
-    exports:[
+    exports: [
         MatCardModule,
         MatPaginatorModule,
         MatDialogModule,
@@ -35,9 +35,8 @@ import {MatIconModule} from '@angular/material/icon';
         MatToolbarModule,
         MatMenuModule,
         MatIconModule,
-        
-        
-    ],
+        MatButtonToggleModule,
+       ],
     providers: [
         {
           provide: MatPaginatorIntl,

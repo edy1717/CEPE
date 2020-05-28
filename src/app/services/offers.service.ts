@@ -17,18 +17,19 @@ export class OffersService {
 
   constructor( private http: HttpClient  ) { }
 
-  editarPost(data){
-    return this.http.post(this.url + '/editar', data);
+  editarPost(id){
+    return this.http.post(this.url + '/editar', id, httpOptions);
   }
 
   eliminarPost(id){
     console.log(id);
-    return this.http.post(this.url+'/eliminar',id, httpOptions);
+    return this.http.post(this.url + '/eliminar', id, httpOptions);
 
   }
-
-
-
+// x id
+  consultaPost(id){
+    return this.http.post(this.url + '/obtener', id, httpOptions);
+  }
   consultarTodosPost(){
     return this.http.get(this.url + '/obtener/todos', httpOptions);
   }

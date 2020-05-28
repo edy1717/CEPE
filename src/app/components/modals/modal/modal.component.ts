@@ -1,10 +1,10 @@
 import { Component, OnInit, Inject, Input, SimpleChanges, OnDestroy, OnChanges } from '@angular/core';
-import { DummyService } from 'src/app/services/dummy.service';
 import { CultivoService } from '../../../services/cultivo.service';
 import { FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
-import Swal from 'sweetalert2';
-import { Subject } from 'rxjs/internal/Subject';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+// import Swal from 'sweetalert2';
+// import { Subject } from 'rxjs/internal/Subject';
+// import { DummyService } from 'src/app/services/dummy.service';
 
 
 @Component({
@@ -15,22 +15,23 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 export class ModalComponent implements OnInit {
 
-  formActualizarProduct : FormGroup;
-  respuesta
+  formActualizarProduct: FormGroup;
+  respuesta;
   respBack;
   dataProducts;
-  
+
  constructor( public dialogRef: MatDialogRef<ModalComponent>,
-  @Inject(MAT_DIALOG_DATA) public data: any, private _cs: CultivoService  ) { 
-  this.formProduct();
+  @Inject(MAT_DIALOG_DATA) public data: any, private _cs: CultivoService  ) {
+
  }
- 
+
  ngOnInit(): void {
-   this.getListProduct()
+   this.formProduct();
+   this.getListProduct();
    this.dataProducts = this.data.item;
-  this.formActualizarProduct.get('id').patchValue(this.data.id); 
-  console.log('on', this.formActualizarProduct.value)
-  console.log('data', this.data)
+   this.formActualizarProduct.get('id').patchValue(this.data.id);
+  //  console.log('on', this.formActualizarProduct.value);
+  //  console.log('data', this.data);
 }
 
 
@@ -56,11 +57,11 @@ getListProduct(){
  actualizarCultivo(){
   this._cs.editarCultivo(this.formActualizarProduct.value)
   .subscribe (respBack => {
-    this.respuesta = respBack
-    this.respBack = this.respuesta.codigoOperacionBackend
+    this.respuesta = respBack;
+    this.respBack = this.respuesta.codigoOperacionBackend;
   });
-  console.log('form',this.formActualizarProduct.value)
-  console.log('cultivo', this.formActualizarProduct.get('id').value)
+   console.log('form',this.formActualizarProduct.value)
+   console.log('cultivo', this.formActualizarProduct.get('id').value)
  }
 
 

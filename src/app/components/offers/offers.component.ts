@@ -41,12 +41,20 @@ export class OffersComponent implements OnInit {
   //    console.log(productos);
   //   });
   // }
+  openDialog(value){
+    const dialogRef = this.dialog.open(ModalOffersComponent, {
+      width: '450px',
+      data: { id : value }
+    });
+    dialogRef.afterClosed().subscribe(result => {
+    });
+  }
 
   consultar(){
     this.offerServ.consultarTodosPost().subscribe (data => {
       this.respuesta = data;
-      this.resultados = this.respuesta.data
-      console.log('pp', this.resultados)
+      this.resultados = this.respuesta.data;
+      console.log('anna', this.resultados);
   });
   }
 
@@ -58,18 +66,6 @@ export class OffersComponent implements OnInit {
 
  });
  }
-  openDialog(value){
-    const dialogRef = this.dialog.open(ModalOffersComponent, {
-      width: '450px',
-      data: { item : value }
-    });
-    dialogRef.afterClosed().subscribe(result => {
-    });
-
-  }
-
-
-
 
   handlePage(e: PageEvent){
     this.page_size = e.pageSize

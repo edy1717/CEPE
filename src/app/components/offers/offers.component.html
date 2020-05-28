@@ -54,11 +54,11 @@
                         Contenido <b class="color">{{product.contenido}}  </b>
                     </p>
                 </mat-card-content>
-                <mat-card-actions class="col-12">
-                    <button class="btn actualizar">Actualizar</button>
-                    <button class="btn eliminar" (click)="eliminarPost(product)">Eliminar</button>
-                </mat-card-actions>
             </mat-card>
+            <mat-card-actions class="col-12">
+                <button class="btn actualizar" (click)="openDialog(product.id)">Actualizar</button>
+                <button class="btn eliminar" (click)="eliminarPost(product)">Eliminar</button>
+            </mat-card-actions>
         </div>
     </div>
 </div>

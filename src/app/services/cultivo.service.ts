@@ -23,7 +23,7 @@ export class CultivoService {
     descripcion: '',
     portada: '',
     cantidad: '',
-    medida:'',
+    medida: '',
 };
 
   constructor( private http: HttpClient, private authService: AuthService ) {
@@ -31,13 +31,13 @@ export class CultivoService {
   }
 
   registerCultivo(data){
-    return this.http.post(this.url+'/registar', data);
+    return this.http.post(this.url + '/registar', data);
   }
-  //id
+  // x id
   consultaCultivo(data){
-  const token = this.authService.getToken();
-  console.log('como recibe el servicio', data);
-    return this.http.post(this.url+'/buscar',data,httpOptions);
+    // const token = this.authService.getToken();
+    // console.log('como recibe el servicio', data);
+    return this.http.post(this.url + '/buscar', data, httpOptions);
   }
 
   consultarTodosCultivos(){
@@ -45,11 +45,11 @@ export class CultivoService {
   }
 
   editarCultivo(data){
-     return this.http.post(this.url+'/editar', data, httpOptions);
+     return this.http.post(this.url + '/editar', data, httpOptions);
   }
 
   eliminarCultivo(id){
-  console.log(id);
-     return this.http.post(this.url+'/eliminar',id, httpOptions);
+     console.log(id);
+     return this.http.post(this.url + '/eliminar', id, httpOptions);
 }
 }
