@@ -35,7 +35,12 @@
     line-height: 20px;
 }
 
-.mat-paginator{
-    border :none;
+.mat-paginator {
+    border: none;
     background: none;
+}
+
+.actualizar {
+    background-color: #418215;
+    color: white;
 }
