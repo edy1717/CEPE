@@ -30,7 +30,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let report of resultados" >
+                    <tr *ngFor="let report of resultados">
                         <td> {{report.id}} </td>
                         <td>{{report.razon}}</td>
                         <td>{{report.descripcion}} </td>
@@ -38,7 +38,7 @@
                         <td> {{report.usuarioCreador}}</td>
                         <td>{{report.fecha}}</td>
                         <td>
-                            <button class="btn btn-danger ">Eliminar</button>
+                            <button class="btn eliminar">Eliminar</button>
                         </td>
                     </tr>
                 </tbody>

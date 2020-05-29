@@ -44,3 +44,8 @@
     background-color: #418215;
     color: white;
 }
+
+.eliminar {
+    background-color: red;
+    color: white;
+}
