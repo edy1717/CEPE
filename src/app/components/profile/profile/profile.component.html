@@ -5,48 +5,48 @@
     <mat-card-content>
         <form [formGroup]="formMyProfil">
             <div class="row">
-                <div class="col-4">
-                    <div mat-card-avatar class="example-header-image"></div>
+                <div class="col-2">
+                    <img class="imguser" src="'../../../../assets/img/us.png">
+                    <mat-label class="nameus">Ana Pérez </mat-label>
                 </div>
-                <div class="col-8">
+                <div class="col-10 datos">
+                    <mat-label class="infogene">Información General </mat-label>
                     <div class="otro">
-                        <mat-form-field class="mr-5">
+                        <mat-form-field class="mr-5 form" appearance="outline">
                             <mat-label>Nombre</mat-label>
                             <input matInput formControlName="nombre">
                         </mat-form-field>
 
-                        <mat-form-field class="mr-5">
+                        <mat-form-field class="mr-5 form" appearance="outline">
                             <mat-label>Apellido Paterno </mat-label>
-                            <input matInput formControlName="Apepat">
+                            <input matInput formControlName="apepat">
                         </mat-form-field>
 
-                        <mat-form-field class="mr-5">
+                        <mat-form-field class="mr-5 form" appearance="outline">
                             <mat-label>Apellido Materno </mat-label>
-                            <input matInput formControlName="Apemat">
+                            <input matInput formControlName="apemat">
                         </mat-form-field>
 
-                        <mat-form-field class="mr-5">
-                            <mat-label>correo electronico </mat-label>
-                            <input matInput formControlName="email">
+                        <mat-form-field class="mr-5 form" appearance="outline">
+                            <mat-label>Correo electronico </mat-label>
+                            <input matInput formControlName="correo">
                         </mat-form-field>
 
-                        <mat-form-field class="mr-5">
+                        <mat-form-field class="mr-5 form" appearance="outline">
                             <mat-label>Contraseña </mat-label>
-                            <input matInput formControlName="contra">
+                            <input matInput formControlName="contrasena">
                         </mat-form-field>
+
                     </div>
                 </div>
             </div>
         </form>
+        <mat-card-actions>
+            <button class="btn opcion" routerLink="/admin/list-products"> Mis productos</button>
+            <button class="btn opcion" routerLink="/admin/list-profiles"> Mis perfiles</button>
+            <button class="btn opcion" routerLink="/admin/offers"> Mis ofertas</button>
+            <button class="btn opcion" routerLink="/admin/reports"> Mis reportes</button>
+            <button class="btn actualizar" (click)="openDialog('1')">Actualizar Perfil</button>
+        </mat-card-actions>
     </mat-card-content>
-    <mat-card-actions>
-
-        <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
-            <mat-button-toggle routerLink="/admin/list-products">Mis Productos</mat-button-toggle>
-            <mat-button-toggle routerLink="/admin/list-profiles">Mis Perfiles</mat-button-toggle>
-            <mat-button-toggle routerLink="/admin/offers">Mis Post</mat-button-toggle>
-            <mat-button-toggle routerLink="/admin/reports">Mis Reportes</mat-button-toggle>
-        </mat-button-toggle-group>
-        <button class="btn actualizar" (click)="openDialog('1')">Actualizar Perfil</button>
-    </mat-card-actions>
 </mat-card>

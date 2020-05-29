@@ -35,7 +35,10 @@ export class ModalReporteComponent implements OnInit {
 
   })
 }
-actualizarCultivo(){
+save(){
+  console.log(this.formReporte);
+}
+  actualizarCultivo(){
   this._reports.enviarReporte(this.formReporte.value)
   .subscribe (respBack => {
     this.respuesta = respBack;
@@ -47,3 +50,5 @@ actualizarCultivo(){
 
 
 }
+
+

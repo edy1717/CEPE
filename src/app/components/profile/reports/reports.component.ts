@@ -55,7 +55,14 @@ export class ReportsComponent implements OnInit {
     });
   }
 
+//   eliminarPost(id){
 
+//     this._rp.(id).subscribe(data => {
+//       console.log('Eliminado');
+//       this.consultar();
+
+//  });
+//  }
 
 
   handlePage(e: PageEvent){

@@ -1,15 +1,32 @@
 .example-card {
-    max-width: 58%;
+    max-width: 68%;
     align-content: center;
     margin: 7%;
-    margin-left: 22%;
+    margin-left: 17%;
     background: white;
 }
 
-.example-header-image {
-    margin: 40%;
-    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-    background-size: cover;
+.imguser {
+    max-width: 100%;
+    margin-left: 8%;
+}
+
+.datos {
+    margin-top: 2%;
+}
+
+.nameus {
+    margin-left: 25%;
+    font-size: 20px;
+    color: Gray;
+}
+
+.infogene {
+    color: gray;
+}
+
+.form {
+    font-size: 10px;
 }
 
 .row {
@@ -21,17 +38,20 @@
     transform: translateY(0px);
 }
 
+mat-card-actions {
+    margin-left: 22%;
+}
+
+.opcion {
+    background-color: #743B8F;
+    color: white;
+    margin-right: 12px;
+    font-size: 12px;
+}
+
 .actualizar {
     background: #418215;
     color: white;
-    margin-left: 10%;
-}
-
-mat-button-toggle-group {
-    margin-left: 12%;
-}
-
-mat-button-toggle {
-    background: #743B8F;
-    color: white;
+    margin-left: 15%;
+    font-size: 12px;
 }
