@@ -13,8 +13,10 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 })
 export class ModalProfileComponent implements OnInit {
 
-  formActualizarPerfil: FormGroup;
+  formPerfil: FormGroup;
+  dataPost;
   respuesta;
+  respBack;
 
   constructor( private _use:UsuarioService, public dialogRef:MatDialogRef<ModalProfileComponent>,
                @Inject(MAT_DIALOG_DATA) public data:any) { }
@@ -22,29 +24,36 @@ export class ModalProfileComponent implements OnInit {
 
   ngOnInit(): void {
     this.actualizarPerfil();
-    this.formActualizarPerfil.get('id').patchValue(this.data.id);
+    this.getListPost();
+    this.dataPost = this.data.item;
+    this.formPerfil.get('id').patchValue(this.data.id);
   }
 
   actualizarPerfil(){
-    this.formActualizarPerfil = new FormGroup ({
-      nombre : new FormControl (),
-      email : new FormControl (),
-      phone : new FormControl (),
-      direccion : new FormControl (),
+    this.formPerfil = new FormGroup ({
+      id : new FormControl (''),
+      nombre: new FormControl  (''),
+      apepat: new FormControl  (''),
+      apemat: new FormControl  (''),
+      correo: new FormControl  (''),
+      direccion: new FormControl  (''),
+      telefono: new FormControl  (''),
+      password: new FormControl  ('')
+
     })
   }
-
-  actualizarCliente(){
-    console.log('Usuario', this.formActualizarPerfil.get('id').value);
+  getListPost(){
+    this.dataPost = this._use.consultUserId(this.dataPost);
   }
-// save(){
-//   this._use.consultaCultivo(this.formActualizarPerfil.value).subscribe(res=>{
-//     this.respuesta = res;
-//     console.log('actualizado', res)
-//   })
-//   console.log('form',this.formActualizarPerfil.value)
-//   console.log('actualizado', this.respuesta)
-
-// }
+  guardarPerfil(){
+    console.log(this._use);
+    this._use.editarPerfil(this.formPerfil.value)
+    .subscribe (respBack => {
+      this.respuesta = respBack;
+      this.respBack = this.respuesta.codigoOperacionBackend;
+    });
+    console.log('form',this.formPerfil.value)
+    console.log('Post', this.formPerfil.get('id').value)
+   }
 
 }

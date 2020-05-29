@@ -1,38 +1,50 @@
-<ng-container [formGroup]="formActualizarPerfil">
-    <div class="modal fade" id="modalProfile" tabindex="-1" role="dialog" aria-labelledby="modalProfileLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2 class="modal-title" id="modalProfileLabel">Actualizar Cliente</h2>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Closea">
-            <span aria-hidden="true">&times;</span>
-          </button>
-                </div>
-                <div class="modal-body">
-                    <mat-form-field class="mr-5">
-                        <mat-label>Nombre</mat-label>
-                        <input matInput formControlName="nombre">
-                    </mat-form-field>
+<div class="col-12" [formGroup]="formPerfil">
+    <!-- <div class="modal-header">
+          <h2 class="modal-title" id="modalProductsLabel">Actualizar Post</h2>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Closea">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      </div> -->
+    <div class="card mb-6">
+        <div class="row no-gutters">
+            <div class="col-md-8">
+                <div class="card-body">
+                    <div class="modal-body">
+                        <mat-form-field class="mr-5">
+                            <mat-label>id </mat-label>
+                            <input matInput formControlName="id">
+                        </mat-form-field>
+                        <mat-form-field class="mr-5">
+                            <mat-label>Nombre </mat-label>
+                            <input matInput formControlName="nombre">
+                        </mat-form-field>
+                        <mat-form-field class="mr-5">
+                            <mat-label>Apellido Paterno </mat-label>
+                            <input matInput formControlName="apepat">
+                        </mat-form-field>
+                        <mat-form-field class="mr-5">
+                            <mat-label>Apellido Materno </mat-label>
+                            <input matInput formControlName="apemat">
+                        </mat-form-field>
+                        <mat-form-field class="mr-5">
+                            <mat-label>Correo </mat-label>
+                            <input matInput formControlName="correo">
+                        </mat-form-field>
+                        <mat-form-field class="mr-5">
+                            <mat-label>Direccion</mat-label>
+                            <input matInput formControlName="direccion">
+                        </mat-form-field>
+                        <mat-form-field class="mr-5">
+                            <mat-label>Contraseña </mat-label>
+                            <input matInput formControlName="password">
+                        </mat-form-field>
 
-                    <mat-form-field class="mr-5">
-                        <mat-label>Correo</mat-label>
-                        <input matInput formControlName="email">
-                    </mat-form-field>
-
-                    <mat-form-field class="mr-5">
-                        <mat-label>Telefono</mat-label>
-                        <input matInput formControlName="phone">
-                    </mat-form-field>
-
-                    <mat-form-field class="mr-5">
-                        <mat-label>Dirección</mat-label>
-                        <input matInput formControlName="direccion">
-                    </mat-form-field>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">Guardar</button>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" (click)="guardarPerfil()">Guardar</button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</ng-container>
+</div>

@@ -64,7 +64,6 @@ export class LoginComponent implements OnInit {
 */
   onLoginCorreo(){
     this.usService.onlogin(this.formLogin.value).subscribe ( resp => {
-
     this.resultado = resp;
     if (this.resultado.data.token != ''){
       localStorage.setItem('SCtoken', this.resultado.data.token);

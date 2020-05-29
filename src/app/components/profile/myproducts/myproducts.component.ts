@@ -64,15 +64,12 @@ export class MyproductsComponent implements OnInit {
         this._cs.consultaCultivo(params).subscribe(datacult => {
         this.myProducts = datacult;
         this.respuesta = this.myProducts.datacult;
-        console.log('2e', this.respuesta)
-
-         /*   console.log('params en my products como se recive',params);
-        console.log('respuesta del servicio',this.myProducts); */
+        console.log('2e', this.respuesta);
         console.log(datacult);
 
         });
-         this._us.consultUserId(params.usuarioCreador).subscribe(dataus=>{
-          this.usua  = dataus;
+        this._us.consultUserId(params.usuarioCreador).subscribe(dataus=>{
+        this.usua  = dataus;
           /* console.log('respuesta usuario',this.usua); */
         });
       }
@@ -81,16 +78,11 @@ export class MyproductsComponent implements OnInit {
 
 
 elimina(id){
-
   this._cs.eliminarCultivo(id).subscribe(data => {
     console.log('Eliminado');
     this.consultar();
-
-});
+  });
 }
-
-
-
 
   handlePage(e: PageEvent){
     this.page_size = e.pageSize

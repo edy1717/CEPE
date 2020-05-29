@@ -8,7 +8,7 @@
                     <div class="col-12">
                         <div class="form-group">
                             <div class="search-box float-left mb-3 ">
-                                <input type="text" class="search-text" name="filterPost" placeholder="Buscar" [(ngModel)]="filterPost">
+                                <input type="text" class="search-text" name="filterPost" placeholder="Buscar">
                                 <a class="search-btn">
                                     <i class="fas fa-search"></i>
                                 </a>
@@ -21,21 +21,21 @@
             </div>
             <table class="table table-hover">
                 <thead>
-                    <tr>
+                    <!-- <tr>
                         <th *ngFor="let head of headElements" scope="col">{{head}} </th>
                         <th scope="col"> &nbsp; </th>
-                    </tr>
+                    </tr> -->
                 </thead>
                 <tbody>
-                    <tr *ngFor="let profil of resultados | filterProfile:filterPost">
+                    <tr *ngFor="let profil of resultados ">
                         <!-- <tr *ngFor="let profil of respuesta.data | filterProfile:filterPost "> -->
                         <th scope="row"> {{profil.id}} </th>
-                        <td> {{profil.nombre}} {{profil.apellidoPaterno}} </td>
+                        <td> {{profil.nombre}} {{profil.apellidoPaterno}} {{profil.apellidoMaterno}}</td>
                         <td> {{profil.email}} </td>
                         <td> {{profil.ubicacion}} </td>
                         <td> {{profil.phone}} </td>
                         <td>
-                            <button class="btn" (click)="openDialog(profil.id)" title="Actualizar Cliente">
+                            <button class="btn" (click)="openDialog(profil.id)">
                                 <i class="fas fa-sync colorActulizar "></i></button>
                             <!-- BOTON DE ELIMINAR -->
                             <button class="btn" (click)="eliminarProfile(profil)">
