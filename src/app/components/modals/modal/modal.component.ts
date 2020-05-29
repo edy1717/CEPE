@@ -40,7 +40,6 @@ export class ModalComponent implements OnInit {
      id : new FormControl (null),
      titulo : new FormControl (null),
      descripcion : new FormControl (null),
-     portada : new FormControl (null),
      cantidad : new FormControl (null),
      medida : new FormControl (null),
      imagen: new FormControl(null),

@@ -1,85 +1,29 @@
-<!-- <div class="col-12" [formGroup]="formActualizarProduct">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title" id="modalProductsLabel">Actualizar Cliente</h2>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Closea">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <mat-form-field class="mr-5">
-            <mat-label>Nombre </mat-label>
-            <input matInput formControlName="titulo">
-          </mat-form-field>
 
-          <mat-form-field class="mr-5">
-            <mat-label>Descripción</mat-label>
-            <input matInput formControlName="descripcion">
-          </mat-form-field>
-
-          <mat-form-field class="mr-5">
-            <mat-label>Imagen</mat-label>
-            <input matInput formControlName="imagen">
-          </mat-form-field>
-
-          <mat-form-field class="mr-5">
-            <mat-label>Cantidad</mat-label>
-            <input matInput formControlName="cantidad">
-          </mat-form-field>
-
-          <mat-form-field class="mr-5">
-            <mat-label >Medida</mat-label>
-            <select matNativeControl required>
-              <input matInput formControlName="medida">
-              <option value=""></option>
-              <option value="kg">Kg</option>
-              <option value="mg">Mg</option>
-              <option value="l">Litros</option>
-              <option value="piezas">Piezas</option>
-            </select>
-          </mat-form-field>
-
-          <mat-form-field class="mr-5">
-            <mat-label>id </mat-label>
-            <input matInput formControlName="id">
-          </mat-form-field>
-
-          <mat-form-field class="mr-5">
-            <mat-label>tipo </mat-label>
-            <input matInput formControlName="tipo">
-          </mat-form-field>
-          
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary" (click)="actualizarCultivo()">Guardar</button>
-        </div>
-      </div>
-    </div>
-  </div>
- 
- -->
-<div class="col-12" [formGroup]="formActualizarProduct">
-    <div class="modal-header">
+  <form [formGroup]="formActualizarProduct">
+    <!-- <div class="modal-header">
         <h2 class="modal-title" id="modalProductsLabel">Actualizar Cliente</h2>
         <button type="button" class="close" data-dismiss="modal" aria-label="Closea">
         <span aria-hidden="true">&times;</span>
       </button>
-    </div>
+    </div> -->
     <div class="card mb-6">
         <div class="row no-gutters">
             <div class="col-md-8">
                 <div class="card-body">
+                  <h2 class="modal-title" id="modalProductsLabel">Actualizar Cliente</h2>
                     <div class="modal-body">
-                        <mat-form-field class="mr-5">
+
+                      <div class="col-12">
+                        <mat-form-field class="col-6">
                             <mat-label>Nombre </mat-label>
                             <input matInput formControlName="titulo">
                         </mat-form-field>
 
-                        <mat-form-field class="mr-5">
+                        <mat-form-field class="col-6">
                             <mat-label>Descripción</mat-label>
                             <input matInput formControlName="descripcion">
                         </mat-form-field>
+                      </div>
 
                         <mat-form-field class="mr-5">
                             <mat-label>Imagen</mat-label>
@@ -113,6 +57,11 @@
                             <input matInput formControlName="tipo">
                         </mat-form-field>
 
+                    <div class="form-group">
+                      <label for="imagen">Suba tu nueva imagen</label>
+                      <input type="file" class="form-control-file" formControlName="imagen">
+                    </div>
+
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-primary" (click)="actualizarCultivo()">Guardar</button>
@@ -121,4 +70,4 @@
             </div>
         </div>
     </div>
-</div>
+  </form> 

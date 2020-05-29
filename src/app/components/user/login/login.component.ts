@@ -14,16 +14,14 @@ export class LoginComponent implements OnInit {
 
   formLogin: FormGroup;
   resultado;
+  respuesta
   private formSubmitAttempt: boolean;
 
   constructor(  private router : Router,
                 private usService : AuthService ) { }
 
-
-
   ngOnInit() {
     this.crearFormulario();
-
   }
 
   crearFormulario() {
@@ -32,9 +30,6 @@ export class LoginComponent implements OnInit {
       password: new FormControl('')
     });
   }
-
-
-
 
 /*
   onLogin(): void {
@@ -71,6 +66,9 @@ export class LoginComponent implements OnInit {
       this.router.navigateByUrl('/home');
 
       console.log(localStorage.getItem('SCtoken'));
+      console.log('res',resp)
+      console.log('resi',this.resultado)
+
       }
     }),error => console.log('erros nemo',error)
   }
