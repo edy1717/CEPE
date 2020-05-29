@@ -40,6 +40,12 @@
                           <option value="piezas">Piezas</option>
                         </select>
                     </mat-form-field>
+
+                    <div class="form-group">
+                        <label for="imagen">Suba tu nueva imagen</label>
+                        <input type="file" class="form-control-file" formControlName="imagen">
+                      </div>
+                      
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn guardar" (click)="save()">Guardar</button>

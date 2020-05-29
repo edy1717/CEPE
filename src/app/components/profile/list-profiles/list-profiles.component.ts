@@ -61,8 +61,17 @@ export class ListProfilesComponent implements OnInit {
   consultar(){
     this._us.consultUsers().subscribe (data => {
       this.respuesta = data;
-      this.resultados = this.respuesta.data;
-      console.log('Profil', this.resultados);
+      this.resultados = this.respuesta.data
+  })
+  }
+
+
+
+openDialogRep(value){
+  const dialogRef = this.dialog.open(ModalReporteComponent, {
+    data: {id : value}
+  });
+  dialogRef.afterClosed().subscribe(resul =>{
   });
   }
   eliminarProfile(id){

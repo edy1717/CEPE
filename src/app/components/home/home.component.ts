@@ -6,7 +6,6 @@ import { FormControl } from '@angular/forms';
 import { FormGroup } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 
-
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -14,24 +13,16 @@ import { MatDialog } from '@angular/material/dialog';
 })
 export class HomeComponent implements OnInit {
 
-
- registros: any[];
  formmyPoduct : FormGroup;
  resultados;
  respuesta;
-
  filterPost = '';
- productos ;
- dataProducts;
- 
-
 
 constructor( public dialog: MatDialog, private _cs: CultivoService ) { }
 
   ngOnInit(): void {
     this.consultar();
     this.formMyProduct();
-
   }
 
   formMyProduct(){

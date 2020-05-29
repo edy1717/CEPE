@@ -3,7 +3,7 @@ import { MatCardModule } from '@angular/material/card';
 import {MatPaginatorModule, MatPaginatorIntl} from '@angular/material/paginator';
 import { CustomMatPaginatorIntl } from '../shared/pipes/paginator-es';
 import {MatDialogModule, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
-import { MatFormFieldModule,  } from '@angular/material/form-field';
+import { MatFormFieldModule, MatFormFieldControl,  } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -49,6 +49,10 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
         {
           provide: MAT_DIALOG_DATA,
           useValue: {},
+        },
+        {
+          provide: MatFormFieldControl,
+          useValue : {}
         }
       ],
 })

@@ -18,6 +18,7 @@ export class MyproductsComponent implements OnInit {
   resultados;
   usua;
   dat
+  myProducts;
 
   filterPost = '';
   headElements = [ '#', 'Nombre', 'Descripcion', 'Imagen', 'Cantidad', 'Medida']
@@ -61,19 +62,15 @@ export class MyproductsComponent implements OnInit {
 
       if(params.usuarioCreador != null){
         this._cs.consultaCultivo(params).subscribe(datacult => {
-        this.resultados = datacult;
-        this.respuesta = this.resultados.datacult;
-        console.log('2e', this.respuesta)
-
-         /*   console.log('params en my products como se recive',params);
-        console.log('respuesta del servicio',this.myProducts); */
+        this.myProducts = datacult;
+        this.respuesta = this.myProducts.datacult;
+        console.log('2e', this.respuesta);
         console.log(datacult);
 
         });
-         this._us.consultUserId(params.usuarioCreador).subscribe(dataus=>{
-          this.usua  = dataus;
-          this.dat = this.usua.dataus;
-          console.log('respuesta usuario',this.usua);
+        this._us.consultUserId(params.usuarioCreador).subscribe(dataus=>{
+        this.usua  = dataus;
+          /* console.log('respuesta usuario',this.usua); */
         });
       }
     });
