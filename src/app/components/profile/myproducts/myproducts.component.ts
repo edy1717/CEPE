@@ -44,7 +44,7 @@ export class MyproductsComponent implements OnInit {
 
   ngOnInit(): void {
     this.consultar();
-    this.formMyProduct();
+    this.formMyProduct(); 
 
   }
 
