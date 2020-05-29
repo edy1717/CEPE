@@ -36,5 +36,7 @@ export class UsuarioService {
     console.log(id);
        return this.http.post(this.url+'/eliminar',id, httpOptions);
   }
-
+  editarPerfil(id){
+    return this.http.post(this.url + '/editar', id, httpOptions);
+  }
 }

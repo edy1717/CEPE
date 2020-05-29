@@ -4,6 +4,7 @@ import { UserInterface } from '../../../interfaces/user';
 import {
     ModalUserprofileComponent
 } from '../../modals/modal-userprofile/modal-userprofile.component';
+import { UsuarioService } from '../../../services/usuario.service';
 import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
 import { FormGroup, FormControl } from '@angular/forms';
@@ -14,51 +15,53 @@ import { FormGroup, FormControl } from '@angular/forms';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
-
-  constructor( private authService : AuthService , public dialog: MatDialog, private router:Router) { }
-
-  public providerId : string = 'null';
-  formMyproduct : FormGroup;
-
-
-  user : UserInterface = {
-    name : '',
-    email : '',
-    photoURL : ''
-  };
+  formMyProfil : FormGroup;
+  resultados;
+  respuesta;
+  constructor( private authService : AuthService , public dialog: MatDialog, private router:Router, private _us:UsuarioService) { }
 
   ngOnInit(): void {
-    // this.authService.isAuth().subscribe(user =>  {
-    //   if(user){
-    //     this.user.name = user.displayName;
-    //     this.user.email = user.email
-    //     this.user.photoURL = user.photoURL
-    //     this.providerId = user.providerData[0].providerId;
-    //   }
-    // })
-    this.formMyProduct();
+    this.consultar();
+    this.formProfil();
   }
 
-
-  formMyProduct(){
-    this.formMyproduct = new FormGroup ({
-      nombre : new FormControl (),
-      Apepat : new FormControl(),
-      Apemat : new FormControl(),
-      email : new FormControl(),
-      contra : new FormControl()
+  formProfil(){
+    this.formMyProfil = new FormGroup ({
+      nombre : new FormControl (''),
+      apepat : new FormControl (''),
+      apemat : new FormControl (''),
+      correo : new FormControl (''),
+      contrasena: new FormControl  ('')
     })
   }
-
-  openDialog(valor){
+  openDialog(value){
     const dialogRef = this.dialog.open(ModalUserprofileComponent, {
       width: '450px',
-      data: { item : valor }
+      data: { id : value }
     });
     dialogRef.afterClosed().subscribe(result => {
     });
-
   }
+
+  consultar(){
+    this._us.consultUsers().subscribe (data => {
+      this.respuesta = data;
+      this.resultados = this.respuesta.data;
+      console.log('anna', this.resultados);
+  });
+  }
+
+
+
+
+
+
+
+
+
+
+
+
 
   // Rutas
   rutProd(){
