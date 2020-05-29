@@ -31,15 +31,12 @@
                 </thead>
                 <tbody>
                     <tr *ngFor="let report of resultados">
-                        <td>{{report.nombre}}</td>
+                        <td> {{report.id}} </td>
+                        <td>{{report.razon}}</td>
                         <td>{{report.descripcion}} </td>
-                        <td>{{report.tiporepo}}</td>
-                        <td> {{report.estatusrepo}}</td>
-                        <td>{{report.resolucion}}</td>
-
-                        <td>
-                            <button class="btn actualizar " data-toggle="modal" data-target="#modalMyProducts">Actualizar</button>
-                        </td>
+                        <td>{{report.usuarioReportado}}</td>
+                        <td> {{report.usuarioCreador}}</td>
+                        <td>{{report.fecha}}</td>
                         <td>
                             <button class="btn btn-danger ">Eliminar</button>
                         </td>

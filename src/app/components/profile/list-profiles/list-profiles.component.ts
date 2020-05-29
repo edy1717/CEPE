@@ -1,10 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { PageEvent } from '@angular/material/paginator';
 import { FormGroup, FormControl } from '@angular/forms';
 import { UsuarioService } from '../../../services/usuario.service';
-import { ModalProfileComponent } from '../../modals/modal-profile/modal-profile.component';
-import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
+
+// IMPORTACION DE MODALES
+import { ModalReporteComponent } from '../../modals/modal-reporte/modal-reporte.component';
+import { ModalProfileComponent } from '../../modals/modal-profile/modal-profile.component';
 
 @Component({
   selector: 'app-list-profiles',
