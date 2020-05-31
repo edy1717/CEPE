@@ -17,12 +17,18 @@ export class HomeComponent implements OnInit {
  resultados;
  respuesta;
  filterPost = '';
+ imagenF : any ;
+ 
 
-constructor( public dialog: MatDialog, private _cs: CultivoService ) { }
+
+constructor( public dialog: MatDialog, private _cs: CultivoService, ) {
+  
+ }
 
   ngOnInit(): void {
     this.consultar();
     this.formMyProduct();
+    this.file()
   }
 
   formMyProduct(){
@@ -58,5 +64,19 @@ constructor( public dialog: MatDialog, private _cs: CultivoService ) { }
     dialogRef.afterClosed().subscribe(result => {
     });
   }
+
+  file(){
+    let base64;
+    this._cs.consultarTodosCultivos().subscribe ((data: any) => {
+      this.respuesta = data;
+      this.resultados = this.respuesta.data
+      base64 = this.resultados[0].imagen
+      // console.log('im', base64)
+      const imageFile =  'data: image/jpeg' + base64;;
+      this.imagenF = imageFile
+
+  })
+}
+
 
 }

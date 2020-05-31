@@ -5,8 +5,8 @@
 }
 
 .card {
-  margin-top: 20px;
-  max-width: 400px;
+  margin-top: 8%;
+  max-width: 100%;
   background-color: none;
   justify-content: center;
   border: none;
@@ -14,9 +14,10 @@
 }
 
 .card-body img {
-  width: auto;
-  height: 165px;
+  height: 70%;
   color: black;
+  max-width: 100%;
+  margin-left: 8%;
 }
 
 .card-color{
@@ -28,3 +29,4 @@
 .color {
   color: #743B8F;
 }
+

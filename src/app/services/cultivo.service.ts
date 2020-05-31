@@ -35,10 +35,9 @@ export class CultivoService {
   }
   // x id
   consultaCultivo(data){
-    // const token = this.authService.getToken();
-    // console.log('como recibe el servicio', data);
     return this.http.post(this.url + '/buscar', data, httpOptions);
   }
+
 
   consultarTodosCultivos(){
     return this.http.get(this.url + '/obtener/todos', httpOptions);

@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, DomSanitizer } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
@@ -36,7 +36,7 @@ import { ModalOffersComponent } from './components/modals/modal-offers/modal-off
 import { ModalComponent } from './components/modals/modal/modal.component';
 import { ModalProfileComponent } from './components/modals/modal-profile/modal-profile.component'
 import { ModalHomeComponent } from './components/modals/modal-home/modal-home.component';
-
+import { safeUrlPipe } from './shared/pipes/safe-url.pipe';
 
 
 @NgModule({
@@ -64,6 +64,7 @@ import { ModalHomeComponent } from './components/modals/modal-home/modal-home.co
     ModalReporteComponent,
     ModalUserprofileComponent,
     ReportsComponent,
+    safeUrlPipe,
   ],
   imports: [
     BrowserModule,
@@ -75,14 +76,7 @@ import { ModalHomeComponent } from './components/modals/modal-home/modal-home.co
     ThemeModule,
   ],
   providers: [
-    // AngularFireAuth,
-    // AngularFirestore,
-    // AuthService,
-    // {
-    //   provide: HTTP_INTERCEPTORS,
-    //   useClass: AuthInterceptorService,
-    //   multi: true
-    // }
+   
   ],
   bootstrap: [AppComponent,
       ],

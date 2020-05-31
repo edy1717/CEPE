@@ -20,22 +20,19 @@ export class ListProfilesComponent implements OnInit {
   forPerfil : FormGroup;
   resultados;
   respuesta;
+  filterPost = '';
 
-  // formListProfil : FormGroup;
   // dataProfiles;
-  // filterPost = '';
   // respuesta;
   // resultados;
 
   // cultivo;
-  // headElements = ['Id', 'Nombre', 'Correo', 'Direccion', 'Telefono'];
+  headElements = ['Id', 'Nombre', 'Correo', 'Direccion', 'Telefono'];
 
   constructor(  private _us: UsuarioService, public dialog: MatDialog, private router: Router) { }
 
 
   ngOnInit(): void {
-    // this.getListProfile();
-    // this.getListProduct();
     this.consultar();
     this.formMyProfil();
   }
@@ -62,9 +59,9 @@ export class ListProfilesComponent implements OnInit {
     this._us.consultUsers().subscribe (data => {
       this.respuesta = data;
       this.resultados = this.respuesta.data
+      console.log(this.resultados)
   })
   }
-
 
 
 openDialogRep(value){
@@ -74,7 +71,8 @@ openDialogRep(value){
   dialogRef.afterClosed().subscribe(resul =>{
   });
   }
-  eliminarProfile(id){
+
+eliminarProfile(id){
     this._us.eliminarPerfil(id).subscribe(data => {
       console.log('Eliminado');
       this.consultar();

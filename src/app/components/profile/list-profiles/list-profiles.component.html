@@ -7,45 +7,42 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="form-group">
-                            <div class="search-box float-left mb-3 ">
-                                <input type="text" class="search-text" name="filterPost" placeholder="Buscar">
+                            <div class="search-box float-left mb-6 ">
+                                <input type="text" class="search-text" name="filterPost" placeholder="Buscar" [(ngModel)]="filterPost">
                                 <a class="search-btn">
                                     <i class="fas fa-search"></i>
                                 </a>
                             </div>
-                            <!-- <mat-paginator   [pageSizeOptions]="pageSizeOptions" (page)="handlePage($event) ">
-                            </mat-paginator>  -->
                         </div>
                     </div>
                 </div>
             </div>
             <table class="table table-hover">
                 <thead>
-                    <!-- <tr>
+                     <tr>
                         <th *ngFor="let head of headElements" scope="col">{{head}} </th>
                         <th scope="col"> &nbsp; </th>
-                    </tr> -->
+                    </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let profil of resultados ">
-                        <!-- <tr *ngFor="let profil of respuesta.data | filterProfile:filterPost "> -->
+                    <tr *ngFor="let profil of resultados | filterProfile:filterPost">
                         <th scope="row"> {{profil.id}} </th>
                         <td> {{profil.nombre}} {{profil.apellidoPaterno}} {{profil.apellidoMaterno}}</td>
                         <td> {{profil.email}} </td>
                         <td> {{profil.ubicacion}} </td>
                         <td> {{profil.phone}} </td>
                         <td>
-                            <button class="btn" (click)="openDialog(profil.id)">
-                                <i class="fas fa-sync colorActulizar "></i></button>
+                            <button class="btn" (click)="openDialog(profil.id)" data-placement="top" title="Actualizar Cliente">
+                                <i class="fas fa-sync button colorActulizar"></i></button>
                             <!-- BOTON DE ELIMINAR -->
-                            <button class="btn" (click)="eliminarProfile(profil)">
-                                <i class="fas fa-trash-alt colorDelete"></i></button>
+                            <button class="btn" (click)="eliminarProfile(profil)" data-placement="top" title="Eliminar Cliente">
+                                <i class="fas fa-trash-alt button colorDelete"></i></button>
                             <!-- BOTON DE DETALLE -->
                             <button class="btn" (click)="openDialog(profil.id)" data-placement="top" title="Reportar Cliente">
-                                <i class="fas fa-user-edit colorReportar "></i></button>
+                                <i class="fas fa-user-edit button colorDetalle "></i></button>
                             <!-- BOTON DE LISTAS -->
                             <button class="btn" placeholder="list-product" data-placement="top" title="Ver Productos del Cliente" (click)="misProductos(profil.id)">
-                                <i class="fas fa-list-ul colorDetalle"></i></button>
+                                <i class="fas fa-list-ul button colorReportar"></i></button>
                         </td>
                     </tr>
                 </tbody>
