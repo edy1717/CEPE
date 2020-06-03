@@ -5,6 +5,7 @@ import {
     ModalUserprofileComponent
 } from '../../modals/modal-userprofile/modal-userprofile.component';
 import { UsuarioService } from '../../../services/usuario.service';
+import { LoginComponent } from '../../user/login/login.component';
 import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
 import { FormGroup, FormControl } from '@angular/forms';
@@ -18,21 +19,26 @@ export class ProfileComponent implements OnInit {
   formMyProfil : FormGroup;
   resultados;
   respuesta;
+  usuario:{};
+
+
   constructor( private authService : AuthService , public dialog: MatDialog, private router:Router, private _us:UsuarioService) { }
 
   ngOnInit(): void {
     this.consultar();
     this.formProfil();
+    this.buscar();
+    this.formMyProfil.get('nombre').patchValue(this.usuario);
   }
 
   formProfil(){
     this.formMyProfil = new FormGroup ({
-      nombre : new FormControl (''),
-      apepat : new FormControl (''),
-      apemat : new FormControl (''),
-      correo : new FormControl (''),
-      contrasena: new FormControl  ('')
-    })
+      nombre : new FormControl ({value: '', disabled: true}),
+      apepat : new FormControl ({value: '', disabled: true}),
+      apemat : new FormControl ({value: '', disabled: true}),
+      correo : new FormControl ({value: '', disabled: true}),
+      contrasena: new FormControl ({value: '', disabled: true})
+    });
   }
   openDialog(value){
     const dialogRef = this.dialog.open(ModalUserprofileComponent, {
@@ -47,33 +53,14 @@ export class ProfileComponent implements OnInit {
     this._us.consultUsers().subscribe (data => {
       this.respuesta = data;
       this.resultados = this.respuesta.data;
-      console.log('anna', this.resultados);
   });
   }
 
+  buscar(){
+  this._us.buscarUserId(localStorage.getItem('idusu')).subscribe (data =>{
+  this.usuario=data['data'];
+  // console.log(this.usuario);
+  });
+ }
 
-
-
-
-
-
-
-
-
-
-
-
-  // Rutas
-  rutProd(){
-    this.router.navigate(['admin/list-products']);
-  }
-  rutPerfiles(){
-    this.router.navigate(['admin/list-profiles']);
-  }
-  rutPost(){
-    this.router.navigate(['admin/offers']);
-  }
-  rutReport(){
-    this.router.navigate(['admin/reports']);
-  }
 }

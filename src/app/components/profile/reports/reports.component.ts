@@ -39,9 +39,9 @@ export class ReportsComponent implements OnInit {
 
   consulta(){
     this._rp.consultarReport().subscribe( data =>{
-      this.respuesta = data
-      this.resultados = this.respuesta.data
-      console.log(this.respuesta)
+      this.respuesta = data;
+      this.resultados = this.respuesta.data;
+      // console.log(this.respuesta)
 
     })
   }
@@ -55,14 +55,13 @@ export class ReportsComponent implements OnInit {
     });
   }
 
-//   eliminarPost(id){
+  eliminarReport(id){
 
-//     this._rp.(id).subscribe(data => {
-//       console.log('Eliminado');
-//       this.consultar();
+     this._rp.eliminarReport(id).subscribe(data => {
+     this.consulta();
 
-//  });
-//  }
+  });
+ }
 
 
   handlePage(e: PageEvent){

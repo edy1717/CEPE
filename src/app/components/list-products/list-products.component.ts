@@ -64,11 +64,8 @@ export class ListProductsComponent implements OnInit {
   }
 
   elimina(id){
-
      this._sc.eliminarCultivo(id).subscribe(data => {
-       console.log('Eliminado');
-       this.consultar();
-
+     this.consultar();
   });
   }
 

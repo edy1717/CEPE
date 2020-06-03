@@ -47,6 +47,7 @@ export class NavbarComponent implements OnInit {
 
   onLogout() {
     localStorage.removeItem('SCtoken');
+    localStorage.removeItem('idusu');
     this.router.navigateByUrl('/home');
   }
 

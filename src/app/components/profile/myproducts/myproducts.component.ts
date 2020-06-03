@@ -5,6 +5,10 @@ import { PageEvent } from '@angular/material/paginator';
 import { FormGroup, FormControl } from '@angular/forms';
 import { CultivoService } from '../../../services/cultivo.service';
 import { UsuarioService } from '../../../services/usuario.service';
+import {
+    ModalMyProductsComponent
+} from '../../modals/modal-my-products/modal-my-products.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-myproducts',
@@ -13,8 +17,8 @@ import { UsuarioService } from '../../../services/usuario.service';
 })
 export class MyproductsComponent implements OnInit {
 
-  formMyproduct : FormGroup;
-  respuesta;
+  formMyproduct: FormGroup;
+
   resultados;
   usua;
   dat
@@ -27,14 +31,14 @@ export class MyproductsComponent implements OnInit {
 
   constructor(private activatedRoute: ActivatedRoute,
               private _cs: CultivoService,
-              private _us: UsuarioService ) {
+              private _us: UsuarioService, public dialog: MatDialog ) {
 
    }
 
    formMyProduct(){
      this.formMyproduct = new FormGroup ({
        id : new FormControl (),
-       nombre : new FormControl(),
+       titulo : new FormControl(),
        descripción : new FormControl(),
        imagen : new FormControl(),
        cantidad : new FormControl(),
@@ -47,15 +51,15 @@ export class MyproductsComponent implements OnInit {
     this.formMyProduct();
 
   }
+  openDialog(value){
+    const dialogRef = this.dialog.open(ModalMyProductsComponent, {
+      width: '450px',
+      data: { id : value }
+      });
 
-
-  // consulta(data){
-  //   this._us.consultUserId(data).subscribe (data => {
-  //     this.respuesta = data;
-  //     this.resultados = this.respuesta.data
-  //     console.log('pp', this.resultados)
-  // })
-  // }
+    dialogRef.afterClosed().subscribe(result => {
+    });
+  }
 
   consultar(){
      this.activatedRoute.params.subscribe (params => {
@@ -63,14 +67,10 @@ export class MyproductsComponent implements OnInit {
       if(params.usuarioCreador != null){
         this._cs.consultaCultivo(params).subscribe(datacult => {
         this.myProducts = datacult;
-        this.respuesta = this.myProducts.datacult;
-        console.log('2e', this.respuesta);
-        console.log(datacult);
-
+        this.resultados = this.myProducts;
         });
         this._us.consultUserId(params.usuarioCreador).subscribe(dataus=>{
         this.usua  = dataus;
-          /* console.log('respuesta usuario',this.usua); */
         });
       }
     });
@@ -79,8 +79,7 @@ export class MyproductsComponent implements OnInit {
 
 elimina(id){
   this._cs.eliminarCultivo(id).subscribe(data => {
-    console.log('Eliminado');
-    this.consultar();
+  this.consultar();
   });
 }
 

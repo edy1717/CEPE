@@ -21,10 +21,10 @@
             </div>
             <table class="table table-hover">
                 <thead>
-                    <!-- <tr>
+                    <tr>
                         <th *ngFor="let head of headElements" scope="col">{{head}} </th>
                         <th scope="col"> &nbsp; </th>
-                    </tr> -->
+                    </tr>
                 </thead>
                 <tbody>
                     <tr *ngFor="let profil of resultados ">
@@ -35,13 +35,13 @@
                         <td> {{profil.ubicacion}} </td>
                         <td> {{profil.phone}} </td>
                         <td>
-                            <button class="btn" (click)="openDialog(profil.id)">
+                            <button class="btn" (click)="openDialog(profil)">
                                 <i class="fas fa-sync colorActulizar "></i></button>
                             <!-- BOTON DE ELIMINAR -->
                             <button class="btn" (click)="eliminarProfile(profil)">
                                 <i class="fas fa-trash-alt colorDelete"></i></button>
                             <!-- BOTON DE DETALLE -->
-                            <button class="btn" (click)="openDialog(profil.id)" data-placement="top" title="Reportar Cliente">
+                            <button class="btn" (click)="openDialogRep(profil.id)" data-placement="top" title="Reportar Cliente">
                                 <i class="fas fa-user-edit colorReportar "></i></button>
                             <!-- BOTON DE LISTAS -->
                             <button class="btn" placeholder="list-product" data-placement="top" title="Ver Productos del Cliente" (click)="misProductos(profil.id)">

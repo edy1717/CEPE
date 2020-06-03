@@ -13,39 +13,43 @@ export class ModalReporteComponent implements OnInit {
 
   formReporte : FormGroup;
   respuesta;
+  dataPost;
   resultado;
 
   constructor(public dialogRef: MatDialogRef<ModalReporteComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any, private _reports: ReporteService
+              @Inject(MAT_DIALOG_DATA) public data: any, private _reports: ReporteService
                 ) { }
 
   ngOnInit(): void {
+
     this.formReporteUs();
-    this.formReporte.get('id').patchValue(this.data.id);
+    this.getListPost();
+    this.dataPost = this.data;
+    this.formReporte.get('usuarioCreador').patchValue(localStorage.getItem('idusu'));
+    this.formReporte.get('usuarioReportado').patchValue(this.data.id);
 
   }
 
   formReporteUs(){
-  this.formReporte = new FormGroup({
-    id : new FormControl (null),
+    this.formReporte = new FormGroup({
     razon : new FormControl (null),
     descripcion : new FormControl (),
     usuarioCreador : new FormControl (null),
     usuarioReportado : new FormControl (null)
 
-  })
-}
-save(){
-  console.log(this.formReporte);
-}
-  actualizarCultivo(){
-  this._reports.enviarReporte(this.formReporte.value)
-  .subscribe (respBack => {
-    this.respuesta = respBack;
-    this.resultado = this.respuesta.respBack;
   });
-   console.log('form',this.formReporte.value)
-   console.log('cultivo', this.formReporte.get('id').value)
+}
+getListPost(){
+  this.dataPost = this._reports.reportUser(this.dataPost);
+}
+
+enviarReport(){
+   this._reports.enviarReporte(this.formReporte.value)
+   .subscribe (respBack => {
+   this.respuesta = respBack;
+   });
+   this.getListPost();
+   this.dialogRef.close();
  }
 
 

@@ -54,9 +54,6 @@ export class OffersComponent implements OnInit {
     this.offerServ.consultarTodosPost().subscribe (data => {
       this.respuesta = data;
       this.resultados = this.respuesta.data;
-      console.log('pp', this.resultados)
-      this.resultados = this.respuesta.data;
-      console.log('anna', this.resultados);
   });
   }
 
@@ -70,7 +67,7 @@ export class OffersComponent implements OnInit {
  }
 
   handlePage(e: PageEvent){
-    this.page_size = e.pageSize
+    this.page_size = e.pageSize;
     this.page_number = e.pageIndex + 1
   }
 

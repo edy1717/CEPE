@@ -10,7 +10,7 @@
 .card {
     margin-top: 20px;
     max-width: 400px;
-    height: 180px;
+    height: 165px;
     background-color: transparent;
     justify-content: center;
     margin-bottom: 10px;
@@ -31,18 +31,22 @@ mat-card-actions {
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
+    margin-top: 20%;
 }
 
 .actualizar {
     background: #418215;
     color: white;
+    margin-left: 8px;
     margin-right: 5px;
+    font-size: 12px;
 }
 
 .eliminar {
     background-color: red;
     color: white;
     margin-left: 10px;
+    font-size: 12px;
 }
 
 mat-card-content p {

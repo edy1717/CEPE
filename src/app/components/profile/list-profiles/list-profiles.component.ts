@@ -17,25 +17,14 @@ import { ModalProfileComponent } from '../../modals/modal-profile/modal-profile.
 export class ListProfilesComponent implements OnInit {
 
   perfiles: any[];
+  headElements = ['#','Nombre','Email','Ubicación', 'Teléfono' ];
   forPerfil : FormGroup;
   resultados;
   respuesta;
 
-  // formListProfil : FormGroup;
-  // dataProfiles;
-  // filterPost = '';
-  // respuesta;
-  // resultados;
-
-  // cultivo;
-  // headElements = ['Id', 'Nombre', 'Correo', 'Direccion', 'Telefono'];
-
   constructor(  private _us: UsuarioService, public dialog: MatDialog, private router: Router) { }
 
-
   ngOnInit(): void {
-    // this.getListProfile();
-    // this.getListProduct();
     this.consultar();
     this.formMyProfil();
   }
@@ -61,22 +50,24 @@ export class ListProfilesComponent implements OnInit {
   consultar(){
     this._us.consultUsers().subscribe (data => {
       this.respuesta = data;
-      this.resultados = this.respuesta.data
+      this.resultados = this.respuesta.data;
+      // console.log(this.resultados);
+
   })
   }
 
-
-
 openDialogRep(value){
   const dialogRef = this.dialog.open(ModalReporteComponent, {
+    width: '450px',
     data: {id : value}
   });
   dialogRef.afterClosed().subscribe(resul =>{
   });
   }
+
   eliminarProfile(id){
     this._us.eliminarPerfil(id).subscribe(data => {
-      console.log('Eliminado');
+      // console.log('Eliminado');
       this.consultar();
 
  });

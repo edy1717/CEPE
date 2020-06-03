@@ -35,12 +35,11 @@
                         <td> {{product.cantidad}} </td>
                         <td> {{product.medida}} </td>
                         <td>
-                            <button class="btn actualizar" (click)="openDialog(product.id)">Actualizar</button>
-                        </td>
-                        <td>
+                            <button class="btn actualizar" (click)="openDialog(product)">Actualizar</button>
                             <button class="btn btn-danger" (click)="elimina(product)">Eliminar</button>
-                            <!-- (click)="onDeleteProducts(i)" -->
+
                         </td>
+
                     </tr>
                 </tbody>
             </table>

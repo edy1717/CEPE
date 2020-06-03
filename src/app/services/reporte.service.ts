@@ -24,8 +24,11 @@ export class ReporteService {
   }
 
   enviarReporte(data){
-    return this.http.post(this.url + '/enviar',data, httpOptions)
+    return this.http.post(this.url + '/enviar', data, httpOptions)
   }
 
+  eliminarReport(data){
+    return this.http.post(this.url + '/eliminar', data, httpOptions);
 
+  }
 }

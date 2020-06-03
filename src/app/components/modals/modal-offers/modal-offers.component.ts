@@ -22,11 +22,10 @@ export class ModalOffersComponent implements OnInit {
   ngOnInit(): void {
     this.formPost();
     this.getListPost();
-    this.dataPost = this.data.item;
-    this.formPosts.get('id').patchValue(this.data.id);
-
-  //  console.log('A', this.formPosts.value);
-  //  console.log('Ana', this.data);
+    this.dataPost = this.data;
+    console.log(this.data.id.id);
+    this.formPosts.get('id').patchValue(this.data.id.id);
+    this.formPosts.get('contenido').patchValue(this.data.id.contenido);
 }
 
   formPost(){
@@ -41,15 +40,16 @@ export class ModalOffersComponent implements OnInit {
   }
 
   guardarActPost(){
-    console.log(this._postServ);
-
     this._postServ.editarPost(this.formPosts.value)
     .subscribe (respBack => {
       this.respuesta = respBack;
-      this.respBack = this.respuesta.codigoOperacionBackend;
     });
     console.log('form',this.formPosts.value)
-    console.log('Post', this.formPosts.get('id').value)
+
+    this.getListPost();
    }
 
+   cerrarModal(){
+    this.dialogRef.close();
+   }
 }

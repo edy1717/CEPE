@@ -25,34 +25,36 @@ export class ModalProfileComponent implements OnInit {
     this.actualizarPerfil();
     this.getListPost();
     this.dataPost = this.data.item;
-    this.formPerfil.get('id').patchValue(this.data.id);
+    this.formPerfil.get('id').patchValue(this.data.id.id);
+    this.formPerfil.get('nombre').patchValue(this.data.id.nombre);
+    this.formPerfil.get('apellidoPaterno').patchValue(this.data.id.apellidoPaterno);
+    this.formPerfil.get('apellidoMaterno').patchValue(this.data.id.apellidoMaterno);
+    this.formPerfil.get('email').patchValue(this.data.id.email);
+    this.formPerfil.get('ubicacion').patchValue(this.data.id.ubicacion);
+
   }
 
   actualizarPerfil(){
     this.formPerfil = new FormGroup ({
       id : new FormControl (''),
       nombre: new FormControl  (''),
-      apepat: new FormControl  (''),
-      apemat: new FormControl  (''),
-      correo: new FormControl  (''),
-      direccion: new FormControl  (''),
-      telefono: new FormControl  (''),
-      password: new FormControl  ('')
-
-    })
+      apellidoPaterno: new FormControl  (''),
+      apellidoMaterno: new FormControl  (''),
+      email: new FormControl  (''),
+      ubicacion: new FormControl  (''),
+      telefono: new FormControl  ('')
+    });
   }
   getListPost(){
     this.dataPost = this._use.consultUserId(this.dataPost);
   }
   guardarPerfil(){
-    console.log(this._use);
     this._use.editarPerfil(this.formPerfil.value)
     .subscribe (respBack => {
       this.respuesta = respBack;
       this.respBack = this.respuesta.codigoOperacionBackend;
     });
-    console.log('form',this.formPerfil.value)
-    console.log('Post', this.formPerfil.get('id').value)
+    this.dialogRef.close();
    }
 
 }

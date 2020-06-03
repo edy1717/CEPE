@@ -29,38 +29,40 @@ export class ModalComponent implements OnInit {
    this.formProduct();
    this.getListProduct();
    this.dataProducts = this.data.item;
-   this.formActualizarProduct.get('id').patchValue(this.data.id);
-  //  console.log('on', this.formActualizarProduct.value);
-  //  console.log('data', this.data);
-}
+   this.formActualizarProduct.get('id').patchValue(this.data.id.id);
+   this.formActualizarProduct.get('titulo').patchValue(this.data.id.titulo);
+   this.formActualizarProduct.get('tipo').patchValue(this.data.id.tipo);
+   this.formActualizarProduct.get('descripcion').patchValue(this.data.id.descripcion);
+   this.formActualizarProduct.get('medida').patchValue(this.data.id.medida);
+   this.formActualizarProduct.get('cantidad').patchValue(this.data.id.cantidad);
 
+}
 
  formProduct(){
    this.formActualizarProduct = new FormGroup({
      id : new FormControl (null),
      titulo : new FormControl (null),
+     tipo : new FormControl (null),
      descripcion : new FormControl (null),
-     cantidad : new FormControl (null),
      medida : new FormControl (null),
-     imagen: new FormControl(null),
-     tipo : new FormControl (null)
+     cantidad : new FormControl (null),
+     imagen: new FormControl(null)
+
    })
  }
-
 
 getListProduct(){
   this.dataProducts = this._cs.consultaCultivo(this.dataProducts);
 }
 
-
  actualizarCultivo(){
-  this._cs.editarCultivo(this.formActualizarProduct.value)
-  .subscribe (respBack => {
-    this.respuesta = respBack;
-    this.respBack = this.respuesta.codigoOperacionBackend;
-  });
-   console.log('form',this.formActualizarProduct.value)
-   console.log('cultivo', this.formActualizarProduct.get('id').value)
+    this._cs.editarCultivo(this.formActualizarProduct.value)
+    .subscribe (respBack => {
+      this.respuesta = respBack;
+      this.respBack = this.respuesta.codigoOperacionBackend;
+    });
+    this.getListProduct();
+    this.dialogRef.close();
  }
 
 

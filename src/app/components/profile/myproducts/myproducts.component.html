@@ -34,8 +34,8 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let a of respuesta | filter:filterPost ">
-                        <th scope="row "></th>
+                    <tr *ngFor="let a of resultados.data | filter:filterPost ">
+                        <th scope="row ">{{a.id}}</th>
                         <td>{{a.titulo}}</td>
                         <td>{{a.descripcion}} </td>
                         <td>{{a.portada}}</td>
@@ -43,9 +43,7 @@
                         <td>{{a.medida}}</td>
 
                         <td>
-                            <button class="btn actualizar" data-toggle="modal" data-target="#modalMyProducts">Actualizar</button>
-                        </td>
-                        <td>
+                            <button class="btn actualizar" (click)="openDialog(a)">Actualizar</button>
                             <button class="btn btn-danger  " (click)="elimina(a)">Eliminar</button>
                         </td>
                     </tr>
@@ -54,4 +52,3 @@
         </div>
     </section>
 </div>
-<app-modal-my-products></app-modal-my-products>

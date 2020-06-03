@@ -21,24 +21,21 @@ export class AuthService {
   }
 
 
-    onlogin(data){
+onlogin(data){
       return this.http.post(this.url + '/login', data, {headers : this.headers} )
       .pipe(map(data => data))
-    }
+}
 
-    getRefreshToken()
-  {
+getRefreshToken(){
     let token = localStorage.getItem('refreshToken');
     return token
-  }
- setRefreshToken(refreshToken): void
-  {
+}
+
+setRefreshToken(refreshToken): void{
     localStorage.setItem('refreshToken',refreshToken);
-  }
+}
 
-
-  refreshToken()
-    {
+refreshToken(){
       return this.http.post<any>(
         this.url + '/refreshToken',
         { 'refreshToken': this.getRefreshToken() }
@@ -46,23 +43,19 @@ export class AuthService {
         let reToken = tokens.refreshtoken;
         this.setRefreshToken(reToken);
       }));
-    }
+}
 
-  logout()
-  {
+logout(){
       localStorage.removeItem('SCtoken');
   }
 
-    setToken(token): void
-    {
+setToken(token): void{
       localStorage.setItem('SCtoken', token);
-    }
-    getToken()
-    {
+}
+getToken(){
       return localStorage.getItem('SCtoken');
-    }
-
-    getCurrentUser(): UserInterface{
+}
+getCurrentUser(): UserInterface{
       let user_string = localStorage.getItem('currentUser');
       if(!isNullOrUndefined(user_string)){
         let user = JSON.parse(user_string)

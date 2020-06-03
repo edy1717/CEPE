@@ -18,7 +18,7 @@ export class UsuarioService {
   constructor( private http: HttpClient, private authService: AuthService  ) { }
 
   registerUser(data){
-    return this.http.post(this.url+'/registrar', data)
+    return this.http.post(this.url + '/registrar', data);
   }
 
   consultUsers(){
@@ -28,15 +28,21 @@ export class UsuarioService {
   consultUserId(data){
 
    let id = {id:data};
-      console.log(id);
-    return this.http.post(this.url + '/obtener',id, httpOptions);
+      // console.log(id);
+   return this.http.post(this.url + '/obtener', id, httpOptions);
+  }
+
+  buscarUserId(data){
+    let id = {id:data};
+    return this.http.post(this.url + '/buscar', id, httpOptions);
   }
 
   eliminarPerfil(id){
-    console.log(id);
-       return this.http.post(this.url+'/eliminar',id, httpOptions);
+    // console.log(id);
+    return this.http.post(this.url + '/eliminar', id, httpOptions);
   }
-  editarPerfil(id){
-    return this.http.post(this.url + '/editar', id, httpOptions);
+  editarPerfil(data){
+    // console.log(data);
+    return this.http.post(this.url + '/editar', data, httpOptions);
   }
 }
