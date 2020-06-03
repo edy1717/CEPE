@@ -4,23 +4,19 @@
     <div class="row">
         <div class="col-12">
             <div class="form-group">
-                <div class="search-box float-left mb-3 ">
-                    <input type="text" class="search-text" name="filterPost" placeholder="Buscar">
-                    <!-- [(ngModel)]="filterPost" -->
+                <div class="search-box float-left mb-6 ">
+                    <input type="text" class="search-text" name="filterPost" placeholder="Buscar" [(ngModel)]="filterPost">
                     <a class="search-btn">
                         <i class="fas fa-search"></i>
                     </a>
                 </div>
-                <mat-paginator>
-                </mat-paginator>
             </div>
         </div>
     </div>
 </div>
 <div class="main-container">
     <div class="row">
-        <div class="col-lg-3 col-md-4 col-sm-12" *ngFor="let post of resultados">
-            <!-- <div class="col-lg-3 col-md-4 col-sm-12" *ngFor="let product of respuesta.data | filter:filterPost| paginate:page_size:page_number">  -->
+        <div class="col-lg-3 col-md-4 col-sm-12" *ngFor="let post of resultados | filter:filterPost">
             <mat-card class="card">
                 <mat-card-content>
                     <!-- <h4 routerLink="/product/{{product.id}} " class="card-title text-center"><b>Nuestro {{product.id}}</b></h4> -->

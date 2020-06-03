@@ -49,9 +49,9 @@
         </div>
 
         <div class="col-12">
-            <div class="form-group">
-                <label for="imagen">Suba tu nueva imagen</label>
-                <input type="file" class="form-control-file" formControlName="imagen">
+            <div class="form-group"> {{imageError}}
+                <label for="file" class="labels">imagen: </label>
+                <input #fileInput name="files[]" type="file" (change)="onFileSelected($event)" accept="application/jpeg">
             </div>
         </div>
 

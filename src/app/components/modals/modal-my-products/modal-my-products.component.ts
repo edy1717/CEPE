@@ -2,6 +2,7 @@
 import { CultivoService } from '../../../services/cultivo.service';
 import { Component, OnInit, Inject } from '@angular/core';
 import { FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
+import { FileReaderPromiseLikeService } from 'fctrlx-angular-file-reader';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 
 @Component({
@@ -10,14 +11,17 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
   styleUrls: ['./modal-my-products.component.css']
 })
 export class ModalMyProductsComponent implements OnInit {
-
   formActualizarProductClient: FormGroup;
   dataProducts;
   respuesta;
   respBack;
+  archivos: any;
+  imag;
+  imageError: string;
 
   constructor(private _cu: CultivoService, public dialogRef: MatDialogRef<ModalMyProductsComponent>,
-              @Inject(MAT_DIALOG_DATA) public data: any) { }
+              @Inject(MAT_DIALOG_DATA) public data: any,
+              private promiseService: FileReaderPromiseLikeService) { }
 
   ngOnInit(): void {
     this.formActProClient();
@@ -47,6 +51,25 @@ export class ModalMyProductsComponent implements OnInit {
     this.dataProducts = this._cu.consultaCultivo(this.dataProducts);
   }
 
+  onFileSelected(event: any)
+  {
+    const file = event.target.files[0] ? event.target.files[0] : false;
+    const max_size = 20971520;
+    if (event.target.files[0].size > max_size) {
+     this.imageError =
+         'Maximum size allowed is ' + max_size / 1000 + 'Mb';
+
+     return false;
+ }
+      if(file)
+      {
+      this.promiseService.toBase64(file).then((result) => {
+      const image = result.split(',')[1];
+      let imageb64 = image.slice(4)
+      this.formActualizarProductClient.get('imagen').setValue(imageb64)
+        });
+      }
+  }
   guardar(){
     this._cu.editarCultivo(this.formActualizarProductClient.value)
     .subscribe (respBack => {

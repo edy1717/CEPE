@@ -45,3 +45,22 @@
     color: white;
     margin-right: 10%;
 }
+
+.box {
+    width: 155px;
+    height: 155px;
+    overflow: hidden;
+}
+
+.box img {
+    width: 100%;
+    height: auto;
+}
+
+@supports(object-fit: cover) {
+    .box img {
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+}

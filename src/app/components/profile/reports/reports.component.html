@@ -7,15 +7,12 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="form-group">
-                            <div class="search-box float-left mb-3 ">
+                            <div class="search-box float-left mb-6 ">
                                 <input type="text" class="search-text" name="filterPost" placeholder="Buscar" [(ngModel)]="filterPost">
                                 <a class="search-btn">
                                     <i class="fas fa-search"></i>
                                 </a>
                             </div>
-                            <!-- <mat-paginator [length]="myProducts.length" [pageSize]="page_size" [pageSizeOptions]="pageSizeOptions"
-                                (page)="handlePage($event) ">
-                            </mat-paginator> -->
                         </div>
                     </div>
                 </div>
@@ -30,7 +27,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let report of resultados">
+                    <tr *ngFor="let report of resultados | filterRepor:filterPost">
                         <td> {{report.id}} </td>
                         <td>{{report.razon}}</td>
                         <td>{{report.descripcion}} </td>

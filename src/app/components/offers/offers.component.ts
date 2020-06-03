@@ -17,6 +17,7 @@ export class OffersComponent implements OnInit {
   formmyPoduct : FormGroup;
   resultados;
   respuesta;
+  filterPost = '';
 
   constructor( private offerServ: OffersService, public dialog: MatDialog) { }
 

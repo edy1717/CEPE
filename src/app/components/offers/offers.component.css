@@ -72,12 +72,13 @@ mat-button {
 
 /* buscador */
 
+
 .search-box {
     position: relative;
     top: 80%;
-    left: 80;
+    left: 35%; 
     background: rgb(241, 239, 241);
-    height: 40px;
+    height: 40%;
     padding: 10px;
 }
 
@@ -102,7 +103,6 @@ mat-button {
     transition: 0.4s;
     line-height: 20px;
 }
-
 .mat-paginator {
     border: none;
     background: none;

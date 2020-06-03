@@ -3,9 +3,7 @@ import { CultivoService } from '../../../services/cultivo.service';
 import { FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 // import Swal from 'sweetalert2';
-// import { Subject } from 'rxjs/internal/Subject';
-// import { DummyService } from 'src/app/services/dummy.service';
-
+import { FileReaderPromiseLikeService, FileReaderObservableLikeService } from 'fctrlx-angular-file-reader';
 
 @Component({
   selector: 'app-modal',
@@ -19,9 +17,14 @@ export class ModalComponent implements OnInit {
   respuesta;
   respBack;
   dataProducts;
+  archivos: any;
+  imag
+  imageError: string;
+
 
  constructor( public dialogRef: MatDialogRef<ModalComponent>,
-  @Inject(MAT_DIALOG_DATA) public data: any, private _cs: CultivoService  ) {
+  @Inject(MAT_DIALOG_DATA) public data: any, private _cs: CultivoService ,
+  private promiseService: FileReaderPromiseLikeService) {
 
  }
 
@@ -65,6 +68,25 @@ getListProduct(){
     this.dialogRef.close();
  }
 
+onFileSelected(event: any)
+ {
+   const file = event.target.files[0] ? event.target.files[0] : false;
+   const max_size = 20971520;
+   if (event.target.files[0].size > max_size) {
+    this.imageError =
+        'Maximum size allowed is ' + max_size / 1000 + 'Mb';
+
+    return false;
+}
+     if(file)
+     {
+       this.promiseService.toBase64(file).then((result) => {
+        const image = result.split(',')[1];
+        let imageb64 = image.slice(4)
+        this.formActualizarProduct.get('imagen').setValue(imageb64)
+       });
+     }
+ }
 
 
 }

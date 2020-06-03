@@ -21,6 +21,7 @@ export class ListProfilesComponent implements OnInit {
   forPerfil : FormGroup;
   resultados;
   respuesta;
+  filterPost = '';
 
   constructor(  private _us: UsuarioService, public dialog: MatDialog, private router: Router) { }
 

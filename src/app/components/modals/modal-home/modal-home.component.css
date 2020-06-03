@@ -5,18 +5,11 @@
 }
 
 .card {
-  margin-top: 20px;
-  max-width: 400px;
+  max-width: 100%;
   background-color: none;
   justify-content: center;
   border: none;
   outline: none;
-}
-
-.card-body img {
-  width: auto;
-  height: 165px;
-  color: black;
 }
 
 .card-color{
@@ -28,3 +21,23 @@
 .color {
   color: #743B8F;
 }
+
+.box{
+  width: 155px;
+  height: 155px;
+  overflow: hidden;
+}
+
+.box img{
+  width: 100%;
+  height: auto;
+  border: none;
+}
+@supports(object-fit: cover){
+    .box img{
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+}
+

@@ -1,10 +1,10 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { ModalHomeComponent } from '../modals/modal-home/modal-home.component';
 import { CultivoService } from '../../services/cultivo.service';
-import { ProductInterface } from '../../interfaces/products';
 import { FormControl } from '@angular/forms';
 import { FormGroup } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
+
 
 @Component({
   selector: 'app-home',
@@ -18,7 +18,8 @@ export class HomeComponent implements OnInit {
  respuesta;
  filterPost = '';
 
-constructor( public dialog: MatDialog, private _cs: CultivoService ) { }
+constructor( public dialog: MatDialog, private _cs: CultivoService) {
+ }
 
   ngOnInit(): void {
     this.consultar();
@@ -36,11 +37,7 @@ constructor( public dialog: MatDialog, private _cs: CultivoService ) { }
     })
   }
 
-  /* consultarId(){
-   this._cs.consultaCultivo(id).subscribe((productos: any) =>{
-     console.log(productos);
-    });
-  } */
+
 
   consultar(){
     this._cs.consultarTodosCultivos().subscribe (data => {

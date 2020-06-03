@@ -13,7 +13,7 @@ import { MatDialog } from '@angular/material/dialog';
 })
 export class ReportsComponent implements OnInit {
 
-  filterPost;
+  filterPost = '';
   myProducts:any=[];
   headElements=['Id de reporte', 'Razón','Descripcion', 'Id de Usuario Reportado', 'Id de Usuario Creador', 'Fecha de Reporte'];
   formReport : FormGroup;

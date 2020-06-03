@@ -11,7 +11,6 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 
-
 @NgModule({
     imports:[
         MatCardModule,
@@ -53,7 +52,8 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
         {
           provide: MatFormFieldControl,
           useValue : {}
-        }
+        },
+
       ],
 })
 
