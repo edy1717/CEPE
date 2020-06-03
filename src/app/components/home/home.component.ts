@@ -1,10 +1,10 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { ModalHomeComponent } from '../modals/modal-home/modal-home.component';
 import { CultivoService } from '../../services/cultivo.service';
-import { ProductInterface } from '../../interfaces/products';
 import { FormControl } from '@angular/forms';
 import { FormGroup } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
+
 
 @Component({
   selector: 'app-home',
@@ -17,18 +17,13 @@ export class HomeComponent implements OnInit {
  resultados;
  respuesta;
  filterPost = '';
- imagenF : any ;
- 
 
-
-constructor( public dialog: MatDialog, private _cs: CultivoService, ) {
-  
+constructor( public dialog: MatDialog, private _cs: CultivoService) {
  }
 
   ngOnInit(): void {
     this.consultar();
     this.formMyProduct();
-    this.file()
   }
 
   formMyProduct(){
@@ -42,11 +37,7 @@ constructor( public dialog: MatDialog, private _cs: CultivoService, ) {
     })
   }
 
-  /* consultarId(){
-   this._cs.consultaCultivo(id).subscribe((productos: any) =>{
-     console.log(productos);
-    });
-  } */
+
 
   consultar(){
     this._cs.consultarTodosCultivos().subscribe (data => {
@@ -64,19 +55,5 @@ constructor( public dialog: MatDialog, private _cs: CultivoService, ) {
     dialogRef.afterClosed().subscribe(result => {
     });
   }
-
-  file(){
-    let base64;
-    this._cs.consultarTodosCultivos().subscribe ((data: any) => {
-      this.respuesta = data;
-      this.resultados = this.respuesta.data
-      base64 = this.resultados[0].imagen
-      // console.log('im', base64)
-      const imageFile =  'data: image/jpeg' + base64;;
-      this.imagenF = imageFile
-
-  })
-}
-
 
 }

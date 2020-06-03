@@ -25,10 +25,10 @@
                         </mat-form-field>
                       </div>
 
-                        <mat-form-field class="mr-5">
+                        <!-- <mat-form-field class="mr-5">
                             <mat-label>Imagen</mat-label>
                             <input matInput formControlName="imagen">
-                        </mat-form-field>
+                        </mat-form-field> -->
 
                         <mat-form-field class="mr-5">
                             <mat-label>Cantidad</mat-label>
@@ -37,14 +37,16 @@
 
                         <mat-form-field class="mr-5">
                             <mat-label>Medida</mat-label>
-                            <select matNativeControl required>
+                            <input matInput formControlName="medida">
+
+                            <!-- <select matNativeControl required>
                   <input matInput formControlName="medida">
                   <option value=""></option>
                   <option value="kg">Kg</option>
                   <option value="mg">Mg</option>
                   <option value="l">Litros</option>
                   <option value="piezas">Piezas</option>
-                </select>
+                </select> -->
                         </mat-form-field>
 
                         <mat-form-field class="mr-5">
@@ -57,9 +59,10 @@
                             <input matInput formControlName="tipo">
                         </mat-form-field>
 
-                    <div class="form-group">
-                      <label for="imagen">Suba tu nueva imagen</label>
-                      <input type="file" class="form-control-file" formControlName="imagen">
+                     <div class="form-group"> {{imageError}}
+                      <label for="file" class="labels">imagen: </label>
+                      <input #fileInput name="files[]" type="file" 
+                      (change)="onFileSelected($event)" accept="application/jpeg">
                     </div>
 
                     </div>

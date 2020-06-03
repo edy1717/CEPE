@@ -6,7 +6,6 @@
             <div class="col-12">
                 <!-- <h2>Por: {{dat.data.id}} <b>{{usua.data.nombre}} {{usua.data.email}}</b></h2> -->
                 <!-- <h2>Por: {{dat.id}}</h2> -->
-
             </div>
             <div class="container">
                 <div class="row">
@@ -18,8 +17,6 @@
                                     <i class="fas fa-search"></i>
                                 </a>
                             </div>
-                            <!-- <mat-paginator [pageSize]="page_size" [pageSizeOptions]="pageSizeOptions" (page)="handlePage($event) ">
-                            </mat-paginator> -->
                         </div>
                     </div>
                 </div>
@@ -38,7 +35,9 @@
                         <th scope="row "></th>
                         <td>{{a.titulo}}</td>
                         <td>{{a.descripcion}} </td>
-                        <td>{{a.portada}}</td>
+                        <td class="col-3 box"> 
+                            <img [src]=" a.imagen | safeUrl" class="img-thumbnail" alt="Responsive">
+                        </td>
                         <td> {{a.cantidad}}</td>
                         <td>{{a.medida}}</td>
 
@@ -55,3 +54,4 @@
     </section>
 </div>
 <app-modal-my-products></app-modal-my-products>
+

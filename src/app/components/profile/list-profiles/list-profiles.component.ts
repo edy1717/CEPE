@@ -22,11 +22,7 @@ export class ListProfilesComponent implements OnInit {
   respuesta;
   filterPost = '';
 
-  // dataProfiles;
-  // respuesta;
-  // resultados;
 
-  // cultivo;
   headElements = ['Id', 'Nombre', 'Correo', 'Direccion', 'Telefono'];
 
   constructor(  private _us: UsuarioService, public dialog: MatDialog, private router: Router) { }
@@ -59,7 +55,7 @@ export class ListProfilesComponent implements OnInit {
     this._us.consultUsers().subscribe (data => {
       this.respuesta = data;
       this.resultados = this.respuesta.data
-      console.log(this.resultados)
+      console.log('ee',this.resultados)
   })
   }
 

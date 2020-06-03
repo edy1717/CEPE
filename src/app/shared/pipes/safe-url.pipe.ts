@@ -3,9 +3,12 @@ import { DomSanitizer } from '@angular/platform-browser';
 @Pipe({
     name: 'safeUrl'
 })
+
 export class safeUrlPipe implements PipeTransform {
     constructor(private _domSanitizer: DomSanitizer) { }
-    transform(value: string, url: string = ''): any {
-        return this._domSanitizer.bypassSecurityTrustResourceUrl(url + value);
+    transform(value: string): any {
+        const imageFile =  'data:image/;base64,/9j/' + value;
+
+        return this._domSanitizer.bypassSecurityTrustResourceUrl( imageFile);
     }
 }
