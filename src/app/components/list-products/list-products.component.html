@@ -7,7 +7,7 @@
                     <div class="col-12">
                         <div class="form-group">
                             <div class="search-box float-left mb-6 ">
-                                <input type="text" class="search-text" name="filterPost" placeholder="Buscar" [(ngModel)]="filterPost">
+                                <input type="text" class="search-text" name="filterPost" placeholder="Buscar" [(ngModel)]="filterPost" >
                                 <a class="search-btn">
                                     <i class="fas fa-search"></i>
                                 </a>
@@ -16,16 +16,15 @@
                     </div>
                 </div>
             </div>
-            <table class="table ">
+            <table class="table" *ngIf="resultados && resultados.length>0">
                 <thead>
                     <tr>
                         <th *ngFor="let head of headElements" scope="col">{{head}} </th>
                         <th scope="col"> &nbsp; </th>
-                        <th scope="col"> &nbsp; </th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr *ngFor="let product of resultados | filter:filterPost" (click)="cultivo = product.id">
+                <tbody >
+                    <tr *ngFor="let product of resultados | paginate:page_size:page_number  | filter:filterPost" (click)="cultivo = product.id">
                         <th scope="row"> {{product.id}} </th>
                         <td> {{product.titulo}} </td>
                         <td> {{product.descripcion}} </td>
@@ -37,12 +36,24 @@
                         <td>
                             <button class="btn actualizar" (click)="openDialog(product)">Actualizar</button>
                             <button class="btn btn-danger" (click)="elimina(product)">Eliminar</button>
-
                         </td>
-
                     </tr>
                 </tbody>
             </table>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+                    <div class="search-box float-left mb-6 ">
+                        <mat-paginator *ngIf="resultados && resultados.length>0"
+                            [length]="resultados.length"
+                            [pageSize]="page_size"
+                            [pageSizeOptions]="pageSizeOptions"
+                            (page)="handlePage($event) ">
+                        </mat-paginator>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 </div>

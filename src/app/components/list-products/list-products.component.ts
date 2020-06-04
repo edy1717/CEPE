@@ -4,6 +4,7 @@ import { CultivoService } from '../../services/cultivo.service';
 import { FormGroup, Validators, FormControl } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { ModalComponent } from '../modals/modal/modal.component';
+import { User } from 'firebase';
 
 
 @Component({
@@ -20,6 +21,8 @@ export class ListProductsComponent implements OnInit {
   resul;
   filterPost = '';
   cultivo;
+  
+ 
 
   constructor( private _sc: CultivoService,  public dialog: MatDialog) { }
 
@@ -54,7 +57,7 @@ export class ListProductsComponent implements OnInit {
     this._sc.consultarTodosCultivos().subscribe (data => {
       this.respuesta = data;
       this.resultados = this.respuesta.data;
-      // console.log('pp', this.resultados)
+       console.log('pp', this.resultados)
     });
   }
 
@@ -68,6 +71,7 @@ export class ListProductsComponent implements OnInit {
      this.consultar();
   });
   }
+
 
 
   handlePage(e: PageEvent){

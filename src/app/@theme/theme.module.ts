@@ -23,6 +23,7 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
         MatMenuModule,
         MatIconModule,
         MatButtonToggleModule,
+        MatPaginatorModule
     ],
     exports: [
         MatCardModule,
@@ -35,6 +36,7 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
         MatMenuModule,
         MatIconModule,
         MatButtonToggleModule,
+        
        ],
     providers: [
         {
