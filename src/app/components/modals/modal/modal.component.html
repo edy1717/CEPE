@@ -1,0 +1,55 @@
+<form [formGroup]="formActualizarProduct">
+    <div class="modal-header">
+        <h2 class="modal-title" id="modalMyProductsLabel">Actualizar Producto</h2>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <mat-form-field class="mr-5">
+                <mat-label>ID</mat-label>
+                <input matInput formControlName="id">
+            </mat-form-field>
+        </div>
+        <div class="col-6">
+            <mat-form-field class="mr-5">
+                <mat-label>Nombre</mat-label>
+                <input matInput formControlName="titulo">
+            </mat-form-field>
+        </div>
+        <div class="col-6">
+            <mat-form-field class="mr-5">
+                <mat-label>Tipo </mat-label>
+                <input matInput formControlName="tipo">
+            </mat-form-field>
+        </div>
+        <div class="col-6">
+            <mat-form-field class="mr-5">
+                <mat-label>Descripción </mat-label>
+                <input matInput formControlName="descripcion">
+            </mat-form-field>
+        </div>
+        <div class="col-6">
+
+            <mat-form-field class="mr-5">
+                <mat-label>Medida</mat-label>
+                <input matInput formControlName="medida" placeholder="Ej. Kg, Mg, L, Pza">
+            </mat-form-field>
+        </div>
+        <div class="col-6">
+            <mat-form-field class="mr-5">
+                <mat-label>Cantidad</mat-label>
+                <input matInput formControlName="cantidad">
+            </mat-form-field>
+        </div>
+
+        <div class="col-12">
+            <div class="form-group"> {{imageError}}
+                <label for="file" class="labels">imagen: </label>
+                <input #fileInput name="files[]" type="file" (change)="onFileSelected($event)" accept="application/jpeg">
+            </div>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn guardar" (click)="actualizarCultivo()">Guardar</button>
+    </div>
+</form>

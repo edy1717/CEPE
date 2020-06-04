@@ -1,0 +1,45 @@
+<img src="../../../assets/img/Banner_lista_productos_cliente.jpg" class="img-fluid" alt="Responsive image">
+
+<div class="main-container">
+    <section class="main-container">
+        <div class="table-responsive">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-group">
+                            <div class="search-box float-left mb-6 ">
+                                <input type="text" class="search-text" name="filterPost" placeholder="Buscar" [(ngModel)]="filterPost">
+                                <a class="search-btn">
+                                    <i class="fas fa-search"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <table class="table ">
+                <thead>
+                    <tr>
+                        <th *ngFor="let head of headElements" scope="col">{{head}} </th>
+                        <th scope="col"> &nbsp; </th>
+                        <th scope="col"> &nbsp; </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let report of resultados | filterRepor:filterPost">
+                        <td> {{report.id}} </td>
+                        <td>{{report.razon}}</td>
+                        <td>{{report.descripcion}} </td>
+                        <td>{{report.usuarioReportado}}</td>
+                        <td> {{report.usuarioCreador}}</td>
+                        <td>{{report.fecha}}</td>
+                        <td>
+                            <button class="btn eliminar" (click)="eliminarReport(report)">Eliminar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</div>

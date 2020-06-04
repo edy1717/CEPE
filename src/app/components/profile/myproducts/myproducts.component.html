@@ -1,0 +1,51 @@
+<img src="../../../assets/img/Banner_lista_productos_cliente.jpg" class="img-fluid" alt="Responsive image">
+
+<div class="main-container">
+    <section class="main-container">
+        <div class="table-responsive">
+            <div class="col-12">
+                <h2>Por: Con {{usua.id}} <b>{{usua.nombre}} {{usua.email}}</b></h2>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-group">
+                            <div class="search-box float-left mb-3 ">
+                                <input type="text" class="search-text" name="filterPost" placeholder="Buscar" [(ngModel)]="filterPost">
+                                <a class="search-btn">
+                                    <i class="fas fa-search"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <table class="table ">
+                <thead>
+                    <tr>
+                        <th *ngFor="let head of headElements" scope="col">{{head}} </th>
+                        <th scope="col"> &nbsp; </th>
+                        <th scope="col"> &nbsp; </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let a of myProducts | filter:filterPost ">
+                        <th scope="row ">{{a.id}}</th>
+                        <td>{{a.titulo}}</td>
+                        <td>{{a.descripcion}} </td>
+                        <td class="col-3 box">
+                            <img [src]=" a.imagen | safeUrl" class="img-thumbnail" alt="Responsive">
+                        </td>
+                        <td> {{a.cantidad}}</td>
+                        <td>{{a.medida}}</td>
+                        <td>
+                            <button class="btn actualizar" (click)="openDialog(a)">Actualizar</button>
+                            <button class="btn btn-danger  " (click)="elimina(a)">Eliminar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</div>

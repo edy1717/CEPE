@@ -1,0 +1,66 @@
+.main-container {
+    margin-top: 1px;
+    margin-top: 2px;
+    padding: 20px;
+}
+
+.search-box {
+    position: relative;
+    top: 80%;
+    left: 35%;
+    background: rgb(241, 239, 241);
+    height: 40%;
+    padding: 10px;
+}
+
+.search-btn {
+    color: whithe;
+    float: rigth;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-text {
+    border: black;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: gray;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 20px;
+}
+
+.mat-paginator {
+    border: none;
+    background: none;
+}
+
+.actualizar {
+    background-color: #418215;
+    color: white;
+    margin-right: 10%;
+}
+
+.box {
+    width: 155px;
+    height: 155px;
+    overflow: hidden;
+}
+
+.box img {
+    width: 100%;
+    height: auto;
+}
+
+@supports(object-fit: cover) {
+    .box img {
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+}

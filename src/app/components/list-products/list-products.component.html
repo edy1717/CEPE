@@ -1,0 +1,48 @@
+<img src="../../../assets/img/Banner_lista_productos.jpg" class="img-fluid" alt="Responsive image">
+<div class="main-container">
+    <section class="main-container">
+        <div class="table-responsive">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-group">
+                            <div class="search-box float-left mb-6 ">
+                                <input type="text" class="search-text" name="filterPost" placeholder="Buscar" [(ngModel)]="filterPost">
+                                <a class="search-btn">
+                                    <i class="fas fa-search"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <table class="table ">
+                <thead>
+                    <tr>
+                        <th *ngFor="let head of headElements" scope="col">{{head}} </th>
+                        <th scope="col"> &nbsp; </th>
+                        <th scope="col"> &nbsp; </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let product of resultados | filter:filterPost" (click)="cultivo = product.id">
+                        <th scope="row"> {{product.id}} </th>
+                        <td> {{product.titulo}} </td>
+                        <td> {{product.descripcion}} </td>
+                        <td class="col-3 box"> 
+                            <img [src]=" product.imagen | safeUrl" class="img-thumbnail" alt="Responsive">
+                        </td>
+                        <td> {{product.cantidad}} </td>
+                        <td> {{product.medida}} </td>
+                        <td>
+                            <button class="btn actualizar" (click)="openDialog(product)">Actualizar</button>
+                            <button class="btn btn-danger" (click)="elimina(product)">Eliminar</button>
+
+                        </td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</div>

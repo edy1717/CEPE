@@ -1,0 +1,44 @@
+.navbar {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar-nav a:hover {
+    color: #743b8f;
+}
+
+
+.example-icon {
+  padding: 0 14px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+/*********/
+
+.color {
+    color: #82E89B;
+}
+
+.main-section {
+    border: 1px solid #18ce64;
+    background: #fff;
+}
+
+.profile-header {
+    background: #82E89B;
+    height: 150px;
+}
+
+.user-detail {
+    margin: -50px 0 30px 0;
+}
+
+img {
+    height: 50px;
+    width: 50px;
+}
+
+.user-details h5 {
+    margin: 15px 0 5px 0;
+}

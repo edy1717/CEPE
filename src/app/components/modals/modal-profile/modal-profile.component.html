@@ -1,0 +1,49 @@
+<form [formGroup]="formPerfil">
+    <div class="modal-header">
+        <h2 class="modal-title" id="modalMyProductsLabel">Actualizar Perfil</h2>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <mat-form-field class="mr-5">
+                <mat-label>ID</mat-label>
+                <input matInput formControlName="id">
+            </mat-form-field>
+        </div>
+        <div class="col-6">
+            <mat-form-field class="mr-5">
+                <mat-label>Nombre</mat-label>
+                <input matInput formControlName="nombre">
+            </mat-form-field>
+        </div>
+        <div class="col-6">
+            <mat-form-field class="mr-5">
+                <mat-label>Apellido Paterno </mat-label>
+                <input matInput formControlName="apellidoPaterno">
+            </mat-form-field>
+        </div>
+        <div class="col-6">
+            <mat-form-field class="mr-5">
+                <mat-label>Apellido Materno </mat-label>
+                <input matInput formControlName="apellidoMaterno">
+            </mat-form-field>
+        </div>
+        <div class="col-6">
+
+            <mat-form-field class="mr-5">
+                <mat-label>Correo electronico </mat-label>
+                <input matInput formControlName="email">
+            </mat-form-field>
+        </div>
+        <div class="col-6">
+
+            <mat-form-field class="mr-5">
+                <mat-label>Direccion </mat-label>
+                <input matInput formControlName="ubicacion">
+            </mat-form-field>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn guardar" (click)="guardarPerfil()">Guardar</button>
+    </div>
+</form>
