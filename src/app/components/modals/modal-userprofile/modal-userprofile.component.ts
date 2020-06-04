@@ -30,7 +30,7 @@ export class ModalUserprofileComponent implements OnInit
 
   formMyPerfil(){
     this.cambiodatos = new FormGroup ({
-      id : new FormControl(),
+      id : new FormControl({value: '', disabled: true}),
       nombre : new FormControl (),
       apellidoPaterno : new FormControl(),
       apellidoMaterno : new FormControl(),

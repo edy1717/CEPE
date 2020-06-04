@@ -18,6 +18,7 @@ export class ModalMyProductsComponent implements OnInit {
   archivos: any;
   imag;
   imageError: string;
+  id:any;
 
   constructor(private _cu: CultivoService, public dialogRef: MatDialogRef<ModalMyProductsComponent>,
               @Inject(MAT_DIALOG_DATA) public data: any,
@@ -33,13 +34,14 @@ export class ModalMyProductsComponent implements OnInit {
     this.formActualizarProductClient.get('medida').patchValue(this.data.id.medida);
     this.formActualizarProductClient.get('imagen').patchValue(this.data.id.imagen);
 
+    // this.id=this.data.id.id;
 
   }
 
 
   formActProClient(){
     this.formActualizarProductClient = new FormGroup ({
-     id : new FormControl (null),
+     id : new FormControl ({value: '', disabled: true}),
      titulo : new FormControl (null),
      descripcion : new FormControl (null),
      cantidad : new FormControl (null),
@@ -58,11 +60,9 @@ export class ModalMyProductsComponent implements OnInit {
     if (event.target.files[0].size > max_size) {
      this.imageError =
          'Maximum size allowed is ' + max_size / 1000 + 'Mb';
-
      return false;
  }
-      if(file)
-      {
+    if(file){
       this.promiseService.toBase64(file).then((result) => {
       const image = result.split(',')[1];
       let imageb64 = image.slice(4)

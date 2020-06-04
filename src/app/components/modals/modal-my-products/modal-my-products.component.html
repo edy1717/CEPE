@@ -4,7 +4,7 @@
     </button>
     </div> -->
     <div class="modal-header">
-        <h2 class="modal-title" id="modalMyProductsLabel">Actualizar Producto</h2>
+        <h2 class="modal-title" id="modalMyProductsLabel">Actualizar Producto <br></h2>
     </div>
     <div class="row">
         <div class="col-6">
@@ -35,14 +35,7 @@
 
             <mat-form-field class="mr-5">
                 <mat-label>Medida</mat-label>
-                <select matNativeControl>
-                          <input matInput formControlName="medida">
-                          <option value=""> </option>
-                          <option value="kg">Kg</option>
-                          <option value="mg">Mg</option>
-                          <option value="l">Litros</option>
-                          <option value="piezas">Piezas</option>
-                        </select>
+                <input matInput formControlName="medida">
             </mat-form-field>
 
             <div class="form-group"> {{imageError}}

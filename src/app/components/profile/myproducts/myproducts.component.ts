@@ -5,9 +5,7 @@ import { PageEvent } from '@angular/material/paginator';
 import { FormGroup, FormControl } from '@angular/forms';
 import { CultivoService } from '../../../services/cultivo.service';
 import { UsuarioService } from '../../../services/usuario.service';
-import {
-    ModalMyProductsComponent
-} from '../../modals/modal-my-products/modal-my-products.component';
+import {ModalMyProductsComponent} from '../../modals/modal-my-products/modal-my-products.component';
 import { MatDialog } from '@angular/material/dialog';
 
 @Component({
@@ -18,16 +16,13 @@ import { MatDialog } from '@angular/material/dialog';
 export class MyproductsComponent implements OnInit {
 
   formMyproduct: FormGroup;
-
-  resultados;
-  usua;
-  dat
-  myProducts;
-
+  myProducts: any;
+  usua: any={};
   filterPost = '';
   headElements = [ '#', 'Nombre', 'Descripcion', 'Imagen', 'Cantidad', 'Medida']
   id: any;
   envio ;
+  resul:any;
 
   constructor(private activatedRoute: ActivatedRoute,
               private _cs: CultivoService,
@@ -47,9 +42,9 @@ export class MyproductsComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    this.consultar();
-    this.formMyProduct();
 
+    this.formMyProduct();
+    this.consultar();
   }
   openDialog(value){
     const dialogRef = this.dialog.open(ModalMyProductsComponent, {
@@ -63,14 +58,13 @@ export class MyproductsComponent implements OnInit {
 
   consultar(){
      this.activatedRoute.params.subscribe (params => {
-
       if(params.usuarioCreador != null){
         this._cs.consultaCultivo(params).subscribe(datacult => {
-        this.myProducts = datacult;
-        this.resultados = this.myProducts;
+        this.myProducts = datacult['data'];
         });
         this._us.consultUserId(params.usuarioCreador).subscribe(dataus=>{
-        this.usua  = dataus;
+        this.usua = dataus['data'];
+        
         });
       }
     });

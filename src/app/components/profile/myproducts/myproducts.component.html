@@ -4,8 +4,7 @@
     <section class="main-container">
         <div class="table-responsive">
             <div class="col-12">
-                <!-- <h2>Por: {{dat.data.id}} <b>{{usua.data.nombre}} {{usua.data.email}}</b></h2> -->
-                <!-- <h2>Por: {{dat.id}}</h2> -->
+                <h2>Por: Con {{usua.id}} <b>{{usua.nombre}} {{usua.email}}</b></h2>
             </div>
             <div class="container">
                 <div class="row">
@@ -31,7 +30,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let a of resultados.data | filter:filterPost ">
+                    <tr *ngFor="let a of myProducts | filter:filterPost ">
                         <th scope="row ">{{a.id}}</th>
                         <td>{{a.titulo}}</td>
                         <td>{{a.descripcion}} </td>
@@ -40,7 +39,6 @@
                         </td>
                         <td> {{a.cantidad}}</td>
                         <td>{{a.medida}}</td>
-
                         <td>
                             <button class="btn actualizar" (click)="openDialog(a)">Actualizar</button>
                             <button class="btn btn-danger  " (click)="elimina(a)">Eliminar</button>

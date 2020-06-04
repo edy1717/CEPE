@@ -43,7 +43,7 @@ export class ModalComponent implements OnInit {
 
  formProduct(){
    this.formActualizarProduct = new FormGroup({
-     id : new FormControl (null),
+     id : new FormControl ({value: '', disabled: true}),
      titulo : new FormControl (null),
      tipo : new FormControl (null),
      descripcion : new FormControl (null),

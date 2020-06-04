@@ -30,7 +30,7 @@ export class ModalOffersComponent implements OnInit {
 
   formPost(){
     this.formPosts = new FormGroup({
-        id: new FormControl (null),
+        id: new FormControl ({value: '', disabled: true}),
         contenido: new FormControl(null)
     });
   }
