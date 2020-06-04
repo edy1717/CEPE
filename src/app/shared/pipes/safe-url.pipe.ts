@@ -12,3 +12,4 @@ export class safeUrlPipe implements PipeTransform {
         return this._domSanitizer.bypassSecurityTrustResourceUrl( imageFile);
     }
 }
+
