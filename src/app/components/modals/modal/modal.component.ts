@@ -43,7 +43,7 @@ export class ModalComponent implements OnInit {
 
  formProduct(){
    this.formActualizarProduct = new FormGroup({
-     id : new FormControl ({value: '', disabled: true}),
+     id : new FormControl (null),
      titulo : new FormControl (null),
      tipo : new FormControl (null),
      descripcion : new FormControl (null),
@@ -59,6 +59,8 @@ getListProduct(){
 }
 
  actualizarCultivo(){
+   console.log(this.formActualizarProduct.value);
+
     this._cs.editarCultivo(this.formActualizarProduct.value)
     .subscribe (respBack => {
       this.respuesta = respBack;

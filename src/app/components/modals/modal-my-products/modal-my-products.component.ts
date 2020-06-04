@@ -41,7 +41,7 @@ export class ModalMyProductsComponent implements OnInit {
 
   formActProClient(){
     this.formActualizarProductClient = new FormGroup ({
-     id : new FormControl ({value: '', disabled: true}),
+     id : new FormControl (null),
      titulo : new FormControl (null),
      descripcion : new FormControl (null),
      cantidad : new FormControl (null),
