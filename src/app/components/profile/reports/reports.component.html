@@ -18,7 +18,7 @@
                 </div>
             </div>
             <br>
-            <table class="table ">
+            <table class="table" *ngIf="resultados && resultados.length>0">
                 <thead>
                     <tr>
                         <th *ngFor="let head of headElements" scope="col">{{head}} </th>
@@ -27,7 +27,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let report of resultados | filterRepor:filterPost">
+                    <tr *ngFor="let report of resultados | paginate:page_size:page_number| filterRepor:filterPost">
                         <td> {{report.id}} </td>
                         <td>{{report.razon}}</td>
                         <td>{{report.descripcion}} </td>
@@ -41,5 +41,20 @@
                 </tbody>
             </table>
         </div>
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+                    <div class="search-box float-left mb-6 ">
+                        <mat-paginator *ngIf="resultados && resultados.length>0"
+                            [length]="resultados.length"
+                            [pageSize]="page_size"
+                            [pageSizeOptions]="pageSizeOptions"
+                            (page)="handlePage($event) ">
+                        </mat-paginator>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </section>
 </div>
