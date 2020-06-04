@@ -36,7 +36,7 @@ export class ModalProfileComponent implements OnInit {
 
   actualizarPerfil(){
     this.formPerfil = new FormGroup ({
-      id : new FormControl ({value: '', disabled: true}),
+      id : new FormControl (''),
       nombre: new FormControl  (''),
       apellidoPaterno: new FormControl  (''),
       apellidoMaterno: new FormControl  (''),

@@ -64,7 +64,6 @@ export class MyproductsComponent implements OnInit {
         });
         this._us.consultUserId(params.usuarioCreador).subscribe(dataus=>{
         this.usua = dataus['data'];
-        
         });
       }
     });
