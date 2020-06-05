@@ -1,43 +1,12 @@
-<!-- <div class="col-12" [formGroup]="formPosts">
-    <div class="card mb-6">
-        <div class="modal-header">
-            <h2 class="modal-title" id="modalMyProductsLabel">Enviar Reporte</h2>
-        </div>
-        <div class="row ">
-            <div class="col-md-8">
-                <div class="card-body">
-                    <div class="modal-body">
-                        <mat-form-field class="mr-5">
-                            <mat-label>id </mat-label>
-                            <input matInput formControlName="id">
-                        </mat-form-field>
-                        <mat-form-field class="mr-5">
-                            <mat-label>Contenido </mat-label>
-                            <input matInput formControlName="contenido">
-                        </mat-form-field>
-
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn guardar" (click)="guardarActPost()">Guardar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> -->
-
 <form [formGroup]="formPosts">
-    <div class="modal-header">
-        <h2 class="modal-title" id="modalMyProductsLabel">Actualizar Posts</h2>
+    <div>
+        <h2 class="modal-title" id="modalMyProductsLabel">Actualizar Producto</h2>
+        <div class="identificador ">
+            <h5>Id: {{id}}</h5>
+        </div>
     </div>
     <div class="row">
 
-        <div class="col-6">
-            <mat-form-field class="mr-5">
-                <mat-label>Id </mat-label>
-                <input matInput formControlName="id">
-            </mat-form-field>
-        </div>
         <div class="col-6">
             <mat-form-field class="mr-5">
                 <mat-label>Contenido </mat-label>

@@ -77,8 +77,10 @@ mat-card-actions {
 
 /* xs */
 
-@media (max-width: 767px) {
-    mat-card-actions {}
+@media (min-width: 360px) and (max-width: 767px) {
+    mat-card-actions {
+        margin-left: 28px;
+    }
     .opcion {
         background-color: #743B8F;
         color: white;
@@ -88,7 +90,8 @@ mat-card-actions {
     .actualizar {
         background: red;
         color: white;
-        margin-left: 15%;
+        margin-top: 10px;
+        margin-left: 35%;
         font-size: 12px;
     }
 }
@@ -96,7 +99,7 @@ mat-card-actions {
 
 /* sm */
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 1024px) {
     .opcion {
         background-color: #743B8F;
         color: white;
@@ -134,7 +137,8 @@ mat-card-actions {
 
 /* lg */
 
-@media (min-width: 1200px) {
+
+/* @media (min-width: 1200px) {
     .opcion {
         background-color: #743B8F;
         color: white;
@@ -146,5 +150,4 @@ mat-card-actions {
         color: white;
         margin-left: 15%;
         font-size: 12px;
-    }
-}
+    } */

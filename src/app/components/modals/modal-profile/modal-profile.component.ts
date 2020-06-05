@@ -16,6 +16,7 @@ export class ModalProfileComponent implements OnInit {
   dataPost;
   respuesta;
   respBack;
+  id: any;
 
   constructor( private _use:UsuarioService, public dialogRef:MatDialogRef<ModalProfileComponent>,
                @Inject(MAT_DIALOG_DATA) public data:any) { }
@@ -31,6 +32,7 @@ export class ModalProfileComponent implements OnInit {
     this.formPerfil.get('apellidoMaterno').patchValue(this.data.id.apellidoMaterno);
     this.formPerfil.get('email').patchValue(this.data.id.email);
     this.formPerfil.get('ubicacion').patchValue(this.data.id.ubicacion);
+    this.id = this.data.id.id;
 
   }
 

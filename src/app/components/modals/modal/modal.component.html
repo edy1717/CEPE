@@ -1,14 +1,13 @@
 <form [formGroup]="formActualizarProduct">
     <div class="modal-header">
-        <h2 class="modal-title" id="modalMyProductsLabel">Actualizar Producto</h2>
+        <div>
+            <h2 class="modal-title" id="modalMyProductsLabel">Actualizar Producto</h2>
+            <div class="identificador ">
+                <h5>Id: {{id}}</h5>
+            </div>
+        </div>
     </div>
     <div class="row">
-        <div class="col-6">
-            <mat-form-field class="mr-5">
-                <mat-label>ID</mat-label>
-                <input matInput formControlName="id">
-            </mat-form-field>
-        </div>
         <div class="col-6">
             <mat-form-field class="mr-5">
                 <mat-label>Nombre</mat-label>
@@ -23,21 +22,21 @@
         </div>
         <div class="col-6">
             <mat-form-field class="mr-5">
-                <mat-label>Descripción </mat-label>
-                <input matInput formControlName="descripcion">
+                <mat-label>Cantidad</mat-label>
+                <input matInput formControlName="cantidad">
             </mat-form-field>
         </div>
         <div class="col-6">
-
             <mat-form-field class="mr-5">
                 <mat-label>Medida</mat-label>
                 <input matInput formControlName="medida" placeholder="Ej. Kg, Mg, L, Pza">
             </mat-form-field>
         </div>
+
         <div class="col-6">
             <mat-form-field class="mr-5">
-                <mat-label>Cantidad</mat-label>
-                <input matInput formControlName="cantidad">
+                <mat-label>Descripción </mat-label>
+                <input matInput formControlName="descripcion">
             </mat-form-field>
         </div>
 

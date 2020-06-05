@@ -33,8 +33,7 @@ export class ModalMyProductsComponent implements OnInit {
     this.formActualizarProductClient.get('cantidad').patchValue(this.data.id.cantidad);
     this.formActualizarProductClient.get('medida').patchValue(this.data.id.medida);
     this.formActualizarProductClient.get('imagen').patchValue(this.data.id.imagen);
-
-    // this.id=this.data.id.id;
+    this.id = this.data.id.id;
 
   }
 
