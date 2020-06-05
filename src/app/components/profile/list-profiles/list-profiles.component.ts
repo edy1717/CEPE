@@ -52,8 +52,6 @@ export class ListProfilesComponent implements OnInit {
     this._us.consultUsers().subscribe (data => {
       this.respuesta = data;
       this.resultados = this.respuesta.data;
-      // console.log(this.resultados);
-
   })
   }
 
@@ -66,13 +64,16 @@ openDialogRep(value){
   });
   }
 
-  eliminarProfile(id){
-    this._us.eliminarPerfil(id).subscribe(data => {
-      // console.log('Eliminado');
+  eliminarProfile(id:string) {
+    const confirmacion = confirm('Estas seguro de eliminar el producto');
+    if(confirmacion){
+      this._us.eliminarPerfil(id).subscribe(data => {
       this.consultar();
+})
+    }
+    this.forPerfil.reset()
+  }
 
- });
- }
   misProductos($usuarioCreador){
     this.router.navigate(['/admin/user-products',$usuarioCreador]);
   }

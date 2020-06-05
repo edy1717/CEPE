@@ -14,12 +14,12 @@
     </div>
 </div>
 <div class="main-container">
-    <div class="row">
-         <div class="col-lg-3 col-md-4 col-sm-12" *ngFor="let product of resultados | filter:filterPost "> 
+    <div class="row" *ngIf="resultados && resultados.length>0">
+        <div class="col-lg-3 col-md-4 col-sm-12" *ngFor="let product of resultados |  paginate:page_size:page_number  | filter:filterPost ">
             <mat-card class="card">
                 <mat-card-content>
                     <div class="card-body text-center">
-                         <img [src]=" product.imagen | safeUrl" class="img-thumbnail" alt="...">
+                        <img [src]=" product.imagen | safeUrl" class="img-thumbnail" alt="...">
                     </div>
                     <h4 routerLink="/product/{{product.id}} " class="card-title text-center"><b>{{product.titulo}}</b></h4>
                     <p class="text-center">
@@ -33,9 +33,3 @@
         </div>
     </div>
 </div>
-
-
-
-          
-
-  

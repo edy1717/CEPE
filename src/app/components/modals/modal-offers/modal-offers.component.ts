@@ -3,6 +3,7 @@ import { FormControl } from '@angular/forms';
 import { FormGroup } from '@angular/forms';
 import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-modal-offers',
@@ -43,12 +44,28 @@ export class ModalOffersComponent implements OnInit {
 
   guardarActPost(){
     this._postServ.editarPost(this.formPosts.value)
-    .subscribe (respBack => {
-      this.respuesta = respBack;
-    });
-    console.log('form',this.formPosts.value)
+        .subscribe(respEditar => {
+      this.respuesta = respEditar
+      this.respBack =this.respuesta.exito
+      
+      if(this.respBack === true){
+        Swal.fire({
+         icon: 'success',
+         title: 'Exito',
+         text: 'Se actualizó con éxito'
+       }).then(dato=>{
+         location.reload()
+       });
+      }
+    });  
+  
+    // this._postServ.editarPost(this.formPosts.value)
+    // .subscribe (respBack => {
+    //   this.respuesta = respBack;
+    // });
+    // console.log('form',this.formPosts.value)
 
-    this.getListPost();
+    // this.getListPost();
    }
 
    cerrarModal(){

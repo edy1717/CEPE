@@ -4,6 +4,7 @@ import { CultivoService } from '../../services/cultivo.service';
 import { FormGroup, Validators, FormControl } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { ModalComponent } from '../modals/modal/modal.component';
+import Swal from 'sweetalert2';
 
 
 @Component({
@@ -20,6 +21,8 @@ export class ListProductsComponent implements OnInit {
   resul;
   filterPost = '';
   cultivo;
+  respBack;
+
 
   constructor( private _sc: CultivoService,  public dialog: MatDialog) { }
 
@@ -63,11 +66,22 @@ export class ListProductsComponent implements OnInit {
     console.log(this.cultivo);
   }
 
-  elimina(id){
-     this._sc.eliminarCultivo(id).subscribe(data => {
-     this.consultar();
-  });
+  elimina(id:string) {
+    const confirmacion = confirm('Estas seguro de eliminar el producto');
+    if(confirmacion){
+      this._sc.eliminarCultivo(id).subscribe(data => {
+      this.consultar();
+})
+    }
+    this.formmyPoduct.reset()
   }
+
+// elimina(id){
+//     this._sc.eliminarCultivo(id).subscribe(data => {
+//     this.consultar();
+//  });
+//  this.formmyPoduct.reset()
+//  }
 
 
   handlePage(e: PageEvent){

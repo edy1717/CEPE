@@ -35,13 +35,6 @@ export class OffersComponent implements OnInit {
       contenido: new FormControl  ('')
     })
   }
-
-  // consultarId(){
-  //  this.offerServ.consultarTodosPost()
-  //  .subscribe((productos: any) =>{
-  //    console.log(productos);
-  //   });
-  // }
   openDialog(value){
     const dialogRef = this.dialog.open(ModalOffersComponent, {
       width: '450px',
@@ -58,14 +51,21 @@ export class OffersComponent implements OnInit {
   });
   }
 
-  eliminarPost(id){
-
-    this.offerServ.eliminarPost(id).subscribe(data => {
-      console.log('Eliminado');
+  eliminarPost(id:string) {
+    const confirmacion = confirm('Estas seguro de eliminar el producto');
+    if(confirmacion){
+      this.offerServ.eliminarPost(id).subscribe(data => {
       this.consultar();
+})
+    }
+    this.formmyPoduct.reset()
+  }
+    
 
- });
- }
+//     this.offerServ.eliminarPost(id).subscribe(data => {
+//       this.consultar();
+//  });
+//  }
 
   handlePage(e: PageEvent){
     this.page_size = e.pageSize;

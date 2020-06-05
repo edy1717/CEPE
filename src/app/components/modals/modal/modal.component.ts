@@ -4,6 +4,7 @@ import { FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 // import Swal from 'sweetalert2';
 import { FileReaderPromiseLikeService, FileReaderObservableLikeService } from 'fctrlx-angular-file-reader';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-modal',
@@ -60,17 +61,35 @@ getListProduct(){
   this.dataProducts = this._cs.consultaCultivo(this.dataProducts);
 }
 
- actualizarCultivo(){
-   console.log(this.formActualizarProduct.value);
+//  actualizarCultivo(){
+//     this._cs.editarCultivo(this.formActualizarProduct.value)
+//     .subscribe (respBack => {
+//       this.respuesta = respBack;
+//       this.respBack = this.respuesta.codigoOperacionBackend;
+//     });
+//     this.getListProduct();
+//     this.dialogRef.close();
+//  }
 
-    this._cs.editarCultivo(this.formActualizarProduct.value)
-    .subscribe (respBack => {
-      this.respuesta = respBack;
-      this.respBack = this.respuesta.codigoOperacionBackend;
-    });
-    this.getListProduct();
-    this.dialogRef.close();
- }
+actualizarCultivo(){
+  this._cs.editarCultivo(this.formActualizarProduct.value)
+  .subscribe(respEditar => {
+    this.respuesta = respEditar
+    this.respBack =this.respuesta.exito
+
+    if(this.respBack === true){
+      Swal.fire({
+       icon: 'success',
+       title: 'Exito',
+       text: 'Se actualizó con éxito'
+     }).then(dato=>{
+       location.reload()
+     });
+    }
+  });
+}
+
+
 
 onFileSelected(event: any)
  {
@@ -79,7 +98,6 @@ onFileSelected(event: any)
    if (event.target.files[0].size > max_size) {
     this.imageError =
         'Maximum size allowed is ' + max_size / 1000 + 'Mb';
-
     return false;
 }
      if(file)
