@@ -4,6 +4,7 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
 import { FileReaderPromiseLikeService } from 'fctrlx-angular-file-reader';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-modal-my-products',
@@ -32,7 +33,6 @@ export class ModalMyProductsComponent implements OnInit {
     this.formActualizarProductClient.get('cantidad').patchValue(this.data.id.cantidad);
     this.formActualizarProductClient.get('medida').patchValue(this.data.id.medida);
     this.formActualizarProductClient.get('imagen').patchValue(this.data.id.imagen);
-
 
   }
 
@@ -72,13 +72,31 @@ export class ModalMyProductsComponent implements OnInit {
   }
   guardar(){
     this._cu.editarCultivo(this.formActualizarProductClient.value)
-    .subscribe (respBack => {
-      this.respuesta = respBack;
-      this.respBack = this.respuesta.codigoOperacionBackend;
+    .subscribe(respEditar => {
+      this.respuesta = respEditar
+      this.respBack =this.respuesta.exito
+      
+      if(this.respBack === true){
+        Swal.fire({
+         icon: 'success',
+         title: 'Exito',
+         text: 'Se actualizó con éxito'
+       }).then(dato=>{
+         location.reload()
+       });
+      }
+    });  
+  
+  //   this._cu.editarCultivo(this.formActualizarProductClient.value)
+  //   .subscribe (respBack => {
+  //     this.respuesta = respBack;
+  //     this.respBack = this.respuesta.codigoOperacionBackend;
 
-    });
-    this.getListProduct();
-    this.dialogRef.close();
-  }
+  //   });
+  //   this.getListProduct();
+  //   this.dialogRef.close();
+  // }
+
+}
 
 }

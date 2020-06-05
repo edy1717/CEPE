@@ -3,6 +3,7 @@ import { NgForm , FormControl, FormGroup,  ReactiveFormsModule } from '@angular/
 import { CultivoService } from '../../../services/cultivo.service';
 import { UsuarioService } from '../../../services/usuario.service';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import Swal from 'sweetalert2';
 
 
 @Component({
@@ -50,11 +51,25 @@ export class ModalProfileComponent implements OnInit {
   }
   guardarPerfil(){
     this._use.editarPerfil(this.formPerfil.value)
-    .subscribe (respBack => {
-      this.respuesta = respBack;
-      this.respBack = this.respuesta.codigoOperacionBackend;
-    });
-    this.dialogRef.close();
+    .subscribe(respEditar => {
+      this.respuesta = respEditar
+      this.respBack =this.respuesta.exito
+      
+      if(this.respBack === true){
+        Swal.fire({
+         icon: 'success',
+         title: 'Exito',
+         text: 'Se actualizó con éxito'
+       }).then(dato=>{
+         location.reload()
+       });
+      }
+    });  
+    // .subscribe (respBack => {
+    //   this.respuesta = respBack;
+    //   this.respBack = this.respuesta.codigoOperacionBackend;
+    // });
+    // this.dialogRef.close();
    }
 
 }

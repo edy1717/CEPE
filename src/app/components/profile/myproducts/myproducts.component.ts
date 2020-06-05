@@ -18,12 +18,10 @@ import { MatDialog } from '@angular/material/dialog';
 export class MyproductsComponent implements OnInit {
 
   formMyproduct: FormGroup;
-
   resultados;
   usua;
   dat
   myProducts;
-
   filterPost = '';
   headElements = [ '#', 'Nombre', 'Descripcion', 'Imagen', 'Cantidad', 'Medida']
   id: any;
@@ -31,9 +29,7 @@ export class MyproductsComponent implements OnInit {
 
   constructor(private activatedRoute: ActivatedRoute,
               private _cs: CultivoService,
-              private _us: UsuarioService, public dialog: MatDialog ) {
-
-   }
+              private _us: UsuarioService, public dialog: MatDialog ) { }
 
    formMyProduct(){
      this.formMyproduct = new FormGroup ({
@@ -49,21 +45,18 @@ export class MyproductsComponent implements OnInit {
   ngOnInit(): void {
     this.consultar();
     this.formMyProduct();
-
   }
   openDialog(value){
     const dialogRef = this.dialog.open(ModalMyProductsComponent, {
       width: '450px',
       data: { id : value }
       });
-
     dialogRef.afterClosed().subscribe(result => {
     });
   }
 
   consultar(){
      this.activatedRoute.params.subscribe (params => {
-
       if(params.usuarioCreador != null){
         this._cs.consultaCultivo(params).subscribe(datacult => {
         this.myProducts = datacult;
@@ -76,11 +69,14 @@ export class MyproductsComponent implements OnInit {
     });
 }
 
-
-elimina(id){
-  this._cs.eliminarCultivo(id).subscribe(data => {
-  this.consultar();
-  });
+  elimina(id:string) {
+    const confirmacion = confirm('Estas seguro de eliminar el producto');
+      if(confirmacion){
+        this._cs.eliminarCultivo(id).subscribe(data => {
+        this.consultar();
+})
+  }
+  this.formMyproduct.reset()
 }
 
   handlePage(e: PageEvent){
@@ -91,6 +87,5 @@ elimina(id){
   page_size: number = 5;
   page_number: number = 1;
   pageSizeOptions  = [5, 10, 15, 20, 25, 30, 40, 80 , 100]
-
 
 }

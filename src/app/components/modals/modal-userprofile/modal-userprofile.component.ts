@@ -3,6 +3,7 @@ import { FormControl } from '@angular/forms';
 import { FormGroup } from '@angular/forms';
 import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-modal-userprofile',
@@ -13,6 +14,8 @@ export class ModalUserprofileComponent implements OnInit
 {
   cambiodatos: FormGroup;
   respuesta;
+  respBack;
+  
   constructor(public dialogRef: MatDialogRef<ModalUserprofileComponent>,
               @Inject(MAT_DIALOG_DATA) public data: any, private _us: UsuarioService) { }
 
@@ -39,11 +42,19 @@ export class ModalUserprofileComponent implements OnInit
   }
   guardar(){
     this._us.editarPerfil(this.cambiodatos.value)
-    .subscribe (respBack => {
-     this.respuesta = respBack;
-
-    });
-    this.dialogRef.close();
-    // this.getListProduct();
+    .subscribe(respEditar => {
+      this.respuesta = respEditar
+      this.respBack =this.respuesta.exito
+      
+      if(this.respBack === true){
+        Swal.fire({
+         icon: 'success',
+         title: 'Exito',
+         text: 'Se actualizó con éxito'
+       }).then(dato=>{
+         location.reload()
+       });
+      }
+    });  
 }
 }

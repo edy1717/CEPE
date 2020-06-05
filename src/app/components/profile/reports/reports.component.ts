@@ -41,8 +41,6 @@ export class ReportsComponent implements OnInit {
     this._rp.consultarReport().subscribe( data =>{
       this.respuesta = data;
       this.resultados = this.respuesta.data;
-      // console.log(this.respuesta)
-
     })
   }
 
@@ -55,14 +53,14 @@ export class ReportsComponent implements OnInit {
     });
   }
 
-  eliminarReport(id){
-
-     this._rp.eliminarReport(id).subscribe(data => {
-     this.consulta();
-
-  });
- }
-
+  eliminarReport(id:string) {
+    const confirmacion = confirm('Estas seguro de eliminar el producto');
+      if(confirmacion){
+        this._rp.eliminarReport(id).subscribe(data => {
+          this.consulta();})
+  }
+  this.formReport.reset()
+}
 
   handlePage(e: PageEvent){
     this.page_size = e.pageSize

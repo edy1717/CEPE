@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../../services/auth.service';
 import { UserInterface } from '../../../interfaces/user';
 import {
-    ModalUserprofileComponent
+ ModalUserprofileComponent
 } from '../../modals/modal-userprofile/modal-userprofile.component';
 import { UsuarioService } from '../../../services/usuario.service';
 import { LoginComponent } from '../../user/login/login.component';
@@ -59,7 +59,6 @@ export class ProfileComponent implements OnInit {
   buscar(){
   this._us.buscarUserId(localStorage.getItem('idusu')).subscribe (data =>{
   this.usuario=data['data'];
-  // console.log(this.usuario);
   });
  }
 
