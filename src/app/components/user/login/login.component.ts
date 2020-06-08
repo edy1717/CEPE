@@ -32,46 +32,17 @@ export class LoginComponent implements OnInit {
     });
   }
 
-/*
-  onLogin(): void {
-    this.authService.loginEmailUser(this.email, this.password)
-    .then((res) => {
-    this.router.navigate(['home']);
-    }).catch(err => console.log('err', err.message));
-  }
-
-  onLoginGoogle():void{
-    this.authService.loginGoogleUser()
-    .then( (resp) => {
-    this.router.navigate(['home']);
-    }).catch(err => console.log('err', err.message ));
-  }
-
-  onLoginFacebook():void{
-    this.authService.loginFacebookUser()
-    .then( (resp) => {
-    this.router.navigate(['home']);
-    }).catch (err => console.log('err', err.message));
-  }
-
-  onLogout():void{
-    this.authService.logoutUser();
-  }
-*/
   onLoginCorreo(){
     this.usService.onlogin(this.formLogin.value).subscribe ( resp => {
     this.resultado = resp;
     if (this.resultado.data.token != ''){
 
-
       localStorage.setItem('idusu',this.resultado.data.id);
       localStorage.setItem('SCtoken', this.resultado.data.token);
       this.router.navigateByUrl('/home');
-
       console.log(localStorage.getItem('SCtoken'));
       console.log('res',resp)
       console.log('resi',this.resultado)
-
       }
     }),error => console.log('erros nemo',error)
   }

@@ -39,6 +39,7 @@ import { ModalHomeComponent } from './components/modals/modal-home/modal-home.co
 import { safeUrlPipe } from './shared/pipes/safe-url.pipe';
 import { FctrlxAngularFileReader } from 'fctrlx-angular-file-reader';
 import { FilterReportsPipe } from './shared/pipes/filter-report.pipe';
+import { AvisoPrivacidadComponent } from './components/aviso-privacidad/aviso-privacidad.component';
 
 @NgModule({
   declarations: [
@@ -66,7 +67,8 @@ import { FilterReportsPipe } from './shared/pipes/filter-report.pipe';
     ModalUserprofileComponent,
     ReportsComponent,
     safeUrlPipe,
-    FilterReportsPipe
+    FilterReportsPipe,
+    AvisoPrivacidadComponent
   ],
   imports: [
     BrowserModule,

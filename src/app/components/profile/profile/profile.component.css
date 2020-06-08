@@ -55,3 +55,99 @@ mat-card-actions {
     margin-left: 15%;
     font-size: 12px;
 }
+
+
+/* XS Portrait */
+
+@media (max-width: 480px) {
+    .opcion {
+        background-color: #743B8F;
+        color: white;
+        margin-right: 12px;
+        font-size: 12px;
+    }
+    .actualizar {
+        background: yellow;
+        color: white;
+        margin-left: 15%;
+        font-size: 12px;
+    }
+}
+
+
+/* xs */
+
+@media (min-width: 360px) and (max-width: 767px) {
+    mat-card-actions {
+        margin-left: 28px;
+    }
+    .opcion {
+        background-color: #743B8F;
+        color: white;
+        margin-right: 12px;
+        font-size: 12px;
+    }
+    .actualizar {
+        background: red;
+        color: white;
+        margin-top: 10px;
+        margin-left: 35%;
+        font-size: 12px;
+    }
+}
+
+
+/* sm */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .opcion {
+        background-color: #743B8F;
+        color: white;
+        margin-left: -58px;
+        margin-right: 60px;
+        font-size: 12px;
+    }
+    .actualizar {
+        background: blue;
+        color: white;
+        font-size: 12px;
+        margin-left: -20px;
+    }
+}
+
+
+/* md */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .opcion {
+        background-color: #743B8F;
+        color: white;
+        margin-left: -26px;
+        margin-right: 28px;
+        font-size: 12px;
+    }
+    .actualizar {
+        background: pink;
+        color: white;
+        margin-left: 10px;
+        font-size: 12px;
+    }
+}
+
+
+/* lg */
+
+
+/* @media (min-width: 1200px) {
+    .opcion {
+        background-color: #743B8F;
+        color: white;
+        margin-right: 12px;
+        font-size: 12px;
+    }
+    .actualizar {
+        background: black;
+        color: white;
+        margin-left: 15%;
+        font-size: 12px;
+    } */

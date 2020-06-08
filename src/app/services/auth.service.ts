@@ -56,14 +56,15 @@ getToken(){
       return localStorage.getItem('SCtoken');
 }
 getCurrentUser(): UserInterface{
-      let user_string = localStorage.getItem('currentUser');
-      if(!isNullOrUndefined(user_string)){
-        let user = JSON.parse(user_string)
+      let user_string = localStorage.getItem('SCtoken');
+      if(isNullOrUndefined(user_string)){
+        let user : UserInterface = JSON.parse(user_string)
         return user
       }else {
         return null;
       }
     }
+
 
 
 }

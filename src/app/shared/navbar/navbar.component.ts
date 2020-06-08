@@ -1,10 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFireAuth } from '@angular/fire/auth';
-import { AuthService } from '../../services/auth.service';
-import { UserInterface } from '../../interfaces/user';
 import { Router } from '@angular/router';
-
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-navbar',
@@ -13,50 +9,27 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 })
 export class NavbarComponent implements OnInit {
 
-  active = 1;
-  public isLogged = true;
+  constructor(   private router:Router, private  _us : AuthService) { }
+  
+  public isLogged = false;
 
-  constructor( private authService : AuthService,
-                 private router:Router ) { }
-
-  public app_name: string = 'Sembrando Conciencia';
-
-
-
-  ngOnInit(): void {
-    this.onCheckUser();
-    // this.authService.isAuth().subscribe(user =>  {
-    //   if(user){
-    //     this.user.name = user.displayName;
-    //     this.user.email = user.email
-    //   }
-    // })
-  }
-
-  //getCurrentUser() {
-  //   this.authService.onlogin().subscribe(auth => {
-  //     if (auth) {
-  //       console.log('user logged');
-  //       this.isLogged = true;
-  //     } else {
-  //       console.log('NOT user logged');
-  //       this.isLogged = false;
-  //     }
-  //   });
-  // }
-
-  onLogout() {
-    localStorage.removeItem('SCtoken');
-    localStorage.removeItem('idusu');
-    this.router.navigateByUrl('/home');
+  ngOnInit(){
+    this.onCheckUser()
   }
 
   onCheckUser(): void {
-    if (this.authService.getCurrentUser() === null) {
+    if (this._us.getCurrentUser() === this.isLogged ) {
       this.isLogged = false;
     } else {
       this.isLogged = true;
     }
   }
+
+  onLogout() {
+    localStorage.removeItem('SCtoken');
+    localStorage.removeItem('idusu');
+    this.router.navigateByUrl('/user/login');
+  }
+
 
 }

@@ -19,6 +19,7 @@ export class ModalMyProductsComponent implements OnInit {
   archivos: any;
   imag;
   imageError: string;
+  id:any;
 
   constructor(private _cu: CultivoService, public dialogRef: MatDialogRef<ModalMyProductsComponent>,
               @Inject(MAT_DIALOG_DATA) public data: any,
@@ -33,7 +34,7 @@ export class ModalMyProductsComponent implements OnInit {
     this.formActualizarProductClient.get('cantidad').patchValue(this.data.id.cantidad);
     this.formActualizarProductClient.get('medida').patchValue(this.data.id.medida);
     this.formActualizarProductClient.get('imagen').patchValue(this.data.id.imagen);
-
+    this.id = this.data.id.id;
   }
 
 

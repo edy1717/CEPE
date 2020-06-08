@@ -21,6 +21,7 @@ export class ModalComponent implements OnInit {
   archivos: any;
   imag
   imageError: string;
+  id:any;
 
 
  constructor( public dialogRef: MatDialogRef<ModalComponent>,
@@ -39,6 +40,7 @@ export class ModalComponent implements OnInit {
    this.formActualizarProduct.get('descripcion').patchValue(this.data.id.descripcion);
    this.formActualizarProduct.get('medida').patchValue(this.data.id.medida);
    this.formActualizarProduct.get('cantidad').patchValue(this.data.id.cantidad);
+   this.id = this.data.id.id;
 
 }
 
@@ -74,7 +76,7 @@ actualizarCultivo(){
   .subscribe(respEditar => {
     this.respuesta = respEditar
     this.respBack =this.respuesta.exito
-    
+
     if(this.respBack === true){
       Swal.fire({
        icon: 'success',
@@ -84,7 +86,7 @@ actualizarCultivo(){
        location.reload()
      });
     }
-  });  
+  });
 }
 
 

@@ -16,6 +16,7 @@ export class ModalOffersComponent implements OnInit {
   dataPost;
   respuesta;
   respBack;
+  id:any;
 
   constructor(private _postServ: OffersService, public dialogRef: MatDialogRef<ModalOffersComponent>,
               @Inject(MAT_DIALOG_DATA) public data: any) { }
@@ -24,9 +25,9 @@ export class ModalOffersComponent implements OnInit {
     this.formPost();
     this.getListPost();
     this.dataPost = this.data;
-    console.log(this.data.id.id);
     this.formPosts.get('id').patchValue(this.data.id.id);
     this.formPosts.get('contenido').patchValue(this.data.id.contenido);
+    this.id = this.data.id.id;
 }
 
   formPost(){
