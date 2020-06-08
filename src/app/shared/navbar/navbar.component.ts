@@ -12,7 +12,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-
+  id:any;
+  verinicio:boolean=false;
+  verperfil:boolean=false;
   active = 1;
   public isLogged = true;
 
@@ -25,6 +27,15 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {
     this.onCheckUser();
+    this.id = localStorage.getItem('idusu');
+    console.log(this.id);
+    if(this.id != null){
+    this.verperfil = true;
+     }
+    if(this.id === null){
+    this.verinicio = true;
+    }
+
     // this.authService.isAuth().subscribe(user =>  {
     //   if(user){
     //     this.user.name = user.displayName;
@@ -44,11 +55,18 @@ export class NavbarComponent implements OnInit {
   //     }
   //   });
   // }
+  inciasesion(){
+    this.router.navigate(['/user/login']);
+
+  }
+
+
 
   onLogout() {
     localStorage.removeItem('SCtoken');
     localStorage.removeItem('idusu');
     this.router.navigateByUrl('/home');
+    location.reload();
   }
 
   onCheckUser(): void {
