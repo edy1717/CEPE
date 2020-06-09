@@ -33,14 +33,16 @@ export class NavbarComponent implements OnInit {
     }
   }
   inciasesion() {
-    this.router.navigate(['/user/login']);
+    this.router.navigate(['/user/login'])
   }
 
   onLogout() {
     localStorage.removeItem('SCtoken');
     localStorage.removeItem('idusu');
-    this.router.navigateByUrl('/home');
-    location.reload();
+    this.router.navigateByUrl('/home').then(dato=>{
+      location.reload()
+    });
+   
   }
 
   // onCheckUser(): void {

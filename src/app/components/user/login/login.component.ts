@@ -39,7 +39,9 @@ export class LoginComponent implements OnInit {
 
       localStorage.setItem('idusu',this.resultado.data.id);
       localStorage.setItem('SCtoken', this.resultado.data.token);
-      this.router.navigateByUrl('/home');
+      this.router.navigateByUrl('/home').then(dato=>{
+        location.reload()
+      });
       console.log(localStorage.getItem('SCtoken'));
       console.log('res',resp)
       console.log('resi',this.resultado)
