@@ -8,7 +8,7 @@
 
 .imguser {
     max-width: 100%;
-    margin-left: 8%;
+    margin-left: 10%;
 }
 
 .datos {
@@ -16,9 +16,10 @@
 }
 
 .nameus {
-    margin-left: 25%;
+    margin-left: 15px;
     font-size: 20px;
     color: Gray;
+    margin-top: 10px;
 }
 
 .infogene {
@@ -81,6 +82,18 @@ mat-card-actions {
     mat-card-actions {
         margin-left: 28px;
     }
+    .row {
+        margin-left: 15%;
+    }
+    .imguser {
+        max-width: 300px;
+        margin-top: 50px;
+        margin-left: -65px;
+    }
+    .nameus {
+        margin-top: 10px;
+        margin-left: -67px;
+    }
     .opcion {
         background-color: #743B8F;
         color: white;
@@ -88,7 +101,7 @@ mat-card-actions {
         font-size: 12px;
     }
     .actualizar {
-        background: red;
+        background: #418215;
         color: white;
         margin-top: 10px;
         margin-left: 35%;
@@ -108,7 +121,7 @@ mat-card-actions {
         font-size: 12px;
     }
     .actualizar {
-        background: blue;
+        background: #418215;
         color: white;
         font-size: 12px;
         margin-left: -20px;
@@ -127,7 +140,7 @@ mat-card-actions {
         font-size: 12px;
     }
     .actualizar {
-        background: pink;
+        background: #418215;
         color: white;
         margin-left: 10px;
         font-size: 12px;

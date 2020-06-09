@@ -3,9 +3,11 @@
     <mat-card-content>
         <form [formGroup]="formMyProfil">
             <div class="row" *ngFor="let usua of usuario">
-                <div class="col-2">
+                <div class="col-2 nombre">
                     <img class="imguser" src="'../../../../assets/img/us.png">
-                    <mat-label class="nameus">{{usua.nombre}} </mat-label>
+                    <div class="nameus">
+                        <mat-label>{{usua.nombre}} </mat-label>
+                    </div>
                 </div>
                 <div class="col-10 datos">
                     <mat-label class="infogene">Información General </mat-label>

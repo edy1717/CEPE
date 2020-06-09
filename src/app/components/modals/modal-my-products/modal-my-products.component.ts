@@ -59,11 +59,9 @@ export class ModalMyProductsComponent implements OnInit {
     if (event.target.files[0].size > max_size) {
      this.imageError =
          'Maximum size allowed is ' + max_size / 1000 + 'Mb';
-
      return false;
  }
-      if(file)
-      {
+    if(file){
       this.promiseService.toBase64(file).then((result) => {
       const image = result.split(',')[1];
       let imageb64 = image.slice(4)
@@ -76,7 +74,7 @@ export class ModalMyProductsComponent implements OnInit {
     .subscribe(respEditar => {
       this.respuesta = respEditar
       this.respBack =this.respuesta.exito
-      
+
       if(this.respBack === true){
         Swal.fire({
          icon: 'success',
@@ -86,8 +84,8 @@ export class ModalMyProductsComponent implements OnInit {
          location.reload()
        });
       }
-    });  
-  
+    });
+
   //   this._cu.editarCultivo(this.formActualizarProductClient.value)
   //   .subscribe (respBack => {
   //     this.respuesta = respBack;

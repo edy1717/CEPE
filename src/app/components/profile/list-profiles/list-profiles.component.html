@@ -17,7 +17,7 @@
                     </div>
                 </div>
             </div>
-            <table class="table table-hover"  *ngIf="resultados && resultados.length>0">
+            <table class="table table-hover">
                 <thead>
                     <tr>
                         <th *ngFor="let head of headElements" scope="col">{{head}} </th>
@@ -25,7 +25,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let profil of resultados | paginate:page_size:page_number  | filterProfile:filterPost">
+                    <tr *ngFor="let profil of resultados | filterProfile:filterPost">
                         <th scope="row"> {{profil.id}} </th>
                         <td> {{profil.nombre}} {{profil.apellidoPaterno}} {{profil.apellidoMaterno}}</td>
                         <td> {{profil.email}} </td>
@@ -47,20 +47,6 @@
                     </tr>
                 </tbody>
             </table>
-        </div>
-        <div class="row">
-            <div class="col-6">
-                <div class="form-group">
-                    <div class="search-box float-left mb-6 ">
-                        <mat-paginator *ngIf="resultados && resultados.length>0"
-                            [length]="resultados.length"
-                            [pageSize]="page_size"
-                            [pageSizeOptions]="pageSizeOptions"
-                            (page)="handlePage($event) ">
-                        </mat-paginator>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 </div>

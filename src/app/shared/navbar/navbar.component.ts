@@ -8,28 +8,47 @@ import { AuthService } from '../../services/auth.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+  id: any;
+  verinicio: boolean = false;
+  verperfil: boolean = false;
+  active = 1;
+  public isLogged = true;
 
-  constructor(   private router:Router, private  _us : AuthService) { }
-  
-  public isLogged = false;
+  constructor(private authService: AuthService,
+    private router: Router) { }
 
-  ngOnInit(){
-    this.onCheckUser()
-  }
+  public app_name: string = 'Sembrando Conciencia';
 
-  onCheckUser(): void {
-    if (this._us.getCurrentUser() === this.isLogged ) {
-      this.isLogged = false;
-    } else {
-      this.isLogged = true;
+
+
+  ngOnInit(): void {
+    // this.onCheckUser();
+    this.id = localStorage.getItem('idusu');
+    console.log(this.id);
+    if (this.id != null) {
+      this.verperfil = true;
     }
+    if (this.id === null) {
+      this.verinicio = true;
+    }
+  }
+  inciasesion() {
+    this.router.navigate(['/user/login']);
   }
 
   onLogout() {
     localStorage.removeItem('SCtoken');
     localStorage.removeItem('idusu');
-    this.router.navigateByUrl('/user/login');
+    this.router.navigateByUrl('/home');
+    location.reload();
   }
 
+  // onCheckUser(): void {
+  //   if (this._us.getCurrentUser() === this.isLogged ) {
+  //     this.isLogged = false;
+  //   } else {
+  //     this.isLogged = true;
+  //   }
+  // }
 
 }

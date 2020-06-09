@@ -26,9 +26,7 @@ export class UsuarioService {
     }
 
   consultUserId(data){
-
-   let id = {id:data};
-      // console.log(id);
+   let id = {id: data};
    return this.http.post(this.url + '/obtener', id, httpOptions);
   }
 
@@ -38,11 +36,9 @@ export class UsuarioService {
   }
 
   eliminarPerfil(id){
-    // console.log(id);
     return this.http.post(this.url + '/eliminar', id, httpOptions);
   }
   editarPerfil(data){
-    // console.log(data);
     return this.http.post(this.url + '/editar', data, httpOptions);
   }
 }
