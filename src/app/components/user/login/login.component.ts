@@ -42,11 +42,8 @@ export class LoginComponent implements OnInit {
       this.router.navigateByUrl('/home').then(dato=>{
         location.reload()
       });
-      console.log(localStorage.getItem('SCtoken'));
-      console.log('res',resp)
-      console.log('resi',this.resultado)
       }
-    }),error => console.log('erros nemo',error)
+    }),error => console.log('error ',error)
   }
 
 
