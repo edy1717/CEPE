@@ -1,4 +1,4 @@
-<img src="../../../assets/img/Banner_lista_productos_cliente.jpg" class="img-fluid" alt="Responsive image">
+<img src="../../../assets/img/reporte.jpg" class="img-fluid" alt="Responsive image">
 
 <div class="main-container">
     <section class="main-container">
@@ -18,16 +18,15 @@
                 </div>
             </div>
             <br>
-            <table class="table ">
+            <table class="table table-hover " *ngIf="resultados && resultados.length>0">
                 <thead>
                     <tr>
                         <th *ngFor="let head of headElements" scope="col">{{head}} </th>
                         <th scope="col"> &nbsp; </th>
-                        <th scope="col"> &nbsp; </th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let report of resultados | filterRepor:filterPost">
+                    <tr *ngFor="let report of resultados | paginate:page_size:page_number| filterRepor:filterPost">    
                         <td> {{report.id}} </td>
                         <td>{{report.razon}}</td>
                         <td>{{report.descripcion}} </td>
@@ -40,6 +39,20 @@
                     </tr>
                 </tbody>
             </table>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group">
+                    <div class="search-box float-left mb-6 ">
+                        <mat-paginator *ngIf="resultados && resultados.length>0"
+                            [length]="resultados.length"
+                            [pageSize]="page_size"
+                            [pageSizeOptions]="pageSizeOptions"
+                            (page)="handlePage($event) ">
+                        </mat-paginator>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 </div>

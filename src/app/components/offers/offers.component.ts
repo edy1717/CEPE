@@ -126,6 +126,11 @@ export class OffersComponent implements OnInit {
       data: { id : value }
     });
     dialogRef.afterClosed().subscribe(result => {
+      if (!result){
+        return;
+      }
+      value = result
+      this.consultar();
     });
   }
 

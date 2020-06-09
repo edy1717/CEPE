@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 import { FormControl } from '@angular/forms';
 import { FormGroup } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
+import { PageEvent } from '@angular/material/paginator';
 
 
 @Component({
@@ -51,8 +52,6 @@ constructor( public dialog: MatDialog, private _cs: CultivoService,
       this.resultados = this.respuesta.data
       console.log('pp', this.resultados)
   })
-
-
   }
 
   openDialog(value){
@@ -63,5 +62,15 @@ constructor( public dialog: MatDialog, private _cs: CultivoService,
     dialogRef.afterClosed().subscribe(result => {
     });
   }
+
+  handlePage(e: PageEvent){
+    this.page_size = e.pageSize
+    this.page_number = e.pageIndex + 1
+  }
+
+  page_size: number = 5;
+  page_number: number = 1;
+  pageSizeOptions  = [5, 10, 15, 20, 25, 30, 40, 80 , 100]
+
 
 }

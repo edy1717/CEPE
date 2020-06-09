@@ -16,3 +16,13 @@
     background-color: #743b8f;
     color: white;
 }
+
+  .example-full-width {
+    width: 100%;
+  }
+
+
+.example-button-row button {
+    display: table-cell;
+    margin-right: 8px;
+  }

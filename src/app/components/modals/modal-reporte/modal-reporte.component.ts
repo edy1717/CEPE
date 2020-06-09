@@ -17,8 +17,7 @@ export class ModalReporteComponent implements OnInit {
   resultado;
 
   constructor(public dialogRef: MatDialogRef<ModalReporteComponent>,
-              @Inject(MAT_DIALOG_DATA) public data: any, private _reports: ReporteService
-                ) { }
+              @Inject(MAT_DIALOG_DATA) public data: any, private _reports: ReporteService ) { }
 
   ngOnInit(): void {
 
@@ -49,9 +48,12 @@ enviarReport(){
    this.respuesta = respBack;
    });
    this.getListPost();
-   this.dialogRef.close();
+   this.dialogRef.close(this.formReporte.value);
  }
 
+ onNoClick(): void {
+  this.dialogRef.close();
+}
 
 }
 

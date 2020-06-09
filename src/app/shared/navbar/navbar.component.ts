@@ -14,15 +14,9 @@ export class NavbarComponent implements OnInit {
   active = 1;
   public isLogged = true;
 
-  constructor(private authService: AuthService,
-    private router: Router) { }
-
-  public app_name: string = 'Sembrando Conciencia';
-
-
+  constructor( private router: Router) { }
 
   ngOnInit(): void {
-    // this.onCheckUser();
     this.id = localStorage.getItem('idusu');
     console.log(this.id);
     if (this.id != null) {
@@ -44,13 +38,4 @@ export class NavbarComponent implements OnInit {
     });
    
   }
-
-  // onCheckUser(): void {
-  //   if (this._us.getCurrentUser() === this.isLogged ) {
-  //     this.isLogged = false;
-  //   } else {
-  //     this.isLogged = true;
-  //   }
-  // }
-
 }

@@ -17,7 +17,7 @@ import { ModalProfileComponent } from '../../modals/modal-profile/modal-profile.
 export class ListProfilesComponent implements OnInit {
 
   perfiles: any[];
-  headElements = ['#','Nombre','Email','Ubicación', 'Teléfono' ];
+  headElements = ['Id Cliente','Nombre','Correo electronico','Ubicación' ];
   forPerfil : FormGroup;
   resultados;
   respuesta;
@@ -45,6 +45,12 @@ export class ListProfilesComponent implements OnInit {
       data: { id : value }
     });
     dialogRef.afterClosed().subscribe(result => {
+      if (!result){
+        return;
+      }
+      value = result
+
+      this.consultar();
     });
   }
 
@@ -61,6 +67,11 @@ openDialogRep(value){
     data: {id : value}
   });
   dialogRef.afterClosed().subscribe(resul =>{
+    if (!resul){
+      return;
+    }
+    value = resul
+    this.consultar();
   });
   }
 

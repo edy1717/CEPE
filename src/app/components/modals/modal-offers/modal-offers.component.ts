@@ -46,28 +46,11 @@ export class ModalOffersComponent implements OnInit {
         .subscribe(respEditar => {
       this.respuesta = respEditar
       this.respBack =this.respuesta.exito
-      
-      if(this.respBack === true){
-        Swal.fire({
-         icon: 'success',
-         title: 'Exito',
-         text: 'Se actualizó con éxito'
-       }).then(dato=>{
-         location.reload()
-       });
-      }
+      this.dialogRef.close(this.formPosts.value)
     });  
-  
-    // this._postServ.editarPost(this.formPosts.value)
-    // .subscribe (respBack => {
-    //   this.respuesta = respBack;
-    // });
-    // console.log('form',this.formPosts.value)
-
-    // this.getListPost();
    }
 
-   cerrarModal(){
+   onNoClick(): void {
     this.dialogRef.close();
-   }
+  }
 }

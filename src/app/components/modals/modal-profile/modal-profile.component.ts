@@ -57,21 +57,13 @@ export class ModalProfileComponent implements OnInit {
       this.respuesta = respEditar
       this.respBack =this.respuesta.exito
       
-      if(this.respBack === true){
-        Swal.fire({
-         icon: 'success',
-         title: 'Exito',
-         text: 'Se actualizó con éxito'
-       }).then(dato=>{
-         location.reload()
-       });
-      }
+      this.dialogRef.close(this.formPerfil.value)
     });  
-    // .subscribe (respBack => {
-    //   this.respuesta = respBack;
-    //   this.respBack = this.respuesta.codigoOperacionBackend;
-    // });
-    // this.dialogRef.close();
+
    }
+
+   onNoClick(): void {
+    this.dialogRef.close();
+  }
 
 }

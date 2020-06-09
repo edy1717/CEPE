@@ -1,9 +1,8 @@
-import { Component, OnInit, Inject, Input, SimpleChanges, OnDestroy, OnChanges } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { CultivoService } from '../../../services/cultivo.service';
-import { FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
+import { FormGroup, FormControl } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-// import Swal from 'sweetalert2';
-import { FileReaderPromiseLikeService, FileReaderObservableLikeService } from 'fctrlx-angular-file-reader';
+import { FileReaderPromiseLikeService } from 'fctrlx-angular-file-reader';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -53,7 +52,6 @@ export class ModalComponent implements OnInit {
      medida : new FormControl (null),
      cantidad : new FormControl (null),
      imagen: new FormControl(null)
-
    })
  }
 
@@ -61,35 +59,20 @@ getListProduct(){
   this.dataProducts = this._cs.consultaCultivo(this.dataProducts);
 }
 
-//  actualizarCultivo(){
-//     this._cs.editarCultivo(this.formActualizarProduct.value)
-//     .subscribe (respBack => {
-//       this.respuesta = respBack;
-//       this.respBack = this.respuesta.codigoOperacionBackend;
-//     });
-//     this.getListProduct();
-//     this.dialogRef.close();
-//  }
 
-actualizarCultivo(){
+actualizarCultivo():void{
   this._cs.editarCultivo(this.formActualizarProduct.value)
   .subscribe(respEditar => {
-    this.respuesta = respEditar
-    this.respBack =this.respuesta.exito
-
-    if(this.respBack === true){
-      Swal.fire({
-       icon: 'success',
-       title: 'Exito',
-       text: 'Se actualizó con éxito'
-     }).then(dato=>{
-       location.reload()
-     });
-    }
-  });
+       this.respuesta = respEditar
+       this.respBack =this.respuesta.exito
+    this.dialogRef.close(this.formActualizarProduct.value)
+    console.log('actua2', this.formActualizarProduct.value)
+  })
 }
 
-
+onNoClick(): void {
+  this.dialogRef.close();
+}
 
 onFileSelected(event: any)
  {

@@ -4,13 +4,13 @@
     <section class="main-container">
         <div class="table-responsive">
             <div class="col-12">
-                <h2>Por: Con {{usua.id}} <b>{{usua.nombre}} {{usua.email}}</b></h2>
+                <h2>Por: <b>{{usua.nombre}}, {{usua.email}}</b> con id: {{usua.id}} </h2>
             </div>
             <div class="container">
                 <div class="row">
                     <div class="col-12">
                         <div class="form-group">
-                            <div class="search-box float-left mb-3 ">
+                            <div class="search-box float-left mb-6 ">
                                 <input type="text" class="search-text" name="filterPost" placeholder="Buscar" [(ngModel)]="filterPost">
                                 <a class="search-btn">
                                     <i class="fas fa-search"></i>
@@ -21,16 +21,15 @@
                 </div>
             </div>
             <br>
-            <table class="table ">
+            <table class="table table-hover"  *ngIf="myProducts && myProducts.length>0">
                 <thead>
                     <tr>
                         <th *ngFor="let head of headElements" scope="col">{{head}} </th>
                         <th scope="col"> &nbsp; </th>
-                        <th scope="col"> &nbsp; </th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let a of myProducts | filter:filterPost ">
+                    <tr *ngFor="let a of myProducts  | paginate:page_size:page_number | filter:filterPost ">
                         <th scope="row ">{{a.id}}</th>
                         <td>{{a.titulo}}</td>
                         <td>{{a.descripcion}} </td>
@@ -41,11 +40,25 @@
                         <td>{{a.medida}}</td>
                         <td>
                             <button class="btn actualizar" (click)="openDialog(a)">Actualizar</button>
-                            <button class="btn btn-danger  " (click)="elimina(a)">Eliminar</button>
+                            <button class="btn btn-danger" (click)="elimina(a)">Eliminar</button>
                         </td>
                     </tr>
                 </tbody>
             </table>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group">
+                    <div class="search-box float-left mb-6 ">
+                        <mat-paginator *ngIf="myProducts && myProducts.length>0"
+                            [length]="myProducts.length"
+                            [pageSize]="page_size"
+                            [pageSizeOptions]="pageSizeOptions"
+                            (page)="handlePage($event) ">
+                        </mat-paginator>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 </div>

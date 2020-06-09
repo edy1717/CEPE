@@ -10,10 +10,12 @@ import { ProfileComponent } from './components/profile/profile/profile.component
 import { MyproductsComponent } from './components/profile/myproducts/myproducts.component';
 import { ReportsComponent } from './components/profile/reports/reports.component';
 import { AvisoPrivacidadComponent } from './components/aviso-privacidad/aviso-privacidad.component';
+import { ModalMapsComponent } from './components/modals/modal-maps/modal-maps.component';
 
 
 const routes: Routes = [
   { path : 'home', component : HomeComponent , pathMatch: 'full'},
+  { path : 'maps', component : ModalMapsComponent},
   { path : 'aviso-de-privavidad', component : AvisoPrivacidadComponent },
   { path : 'user/login' , component : LoginComponent },
   { path : 'user/profile' ,  component : ProfileComponent ,canActivate: [AuthGuard]  },

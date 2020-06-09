@@ -42,9 +42,9 @@ export class MyproductsComponent implements OnInit {
    }
 
   ngOnInit(): void {
-
     this.formMyProduct();
     this.consultar();
+
   }
   openDialog(value){
     const dialogRef = this.dialog.open(ModalMyProductsComponent, {
@@ -52,6 +52,11 @@ export class MyproductsComponent implements OnInit {
       data: { id : value }
       });
     dialogRef.afterClosed().subscribe(result => {
+      if (!result){
+        return;
+      }
+      value = result
+      this.consultar();
     });
   }
 

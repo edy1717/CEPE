@@ -9,7 +9,7 @@
     </div>
     <div class="row">
         <div class="col-6">
-            <mat-form-field class="mr-5">
+            <mat-form-field class="mr-5">   
                 <mat-label>Nombre</mat-label>
                 <input matInput formControlName="titulo">
             </mat-form-field>
@@ -33,22 +33,27 @@
             </mat-form-field>
         </div>
 
-        <div class="col-6">
-            <mat-form-field class="mr-5">
+        <div class="col-12">
+            <mat-form-field class="example-full-width">
                 <mat-label>Descripción </mat-label>
-                <input matInput formControlName="descripcion">
+                <textarea matInput  formControlName="descripcion"></textarea>
             </mat-form-field>
         </div>
 
+
         <div class="col-12">
             <div class="form-group"> {{imageError}}
-                <label for="file" class="labels">imagen: </label>
-                <input #fileInput name="files[]" type="file" (change)="onFileSelected($event)" accept="application/jpeg">
+                <label for="file" class="labels">Selecciona tu nueva imagen: </label>
+                <input #fileInput name="files[]" type="file" (change)="onFileSelected($event)"
+                    accept="application/jpeg">
             </div>
         </div>
 
     </div>
     <div class="modal-footer">
-        <button type="button" class="btn guardar" (click)="actualizarCultivo()">Guardar</button>
+        <div class="example-button-row">
+            <button mat-raised-button color="warn" (click)="onNoClick()">Cerrar</button> 
+            <button class="btn guardar" (click)="actualizarCultivo()" mat-raised-button>Guardar</button>
+          </div>
     </div>
 </form>

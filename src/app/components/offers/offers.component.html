@@ -1,5 +1,5 @@
-<!-- <img src="../../../assets/img/Banner_ofertas.jpg" class="img-fluid" alt="Responsive image">
 
+<img src="../../../assets/img/Banner_ofertas.jpg" class="img-fluid" alt="Responsive image">
 <div class="main-container">
     <div class="row">
         <div class="col-12">
@@ -19,41 +19,6 @@
         <div class="col-lg-3 col-md-4 col-sm-12" *ngFor="let post of resultados |  paginate:page_size:page_number | filter:filterPost">
             <mat-card class="card">
                 <mat-card-content>
-                    <!-- <h4 routerLink="/product/{{product.id}} " class="card-title text-center"><b>Nuestro {{product.id}}</b></h4>
-                    <p class="text-center">
-                        Contenido <b class="color">{{post.contenido}}  </b>
-                    </p>
-                </mat-card-content>
-                <mat-card-actions class="col-12">
-                    <button class="btn actualizar" (click)="openDialog(post)">Actualizar</button>
-                    <button class="btn eliminar" (click)="eliminarPost(post)">Eliminar</button>
-                </mat-card-actions>
-            </mat-card>
-
-        </div>
-    </div>
-</div> -->
-<img src="../../../assets/img/Banner_ofertas.jpg" class="img-fluid" alt="Responsive image">
-
-<div class="main-container">
-    <div class="row">
-        <div class="col-12">
-            <div class="form-group">
-                <div class="search-box float-left mb-6 ">
-                    <input type="text" class="search-text" name="filterPost" placeholder="Buscar" [(ngModel)]="filterPost">
-                    <a class="search-btn">
-                        <i class="fas fa-search"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="main-container">
-    <div class="row">
-        <div class="col-lg-3 col-md-4 col-sm-12" *ngFor="let post of resultados | filter:filterPost">
-            <mat-card class="card">
-                <mat-card-content>
                     <!-- <h4 routerLink="/product/{{product.id}} " class="card-title text-center"><b>Nuestro {{product.id}}</b></h4> -->
                     <p class="text-center">
                         Contenido <b class="color">{{post.contenido}}  </b>
@@ -64,7 +29,20 @@
                     <button class="btn eliminar" (click)="eliminarPost(post)">Eliminar</button>
                 </mat-card-actions>
             </mat-card>
-
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <div class="search-box float-left mb-6 ">
+                    <mat-paginator *ngIf="resultados && resultados.length>0"
+                        [length]="resultados.length"
+                        [pageSize]="page_size"
+                        [pageSizeOptions]="pageSizeOptions"
+                        (page)="handlePage($event) ">
+                    </mat-paginator>
+                </div>
+            </div>
         </div>
     </div>
 </div>

@@ -29,9 +29,7 @@ export class ListProductsComponent implements OnInit {
   ngOnInit() {
     this.formMyProduct();
     this.consultar();
-
   }
-
 
   formMyProduct(){
     this.formmyPoduct = new FormGroup ({
@@ -50,6 +48,11 @@ export class ListProductsComponent implements OnInit {
       data: { id : value }
     });
     dialogRef.afterClosed().subscribe(result => {
+      if (!result){
+        return;
+      }
+      value = result
+      this.consultar();
     });
   }
 
@@ -57,13 +60,11 @@ export class ListProductsComponent implements OnInit {
     this._sc.consultarTodosCultivos().subscribe (data => {
       this.respuesta = data;
       this.resultados = this.respuesta.data;
-      // console.log('pp', this.resultados)
     });
   }
 
   obtenerCultivoId(data){
     this.cultivo = data
-    console.log(this.cultivo);
   }
 
   elimina(id:string) {
@@ -76,12 +77,6 @@ export class ListProductsComponent implements OnInit {
     this.formmyPoduct.reset()
   }
 
-// elimina(id){
-//     this._sc.eliminarCultivo(id).subscribe(data => {
-//     this.consultar();
-//  });
-//  this.formmyPoduct.reset()
-//  }
 
 
   handlePage(e: PageEvent){
