@@ -34,10 +34,14 @@
     transition: 0.4s;
     line-height: 20px;
 }
+
 .mat-paginator {
     border: none;
     background: none;
+    color: none;
+    outline: none;
 }
+
 
 .actualizar {
     background-color: #418215;

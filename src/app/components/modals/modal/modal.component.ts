@@ -66,7 +66,6 @@ actualizarCultivo():void{
        this.respuesta = respEditar
        this.respBack =this.respuesta.exito
     this.dialogRef.close(this.formActualizarProduct.value)
-    console.log('actua2', this.formActualizarProduct.value)
   })
 }
 

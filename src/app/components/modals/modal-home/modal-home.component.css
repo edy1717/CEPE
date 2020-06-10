@@ -12,6 +12,16 @@
   outline: none;
 }
 
+.search-box {
+  position: relative;
+  top: 80%;
+  left: 80%;
+  background: none;
+  height: 40%;
+  padding: none;
+  border: none;
+}
+
 .card-color{
   color:#928C8C;
 }

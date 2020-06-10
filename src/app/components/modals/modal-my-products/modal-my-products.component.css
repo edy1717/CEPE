@@ -17,6 +17,10 @@
     color: white;
 }
 
+.example-full-width {
+    width: 100%;
+  }
+
 
 .example-button-row button {
     display: table-cell;

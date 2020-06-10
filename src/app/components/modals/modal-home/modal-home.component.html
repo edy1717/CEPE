@@ -1,4 +1,9 @@
 <div class="card mb-12">
+    <div class="search-box float-rigth mb-6 ">
+        <button mat-raised-button (click)="onNoClick()"><span class="material-icons">
+            highlight_off
+            </span></button> 
+    </div>
     <div class="row no-gutters">
         <div class="col-3 box">
             <img [src]=" dataProducts.imagen | safeUrl" class="img-thumbnail" alt="Responsive">
@@ -11,7 +16,7 @@
                 <small class="text-muted1">Descarga nuestra APP</small>
                 <i class="fab fa-android " style="color :#418215;"></i><small class="text-muted">Disponible para
                     Andorid Mobile</small>
-            </h5>
-        </div>
+                </h5>
+            </div>
     </div>
 </div>

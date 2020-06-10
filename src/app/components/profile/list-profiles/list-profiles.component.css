@@ -45,9 +45,10 @@
 }
 
 .mat-paginator {
-    border: none;
-    background: none;
+  border: none;
+  background: none;
 }
+
 
 .search-box {
     position: relative;

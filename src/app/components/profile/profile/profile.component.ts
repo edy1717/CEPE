@@ -5,7 +5,6 @@ import {
  ModalUserprofileComponent
 } from '../../modals/modal-userprofile/modal-userprofile.component';
 import { UsuarioService } from '../../../services/usuario.service';
-import { LoginComponent } from '../../user/login/login.component';
 import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
 import { FormGroup, FormControl } from '@angular/forms';
@@ -22,7 +21,7 @@ export class ProfileComponent implements OnInit {
   usuario:{};
 
 
-  constructor( private authService : AuthService , public dialog: MatDialog, private router:Router, private _us:UsuarioService) { }
+  constructor( public dialog: MatDialog, private _us:UsuarioService) { }
 
   ngOnInit(): void {
     this.consultar();
@@ -46,6 +45,11 @@ export class ProfileComponent implements OnInit {
       data: { id : value }
     });
     dialogRef.afterClosed().subscribe(result => {
+      if (!result){
+        return;
+      }
+      value = result
+      this.buscar();
     });
   }
 

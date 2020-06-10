@@ -57,6 +57,11 @@ mat-card-actions {
     font-size: 12px;
 }
 
+.mat-paginator {
+    border: none;
+    background: none;
+}
+
 
 /* XS Portrait */
 

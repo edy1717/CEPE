@@ -69,6 +69,11 @@ mat-button {
     color: red;
 }
 
+.mat-paginator {
+    border: none;
+    background: none;
+}
+
 
 /* buscador */
 

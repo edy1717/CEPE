@@ -21,8 +21,6 @@ export class ModalUserprofileComponent implements OnInit
 
   ngOnInit(): void {
     this.formMyPerfil();
-    console.log(this.data);
-
     this.cambiodatos.get('id').patchValue(this.data.id.id);
     this.cambiodatos.get('nombre').patchValue(this.data.id.nombre);
     this.cambiodatos.get('apellidoPaterno').patchValue(this.data.id.apellidoPaterno);
@@ -33,11 +31,11 @@ export class ModalUserprofileComponent implements OnInit
 
   formMyPerfil(){
     this.cambiodatos = new FormGroup ({
-      id : new FormControl(),
-      nombre : new FormControl (),
-      apellidoPaterno : new FormControl(),
-      apellidoMaterno : new FormControl(),
-      email : new FormControl()
+      id : new FormControl(null),
+      nombre : new FormControl (null),
+      apellidoPaterno : new FormControl(null),
+      apellidoMaterno : new FormControl(null),
+      email : new FormControl(null)
     });
   }
   guardar(){
@@ -45,16 +43,12 @@ export class ModalUserprofileComponent implements OnInit
     .subscribe(respEditar => {
       this.respuesta = respEditar
       this.respBack =this.respuesta.exito
-      
-      if(this.respBack === true){
-        Swal.fire({
-         icon: 'success',
-         title: 'Exito',
-         text: 'Se actualizó con éxito'
-       }).then(dato=>{
-         location.reload()
-       });
-      }
+      this.dialogRef.close(this.cambiodatos.value)
     });  
 }
+
+onNoClick(): void {
+  this.dialogRef.close();
+}
+
 }
