@@ -1,9 +1,7 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment';
 import { ProductInterface } from '../interfaces/products';
-import {map} from 'rxjs/operators';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { AuthService } from './auth.service';
 
 
 const httpOptions = { headers: new HttpHeaders({ "Content-Type": "application/json" ,
@@ -26,7 +24,7 @@ export class CultivoService {
     medida: '',
 };
 
-  constructor( private http: HttpClient, private authService: AuthService ) {
+  constructor( private http: HttpClient) {
 
   }
 
@@ -40,7 +38,7 @@ export class CultivoService {
 
 
   consultarTodosCultivos(){
-    return this.http.get(this.url + '/obtener/todos', httpOptions);
+    return this.http.get(this.url + '/obtener/todos');
   }
 
   editarCultivo(data){
@@ -52,3 +50,6 @@ export class CultivoService {
      return this.http.post(this.url + '/eliminar', id, httpOptions);
 }
 }
+
+
+
