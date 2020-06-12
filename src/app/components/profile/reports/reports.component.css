@@ -1,6 +1,5 @@
 .main-container {
     margin-top: 1px;
-    margin-top: 2px;
     padding: 20px;
 }
 
@@ -41,7 +40,6 @@
     color: none;
     outline: none;
 }
-
 
 .actualizar {
     background-color: #418215;

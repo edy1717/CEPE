@@ -17,8 +17,7 @@ export class LoginComponent implements OnInit {
   hide = true;
   private formSubmitAttempt: boolean;
 
-  constructor(  private router : Router,
-                private usService : AuthService ) { }
+  constructor(  private router : Router, private usService : AuthService ) { }
 
   ngOnInit() {
     this.crearFormulario();
@@ -35,7 +34,6 @@ export class LoginComponent implements OnInit {
     this.usService.onlogin(this.formLogin.value).subscribe ( resp => {
     this.resultado = resp;
     if (this.resultado.data.token != ''){
-
       localStorage.setItem('idusu',this.resultado.data.id);
       localStorage.setItem('SCtoken', this.resultado.data.token);
       this.router.navigateByUrl('/home').then(dato=>{

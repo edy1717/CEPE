@@ -1,8 +1,7 @@
 import { ReporteService } from '../../../services/reporte.service';
 import { Component, OnInit,Inject } from '@angular/core';
-import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
-import { NgForm , FormControl, FormGroup,  ReactiveFormsModule } from '@angular/forms';
-
+import { MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-modal-reporte',
@@ -26,16 +25,14 @@ export class ModalReporteComponent implements OnInit {
     this.dataPost = this.data;
     this.formReporte.get('usuarioCreador').patchValue(localStorage.getItem('idusu'));
     this.formReporte.get('usuarioReportado').patchValue(this.data.id);
-
   }
 
   formReporteUs(){
     this.formReporte = new FormGroup({
     razon : new FormControl (null),
-    descripcion : new FormControl (),
+    descripcion : new FormControl (null),
     usuarioCreador : new FormControl (null),
     usuarioReportado : new FormControl (null)
-
   });
 }
 getListPost(){

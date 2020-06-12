@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductProfileInterface } from 'src/app/interfaces/products-profile';
 import { ActivatedRoute } from '@angular/router';
 import { PageEvent } from '@angular/material/paginator';
 import { FormGroup, FormControl } from '@angular/forms';
 import { CultivoService } from '../../../services/cultivo.service';
 import { UsuarioService } from '../../../services/usuario.service';
-import {ModalMyProductsComponent} from '../../modals/modal-my-products/modal-my-products.component';
+import { ModalMyProductsComponent } from '../../modals/modal-my-products/modal-my-products.component';
 import { MatDialog } from '@angular/material/dialog';
 
 @Component({
@@ -32,19 +31,18 @@ export class MyproductsComponent implements OnInit {
 
    formMyProduct(){
      this.formMyproduct = new FormGroup ({
-       id : new FormControl (),
-       titulo : new FormControl(),
-       descripción : new FormControl(),
-       imagen : new FormControl(),
-       cantidad : new FormControl(),
-       medida: new FormControl  ()
+       id : new FormControl ( null ),
+       titulo : new FormControl( null ),
+       descripción : new FormControl( null ),
+       imagen : new FormControl( null ),
+       cantidad : new FormControl( null ),
+       medida: new FormControl  ( null )
      });
    }
 
   ngOnInit(): void {
     this.formMyProduct();
     this.consultar();
-
   }
   openDialog(value){
     const dialogRef = this.dialog.open(ModalMyProductsComponent, {
@@ -68,8 +66,7 @@ export class MyproductsComponent implements OnInit {
         });
         this._us.consultUserId(params.usuarioCreador).subscribe(dataus=>{
         this.usua = dataus['data'];
-        });
-      }
+        });  }
     });
 }
 

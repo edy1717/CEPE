@@ -7,7 +7,8 @@
                     <div class="col-12">
                         <div class="form-group">
                             <div class="search-box float-left mb-6 ">
-                                <input type="text" class="search-text" name="filterPost" placeholder="Buscar" [(ngModel)]="filterPost">
+                                <input type="text" class="search-text" name="filterPost" placeholder="Buscar"
+                                    [(ngModel)]="filterPost">
                                 <a class="search-btn">
                                     <i class="fas fa-search"></i>
                                 </a>
@@ -16,27 +17,30 @@
                     </div>
                 </div>
             </div>
-            <table class="table table-hover"  *ngIf="resultados && resultados.length>0">
+            <table class="table table-hover" *ngIf="resultados && resultados.length>0">
                 <thead>
                     <tr>
                         <th *ngFor="let head of headElements" scope="col">{{head}} </th>
-                        <th scope="col"> &nbsp; </th>                    
+                        <th scope="col"> &nbsp; </th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let product of resultados | paginate:page_size:page_number  | filter:filterPost" (click)="cultivo = product.id">                        <th scope="row"> {{product.id}} </th>
+                    <tr *ngFor="let product of resultados | paginate:page_size:page_number  | filter:filterPost"
+                        (click)="cultivo = product.id">
+                        <th scope="row"> {{product.id}} </th>
                         <td> {{product.titulo}} </td>
                         <td> {{product.descripcion}} </td>
-                        <td class="col-3 box"> 
+                        <td class="col-3 box">
                             <img [src]=" product.imagen | safeUrl" class="img-thumbnail" alt="Responsive">
                         </td>
                         <td> {{product.cantidad}} </td>
                         <td> {{product.medida}} </td>
                         <td class=" box1">
-                                <div class="example-button-row">
-                                    <button class="btn actualizar" (click)="openDialog(product)" mat-raised-button>Actualizar</button>
-                                    <button class="btn btn-danger" (click)="elimina(product)">Eliminar</button>                                  
-                                </div>
+                            <div class="example-button-row">
+                                <button class="btn actualizar" (click)="openDialog(product)"
+                                    mat-raised-button>Actualizar</button>
+                                <button class="btn btn-danger" (click)="elimina(product)">Eliminar</button>
+                            </div>
                         </td>
                     </tr>
                 </tbody>
@@ -46,11 +50,8 @@
             <div class="col-12">
                 <div class="form-group">
                     <div class="search-box float-left mb-6 ">
-                        <mat-paginator *ngIf="resultados && resultados.length>0"
-                            [length]="resultados.length"
-                            [pageSize]="page_size"
-                            [pageSizeOptions]="pageSizeOptions"
-                            (page)="handlePage($event) ">
+                        <mat-paginator *ngIf="resultados && resultados.length>0" [length]="resultados.length"
+                            [pageSize]="page_size" [pageSizeOptions]="pageSizeOptions" (page)="handlePage($event) ">
                         </mat-paginator>
                     </div>
                 </div>

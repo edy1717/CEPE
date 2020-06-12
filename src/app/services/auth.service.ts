@@ -2,8 +2,6 @@ import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { map, tap } from 'rxjs/operators';
-import { isNullOrUndefined } from 'util';
-import { UserInterface } from '../interfaces/user';
 
 @Injectable({
   providedIn: 'root'
@@ -15,11 +13,7 @@ export class AuthService {
     "Conten-type": "application.json"
   })
 
-
-  constructor( private http: HttpClient  ) {
-
-  }
-
+  constructor( private http: HttpClient  ) {}
 
 onlogin(data){
       return this.http.post(this.url + '/login', data, {headers : this.headers} )
@@ -55,16 +49,5 @@ setToken(token): void{
 getToken(){
       return localStorage.getItem('SCtoken');
 }
-getCurrentUser(): UserInterface{
-      let user_string = localStorage.getItem('SCtoken');
-      if(isNullOrUndefined(user_string)){
-        let user : UserInterface = JSON.parse(user_string)
-        return user
-      }else {
-        return null;
-      }
-    }
-
-
 
 }

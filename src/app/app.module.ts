@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ThemeModule } from './@theme/theme.module';
-
 //COMPONENTS
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -20,29 +19,22 @@ import { MyproductsComponent } from './components/profile/myproducts/myproducts.
 import { OffersComponent } from './components/offers/offers.component';
 import { ReportsComponent } from './components/profile/reports/reports.component';
 import { AvisoPrivacidadComponent } from './components/aviso-privacidad/aviso-privacidad.component';
-
 import { FctrlxAngularFileReader } from 'fctrlx-angular-file-reader';
 import { AgmCoreModule } from '@agm/core';
-
 //PIPE
 import { FilterPipe } from './shared/pipes/filter.pipe';
 import { FilterProfilePipe } from './shared/pipes/filter-profile.pipe';
 import { PaginatePipe } from './shared/pipes/paginate.pipe';
 import { safeUrlPipe } from './shared/pipes/safe-url.pipe';
 import { FilterReportsPipe } from './shared/pipes/filter-report.pipe';
-
 //modals
-
 import { ModalReporteComponent } from './components/modals/modal-reporte/modal-reporte.component';
 import { ModalMyProductsComponent } from './components/modals/modal-my-products/modal-my-products.component';
-import { ModalMapsComponent } from './components/modals/modal-maps/modal-maps.component';
 import { ModalUserprofileComponent } from './components/modals/modal-userprofile/modal-userprofile.component';
 import { ModalOffersComponent } from './components/modals/modal-offers/modal-offers.component';
 import { ModalComponent } from './components/modals/modal/modal.component';
 import { ModalProfileComponent } from './components/modals/modal-profile/modal-profile.component'
 import { ModalHomeComponent } from './components/modals/modal-home/modal-home.component';
-
-
 
 @NgModule({
   entryComponents:[
@@ -77,7 +69,6 @@ import { ModalHomeComponent } from './components/modals/modal-home/modal-home.co
     safeUrlPipe,
     FilterReportsPipe,
     AvisoPrivacidadComponent,
-    ModalMapsComponent,
   ],
   imports: [
     BrowserModule,
@@ -88,7 +79,6 @@ import { ModalHomeComponent } from './components/modals/modal-home/modal-home.co
     BrowserAnimationsModule,
     ThemeModule,
     FctrlxAngularFileReader,
-    AgmCoreModule.forRoot({apiKey: 'AIzaSyAwSIeXKK3WlzKFzKWrnaGBTZu6R46huDU'})
   ],
   providers: [
   ],

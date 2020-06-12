@@ -6,7 +6,6 @@
 .color {
     color: black;
 }
-
 .card {
     margin-top: 20px;
     max-width: 400px;
@@ -73,11 +72,7 @@ mat-button {
     border: none;
     background: none;
 }
-
-
 /* buscador */
-
-
 .search-box {
     position: relative;
     top: 80%;

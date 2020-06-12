@@ -9,7 +9,7 @@
         <div class="col-6">
             <mat-form-field class="mr-5">
                 <mat-label>Nombre</mat-label>
-                <input matInput formControlName="titulo">
+                <input matInput formControlName="titulo" required>
             </mat-form-field>
         </div>
 
@@ -23,24 +23,23 @@
         <div class="col-6">
             <mat-form-field class="mr-5">
                 <mat-label>Medida</mat-label>
-                <input matInput formControlName="medida">
+                <input matInput formControlName="medida" required>
             </mat-form-field>
         </div>
 
         <div class="col-6">
             <mat-form-field class="mr-5">
                 <mat-label>Cantidad</mat-label>
-                <input matInput formControlName="cantidad">
+                <input matInput formControlName="cantidad" required>
             </mat-form-field>
         </div>
 
         <div class="col-12">
             <mat-form-field class="example-full-width">
                 <mat-label>Descripción </mat-label>
-                <textarea matInput  formControlName="descripcion"></textarea>
+                <textarea matInput formControlName="descripcion" required></textarea>
             </mat-form-field>
         </div>
-
 
         <div class="col-12">
             <div class="form-group"> {{imageError}}
@@ -52,7 +51,7 @@
 
     </div>
     <div class="modal-footer">
-        <button mat-raised-button color="warn" (click)="onNoClick()">Cerrar</button> 
+        <button mat-raised-button color="warn" (click)="onNoClick()">Cerrar</button>
         <button type="button" class="btn guardar" (click)="guardar()">Guardar</button>
     </div>
 </form>

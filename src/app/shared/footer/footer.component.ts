@@ -1,4 +1,3 @@
-import { ModalAvisoComponent } from '../../components/modals/modal-aviso/modal-aviso.component';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 
@@ -13,12 +12,5 @@ export class FooterComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  openDialog(){
-    const dialogRef = this.dialog.open(ModalAvisoComponent, {
-      width: '450px',
-
-    });
-    dialogRef.afterClosed().subscribe(result => {
-    });
-  }
+  
 }

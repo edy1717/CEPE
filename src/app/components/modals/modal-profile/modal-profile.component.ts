@@ -1,10 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { NgForm , FormControl, FormGroup,  ReactiveFormsModule } from '@angular/forms';
-import { CultivoService } from '../../../services/cultivo.service';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { UsuarioService } from '../../../services/usuario.service';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import Swal from 'sweetalert2';
-
 
 @Component({
   selector: 'app-modal-profile',
@@ -22,7 +19,6 @@ export class ModalProfileComponent implements OnInit {
   constructor( private _use:UsuarioService, public dialogRef:MatDialogRef<ModalProfileComponent>,
                @Inject(MAT_DIALOG_DATA) public data:any) { }
 
-
   ngOnInit(): void {
     this.actualizarPerfil();
     this.getListPost();
@@ -34,18 +30,17 @@ export class ModalProfileComponent implements OnInit {
     this.formPerfil.get('email').patchValue(this.data.id.email);
     this.formPerfil.get('ubicacion').patchValue(this.data.id.ubicacion);
     this.id = this.data.id.id;
-
   }
 
   actualizarPerfil(){
     this.formPerfil = new FormGroup ({
       id : new FormControl (''),
-      nombre: new FormControl  (''),
-      apellidoPaterno: new FormControl  (''),
-      apellidoMaterno: new FormControl  (''),
-      email: new FormControl  (''),
-      ubicacion: new FormControl  (''),
-      telefono: new FormControl  ('')
+      nombre: new FormControl  (Validators.required),
+      apellidoPaterno: new FormControl  (Validators.required),
+      apellidoMaterno: new FormControl  (Validators.required),
+      email: new FormControl  (null),
+      ubicacion: new FormControl  (null),
+      telefono: new FormControl  (null)
     });
   }
   getListPost(){
@@ -56,14 +51,10 @@ export class ModalProfileComponent implements OnInit {
     .subscribe(respEditar => {
       this.respuesta = respEditar
       this.respBack =this.respuesta.exito
-      
       this.dialogRef.close(this.formPerfil.value)
     });  
-
    }
-
    onNoClick(): void {
     this.dialogRef.close();
   }
-
 }

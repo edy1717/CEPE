@@ -11,7 +11,8 @@
                     <div class="col-12">
                         <div class="form-group">
                             <div class="search-box float-left mb-6 ">
-                                <input type="text" class="search-text" name="filterPost" placeholder="Buscar" [(ngModel)]="filterPost">
+                                <input type="text" class="search-text" name="filterPost" placeholder="Buscar"
+                                    [(ngModel)]="filterPost">
                                 <a class="search-btn">
                                     <i class="fas fa-search"></i>
                                 </a>
@@ -21,7 +22,7 @@
                 </div>
             </div>
             <br>
-            <table class="table table-hover"  *ngIf="myProducts && myProducts.length>0">
+            <table class="table table-hover" *ngIf="myProducts && myProducts.length>0">
                 <thead>
                     <tr>
                         <th *ngFor="let head of headElements" scope="col">{{head}} </th>
@@ -50,11 +51,8 @@
             <div class="col-12">
                 <div class="form-group">
                     <div class="search-box float-left mb-6 ">
-                        <mat-paginator *ngIf="myProducts && myProducts.length>0"
-                            [length]="myProducts.length"
-                            [pageSize]="page_size"
-                            [pageSizeOptions]="pageSizeOptions"
-                            (page)="handlePage($event) ">
+                        <mat-paginator *ngIf="myProducts && myProducts.length>0" [length]="myProducts.length"
+                            [pageSize]="page_size" [pageSizeOptions]="pageSizeOptions" (page)="handlePage($event) ">
                         </mat-paginator>
                     </div>
                 </div>

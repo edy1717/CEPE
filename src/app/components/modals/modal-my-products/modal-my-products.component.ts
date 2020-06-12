@@ -1,10 +1,9 @@
 
 import { CultivoService } from '../../../services/cultivo.service';
 import { Component, OnInit, Inject } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { FileReaderPromiseLikeService } from 'fctrlx-angular-file-reader';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
-import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-modal-my-products',
@@ -42,12 +41,12 @@ export class ModalMyProductsComponent implements OnInit {
   formActProClient(){
     this.formActualizarProductClient = new FormGroup ({
      id : new FormControl (null),
-     titulo : new FormControl (null),
-     descripcion : new FormControl (null),
-     cantidad : new FormControl (null),
-     medida : new FormControl (null),
-     imagen: new FormControl(null),
-     tipo : new FormControl (null)
+     titulo : new FormControl (Validators.required),
+     descripcion : new FormControl (Validators.required),
+     cantidad : new FormControl (Validators.required),
+     medida : new FormControl (Validators.required),
+     imagen: new FormControl(Validators.required),
+     tipo : new FormControl (Validators.required)
     });
   }
   getListProduct(){
@@ -83,5 +82,4 @@ export class ModalMyProductsComponent implements OnInit {
   onNoClick(): void {
     this.dialogRef.close();
   }
-
 }

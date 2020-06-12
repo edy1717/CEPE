@@ -1,5 +1,4 @@
 <img src="../../../assets/img/Banner_lista_clientes.jpg" class="img-fluid" alt="Responsive image">
-
 <div class="main-container">
     <section class="main-container">
         <div class="table-responsive">
@@ -8,7 +7,8 @@
                     <div class="col-12">
                         <div class="form-group">
                             <div class="search-box float-left mb-6 ">
-                                <input type="text" class="search-text" name="filterPost" placeholder="Buscar" [(ngModel)]="filterPost">
+                                <input type="text" class="search-text" name="filterPost" placeholder="Buscar"
+                                    [(ngModel)]="filterPost">
                                 <a class="search-btn">
                                     <i class="fas fa-search"></i>
                                 </a>
@@ -25,21 +25,26 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let profil of resultados | paginate:page_size:page_number  | filterProfile:filterPost">                        <th scope="row"> {{profil.id}} </th>
+                    <tr *ngFor="let profil of resultados | paginate:page_size:page_number  | filterProfile:filterPost">
+                        <th scope="row"> {{profil.id}} </th>
                         <td> {{profil.nombre}} {{profil.apellidoPaterno}} {{profil.apellidoMaterno}}</td>
                         <td> {{profil.email}} </td>
                         <td> {{profil.ubicacion}} </td>
                         <td>
-                            <button class="btn" (click)="openDialog(profil)" data-placement="top" title="Actualizar Cliente">
+                            <button class="btn" (click)="openDialog(profil)" data-placement="top"
+                                title="Actualizar Cliente">
                                 <i class="fas fa-sync button colorActulizar"></i></button>
                             <!-- BOTON DE ELIMINAR -->
-                            <button class="btn" (click)="eliminarProfile(profil)" data-placement="top" title="Eliminar Cliente">
+                            <button class="btn" (click)="eliminarProfile(profil)" data-placement="top"
+                                title="Eliminar Cliente">
                                 <i class="fas fa-trash-alt button colorDelete"></i></button>
                             <!-- BOTON DE REPORTAR -->
-                            <button class="btn" (click)="openDialogRep(profil.id)" data-placement="top" title="Reportar Cliente">
+                            <button class="btn" (click)="openDialogRep(profil.id)" data-placement="top"
+                                title="Reportar Cliente">
                                 <i class="fas fa-user-edit button colorReportar "></i></button>
                             <!-- BOTON DE DETALLES -->
-                            <button class="btn" placeholder="list-product" data-placement="top" title="Ver Productos del Cliente" (click)="misProductos(profil.id)">
+                            <button class="btn" placeholder="list-product" data-placement="top"
+                                title="Ver Productos del Cliente" (click)="misProductos(profil.id)">
                                 <i class="fas fa-list-ul button colorDetalle"></i></button>
                         </td>
                     </tr>
@@ -50,11 +55,8 @@
             <div class="col-12">
                 <div class="form-group">
                     <div class="search-box float-left mb-6 ">
-                        <mat-paginator *ngIf="resultados && resultados.length>0"
-                            [length]="resultados.length"
-                            [pageSize]="page_size"
-                            [pageSizeOptions]="pageSizeOptions"
-                            (page)="handlePage($event) ">
+                        <mat-paginator *ngIf="resultados && resultados.length>0" [length]="resultados.length"
+                            [pageSize]="page_size" [pageSizeOptions]="pageSizeOptions" (page)="handlePage($event) ">
                         </mat-paginator>
                     </div>
                 </div>

@@ -4,8 +4,6 @@ import { CultivoService } from '../../services/cultivo.service';
 import { FormGroup, Validators, FormControl } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { ModalComponent } from '../modals/modal/modal.component';
-import Swal from 'sweetalert2';
-
 
 @Component({
   selector: 'app-list-products',
@@ -23,7 +21,6 @@ export class ListProductsComponent implements OnInit {
   cultivo;
   respBack;
 
-
   constructor( private _sc: CultivoService,  public dialog: MatDialog) { }
 
   ngOnInit() {
@@ -34,11 +31,11 @@ export class ListProductsComponent implements OnInit {
   formMyProduct(){
     this.formmyPoduct = new FormGroup ({
       id : new FormControl (''),
-      titulo : new FormControl(''),
-      descripción : new FormControl(''),
-      imagen : new FormControl(''),
-      cantidad : new FormControl(''),
-      medida: new FormControl  ('')
+      titulo : new FormControl(Validators.required),
+      descripción : new FormControl(Validators.required),
+      imagen : new FormControl(Validators.required),
+      cantidad : new FormControl(Validators.required),
+      medida: new FormControl  (Validators.required)
     });
   }
 
@@ -72,12 +69,10 @@ export class ListProductsComponent implements OnInit {
     if(confirmacion){
       this._sc.eliminarCultivo(id).subscribe(data => {
       this.consultar();
-})
+});
     }
     this.formmyPoduct.reset()
   }
-
-
 
   handlePage(e: PageEvent){
     this.page_size = e.pageSize
@@ -87,5 +82,4 @@ export class ListProductsComponent implements OnInit {
   page_size: number = 5;
   page_number: number = 1;
   pageSizeOptions  = [5, 10, 15, 20, 25, 30, 40, 80 , 100]
-
 }
