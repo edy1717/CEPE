@@ -31,9 +31,11 @@ export class NavbarComponent implements OnInit {
   onLogout() {
     localStorage.removeItem('SCtoken');
     localStorage.removeItem('idusu');
-    this.router.navigateByUrl('/home').then(dato=>{
+    localStorage.removeItem('isAdmin');
+    this.router.navigate(['/home'])
+    // .then(dato=>{
       location.reload()
-    });
+    // });
    
   }
 }
