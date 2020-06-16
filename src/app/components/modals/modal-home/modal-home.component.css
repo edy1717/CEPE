@@ -3,3 +3,51 @@
     font-family: "Latin Modern Roman 10";
   font-style: oblique;
 }
+
+.card {
+  max-width: 100%;
+  background-color: none;
+  justify-content: center;
+  border: none;
+  outline: none;
+}
+
+.search-box {
+  position: relative;
+  top: 80%;
+  left: 80%;
+  background: none;
+  height: 40%;
+  padding: none;
+  border: none;
+}
+
+.card-color{
+  color:#928C8C;
+}
+.card-colo1{
+  color: #A9A6A5; 
+}
+.color {
+  color: #743B8F;
+}
+
+.box{
+  width: 155px;
+  height: 155px;
+  overflow: hidden;
+}
+
+.box img{
+  width: 100%;
+  height: auto;
+  border: none;
+}
+@supports(object-fit: cover){
+    .box img{
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+}
+

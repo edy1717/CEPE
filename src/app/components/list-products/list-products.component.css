@@ -1,4 +1,4 @@
-.main-container{
+.main-container {
     margin-top: 1px;
     margin-top: 2px;
     padding: 20px;
@@ -7,9 +7,9 @@
 .search-box {
     position: relative;
     top: 80%;
-    left: 80;
+    left: 35%;
     background: rgb(241, 239, 241);
-    height: 40px;
+    height: 40%;
     padding: 10px;
 }
 
@@ -35,7 +35,43 @@
     line-height: 20px;
 }
 
-.mat-paginator{
-    border :none;
+.mat-paginator {
+    border: none;
     background: none;
 }
+
+.actualizar {
+    background-color: #418215;
+    color: white;
+    margin-right: 10%;
+}
+
+.box {
+    width: 155px;
+    height: 155px;
+    overflow: hidden;
+}
+
+.box1 {
+    width: 300px;
+    height: 155px;
+    overflow: hidden;
+    padding: none;
+}
+
+.box img {
+    width: 100%;
+    height: auto;
+}
+
+@supports(object-fit: cover) {
+    .box img {
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+}
+
+.example-button-row button {
+    margin-right: 8px;
+  }

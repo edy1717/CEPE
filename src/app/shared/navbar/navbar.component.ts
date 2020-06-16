@@ -1,10 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFireAuth } from '@angular/fire/auth';
-import { AuthService } from '../../services/auth.service';
-import { UserInterface } from '../../interfaces/user';
 import { Router } from '@angular/router';
-
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-navbar',
@@ -12,50 +7,35 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-
+  id: any;
+  verinicio: boolean = false;
+  verperfil: boolean = false;
   active = 1;
+  public isLogged = true;
 
-
-  constructor( private authService : AuthService,
-                private afsAuth : AngularFireAuth, private router:Router ) { }
-
-  public app_name: string = 'Sembrando Conciencia';
-
-  public isLogged : Boolean = false;
-
-  user : UserInterface = {
-    name : '',
-    email : '',
-    photoURL : ''
-  };
+  constructor( private router: Router) { }
 
   ngOnInit(): void {
-    // this.getCurrentUser();
-    // this.authService.isAuth().subscribe(user =>  {
-    //   if(user){
-    //     this.user.name = user.displayName;
-    //     this.user.email = user.email
-    //   }
-    // })
+    this.id = localStorage.getItem('idusu');
+    if (this.id != null) {
+      this.verperfil = true;
+    }
+    if (this.id === null) {
+      this.verinicio = true;
+    }
   }
-
-  // getCurrentUser() {
-  //   this.authService.isAuth().subscribe(auth => {
-  //     if (auth) {
-  //       console.log('user logged');
-  //       this.isLogged = true;
-  //     } else {
-  //       console.log('NOT user logged');
-  //       this.isLogged = false;
-  //     }
-  //   });
-  // }
+  inciasesion() {
+    this.router.navigate(['/user/login'])
+  }
 
   onLogout() {
     localStorage.removeItem('SCtoken');
-    this.router.navigateByUrl('/home');
+    localStorage.removeItem('idusu');
+    localStorage.removeItem('isAdmin');
+    this.router.navigate(['/home'])
+    // .then(dato=>{
+      location.reload()
+    // });
+   
   }
-
-
-
 }

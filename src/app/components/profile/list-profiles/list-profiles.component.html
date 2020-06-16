@@ -1,5 +1,4 @@
 <img src="../../../assets/img/Banner_lista_clientes.jpg" class="img-fluid" alt="Responsive image">
-
 <div class="main-container">
     <section class="main-container">
         <div class="table-responsive">
@@ -7,56 +6,61 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="form-group">
-                            <div class="search-box float-left mb-3 ">
-                                <input type="text" class="search-text" name="filterPost" placeholder="Buscar" [(ngModel)]="filterPost">
+                            <div class="search-box float-left mb-6 ">
+                                <input type="text" class="search-text" name="filterPost" placeholder="Buscar"
+                                    [(ngModel)]="filterPost">
                                 <a class="search-btn">
                                     <i class="fas fa-search"></i>
                                 </a>
                             </div>
-                            <mat-paginator [length]="dataProfiles.length" [pageSize]="page_size" [pageSizeOptions]="pageSizeOptions" (page)="handlePage($event) ">
-                            </mat-paginator>
                         </div>
                     </div>
                 </div>
             </div>
-            <table class="table table-hover">
+            <table class="table table-hover" *ngIf="resultados && resultados.length>0">
                 <thead>
                     <tr>
-                        <th scope="col"> Id</th>
-                        <th scope="col"> Nombre </th>
-                        <th scope="col"> Correo </th>
-                        <th scope="col"> Direccion </th>
-                        <th scope="col"> Telefono </th>
+                        <th *ngFor="let head of headElements" scope="col">{{head}} </th>
                         <th scope="col"> &nbsp; </th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let profil of dataProfiles | filterProfile:filterPost | paginate:page_size:page_number">
-                        <th scope="row"> {{profil.idProfile}} </th>
-                        <td> {{profil.nombre}} </td>
+                    <tr *ngFor="let profil of resultados | paginate:page_size:page_number  | filterProfile:filterPost">
+                        <th scope="row"> {{profil.id}} </th>
+                        <td> {{profil.nombre}} {{profil.apellidoPaterno}} {{profil.apellidoMaterno}}</td>
                         <td> {{profil.email}} </td>
-                        <td> ... </td>
-                        <td> {{profil.direccion}} </td>
-                        <td> {{profil.phone}} </td>
+                        <td> {{profil.ubicacion}} </td>
                         <td>
-                            <button class="btn" data-toggle="modal" data-target="#modalProfile" placeholder="update" data-placement="top" title="Actualizar Cliente">
-                                <i class="fas fa-sync colorActulizar "></i></button>
+                            <button class="btn" (click)="openDialog(profil)" data-placement="top"
+                                title="Actualizar Cliente">
+                                <i class="fas fa-sync button colorActulizar"></i></button>
                             <!-- BOTON DE ELIMINAR -->
-                            <button class="btn" placeholder="delete" data-placement="top" title="Eliminar Cliente">
-                                <i class="fas fa-trash-alt colorDelete"></i></button>
-                            <!-- BOTON DE DETALLE -->
-                            <button class="btn" data-toggle="modal" data-target="#modalReporte" placeholder="masDetalle" data-placement="top" title="Reportar Cliente">
-                                <i class="fas fa-user-edit colorReportar "></i></button>
-                            <!-- BOTON DE LISTAS -->
-                            <button class="btn" placeholder="list-product" data-placement="top" title="Ver Productos del Cliente" (click)="misProductos(profil.idProfile)">
-                                <i class="fas fa-list-ul colorDetalle"></i></button>
+                            <button class="btn" (click)="eliminarProfile(profil)" data-placement="top"
+                                title="Eliminar Cliente">
+                                <i class="fas fa-trash-alt button colorDelete"></i></button>
+                            <!-- BOTON DE REPORTAR -->
+                            <button class="btn" (click)="openDialogRep(profil.id)" data-placement="top"
+                                title="Reportar Cliente">
+                                <i class="fas fa-user-edit button colorReportar "></i></button>
+                            <!-- BOTON DE DETALLES -->
+                            <button class="btn" placeholder="list-product" data-placement="top"
+                                title="Ver Productos del Cliente" (click)="misProductos(profil.id)">
+                                <i class="fas fa-list-ul button colorDetalle"></i></button>
                         </td>
                     </tr>
                 </tbody>
             </table>
         </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group">
+                    <div class="search-box float-left mb-6 ">
+                        <mat-paginator *ngIf="resultados && resultados.length>0" [length]="resultados.length"
+                            [pageSize]="page_size" [pageSizeOptions]="pageSizeOptions" (page)="handlePage($event) ">
+                        </mat-paginator>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 </div>
-
-<app-modal-profile></app-modal-profile>
-<app-modal-reporte></app-modal-reporte>

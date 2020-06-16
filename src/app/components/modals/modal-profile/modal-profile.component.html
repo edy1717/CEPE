@@ -1,39 +1,45 @@
-<ng-container [formGroup]="formActualizarPerfil">
-  <div class="modal fade" id="modalProfile" tabindex="-1" role="dialog" aria-labelledby="modalProfileLabel"
-    aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title" id="modalProfileLabel">Actualizar Cliente</h2>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Closea">
-            <span aria-hidden="true">&times;</span>
-          </button>
+<form [formGroup]="formPerfil">
+    <div>
+        <h2 class="modal-title" id="modalMyProductsLabel">Actualizar Perfil</h2>
+        <div class="identificador ">
+            <h5>Id: {{id}}</h5>
         </div>
-        <div class="modal-body">
-          <mat-form-field class="mr-5">
-            <mat-label>Nombre</mat-label>
-            <input matInput formControlName="nombre">
-          </mat-form-field>
-
-          <mat-form-field class="mr-5">
-            <mat-label>Correo</mat-label>
-            <input matInput formControlName="email">
-          </mat-form-field>
-
-          <mat-form-field class="mr-5">
-            <mat-label>Telefono</mat-label>
-            <input matInput formControlName="phone">
-          </mat-form-field>
-
-          <mat-form-field class="mr-5">
-            <mat-label>Dirección</mat-label>
-            <input matInput formControlName="direccion">
-          </mat-form-field>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary" (click)="save()">Guardar</button>
-        </div>
-      </div>
     </div>
-  </div>
-</ng-container>
+    <div class="row">
+        <div class="col-6">
+            <mat-form-field class="mr-5">
+                <mat-label>Nombre</mat-label>
+                <input matInput formControlName="nombre" required>
+            </mat-form-field>
+        </div>
+        <div class="col-6">
+            <mat-form-field class="mr-5">
+                <mat-label>Apellido Paterno </mat-label>
+                <input matInput formControlName="apellidoPaterno" required>
+            </mat-form-field>
+        </div>
+        <div class="col-6">
+            <mat-form-field class="mr-5">
+                <mat-label>Apellido Materno </mat-label>
+                <input matInput formControlName="apellidoMaterno" required>
+            </mat-form-field>
+        </div>
+        <div class="col-6">
+            <mat-form-field class="mr-5">
+                <mat-label>Correo electronico </mat-label>
+                <input matInput formControlName="email">
+            </mat-form-field>
+        </div>
+        <div class="col-6">
+            <mat-form-field class="mr-5">
+                <mat-label>Direccion </mat-label>
+                <input matInput formControlName="ubicacion">
+            </mat-form-field>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button mat-raised-button color="warn" (click)="onNoClick()">Cerrar</button> 
+        <button type="button" class="btn guardar" (click)="guardarPerfil()">Guardar</button>
+    </div>
+</form>

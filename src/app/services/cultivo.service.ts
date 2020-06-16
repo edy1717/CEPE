@@ -1,6 +1,10 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+
+const httpOptions = { headers: new HttpHeaders({ "Content-Type": "application/json" ,
+Authorization: 'Bearer ' + localStorage.getItem('SCtoken') }) };
+
 
 @Injectable({
   providedIn: 'root'
@@ -9,22 +13,28 @@ export class CultivoService {
 
   url = environment.apiUrl + '/cultivo';
 
-  constructor( private http: HttpClient  ) { }
-
+  constructor( private http: HttpClient) {}
   registerCultivo(data){
-    return this.http.post(this.url+'/registar', data)
+    return this.http.post(this.url + '/registar', data);
   }
-
+  // x id
   consultaCultivo(data){
-    return this.http.post(this.url+'/obtener/todos', data)
+    return this.http.post(this.url + '/buscar', data, httpOptions);
+  }
+  
+  consultarTodosCultivos(){
+    return this.http.get(this.url + '/obtener/todos');
   }
 
   editarCultivo(data){
-    return this.http.post(this.url+'/editar', data)
+     return this.http.post(this.url + '/editar', data, httpOptions);
   }
 
-  eliminarCultivo(){
-    return this.http.delete(this.url+'/eliminar')
-  }
-
+  eliminarCultivo(id){
+     console.log(id);
+     return this.http.post(this.url + '/eliminar', id, httpOptions);
 }
+}
+
+
+

@@ -1,62 +1,62 @@
-    <img src="../../../assets/img/Banner_lista_productos_cliente.jpg" class="img-fluid" alt="Responsive image">
+<img src="../../../assets/img/Banner_lista_productos_cliente.jpg" class="img-fluid" alt="Responsive image">
 
 <div class="main-container">
     <section class="main-container">
         <div class="table-responsive">
-            <div>
-                <h2>Por: {{myProducts[0].profil.idProfile }} <b>{{myProducts[0].profil.nombre}} {{myProducts[0].profil.email}}</b></h2>
+            <div class="col-12">
+                <h2>Por: <b>{{usua.nombre}}, {{usua.email}}</b> con id: {{usua.id}} </h2>
             </div>
             <div class="container">
                 <div class="row">
                     <div class="col-12">
                         <div class="form-group">
-                            <div class="search-box float-left mb-3 ">
+                            <div class="search-box float-left mb-6 ">
                                 <input type="text" class="search-text" name="filterPost" placeholder="Buscar"
                                     [(ngModel)]="filterPost">
                                 <a class="search-btn">
                                     <i class="fas fa-search"></i>
                                 </a>
                             </div>
-                            <mat-paginator [length]="myProducts.length" [pageSize]="page_size" [pageSizeOptions]="pageSizeOptions"
-                                (page)="handlePage($event) ">
-                            </mat-paginator>
                         </div>
                     </div>
                 </div>
             </div>
             <br>
-            <table class="table ">
+            <table class="table table-hover" *ngIf="myProducts && myProducts.length>0">
                 <thead>
                     <tr>
-                        <th scope="col"> #2</th>
-                        <th scope="col"> Nombre </th>
-                        <th scope="col"> Descripcion </th>
-                        <th scope="col"> Imagen </th>
-                        <th scope="col"> Cantidad </th>
-                        <th scope="col"> Medida </th>
-                        <th scope="col"> &nbsp; </th>
+                        <th *ngFor="let head of headElements" scope="col">{{head}} </th>
                         <th scope="col"> &nbsp; </th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let a of myProducts">
-                        <th scope="row "></th>
-                        <td>{{a.nombre}}</td>
+                    <tr *ngFor="let a of myProducts  | paginate:page_size:page_number | filter:filterPost ">
+                        <th scope="row ">{{a.id}}</th>
+                        <td>{{a.titulo}}</td>
                         <td>{{a.descripcion}} </td>
-                        <td>{{a.portada}}</td>
+                        <td class="col-3 box">
+                            <img [src]=" a.imagen | safeUrl" class="img-thumbnail" alt="Responsive">
+                        </td>
                         <td> {{a.cantidad}}</td>
                         <td>{{a.medida}}</td>
-
                         <td>
-                            <button class="btn btn-primary " data-toggle="modal" data-target="#modalMyProducts">Actualizar</button>
-                        </td>
-                        <td>
-                            <button class="btn btn-danger ">Eliminar</button>
+                            <button class="btn actualizar" (click)="openDialog(a)">Actualizar</button>
+                            <button class="btn btn-danger" (click)="elimina(a)">Eliminar</button>
                         </td>
                     </tr>
                 </tbody>
             </table>
         </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group">
+                    <div class="search-box float-left mb-6 ">
+                        <mat-paginator *ngIf="myProducts && myProducts.length>0" [length]="myProducts.length"
+                            [pageSize]="page_size" [pageSizeOptions]="pageSizeOptions" (page)="handlePage($event) ">
+                        </mat-paginator>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 </div>
-<app-modal-my-products></app-modal-my-products>

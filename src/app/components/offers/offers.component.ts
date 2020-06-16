@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { DummyImagesService } from '../../services/dummy-images.service';
+import { OffersService } from '../../services/offers.service';
+import { ModalOffersComponent } from '../modals/modal-offers/modal-offers.component';
+import { FormControl } from '@angular/forms';
+import { FormGroup } from '@angular/forms';
 import { PageEvent } from '@angular/material/paginator';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-offers',
@@ -9,21 +13,56 @@ import { PageEvent } from '@angular/material/paginator';
 })
 export class OffersComponent implements OnInit {
 
-imagenes;
+  registros: any[];
+  formmyPoduct : FormGroup;
+  resultados;
+  respuesta;
+  filterPost = '';
 
-  constructor(private dummyImagen: DummyImagesService) { }
+  constructor( private offerServ: OffersService, public dialog: MatDialog) { }
 
   ngOnInit(): void {
-    this.verImagen()
+    this.consultar();
+    this.formMyProduct();
   }
 
-  verImagen(){
-    this.imagenes = this.dummyImagen.consultaImagen();
-    console.log('img', this.imagenes)
+  formMyProduct(){
+    this.formmyPoduct = new FormGroup ({
+      id : new FormControl (null),
+      contenido: new FormControl  (null)
+    })
   }
+
+  openDialog(value){
+    const dialogRef = this.dialog.open(ModalOffersComponent, {
+      width: '450px',
+      data: { id : value }
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      if (!result){
+        return;
+      }
+      value = result
+      this.consultar();
+    });
+  }
+
+  consultar(){
+    this.offerServ.consultarTodosPost().subscribe (data => {
+      this.respuesta = data;
+      this.resultados = this.respuesta.data;
+  });
+  }
+
+  eliminarPost(id){
+    this.offerServ.eliminarPost(id).subscribe(data => {
+      this.consultar();
+
+ });
+ }
 
   handlePage(e: PageEvent){
-    this.page_size = e.pageSize
+    this.page_size = e.pageSize;
     this.page_number = e.pageIndex + 1
   }
 

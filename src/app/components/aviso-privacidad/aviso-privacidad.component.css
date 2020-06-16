@@ -1,0 +1,11 @@
+.container_inner {
+    position: relative;
+    padding: 10px;
+    text-align: justify ;
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.colorp{
+    color: 	#00BA22;
+}

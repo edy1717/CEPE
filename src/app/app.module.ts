@@ -1,6 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ThemeModule } from './@theme/theme.module';
+//COMPONENTS
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
@@ -8,36 +13,35 @@ import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { LoginComponent } from './components/user/login/login.component';
 import { ProfileComponent } from './components/profile/profile/profile.component';
-
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { AppRoutingModule } from './app-routing.module';
-import { environment } from '../environments/environment';
-
-import { AngularFireModule } from '@angular/fire';
-import { AngularFireDatabaseModule } from '@angular/fire/database';
-
-import { AngularFireAuth } from '@angular/fire/auth';
-import { AngularFirestore } from '@angular/fire/firestore';
 import { ListProductsComponent } from './components/list-products/list-products.component';
-import { FilterPipe } from './shared/pipes/filter.pipe';
 import { ListProfilesComponent } from './components/profile/list-profiles/list-profiles.component';
-import { FilterProfilePipe } from './shared/pipes/filter-profile.pipe';
 import { MyproductsComponent } from './components/profile/myproducts/myproducts.component';
-import { ModalProfileComponent } from './components/modals/modal-profile/modal-profile.component'
-import { ModalComponent } from './components/modals/modal/modal.component';
 import { OffersComponent } from './components/offers/offers.component';
-import { ModalMyProductsComponent } from './components/modals/modal-my-products/modal-my-products.component';
-import { ModalOffersComponent } from './components/modals/modal-offers/modal-offers.component';
-import { HttpClientModule } from '@angular/common/http';
-import { ModalHomeComponent } from './components/modals/modal-home/modal-home.component';
+import { ReportsComponent } from './components/profile/reports/reports.component';
+import { AvisoPrivacidadComponent } from './components/aviso-privacidad/aviso-privacidad.component';
+import { FctrlxAngularFileReader } from 'fctrlx-angular-file-reader';
+import { AgmCoreModule } from '@agm/core';
+//PIPE
+import { FilterPipe } from './shared/pipes/filter.pipe';
+import { FilterProfilePipe } from './shared/pipes/filter-profile.pipe';
 import { PaginatePipe } from './shared/pipes/paginate.pipe';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ThemeModule } from './@theme/theme.module';
+import { safeUrlPipe } from './shared/pipes/safe-url.pipe';
+import { FilterReportsPipe } from './shared/pipes/filter-report.pipe';
+//modals
 import { ModalReporteComponent } from './components/modals/modal-reporte/modal-reporte.component';
-
-
+import { ModalMyProductsComponent } from './components/modals/modal-my-products/modal-my-products.component';
+import { ModalUserprofileComponent } from './components/modals/modal-userprofile/modal-userprofile.component';
+import { ModalOffersComponent } from './components/modals/modal-offers/modal-offers.component';
+import { ModalComponent } from './components/modals/modal/modal.component';
+import { ModalProfileComponent } from './components/modals/modal-profile/modal-profile.component'
+import { ModalHomeComponent } from './components/modals/modal-home/modal-home.component';
 
 @NgModule({
+  entryComponents:[
+    ModalHomeComponent,
+    ModalComponent,
+    ModalReporteComponent,
+  ],
   declarations: [
     AppComponent,
     HomeComponent,
@@ -60,6 +64,11 @@ import { ModalReporteComponent } from './components/modals/modal-reporte/modal-r
     ModalHomeComponent,
     PaginatePipe,
     ModalReporteComponent,
+    ModalUserprofileComponent,
+    ReportsComponent,
+    safeUrlPipe,
+    FilterReportsPipe,
+    AvisoPrivacidadComponent,
   ],
   imports: [
     BrowserModule,
@@ -67,20 +76,14 @@ import { ModalReporteComponent } from './components/modals/modal-reporte/modal-r
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    AngularFireModule.initializeApp(environment.firebaseconfig) ,
-    AngularFireDatabaseModule,
     BrowserAnimationsModule,
     ThemeModule,
-
+    FctrlxAngularFileReader,
   ],
   providers: [
-    AngularFireAuth,
-    AngularFirestore,
   ],
   bootstrap: [AppComponent,
-      ],
-      entryComponents:[
-        ModalHomeComponent,
       ]
+
 })
 export class AppModule { }

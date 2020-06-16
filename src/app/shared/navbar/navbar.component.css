@@ -6,7 +6,13 @@
     color: #743b8f;
 }
 
+.example-icon {
+  padding: 0 14px;
+}
 
+.example-spacer {
+  flex: 1 1 auto;
+}
 /*********/
 
 .color {
@@ -14,12 +20,12 @@
 }
 
 .main-section {
-    border: 1px solid #007bff;
+    border: 1px solid #18ce64;
     background: #fff;
 }
 
 .profile-header {
-    background: #007bff;
+    background: #82E89B;
     height: 150px;
 }
 

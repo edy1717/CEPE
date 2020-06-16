@@ -1,37 +1,24 @@
-<section id="login" class="mb-5 mt-5">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-4 mx-auto">
-                <div class="card_login">
-                    <div class="card">
-                        <div class="card-body text-center">
-                            <form [formGroup]="formLogin" (ngSubmit)="crearFormulario()">
-                                <h1 class="h3 mb-3 font-weight-normal">Iniciar Sesión</h1>
-                                <div class="form-group">
-                                    <input formControlName="email" type="email" id="email" name="email" class="form-control" placeholder="Email" required>
-                                </div>
-                                <div class="form-group">
-                                    <input formControlName="password" type="password" id="password" name="password" class="form-control" placeholder="Password" required>
-                                </div>
-                                <button type="submit" class="btn btn-lg btn-primary btn-block" (click)="onLoginCorreo()">Iniciar</button>
-                                <div class="form-group">
-                                    <a routerLink="/user/register" class="form-control login-user"></a>
-                                </div>
-                                <div class="form-group">
-                                    <button class="btn btn-block btn-social btn-facebook">
-                    <span class="fa fa-facebook"></span>
-                    FACEBOOK
-                  </button>
-                                    <button class="btn btn-block btn-social btn-google">
-                    <span class="fa fa-google"></span>
-                    GOOGLE
-                  </button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+<div class="signin-content">
+  <mat-card>
+    <mat-card-content>
+      <form [formGroup]="formLogin" (ngSubmit)="crearFormulario()">
+        <h1>Iniciar Sesión</h1>
+        <mat-form-field class="full-width-input">
+          <input matInput placeholder="Ingresa tu correo electronico" formControlName="email" required>
+          <mat-error>
+            Por favor!!! ingresa tu correo correctamente
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field class="full-width-input">
+          <input matInput type="password" placeholder="Ingresa tu contraseña" formControlName="password" required>
+          <mat-error>
+            Por favor!!! ingresa tu contraseña correctamente
+          </mat-error>
+        </mat-form-field>
+        <mat-card-actions>
+          <button mat-flat-button class="colotbtn" (click)="onLoginCorreo()">Iniciar</button>
+        </mat-card-actions>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

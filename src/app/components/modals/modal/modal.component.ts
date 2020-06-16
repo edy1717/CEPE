@@ -1,60 +1,88 @@
-import { Component, OnInit, ViewChild, ElementRef,  } from '@angular/core';
-import { DataApiService } from '../../../services/data-api.service';
-import { NgForm, FormGroup, FormControl,ReactiveFormsModule } from '@angular/forms';
-import { DummyService } from 'src/app/services/dummy.service';
-
-
+import { Component, OnInit, Inject } from '@angular/core';
+import { CultivoService } from '../../../services/cultivo.service';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { FileReaderPromiseLikeService } from 'fctrlx-angular-file-reader';
 
 @Component({
   selector: 'app-modal',
   templateUrl: './modal.component.html',
+  styleUrls: ['./modal.component.css']
 })
 
 export class ModalComponent implements OnInit {
 
-  formActualizarProduct : FormGroup;
+  formActualizarProduct: FormGroup;
+  respuesta;
+  respBack;
+  dataProducts;
+  archivos: any;
+  imag
+  imageError: string;
+  id: any;
 
-  constructor( public dataApi : DataApiService,
-                 public dummyService : DummyService   ) { }
+  constructor(public dialogRef: MatDialogRef<ModalComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: any, private _cs: CultivoService,
+    private promiseService: FileReaderPromiseLikeService) {
 
-  @ViewChild('btnClose') btnClose : ElementRef;
-
-  public products =[];
-  public product = '';
-
+  }
 
   ngOnInit(): void {
-    this.dataApi.getAllProducts().subscribe(products => {
-      this.products = products;
-    })
-    this.formProduct()
+    this.formProduct();
+    this.getListProduct();
+    this.dataProducts = this.data.item;
+    this.formActualizarProduct.get('id').patchValue(this.data.id.id);
+    this.formActualizarProduct.get('titulo').patchValue(this.data.id.titulo);
+    this.formActualizarProduct.get('tipo').patchValue(this.data.id.tipo);
+    this.formActualizarProduct.get('descripcion').patchValue(this.data.id.descripcion);
+    this.formActualizarProduct.get('medida').patchValue(this.data.id.medida);
+    this.formActualizarProduct.get('cantidad').patchValue(this.data.id.cantidad);
+    this.id = this.data.id.id;
   }
 
-  formProduct(){
+  formProduct() {
     this.formActualizarProduct = new FormGroup({
-      id : new FormControl (),
-      nombre : new FormControl (),
-      descripcion : new FormControl (),
-      portada : new FormControl (),
-      cantidad : new FormControl (),
-      medida : new FormControl (),
-      imagen: new FormControl(),
-    })
+      id: new FormControl(null),
+      titulo: new FormControl(Validators.required),
+      tipo: new FormControl(Validators.required),
+      descripcion: new FormControl(Validators.required),
+      medida: new FormControl(Validators.required),
+      cantidad: new FormControl(Validators.required),
+      imagen: new FormControl(Validators.required)
+    });
   }
 
-  save(){
-    console.log('holi', this.formProduct)
+  getListProduct() {
+    this.dataProducts = this._cs.consultaCultivo(this.dataProducts);
   }
 
+  actualizarCultivo(): void {
+    this._cs.editarCultivo(this.formActualizarProduct.value)
+      .subscribe(respEditar => {
+        this.respuesta = respEditar
+        this.respBack = this.respuesta.exito
+        this.dialogRef.close(this.formActualizarProduct.value)
+      });
+  }
 
-  onSaveProduct( productForm: NgForm ):void{
-    if(productForm.value.id == null) {
-      //nuevo
-      this.dataApi.addProduct(productForm.value);
-    }else {
-      this.dataApi.updateProduct(productForm.value);
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
+
+  onFileSelected(event: any) {
+    const file = event.target.files[0] ? event.target.files[0] : false;
+    const max_size = 20971520;
+    if (event.target.files[0].size > max_size) {
+      this.imageError =
+        'Maximum size allowed is ' + max_size / 1000 + 'Mb';
+      return false;
     }
-  productForm.resetForm();
-  this.btnClose.nativeElement.click();
+    if (file) {
+      this.promiseService.toBase64(file).then((result) => {
+        const image = result.split(',')[1];
+        let imageb64 = image.slice(4)
+        this.formActualizarProduct.get('imagen').setValue(imageb64)
+      });
+    }
   }
 }

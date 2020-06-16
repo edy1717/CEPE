@@ -1,8 +1,7 @@
-import { DataApiService } from '../../../services/data-api.service';
-import { DummyService } from '../../../services/dummy.service';
-import { Component, OnInit } from '@angular/core';
-import { NgForm , FormControl, FormGroup,  ReactiveFormsModule } from '@angular/forms';
-
+import { ReporteService } from '../../../services/reporte.service';
+import { Component, OnInit,Inject } from '@angular/core';
+import { MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-modal-reporte',
@@ -12,26 +11,47 @@ import { NgForm , FormControl, FormGroup,  ReactiveFormsModule } from '@angular/
 export class ModalReporteComponent implements OnInit {
 
   formReporte : FormGroup;
+  respuesta;
+  dataPost;
+  resultado;
 
-  constructor(
-                ) { }
+  constructor(public dialogRef: MatDialogRef<ModalReporteComponent>,
+              @Inject(MAT_DIALOG_DATA) public data: any, private _reports: ReporteService ) { }
 
   ngOnInit(): void {
+
     this.formReporteUs();
+    this.getListPost();
+    this.dataPost = this.data;
+    this.formReporte.get('usuarioCreador').patchValue(localStorage.getItem('idusu'));
+    this.formReporte.get('usuarioReportado').patchValue(this.data.id);
   }
 
   formReporteUs(){
-  this.formReporte = new FormGroup({
-    id : new FormControl (),
-    nombre : new FormControl (),
-    razon : new FormControl (),
-    descripcion : new FormControl (),
-    idProfil : new FormControl ()
+    this.formReporte = new FormGroup({
+    razon : new FormControl (null),
+    descripcion : new FormControl (null),
+    usuarioCreador : new FormControl (null),
+    usuarioReportado : new FormControl (null)
+  });
+}
+getListPost(){
+  this.dataPost = this._reports.reportUser(this.dataPost);
+}
 
-  })
+enviarReport(){
+   this._reports.enviarReporte(this.formReporte.value)
+   .subscribe (respBack => {
+   this.respuesta = respBack;
+   });
+   this.getListPost();
+   this.dialogRef.close(this.formReporte.value);
+ }
+
+ onNoClick(): void {
+  this.dialogRef.close();
 }
-save(){
-  console.log(this.formReporte);
 
 }
-}
+
+

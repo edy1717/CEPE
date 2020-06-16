@@ -1,0 +1,17 @@
+.modal-header {
+    font-size: 14px;
+}
+
+.row {
+    max-width: 98%;
+    margin-top: 6%;
+}
+
+.guardar {
+    background-color: #743b8f;
+    color: white;
+}
+
+.example-full-width {
+    width: 100%;
+  }

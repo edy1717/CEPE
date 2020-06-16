@@ -1,18 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { DummyService } from 'src/app/services/dummy.service';
-import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
-import { FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
+import { CultivoService } from '../../../services/cultivo.service';
+import { MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 
-
-export interface ProductInterface {
-  id: string;
-  nombre: string;
-  descripcion: string;
-  portada: string;
-  cantidad: string;
-  medida:string;
-
-}
 
 @Component({
   selector: 'app-modal-home',
@@ -24,21 +13,19 @@ export class ModalHomeComponent implements OnInit {
   dataProducts;
 
   constructor( public dialogRef: MatDialogRef<ModalHomeComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any, public dummyService : DummyService ) { }
+    @Inject(MAT_DIALOG_DATA) public data: any, private _cs: CultivoService ) { }
 
     ngOnInit(): void {
-      this.getListProduct();
-      console.log(this.data.item);
+       this.getListProduct();
        this.dataProducts = this.data.item;
-    }
 
+    }
     getListProduct(){
-      this.dataProducts = this.dummyService.consultaProducto();
+      this.dataProducts = this._cs.consultaCultivo(this.dataProducts);
     }
 
-  onNoClick(): void {
-    this.dialogRef.close();
-  }
-
+    onNoClick(): void {
+      this.dialogRef.close();
+    }
 
 }

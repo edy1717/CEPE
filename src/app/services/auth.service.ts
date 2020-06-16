@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { map, tap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -8,22 +9,47 @@ import { HttpClient } from '@angular/common/http';
 export class AuthService {
 
   url = environment.apiUrl + '/auth';
+  headers : HttpHeaders = new HttpHeaders({
+    "Conten-type": "application.json"
+  })
 
+  constructor( private http: HttpClient  ) {}
 
-  constructor( private http: HttpClient  ) {
+onlogin(data){
+      return this.http.post(this.url + '/login', data, {headers : this.headers} )
+      .pipe(map(data => data))
+}
 
+getRefreshToken(){
+    let token = localStorage.getItem('refreshToken');
+    return token
+}
+
+setRefreshToken(refreshToken): void{
+    localStorage.setItem('refreshToken',refreshToken);
+}
+
+refreshToken(){
+      return this.http.post<any>(
+        this.url + '/refreshToken',
+        { 'refreshToken': this.getRefreshToken() }
+      ).pipe(tap((tokens) => {
+        let reToken = tokens.refreshtoken;
+        this.setRefreshToken(reToken);
+      }));
+}
+
+logout(){
+      localStorage.removeItem('SCtoken');
   }
-    onlogin(data){
-      return this.http.post(this.url + '/login', data);
-    }
 
-    setToken(token): void
-    {
-      localStorage.setItem('accessToken', token);
-    }
-  getToken()
-    {
-      return localStorage.getItem('accessToken');
-    }
+setToken(token): void{
+      localStorage.setItem('SCtoken', token);
+}
+getToken(){
+      return localStorage.getItem('SCtoken');
+}
 
 }
+
+

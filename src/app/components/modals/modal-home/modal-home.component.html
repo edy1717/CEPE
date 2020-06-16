@@ -1,13 +1,17 @@
-
-<h1 mat-dialog-title>Nuestros productos</h1>
-<div mat-dialog-content>
-    <img src={{dataProducts.portada}} class="card-img" alt="...">
-    <p>{{dataProducts.nombre}}</p>
-    <p class="card-text"><small class="text-muted">Producto disponible {{dataProducts.cantidad}}{{dataProducts.medida}} </small></p>
-    <p class="card-text"> {{dataProducts.descripcion}}</p>
-    <p class="card-text"><small class="text-muted">¿Te interesa?</small> <br>
-        <small class="text-muted1">Descarga nuestra APP</small> <br>
-        <i class="fab fa-android " style="color :#418215;"></i><small class="text-muted">Disponible para Andorid Mobile</small>
-    </p>
-</div> 
-
+<div class="card mb-12">
+    <div class="row no-gutters">
+        <div class="col-3 box">
+            <img [src]=" dataProducts.imagen | safeUrl" class="img-thumbnail" alt="Responsive">
+        </div>
+        <div class="card-body">
+            <h2 class="card-color">{{dataProducts.titulo}}</h2>
+            <p> Cantidad disponible : <b class="color">{{dataProducts.cantidad}} {{dataProducts.medida}} </b> </p>
+            <b class="card-colo1"> {{dataProducts.descripcion}}</b>
+            <h5 class="card-text"><small class="text-muted">¿Te interesa?</small> <br>
+                <small class="text-muted1">Descarga nuestra APP</small>
+                <i class="fab fa-android " style="color :#418215;"></i><small class="text-muted">Disponible para
+                    Andorid Mobile</small>
+                </h5>
+            </div>
+    </div>
+</div>

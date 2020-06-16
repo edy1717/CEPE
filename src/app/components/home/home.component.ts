@@ -1,76 +1,72 @@
 import { Component, OnInit } from '@angular/core';
-import { DataApiService } from '../../services/data-api.service';
-import Swal from 'sweetalert2';
-import { Button } from 'protractor';
-import { reduce } from 'rxjs/operators';
-import { DummyService } from '../../services/dummy.service';
 import { ModalHomeComponent } from '../modals/modal-home/modal-home.component';
-import {MatPaginatorModule, PageEvent} from '@angular/material/paginator';
+import { CultivoService } from '../../services/cultivo.service';
+import { Location } from '@angular/common';
+import { Router } from '@angular/router';
+import { FormControl } from '@angular/forms';
+import { FormGroup } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
-
+import { PageEvent } from '@angular/material/paginator';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-
 export class HomeComponent implements OnInit {
 
-
-  constructor( private dataApi: DataApiService, private dummyService: DummyService, public dialog: MatDialog ) { }
-
-
-
+  formmyPoduct: FormGroup;
+  resultados;
+  respuesta;
   filterPost = '';
-  public products = [];
-  public product = '';
-  dataProducts;
+
+  constructor(public dialog: MatDialog, private _cs: CultivoService,
+    public router: Router, public _Location: Location) {
+  }
 
   ngOnInit(): void {
-    this.dataApi.getAllProducts().subscribe(products => {
-      this.products = products;
-    });
-    this.getListProduct();
-
-
-  }
-
-  getListProduct(){
-    this.dataProducts = this.dummyService.consultaProducto();
-  }
-
-  alertProduct(){
-    Swal.fire({
-      title: '<strong>Te interesa?</strong>',
-      html: 'Para contactar <b> descarga la aplicación. </b> ' + '<br>' +
-      '<a href="https://play.google.com/store/apps?hl=es_MX" ><img src="https://i.pinimg.com/236x/37/18/ff/3718ffe54260f2cb2af297a08b41cc1d.jpg" width="26px" height="26px"></a>'+
-      '<a href="https://www.apple.com/la/ios/app-store/" style="margin-left:12px;"><img src="https://pickaso.com/wp-content/uploads/2016/10/apple-app-store.png" width="26px" height="26px"></a>',
-      background: 'rgba(255, 255, 255, 0.7)',
-
+    this.consultar();
+    this.formMyProduct();
+    this.router.navigateByUrl('/home', { skipLocationChange: true }).then(() => {
+      this.router.navigate([decodeURI(this._Location.path())]);
     });
   }
 
-  openDialog(value){
+  formMyProduct() {
+    this.formmyPoduct = new FormGroup({
+      id: new FormControl(''),
+      nombre: new FormControl(null),
+      descripción: new FormControl(null),
+      imagen: new FormControl(null),
+      cantidad: new FormControl(null),
+      medida: new FormControl(null)
+    })
+  }
+
+  consultar() {
+    this._cs.consultarTodosCultivos().subscribe(data => {
+      this.respuesta = data;
+      this.resultados = this.respuesta.data
+    })
+  }
+
+  openDialog(value) {
     const dialogRef = this.dialog.open(ModalHomeComponent, {
       width: '450px',
-      data: { item : value }
+      data: { item: value }
     });
     dialogRef.afterClosed().subscribe(result => {
     });
-
   }
 
-
-
-
-  handlePage(e: PageEvent){
+  handlePage(e: PageEvent) {
     this.page_size = e.pageSize
     this.page_number = e.pageIndex + 1
   }
 
-  page_size: number =8;
+  page_size: number = 5;
   page_number: number = 1;
-  pageSizeOptions  = [4, 8, 16, 24, 32, 40, 48 ,  80 , 100]
+  pageSizeOptions = [5, 10, 15, 20, 25, 30, 40, 80, 100]
+
 
 }

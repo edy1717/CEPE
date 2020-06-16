@@ -52,7 +52,6 @@ mat-button {
     color: red;
 }
 
-
 /* buscador */
 
 .search-box {
@@ -90,3 +89,22 @@ mat-button {
     border: none;
     background: none;
 }
+
+.colotbtn{
+    appearance: none;
+    outline: 0;
+    border: 0;
+    padding: 10px 15px;
+    color: whitesmoke;
+    border-radius: 3px;
+    width: 250px;
+    cursor: pointer;
+    font-size: 18px;
+    transition-duration: 0.25s;
+    background-color: #418215;
+    border-radius: 2rem;
+}
+
+/*  */
+
+

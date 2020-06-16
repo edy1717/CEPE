@@ -1,8 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { DummyService } from '../../../services/dummy.service';
 import { PageEvent } from '@angular/material/paginator';
 import { FormGroup, FormControl } from '@angular/forms';
+import { UsuarioService } from '../../../services/usuario.service';
+import { MatDialog } from '@angular/material/dialog';
+
+// IMPORTACION DE MODALES
+import { ModalReporteComponent } from '../../modals/modal-reporte/modal-reporte.component';
+import { ModalProfileComponent } from '../../modals/modal-profile/modal-profile.component';
 
 @Component({
   selector: 'app-list-profiles',
@@ -11,55 +16,84 @@ import { FormGroup, FormControl } from '@angular/forms';
 })
 export class ListProfilesComponent implements OnInit {
 
-  constructor( private dummyService:DummyService,  private router:Router) { }
-
-  dataProfiles;
-  dataProducts;
+  perfiles: any[];
+  headElements = ['Id Cliente', 'Nombre', 'Correo electronico', 'Ubicación'];
+  forPerfil: FormGroup;
+  resultados;
+  respuesta;
   filterPost = '';
-  formDelete : FormGroup;
+
+  constructor(private _us: UsuarioService, public dialog: MatDialog, private router: Router) { }
 
   ngOnInit(): void {
-    this.getListProfile();
-    this.getListProduct();
-    //this.eliminar();
+    this.consultar();
+    this.formMyProfil();
   }
 
-  // eliminar (){
-  //   this.formDelete = new FormGroup ({
-  //     usuario_id : new FormControl (),
-  //     cliente_id : new FormControl ()
-  //   })
-  // }
+  formMyProfil() {
+    this.forPerfil = new FormGroup({
+      id: new FormControl(null),
+      nombre: new FormControl(null),
+      correo: new FormControl(null),
+      direccion: new FormControl(null),
+      telefono: new FormControl(null)
+    });
+  }
+  openDialog(value) {
+    const dialogRef = this.dialog.open(ModalProfileComponent, {
+      width: '450px',
+      data: { id: value }
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      if (!result) {
+        return;
+      }
+      value = result
+      this.consultar();
+    });
+  }
 
-  removerDato() {
-    if(this.formDelete.valid)  {
-      console.log(this.formDelete.value)
-    }else{
+  consultar() {
+    this._us.consultUsers().subscribe(data => {
+      this.respuesta = data;
+      this.resultados = this.respuesta.data;
+    })
+  }
 
+  openDialogRep(value) {
+    const dialogRef = this.dialog.open(ModalReporteComponent, {
+      width: '450px',
+      data: { id: value }
+    });
+    dialogRef.afterClosed().subscribe(resul => {
+      if (!resul) {
+        return;
+      }
+      value = resul
+      this.consultar();
+    });
+  }
+
+  eliminarProfile(id: string) {
+    const confirmacion = confirm('Estas seguro de eliminar el producto');
+    if (confirmacion) {
+      this._us.eliminarPerfil(id).subscribe(data => {
+        this.consultar();
+      })
     }
-    this.formDelete.reset()
+    this.forPerfil.reset()
   }
 
-
-  getListProfile(){
-
-    this.dataProfiles = this.dummyService.consultaProfile();
+  misProductos($usuarioCreador) {
+    this.router.navigate(['/admin/user-products', $usuarioCreador]);
   }
 
-  getListProduct(){
-    this.dataProducts = this.dummyService.consultaProducto();
-  }
-  misProductos($a){
-    this.router.navigate(['/admin/user-products', $a]);
-  }
-
-  handlePage(e: PageEvent){
+  handlePage(e: PageEvent) {
     this.page_size = e.pageSize
     this.page_number = e.pageIndex + 1
   }
-
   page_size: number = 5;
   page_number: number = 1;
-  pageSizeOptions  = [5, 10, 15, 20, 25, 30, 40, 80 , 100]
+  pageSizeOptions = [5, 10, 15, 20, 25, 30, 40, 80, 100]
 
 }
